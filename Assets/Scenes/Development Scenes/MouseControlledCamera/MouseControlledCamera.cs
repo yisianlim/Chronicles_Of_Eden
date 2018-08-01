@@ -33,11 +33,11 @@ public class MouseControlledCamera : MonoBehaviour {
 
         /* Find the horizontal distance of camera from the target, then use that to determine its x and y based its angle around the player.*/
         float cameraRadius = Mathf.Cos(angleFromTargetInRadians) * distanceFromTarget;
-        float cameraX = focusObject.transform.localPosition.x + Mathf.Cos(angleAroundTarget) * cameraRadius;
-        float cameraZ = focusObject.transform.localPosition.z + Mathf.Sin(angleAroundTarget) * cameraRadius;
+        float cameraX = focusObject.transform.localPosition.x + Mathf.Cos(angleAroundTargetInRadians) * cameraRadius;
+        float cameraZ = focusObject.transform.localPosition.z + Mathf.Sin(angleAroundTargetInRadians) * cameraRadius;
 
         transform.localPosition = new Vector3(cameraX, cameraHeight, cameraZ);
-        transform.localEulerAngles = new Vector3(angleFromTarget, angleAroundTarget - YRotationOffset, transform.localEulerAngles.z);
+        transform.localEulerAngles = new Vector3(angleFromTarget, -angleAroundTarget - YRotationOffset, transform.localEulerAngles.z);
 
 	}
 
