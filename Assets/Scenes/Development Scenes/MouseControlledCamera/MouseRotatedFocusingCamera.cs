@@ -24,7 +24,7 @@ public class MouseRotatedFocusingCamera : FocusingCamera {
     {
         if (deltaY == 0) return;
 
-        angleAroundTarget += sensitivity * deltaY;
+        angleAroundTarget -= sensitivity * deltaX;
 
     }
 
