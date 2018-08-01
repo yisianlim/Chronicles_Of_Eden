@@ -8,7 +8,7 @@ using UnityEngine;
 public class MouseInputManager : MonoBehaviour {
 
     public delegate void MouseMovement(float deltaX, float deltaY, float deltaZ);
-    public static MouseMovement mouseMoved;
+    public MouseMovement mouseMoved;
 
     private Vector3 previousMousePosition;
 
