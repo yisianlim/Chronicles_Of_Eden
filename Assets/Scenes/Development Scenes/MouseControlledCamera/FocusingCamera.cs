@@ -2,29 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// Allows a camera to be locked onto a player and rotated left and right using the mouse.
-/// </summary>
-public class MouseControlledCamera : MonoBehaviour {
+public abstract class FocusingCamera : MonoBehaviour {
 
     const float YRotationOffset = 90;
 
-    [SerializeField] private Transform focusObject;
-	[SerializeField] private bool lockOntoObject;
+    [SerializeField] protected Transform focusObject;
+    [SerializeField] protected bool lockOntoObject;
 
-	[SerializeField] float distanceFromTarget;
-	[SerializeField] [Range(0, 90)] float angleFromTarget; //The angle at which the camera is looking at the player.
-    [SerializeField] [Range(0, 360)] float angleAroundTarget; //Where the player is around the circle. The mouse will control this.
-	public float baseY; //The y value the camera will be locked on to.
+    [SerializeField] protected float distanceFromTarget;
+    [SerializeField] [Range(0, 90)] protected float angleFromTarget; //The angle at which the camera is looking at the player.
+    [SerializeField] [Range(0, 360)] protected float angleAroundTarget; //Where the player is around the circle. The mouse will control this.
+    [SerializeField] protected float baseY; //The y value the camera will be locked on to.
 
-	void Start(){
+    void Start()
+    {
+        transform.parent = focusObject.parent; //Ensure camera is in the same level as its chosen object in the hireachy.
+    }
 
-		transform.parent = focusObject.parent; //Ensure camera is in the same level as its chosen object in the hireachy.
+    void Update()
+    {
 
-	}
+        if (!lockOntoObject) return;
 
-	void Update(){
-
+        /* Conversions to radians for Mathf trig functions. */
         float angleFromTargetInRadians = Mathf.Deg2Rad * angleFromTarget;
         float angleAroundTargetInRadians = Mathf.Deg2Rad * angleAroundTarget;
 
@@ -39,10 +39,5 @@ public class MouseControlledCamera : MonoBehaviour {
         transform.localPosition = new Vector3(cameraX, cameraHeight, cameraZ);
         transform.localEulerAngles = new Vector3(angleFromTarget, -angleAroundTarget - YRotationOffset, transform.localEulerAngles.z);
 
-	}
-
-	private void lockOn(){
-
-	}
-
+    }
 }
