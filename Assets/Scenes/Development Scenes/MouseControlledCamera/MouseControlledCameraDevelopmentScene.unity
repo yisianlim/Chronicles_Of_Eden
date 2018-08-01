@@ -113,6 +113,46 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &459931040
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 459931042}
+  - component: {fileID: 459931041}
+  m_Layer: 0
+  m_Name: Imput Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &459931041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 459931040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14dbca768621aee47aeae4e4abaf85c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &459931042
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 459931040}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &551021832
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,15 +325,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 652372579}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61740290e720ded44bfc8ec44a6315d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 47133c462ce6e4e41a05aaa555e6bd34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   focusObject: {fileID: 551021836}
-  lockOntoObject: 0
+  lockOntoObject: 1
   distanceFromTarget: 0
   angleFromTarget: 0
   angleAroundTarget: 0
   baseY: -0.6693323
+  mouseInput: {fileID: 459931041}
+  sensitivity: 1
 --- !u!1 &735831065
 GameObject:
   m_ObjectHideFlags: 0
