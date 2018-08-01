@@ -7,6 +7,8 @@ using UnityEngine;
 /// </summary>
 public class MouseControlledCamera : MonoBehaviour {
 
+    const float YRotationOffset = 90;
+
     [SerializeField] private Transform focusObject;
 	[SerializeField] private bool lockOntoObject;
 
@@ -35,7 +37,7 @@ public class MouseControlledCamera : MonoBehaviour {
         float cameraZ = focusObject.transform.localPosition.z + Mathf.Sin(angleAroundTarget) * cameraRadius;
 
         transform.localPosition = new Vector3(cameraX, cameraHeight, cameraZ);
-        transform.localEulerAngles = new Vector3(-angleFromTarget, -angleAroundTarget, transform.localRotation.y);
+        transform.localEulerAngles = new Vector3(angleFromTarget, angleAroundTarget - YRotationOffset, transform.localEulerAngles.z);
 
 	}
 
