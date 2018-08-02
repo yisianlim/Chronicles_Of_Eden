@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
+    private Transform cam;
+    private Vector2 input;
+    private Vector3 camF;
+    private Vector3 camR;
+
     // Condition = 0 for Idle.
     // Condition = 1 for Charge.
     // Condition = 2 for Attack. 
@@ -30,13 +35,22 @@ public class PlayerController : MonoBehaviour {
         }
 
         // Only move if it is not attacking.
+        // Note: move relative to the position of the camera.
         if (!attacking)
         {
-            //Move horizontally
-            rb.MovePosition(rb.position + (Vector3.left * Input.GetAxis("Horizontal")) * speed * Time.deltaTime);
+            // Get player inputs.
+            input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+            input = Vector2.ClampMagnitude(input, 1);
 
-            // Move vertically.
-            rb.MovePosition(rb.position + (Vector3.back * Input.GetAxis("Vertical")) * speed * Time.deltaTime);
+            // Compute the position of the player based on camera. 
+            cam = Camera.main.transform;
+            camF = cam.forward;
+            camR = cam.right;
+            camF.y = 0;
+            camR.y = 0;
+            camF = camF.normalized;
+            camR = camR.normalized;
+            rb.MovePosition(rb.position + (camF * input.y + camR * input.x) * Time.deltaTime * speed);
         }
     }
 
@@ -56,22 +70,7 @@ public class PlayerController : MonoBehaviour {
         }
 
         // Make the player face to where it is heading. 
-        if (Input.GetAxis("Horizontal") < 0)
-        {
-            transform.LookAt(transform.position + Vector3.right);
-        }
-        else if (Input.GetAxis("Horizontal") > 0)
-        {
-            transform.LookAt(transform.position + Vector3.left);
-        }
-        else if (Input.GetAxis("Vertical") < 0)
-        {
-            transform.LookAt(transform.position + Vector3.forward);
-        }
-        else if (Input.GetAxis("Vertical") > 0)
-        {
-            transform.LookAt(transform.position + Vector3.back);
-        }
+        transform.LookAt(transform.position + (camF * input.y + camR * input.x));
     }
 
     void Attack() {
