@@ -29,11 +29,15 @@ public class PlayerController : MonoBehaviour {
             Attack();
         }
 
-        //Move horizontally
-        rb.MovePosition(rb.position + (Vector3.left * Input.GetAxis("Horizontal")) * speed * Time.deltaTime);
+        // Only move if it is not attacking.
+        if (!attacking)
+        {
+            //Move horizontally
+            rb.MovePosition(rb.position + (Vector3.left * Input.GetAxis("Horizontal")) * speed * Time.deltaTime);
 
-        // Move vertically.
-        rb.MovePosition(rb.position + (Vector3.back * Input.GetAxis("Vertical")) * speed * Time.deltaTime);
+            // Move vertically.
+            rb.MovePosition(rb.position + (Vector3.back * Input.GetAxis("Vertical")) * speed * Time.deltaTime);
+        }
     }
 
     void SetAnimationAndDirection() {
