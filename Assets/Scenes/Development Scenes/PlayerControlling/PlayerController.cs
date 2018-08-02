@@ -16,16 +16,11 @@ public class PlayerController : MonoBehaviour {
 
     [Header("Combat")]
     private bool attacking;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void Update () {
         GetInput();
-        Move();
+        SetAnimationAndDirection();
 	}
 
     void GetInput() {
@@ -33,41 +28,46 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetMouseButtonDown(1)) {
             Attack();
         }
-        // Move left.
-        if (Input.GetKey(KeyCode.A)){
-            SetDirection(-1);
-        }
-        else if (Input.GetKeyUp(KeyCode.A)) {
-            SetDirection(0);
-            anim.SetInteger("Condition", 0);
-        }
 
-        // Move right.
-        if (Input.GetKey(KeyCode.D))
-        {
-            SetDirection(1);
-        }
-        else if (Input.GetKeyUp(KeyCode.D))
-        {
-            SetDirection(0);
-            anim.SetInteger("Condition", 0);
-        }
+        //Move horizontally
+        rb.MovePosition(rb.position + (Vector3.left * Input.GetAxis("Horizontal")) * speed * Time.deltaTime);
+
+        // Move vertically.
+        rb.MovePosition(rb.position + (Vector3.back * Input.GetAxis("Vertical")) * speed * Time.deltaTime);
     }
 
-    void Move() {
-        // If the player is moving.
-        if(direction != 0) {
-            if (!attacking) {
+    void SetAnimationAndDirection() {
+        // If the player is moving, then we want to set it to charge animation.
+        // Otherwise, we set it to idle.
+        if (!attacking)
+        {
+            if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+            {
                 anim.SetInteger("Condition", 1);
-                rb.MovePosition(transform.position + (Vector3.right * direction * speed * Time.deltaTime));
-            } 
+            }
+            else
+            {
+                anim.SetInteger("Condition", 0);
+            }
         }
-    }
 
-    void SetDirection(float dir) {
-        if (dir < 0) transform.LookAt(transform.position + Vector3.left);
-        else if (dir > 0) transform.LookAt(transform.position + Vector3.right);
-        direction = dir;
+        // Make the player face to where it is heading. 
+        if (Input.GetAxis("Horizontal") < 0)
+        {
+            transform.LookAt(transform.position + Vector3.right);
+        }
+        else if (Input.GetAxis("Horizontal") > 0)
+        {
+            transform.LookAt(transform.position + Vector3.left);
+        }
+        else if (Input.GetAxis("Vertical") < 0)
+        {
+            transform.LookAt(transform.position + Vector3.forward);
+        }
+        else if (Input.GetAxis("Vertical") > 0)
+        {
+            transform.LookAt(transform.position + Vector3.back);
+        }
     }
 
     void Attack() {
