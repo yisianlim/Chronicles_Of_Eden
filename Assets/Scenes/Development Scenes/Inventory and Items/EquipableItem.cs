@@ -4,7 +4,9 @@ using UnityEngine;
 /// <summary>
 /// An item that can be pickedup and used from the inventory.
 /// </summary>
-public abstract class EquipableItem : MonoBehaviour {
+public abstract class EquipableItem : ScriptableObject {
+
+    [SerializeField] string InGameName;
 
     /// <summary>
     /// Activate the item.
