@@ -6,10 +6,14 @@ using UnityEngine;
 public class ItemThrower : EquipableItem
 {
 
-    Rigidbody item; //The type of item that is able to be thrown.
+    [SerializeField] Rigidbody item; //The type of item that is able to be thrown.
+    [SerializeField] Vector3 throwForce;
 
     public override void Use(Transform userTranform)
     {
-        
+
+        Rigidbody itemInstance = Instantiate(item, Vector3.zero, Quaternion.identity, userTranform);
+        itemInstance.AddForce(throwForce, ForceMode.Impulse);
+
     }
 }
