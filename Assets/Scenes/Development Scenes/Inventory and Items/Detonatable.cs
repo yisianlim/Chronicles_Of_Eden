@@ -27,7 +27,8 @@ public abstract class Detonatable : MonoBehaviour {
 
         yield return new WaitForSeconds(delay);
 
-        Instantiate(explosionEffect.gameObject, transform.position, transform.rotation);
+        ParticleSystem explosionInstance = Instantiate(explosionEffect, transform.position, transform.rotation);
+        explosionInstance.gameObject.SetActive(true);
 
         yield return new WaitForSeconds(delayBeforeDamage);
 
@@ -38,7 +39,14 @@ public abstract class Detonatable : MonoBehaviour {
             if (reciever != null) reciever.ApplyDetonation();
         });
 
+        gameObject.GetComponent<Renderer>().enabled = false;
+
+        yield return new WaitForSeconds(explosionEffect.main.duration / 2 - delayBeforeDamage - 0.5f);
+
+        Destroy(explosionInstance.gameObject);
         Destroy(gameObject); //Remove from scene once done.
     }
+
+
 
 }
