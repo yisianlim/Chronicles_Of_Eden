@@ -9,9 +9,18 @@ public class TestItemThrower : MonoBehaviour {
 
     [SerializeField] Transform player;
     [SerializeField] ItemThrower thower;
+
+    float count = 0;
 	
 	// Update is called once per frame
 	void Update () {
-        if(Input.GetMouseButton(0))thower.Use(player);
+
+        if (Input.GetMouseButton(0) && count <= 0)
+        {
+            thower.Use(player);
+            count = 0.5f;
+        }
+
+        count -= Time.deltaTime;
 	}
 }
