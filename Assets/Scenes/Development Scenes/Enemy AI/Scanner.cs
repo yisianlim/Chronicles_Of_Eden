@@ -22,8 +22,9 @@ public abstract class Scanner : MonoBehaviour {
 
     private void Update()
     {
+
         List<Scannable> scannedObjects = Scan();
-        if (scannedObjects != null) return;
+        if (scannedObjects == null) return;
 
         //Group identified objects by type.
         Dictionary<string, List<Scannable>> groupedScannedObjects = new Dictionary<string, List<Scannable>>();
@@ -37,7 +38,14 @@ public abstract class Scanner : MonoBehaviour {
 
         }
 
-        ObjectsScanned(groupedScannedObjects);
+        if(ObjectsScanned != null)
+            ObjectsScanned(groupedScannedObjects);
+
+        foreach(string key in groupedScannedObjects.Keys)
+        {
+            Debug.Log(key + ": " + groupedScannedObjects[key].Count);
+        }
+
     }
 
 }

@@ -23,6 +23,8 @@ public class RadiusScanner : Scanner
             Scannable scannable = obj.GetComponent<Scannable>();
             if (scannable != null) scannables.Add(scannable);
         });
+
+        if (scannables.Count <= 0) return null;
         return new List<Scannable>(scannables);
 
     }
