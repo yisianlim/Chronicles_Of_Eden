@@ -38,13 +38,8 @@ public abstract class Scanner : MonoBehaviour {
 
         }
 
-        if(ObjectsScanned != null)
+        if (ObjectsScanned != null)
             ObjectsScanned(groupedScannedObjects);
-
-        foreach(string key in groupedScannedObjects.Keys)
-        {
-            Debug.Log(key + ": " + groupedScannedObjects[key].Count);
-        }
 
     }
 
