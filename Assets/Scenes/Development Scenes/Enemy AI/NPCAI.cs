@@ -25,13 +25,36 @@ public class NPCAI : MonoBehaviour {
         {
 
             if (!detectedObjects.ContainsKey(reaction.objectType)) continue;
+
+            Scannable targetScannable = getNearestScannable(detectedObjects[reaction.objectType]);
+            reaction.reaction.Act(this, targetScannable);
+
+            return; //Only react to highest priority scannable.
+
         }
 
     }
 
-    private Scannable getNearestScannable(List<Scannable>)
+    /// <summary>
+    /// Find the closest scanable to the current scanable from the given list of scannables.
+    /// </summary>
+    /// <param name="scannables"></param>
+    /// <returns></returns>
+    private Scannable getNearestScannable(List<Scannable> scannables)
     {
-        return null;
+        Scannable nearestScannable = scannables[0];
+        for(int i = 0; i < scannables.Count; i++) {
+
+            float distanceToCurrent = Vector3.Distance(transform.position, scannables[i].transform.position);
+            float distanceToNearest = Vector3.Distance(transform.position, nearestScannable.transform.position);
+
+            if (distanceToCurrent < distanceToNearest)
+                nearestScannable = scannables[i];
+
+        }
+
+        return nearestScannable;
+
     }
 
     [SerializeField]
