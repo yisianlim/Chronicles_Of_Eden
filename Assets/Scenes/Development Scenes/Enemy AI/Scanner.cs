@@ -11,20 +11,33 @@ public abstract class Scanner : MonoBehaviour {
     /// A delegate to be called when scannable objects have been identified.
     /// </summary>
     /// <param name="scannedObjects"></param>
-    public delegate void ScanResult(Scannable[] scannedObjects);
+    public delegate void ScanResult(Dictionary<string, List<Scannable>> scannedObjects);
     public ScanResult ObjectsScanned;
 
     /// <summary>
     /// Identify scannable object.
     /// </summary>
-    /// <returns>A list of all the scannable objects nearby, null if there are none.</returns>
-    protected abstract Scannable[] Scan();
+    /// <returns>A collect list of all scannable objects</returns>
+    protected abstract List<Scannable> Scan();
 
     private void Update()
     {
-        Scannable[] scannedObjects = Scan();
-        if (scannedObjects != null)
-            ObjectsScanned(scannedObjects);
+        List<Scannable> scannedObjects = Scan();
+        if (scannedObjects != null) return;
+
+        //Group identified objects by type.
+        Dictionary<string, List<Scannable>> groupedScannedObjects = new Dictionary<string, List<Scannable>>();
+        foreach(Scannable obj in scannedObjects)
+        {
+            
+           if(!groupedScannedObjects.ContainsKey(obj.Type))
+                groupedScannedObjects.Add(obj.Type, new List<Scannable>());
+
+            groupedScannedObjects[obj.Type].Add(obj); 
+
+        }
+
+        ObjectsScanned(groupedScannedObjects);
     }
 
 }

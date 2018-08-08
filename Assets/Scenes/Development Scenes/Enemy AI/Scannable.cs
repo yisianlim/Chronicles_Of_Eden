@@ -4,13 +4,7 @@ using UnityEngine;
 
 public class Scannable : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    [SerializeField] string type;
+    public string Type { get { return type; } }
+
 }
