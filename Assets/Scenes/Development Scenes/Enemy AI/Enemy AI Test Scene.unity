@@ -327,6 +327,48 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1197139900
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1197139902}
+  - component: {fileID: 1197139901}
+  m_Layer: 0
+  m_Name: ItemThrowerDriver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1197139901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1197139900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd44ab4891249b5409bda1d717b77501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1251061201}
+  thower: {fileID: 11400000, guid: 7e1a2db000b969a4dbb575271dde77b1, type: 2}
+--- !u!4 &1197139902
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1197139900}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.0955987, y: 2.0835803, z: 6.5661345}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1227361560
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,7 +586,7 @@ Transform:
   m_GameObject: {fileID: 1813571160}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4.9177, y: 1, z: 3.9205}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -580,7 +622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b005dd5296044f4c9a9fda6f7e89b1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scanRadius: 2
+  scanRadius: 4
 --- !u!65 &2024978890
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -661,5 +703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scanner: {fileID: 2024978889}
   reactions:
+  - objectType: Bomb
+    reaction: {fileID: 11400000, guid: e6ce61c593cd6df4abae8f691ebd52c3, type: 2}
   - objectType: Player
     reaction: {fileID: 11400000, guid: b11914bc5f6c09f468e2302aacf54759, type: 2}
