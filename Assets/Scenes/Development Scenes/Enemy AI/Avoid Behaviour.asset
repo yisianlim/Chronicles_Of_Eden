@@ -14,4 +14,4 @@ MonoBehaviour:
   movementSpeed: 6
   turnSpeed: 0.1
   targetDistance: 4
-  adjustmentDirections: 32
+  adjustmentDirections: 4
