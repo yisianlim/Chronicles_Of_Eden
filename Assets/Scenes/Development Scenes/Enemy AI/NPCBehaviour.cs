@@ -5,6 +5,13 @@ using UnityEngine;
 public abstract class NPCBehaviour : ScriptableObject {
 
     /// <summary>
+    /// Called each time information about the target being responded to has changed.
+    /// </summary>
+    /// <param name="npc"></param>
+    /// <param name="target"></param>
+    public abstract void Plan(NPCAI npc, Scannable target);
+
+    /// <summary>
     /// Describes a frame of the behaviour.
     /// </summary>
     /// <param name="instigator"></param>

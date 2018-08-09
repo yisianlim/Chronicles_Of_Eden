@@ -7,6 +7,9 @@ public class NPCAI : MonoBehaviour {
     [SerializeField] Scanner scanner; //The object used to detemine other nearby objects.
     [SerializeField] Reaction[] reactions; //The reactions of the NPC to differen object types, in order of priority.
 
+    private string targetScannableType = ""; //The type of the scannable currently being reacted to.
+    private Vector3 nearestScannablePosition = Vector3.positiveInfinity; //The position of the current closest scanable.
+
     private void OnEnable()
     {
         scanner.ObjectsScanned += ObjectsDetected;
@@ -27,11 +30,22 @@ public class NPCAI : MonoBehaviour {
             if (!detectedObjects.ContainsKey(reaction.objectType)) continue;
 
             Scannable targetScannable = getNearestScannable(detectedObjects[reaction.objectType]);
+
+            //If there is new information, plan for it, and update the new information.
+            if(!nearestScannablePosition.Equals(targetScannable.transform.position) || !targetScannableType.Equals(targetScannable.Type))
+            {
+                reaction.reaction.Plan(this, targetScannable);
+                targetScannableType = targetScannable.Type;
+                nearestScannablePosition = targetScannable.transform.position;
+            }
+
             reaction.reaction.Act(this, targetScannable);
 
             return; //Only react to highest priority scannable.
 
         }
+
+        targetScannableType = ""; //No scanables on any type were detected.
 
     }
 
