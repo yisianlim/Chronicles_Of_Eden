@@ -18,20 +18,18 @@ public class Avoid : NPCBehaviour
     public override void Plan(NPCAI npc, Scannable target)
     {
 
-        //Calculate the direction (on the x and z axis) in which the player must head to get directly away from the target.
-        Vector3 directionAway = (new Vector3(npc.transform.position.x, 0, npc.transform.position.z) -
-                                 new Vector3(target.transform.position.x, 0, target.transform.position.z)).normalized;
-
+        
         //  Find the furtherest point you can get to for adjustmentDirections evenly distributed directions around a circle, if you try to travel
         //target distance in that direction.
         Vector3[] points = new Vector3[adjustmentDirections];
-        float angleSteps = 360 / adjustmentDirections;
+        float angleSteps = 360f / adjustmentDirections;
         for (int i = 0; i < points.Length; i++)
         {
 
-            //Raycast in each direction arounf the circle.
-            Vector3 currentDirection = Quaternion.Euler(0, adjustmentDirections * i, 0) * directionAway;
-            Ray ray = new Ray(npc.transform.position, directionAway);
+            //Raycast in each direction around the circle.
+            Vector3 currentDirection = Quaternion.Euler(0, angleSteps * i, 0) * Vector3.forward;
+
+            Ray ray = new Ray(npc.transform.position, currentDirection);
             RaycastHit[] hits = Physics.RaycastAll(ray, targetDistance);
 
             //Find closest hit for each direction.
@@ -43,6 +41,7 @@ public class Avoid : NPCBehaviour
             }
             else
             {
+
                 //If there were hits, find the closest.
                 Vector3 closestHitPoint = hits[0].point;
                 for(int j = 1; j < hits.Length; j++)
