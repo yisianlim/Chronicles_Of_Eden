@@ -28,7 +28,7 @@ public class MoveTowards : NPCBehaviour
     {
 
         //Move the npc a step towards the target.
-        npc.transform.position = Vector3.MoveTowards(npc.transform.position, targetPosition, movementSpeed);
+        npc.transform.position = Vector3.MoveTowards(npc.transform.position, targetPosition, movementSpeed * Time.deltaTime);
 
 
         //Turn the npc towards the target.
