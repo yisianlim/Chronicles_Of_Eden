@@ -13,5 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InGameName: 
   item: {fileID: 54274712734616706, guid: 001cfb0b87163e54684c7cab1d1fbea2, type: 2}
-  throwForce: {x: 35, y: 20}
-  instantiationDistanceFromPlayer: 1
+  throwForce: {x: 10, y: 10}
+  instantiationDistanceFromPlayer: 0.2

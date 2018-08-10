@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5489b90658b094488f00c7ca37eba96, type: 3}
   m_Name: TestMoveAway
   m_EditorClassIdentifier: 
-  movementSpeed: 10
+  movementSpeed: 0.5
   turnSpeed: -0.1
