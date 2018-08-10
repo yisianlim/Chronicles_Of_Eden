@@ -13,5 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 6
   turnSpeed: 0.1
-  targetDistance: 4
+  targetDistance: 8
   adjustmentDirections: 4
