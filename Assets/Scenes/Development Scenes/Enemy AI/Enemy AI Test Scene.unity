@@ -685,11 +685,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e2ae7cc42258474c8c3d63d379a0441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scanner: {fileID: 2130549146}
+  scanner: {fileID: 0}
   reactions:
   - objectType: Bomb
+    scanner: {fileID: 0}
     reaction: {fileID: 11400000, guid: 6c1c034dded0f3c4f8800546d661bb39, type: 2}
   - objectType: Player
+    scanner: {fileID: 0}
     reaction: {fileID: 11400000, guid: b11914bc5f6c09f468e2302aacf54759, type: 2}
 --- !u!54 &2130549148
 Rigidbody:
@@ -706,6 +708,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2130549149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2130549145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b005dd5296044f4c9a9fda6f7e89b1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scanRadius: 0
 --- !u!65 &2130549150
 BoxCollider:
   m_ObjectHideFlags: 0

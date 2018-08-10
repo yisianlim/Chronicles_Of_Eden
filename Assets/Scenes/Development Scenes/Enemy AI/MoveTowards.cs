@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Move Towards Behaviour", menuName = "NPC Behaviors/Movement/Move Towards", order = 1)]
+[CreateAssetMenu(fileName = "Move Towards Behaviour", menuName = "NPC AI/Behaviors/Movement/Move Towards", order = 1)]
 public class MoveTowards : NPCBehaviour
 {
 

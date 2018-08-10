@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// A behaviour in which the npc tries to get as far away from an object as possible, accounting for possible walls.
 /// </summary>
-[CreateAssetMenu(fileName = "Avoid Behaviour", menuName = "NPC Behaviors/Movement/Avoid", order = 2)]
+[CreateAssetMenu(fileName = "Avoid Behaviour", menuName = "NPC AI/Behaviors/Movement/Avoid", order = 2)]
 public class Avoid : NPCBehaviour
 {
     [SerializeField] float movementSpeed;

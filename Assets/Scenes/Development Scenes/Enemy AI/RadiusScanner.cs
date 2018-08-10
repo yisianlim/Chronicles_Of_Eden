@@ -5,6 +5,7 @@ using UnityEngine;
 /// <summary>
 /// A scanner that looks for scannable objects in a radius around the object.
 /// </summary>
+[CreateAssetMenu(fileName = "Radius Scanner", menuName = "NPC AI/Scanners/Radius Scanner", order = 1)]
 public class RadiusScanner : Scanner
 {
 
