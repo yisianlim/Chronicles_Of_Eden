@@ -18,7 +18,7 @@ public class Inventory : MonoBehaviour {
         }
 
         //If the user presses a number key, equipt the item of that number, if it exists.
-        for (int key = 0; key <= items.Length; key++)
+        for (int key = 0; key < items.Length; key++)
         {
             if (Input.GetKeyDown(key + "") && items[key] != null) equipedItem = key;
         }
