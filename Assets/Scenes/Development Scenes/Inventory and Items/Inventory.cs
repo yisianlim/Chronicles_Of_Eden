@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    private EquipableItem[] items = new EquipableItem[9];
+
+    private void Update()
+    {
+
+        //If the user hasn't pressed the left mouse button, don't do anything.
+        if (!Input.GetMouseButtonDown(0)) return;
+
+    }
+
 }
