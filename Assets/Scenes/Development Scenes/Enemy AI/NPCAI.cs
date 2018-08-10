@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class NPCAI : MonoBehaviour {
 
-    [SerializeField] Scanner scanner; //The object used to detemine other nearby objects.
     [SerializeField] Reaction[] reactions; //The reactions of the NPC to differen object types, in order of priority.
 
     private string targetScannableType = ""; //The type of the scannable currently being reacted to.
