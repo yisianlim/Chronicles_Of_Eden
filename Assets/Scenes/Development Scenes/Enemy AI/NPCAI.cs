@@ -10,26 +10,18 @@ public class NPCAI : MonoBehaviour {
     private string targetScannableType = ""; //The type of the scannable currently being reacted to.
     private Vector3 nearestScannablePosition = Vector3.positiveInfinity; //The position of the current closest scanable.
 
-    private void OnEnable()
-    {
-        scanner.ObjectsScanned += ObjectsDetected;
-    }
 
-    private void OnDisable()
-    {
-        scanner.ObjectsScanned -= ObjectsDetected;
-    }
-
-
-    private void ObjectsDetected(Dictionary<string, List<Scannable>> detectedObjects)
+    private void Update()
     {
 
         foreach(Reaction reaction in reactions)
         {
 
-            if (!detectedObjects.ContainsKey(reaction.objectType)) continue;
+            //Use the reaction's scanner to search for objects of the relevant type, and skip reaction if none are found.
+            List<Scannable> detectedObjects = reaction.scanner.ScanFor(reaction.objectType, transform);
+            if (detectedObjects.Count <= 0) continue;
 
-            Scannable targetScannable = getNearestScannable(detectedObjects[reaction.objectType]);
+            Scannable targetScannable = getNearestScannable(detectedObjects);
 
             //If there is new information, plan for it, and update the new information.
             if(!nearestScannablePosition.Equals(targetScannable.transform.position) || !targetScannableType.Equals(targetScannable.Type))
@@ -75,6 +67,7 @@ public class NPCAI : MonoBehaviour {
     private class Reaction
     {
         public string objectType;
+        public Scanner scanner; //The scanner used to search for the objects to react to.
         public NPCBehaviour reaction;
     }
 

@@ -10,11 +10,11 @@ public class RadiusScanner : Scanner
 
     [SerializeField] float scanRadius;
 
-    protected override List<Scannable> Scan()
+    protected override ICollection<Scannable> Scan(Transform originTransform)
     {
 
         //Find all colliderable objects nearby.
-        Collider[] objsNearby = Physics.OverlapSphere(transform.position, scanRadius);
+        Collider[] objsNearby = Physics.OverlapSphere(originTransform.position, scanRadius);
 
         //Filter out the scannable objects and return them.
         List<Scannable> scannables = new List<Scannable>();
