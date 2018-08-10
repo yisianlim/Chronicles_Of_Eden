@@ -23,7 +23,7 @@ public class Pickup : MonoBehaviour {
         //Do not do anything if the object in the trigger is no meant to use the pickup.
         if (!other.gameObject.Equals(user)) return;
 
-        //Add item to inventory
+        inventory.AddItem(pickup);
 
         //Hide representation from world, and disable trigger.
         inGameRepresentation.SetActive(false);
