@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DetonationReciever : MonoBehaviour {
+/// <summary>
+/// A abstract compoenent that can somehow be effected by an explosion.
+/// </summary>
+public abstract class DetonationReciever : MonoBehaviour {
 
-	public void ApplyDetonation()
-    {
-        //Implement later.
-    }
+    public abstract void ApplyDetonation();
 
 }
