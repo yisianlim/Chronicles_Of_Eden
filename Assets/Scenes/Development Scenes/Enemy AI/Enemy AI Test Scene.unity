@@ -688,10 +688,10 @@ MonoBehaviour:
   scanner: {fileID: 0}
   reactions:
   - objectType: Bomb
-    scanner: {fileID: 0}
+    scanner: {fileID: 11400000, guid: 59f27ac598a0e574ebfe4847200b9bd4, type: 2}
     reaction: {fileID: 11400000, guid: 6c1c034dded0f3c4f8800546d661bb39, type: 2}
   - objectType: Player
-    scanner: {fileID: 0}
+    scanner: {fileID: 11400000, guid: 6df5ce11921ebeb469ffbd1acc630964, type: 2}
     reaction: {fileID: 11400000, guid: b11914bc5f6c09f468e2302aacf54759, type: 2}
 --- !u!54 &2130549148
 Rigidbody:
