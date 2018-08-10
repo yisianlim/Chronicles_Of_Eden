@@ -129,7 +129,7 @@ MonoBehaviour:
     type: 2}
   cookTime: 3
   delayBeforeDamage: 0.1
-  exposionRadius: 3
+  exposionRadius: 1
 --- !u!135 &135268877258628338
 SphereCollider:
   m_ObjectHideFlags: 1
