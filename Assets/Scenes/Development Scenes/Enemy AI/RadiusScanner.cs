@@ -25,7 +25,6 @@ public class RadiusScanner : Scanner
             if (scannable != null) scannables.Add(scannable);
         });
 
-        if (scannables.Count <= 0) return null;
         return new List<Scannable>(scannables);
 
     }
