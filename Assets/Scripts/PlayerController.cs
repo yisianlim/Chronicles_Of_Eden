@@ -76,8 +76,9 @@ public class PlayerController : MonoBehaviour {
     void Attack() {
         // Check if the player is close to any enemies.
         GameObject enemy = GameUtils.FindClosestEnemy(GameObject.FindGameObjectsWithTag("Enemy"), transform.position);
-        if (enemy != null) {
-            Debug.Log("Enemy!!");
+        float dist = Vector3.Distance(enemy.transform.position, transform.position);
+        if (enemy != null && dist < 0.5) {
+            Debug.Log("Attacking enemy");
         }
 
         // Manage the animation.
