@@ -489,6 +489,7 @@ GameObject:
   - component: {fileID: 54780015019753420}
   - component: {fileID: 65542838853066758}
   - component: {fileID: 114898814417106036}
+  - component: {fileID: 114273607768647838}
   m_Layer: 0
   m_Name: RockWarrior
   m_TagString: Enemy
@@ -1751,13 +1752,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114898814417106036
+--- !u!114 &114273607768647838
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1521395712897908}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12cc1b278fdd0514982096d194dca965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+--- !u!114 &114898814417106036
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1521395712897908}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e2ae7cc42258474c8c3d63d379a0441, type: 3}
   m_Name: 
