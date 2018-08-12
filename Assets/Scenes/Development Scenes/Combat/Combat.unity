@@ -374,7 +374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focusObject: {fileID: 1309196358}
   lockOntoObject: 1
-  distanceFromTarget: 9
+  distanceFromTarget: 4.29
   angleFromTarget: 59
   angleAroundTarget: 0
   baseY: 0
