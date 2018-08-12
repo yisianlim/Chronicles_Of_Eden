@@ -78,6 +78,11 @@ public class Avoid : NPCBehaviour
 
     }
 
+    public override void Adjust(NPCAI npc, Scannable target)
+    {
+        Plan(npc, target); //Just change target position.
+    }
+
     public override void Act(NPCAI npc, Scannable target)
     {
 

@@ -14,6 +14,11 @@ public class MoveTowards : NPCBehaviour
         //No need to plan.
     }
 
+    public override void Adjust(NPCAI npc, Scannable target)
+    {
+        //No need to adjust.
+    }
+
     public override void Act(NPCAI npc, Scannable target)
     {
 
