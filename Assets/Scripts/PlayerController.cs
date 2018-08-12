@@ -78,7 +78,9 @@ public class PlayerController : MonoBehaviour {
         GameObject enemy = GameUtils.FindClosestEnemy(GameObject.FindGameObjectsWithTag("Enemy"), transform.position);
         float dist = Vector3.Distance(enemy.transform.position, transform.position);
         if (enemy != null && dist < 0.5) {
-            Debug.Log("Attacking enemy");
+            // Affect enemy stat.
+            EnemyStat enemyStat = enemy.GetComponent<EnemyStat>();
+            enemyStat.TakeDamage(10);
         }
 
         // Manage the animation.
