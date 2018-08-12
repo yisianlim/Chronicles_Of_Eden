@@ -22,11 +22,17 @@ public class NPCAI : MonoBehaviour {
 
             Scannable targetScannable = getNearestScannable(detectedObjects);
 
-            //If there is new information, plan for it, and update the new information.
-            if(!nearestScannablePosition.Equals(targetScannable.transform.position) || !targetScannableType.Equals(targetScannable.Type))
+            //If the type of the target has changed, initialise a new behavior.
+            if (!targetScannableType.Equals(targetScannable.Type))
             {
                 reaction.reaction.Plan(this, targetScannable);
                 targetScannableType = targetScannable.Type;
+            }
+
+            //Otherwise, if information about the target has changed, adjust plan for new information.
+            else if (!nearestScannablePosition.Equals(targetScannable.transform.position) || !targetScannableType.Equals(targetScannable.Type))
+            {
+                reaction.reaction.Adjust(this, targetScannable);
                 nearestScannablePosition = targetScannable.transform.position;
             }
 
