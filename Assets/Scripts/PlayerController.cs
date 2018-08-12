@@ -21,9 +21,9 @@ public class PlayerController : MonoBehaviour {
 
     [Header("Combat")]
     private bool attacking;
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
         GetInput();
         SetAnimationAndDirection();
 	}
@@ -74,6 +74,13 @@ public class PlayerController : MonoBehaviour {
     }
 
     void Attack() {
+        // Check if the player is close to any enemies.
+        GameObject enemy = GameUtils.FindClosestEnemy(GameObject.FindGameObjectsWithTag("Enemy"), transform.position);
+        if (enemy != null) {
+            Debug.Log("Enemy!!");
+        }
+
+        // Manage the animation.
         if (attacking) return;
         anim.SetInteger("Condition", 2);
         StartCoroutine(AttackRoutine());
