@@ -16,7 +16,7 @@ public class PlayerStat : MonoBehaviour {
     }
 
     private void UpdateHealthBarDisplay() {
-        float ratio = currentHealth / maxHealth;
+        float ratio = (float)currentHealth / (float)maxHealth;
         HPImage.rectTransform.localScale = new Vector3(ratio, 1, 1);
     }
 
