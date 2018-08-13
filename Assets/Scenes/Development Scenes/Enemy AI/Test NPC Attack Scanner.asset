@@ -11,4 +11,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b005dd5296044f4c9a9fda6f7e89b1c, type: 3}
   m_Name: Test NPC Attack Scanner
   m_EditorClassIdentifier: 
-  scanRadius: 0.3
+  scanRadius: 1
