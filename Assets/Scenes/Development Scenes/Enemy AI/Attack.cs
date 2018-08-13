@@ -10,7 +10,7 @@ public class Attack : NPCBehaviour
     [SerializeField] float warmup; //The before the first attack.
     [SerializeField] float attackRate; //The time interval (in seconds between attacks).
 
-    bool warmedUp; //Whether the npc has performed its first attack since it was initialsed.
+    bool warmedUp = false; //Whether the npc has performed its first attack since it was initialsed.
     double intervalTime; //The time since the last attack, or the behavior was initialsed.
 
     public override void Plan(NPCAI npc, Scannable target)
@@ -26,11 +26,16 @@ public class Attack : NPCBehaviour
 
     public override void Act(NPCAI npc, Scannable target)
     {
+
+        //Debug.Log("Attacking");
+
         if((!warmedUp && intervalTime >= warmup) || (warmedUp && intervalTime >= attackRate))
         {
             warmedUp = true;
             target.GetComponent<PlayerStat>().TakeDamage(strength);
             intervalTime = 0;
         }
+
+        intervalTime += Time.deltaTime;
     }
 }
