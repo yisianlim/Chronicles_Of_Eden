@@ -41,6 +41,6 @@ public class Attack : NPCBehaviour
 
     public override void Cease(NPCAI npc, Scannable target)
     {
-        
+        //
     }
 }

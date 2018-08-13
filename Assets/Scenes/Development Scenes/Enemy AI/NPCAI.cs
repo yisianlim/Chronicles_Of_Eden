@@ -6,7 +6,7 @@ public class NPCAI : MonoBehaviour {
 
     [SerializeField] Reaction[] reactions; //The reactions of the NPC to differen object types, in order of priority.
 
-    private string targetScannableType = ""; //The type of the scannable currently being reacted to.
+    Reaction currentReaction;
     private Vector3 nearestScannablePosition = Vector3.positiveInfinity; //The position of the current closest scanable.
 
 
@@ -23,14 +23,14 @@ public class NPCAI : MonoBehaviour {
             Scannable targetScannable = getNearestScannable(detectedObjects);
 
             //If the type of the target has changed, initialise a new behavior.
-            if (!targetScannableType.Equals(targetScannable.Type))
+            if (ReferenceEquals(currentReaction, reaction))
             {
                 reaction.reaction.Plan(this, targetScannable);
-                targetScannableType = targetScannable.Type;
+                currentReaction = reaction;
             }
 
             //Otherwise, if information about the target has changed, adjust plan for new information.
-            else if (!nearestScannablePosition.Equals(targetScannable.transform.position) || !targetScannableType.Equals(targetScannable.Type))
+            else if (!nearestScannablePosition.Equals(targetScannable.transform.position))
             {
                 reaction.reaction.Adjust(this, targetScannable);
                 nearestScannablePosition = targetScannable.transform.position;
@@ -42,7 +42,7 @@ public class NPCAI : MonoBehaviour {
 
         }
 
-        targetScannableType = ""; //No scanables on any type were detected.
+        currentReaction = null; //There are no applicable reactions.
 
     }
 
