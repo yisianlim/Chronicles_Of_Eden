@@ -23,7 +23,7 @@ public class NPCAI : MonoBehaviour {
             Scannable targetScannable = getNearestScannable(detectedObjects);
 
             //If the type of the target has changed, initialise a new behavior.
-            if (ReferenceEquals(currentReaction, reaction))
+            if (!ReferenceEquals(currentReaction, reaction))
             {
                 reaction.reaction.Plan(this, targetScannable);
                 currentReaction = reaction;
