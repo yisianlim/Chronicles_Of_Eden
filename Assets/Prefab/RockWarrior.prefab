@@ -1770,7 +1770,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1521395712897908}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e2ae7cc42258474c8c3d63d379a0441, type: 3}
   m_Name: 
@@ -1779,6 +1779,9 @@ MonoBehaviour:
   - objectType: Bomb
     scanner: {fileID: 11400000, guid: 59f27ac598a0e574ebfe4847200b9bd4, type: 2}
     reaction: {fileID: 11400000, guid: 6c1c034dded0f3c4f8800546d661bb39, type: 2}
+  - objectType: Player
+    scanner: {fileID: 11400000, guid: b2f1c8b3078894e4f991a2df2e9cbe84, type: 2}
+    reaction: {fileID: 11400000, guid: 9bb1629919e5f7748a471988ffa5265b, type: 2}
   - objectType: Player
     scanner: {fileID: 11400000, guid: 6df5ce11921ebeb469ffbd1acc630964, type: 2}
     reaction: {fileID: 11400000, guid: b11914bc5f6c09f468e2302aacf54759, type: 2}
