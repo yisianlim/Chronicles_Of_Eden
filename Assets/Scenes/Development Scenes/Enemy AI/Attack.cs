@@ -38,4 +38,9 @@ public class Attack : NPCBehaviour
 
         intervalTime += Time.deltaTime;
     }
+
+    public override void Cease(NPCAI npc, Scannable target)
+    {
+        
+    }
 }

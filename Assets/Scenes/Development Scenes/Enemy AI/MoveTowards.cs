@@ -43,4 +43,9 @@ public class MoveTowards : NPCBehaviour
 
     }
 
+    public override void Cease(NPCAI npc, Scannable target)
+    {
+        //NA
+    }
+
 }

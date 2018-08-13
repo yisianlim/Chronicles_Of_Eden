@@ -24,4 +24,11 @@ public abstract class NPCBehaviour : ScriptableObject {
     /// <param name="instigator"></param>
     public abstract void Act(NPCAI npc, Scannable target);
 
+    /// <summary>
+    /// Called when a target of another type is found - perform operations to cleanly stop current behaviour.
+    /// </summary>
+    /// <param name="npc"></param>
+    /// <param name="target"></param>
+    public abstract void Cease(NPCAI npc, Scannable target);
+
 }

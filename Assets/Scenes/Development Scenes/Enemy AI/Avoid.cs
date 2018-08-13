@@ -89,5 +89,10 @@ public class Avoid : NPCBehaviour
         MoveTowards.MoveNPCTowardsPosition(npc, targetPosition, movementSpeed, turnSpeed);
 
     }
-    
+
+    public override void Cease(NPCAI npc, Scannable target)
+    {
+        //NA
+    }
+
 }
