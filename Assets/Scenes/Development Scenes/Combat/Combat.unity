@@ -662,6 +662,21 @@ Prefab:
       propertyPath: HPImage
       value: 
       objectReference: {fileID: 1622459878}
+    - target: {fileID: 114088901697690886, guid: 2b0ae3a9c0f4fb54496cc5345b7e1dc8,
+        type: 2}
+      propertyPath: knockBackForce
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114088901697690886, guid: 2b0ae3a9c0f4fb54496cc5345b7e1dc8,
+        type: 2}
+      propertyPath: knockBackTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 54329180034268072, guid: 2b0ae3a9c0f4fb54496cc5345b7e1dc8,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b0ae3a9c0f4fb54496cc5345b7e1dc8, type: 2}
   m_IsPrefabAsset: 0

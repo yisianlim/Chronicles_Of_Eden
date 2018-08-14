@@ -32,7 +32,7 @@ public class Attack : NPCBehaviour
         if((!warmedUp && intervalTime >= warmup) || (warmedUp && intervalTime >= attackRate))
         {
             warmedUp = true;
-            target.GetComponent<PlayerStat>().TakeDamage(strength);
+            target.GetComponent<PlayerStat>().TakeDamage(strength, npc.transform.position);
             intervalTime = 0;
         }
 
