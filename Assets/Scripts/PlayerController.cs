@@ -40,9 +40,6 @@ public class PlayerController : MonoBehaviour {
             Attack();
         }
 
-        Debug.Log(moveDirection);
-        Debug.Log("Knock Back Counter " + knockBackCounter);
-
         // Only move if it is not attacking or not being knockback (attacked).
         // Note: move relative to the position of the camera.
         if (!attacking && knockBackCounter <= 0)
@@ -115,9 +112,5 @@ public class PlayerController : MonoBehaviour {
     public void KnockBack(Vector3 knockBackDirection) {
         knockBackCounter = knockBackTime;
         moveDirection = knockBackDirection * knockBackForce;
-        //Debug.Log(moveDirection);
-        //rb.MovePosition((rb.position + moveDirection) * Time.deltaTime * speed);
-        //transform.LookAt(moveDirection);
-
     }
 }
