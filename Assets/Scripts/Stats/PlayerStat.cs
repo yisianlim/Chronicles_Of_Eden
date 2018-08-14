@@ -9,10 +9,13 @@ public class PlayerStat : MonoBehaviour {
 
     public Image HPImage;
 
+    public PlayerController playerController;
+
     private void Awake()
     {
         currentHealth = maxHealth;
         UpdateHealthBarDisplay();
+        playerController = FindObjectOfType<PlayerController>();
     }
 
     private void UpdateHealthBarDisplay() {
@@ -20,12 +23,15 @@ public class PlayerStat : MonoBehaviour {
         HPImage.rectTransform.localScale = new Vector3(ratio, 1, 1);
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, Vector3 enemyDirection)
     {
         currentHealth -= damage;
         Mathf.Clamp(currentHealth, 0, maxHealth);
         UpdateHealthBarDisplay();
 
-        Debug.Log("Health:" + currentHealth);
+        // Determine the hit direction, which is the difference between the enemy and player.
+        Vector3 hitDirection = enemyDirection - playerController.transform.position;
+        hitDirection = -hitDirection.normalized;
+        playerController.KnockBack(hitDirection);
     }
 }

@@ -16,14 +16,20 @@ public class PlayerController : MonoBehaviour {
 
     [Header("Movement")]
     public float speed;
-    public float direction;
     public Rigidbody rb;
+    private Vector3 moveDirection;
+
+    [Header("Knockback")]
+    public float knockBackForce;
+    public float knockBackTime;
+    private float knockBackCounter;
 
     [Header("Combat")]
     private bool attacking;
 
     // Update is called once per frame
     void Update () {
+        //KnockBack();
         GetInput();
         SetAnimationAndDirection();
 	}
@@ -34,9 +40,12 @@ public class PlayerController : MonoBehaviour {
             Attack();
         }
 
-        // Only move if it is not attacking.
+        Debug.Log(moveDirection);
+        Debug.Log("Knock Back Counter " + knockBackCounter);
+
+        // Only move if it is not attacking or not being knockback (attacked).
         // Note: move relative to the position of the camera.
-        if (!attacking)
+        if (!attacking && knockBackCounter <= 0)
         {
             // Get player inputs.
             input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
@@ -50,8 +59,12 @@ public class PlayerController : MonoBehaviour {
             camR.y = 0;
             camF = camF.normalized;
             camR = camR.normalized;
-            rb.MovePosition(rb.position + (camF * input.y + camR * input.x) * Time.deltaTime * speed);
+            moveDirection = (camF * input.y + camR * input.x); 
         }
+        else {
+            knockBackCounter -= Time.deltaTime;
+        }
+        rb.MovePosition(rb.position + moveDirection * Time.deltaTime * speed);
     }
 
     void SetAnimationAndDirection() {
@@ -77,6 +90,8 @@ public class PlayerController : MonoBehaviour {
         // Check if the player is close to any enemies.
         GameObject enemy = GameUtils.FindClosestEnemy(GameObject.FindGameObjectsWithTag("Enemy"), transform.position);
         float dist = Vector3.Distance(enemy.transform.position, transform.position);
+
+        // If the player is close enough to attack. 
         if (enemy != null && dist < 0.5) {
             // Affect enemy stat.
             EnemyStat enemyStat = enemy.GetComponent<EnemyStat>();
@@ -95,5 +110,14 @@ public class PlayerController : MonoBehaviour {
         yield return new WaitForSeconds(1);
         attacking = false;
         anim.SetInteger("Condition", 0);
+    }
+
+    public void KnockBack(Vector3 knockBackDirection) {
+        knockBackCounter = knockBackTime;
+        moveDirection = knockBackDirection * knockBackForce;
+        //Debug.Log(moveDirection);
+        //rb.MovePosition((rb.position + moveDirection) * Time.deltaTime * speed);
+        //transform.LookAt(moveDirection);
+
     }
 }
