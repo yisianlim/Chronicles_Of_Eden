@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 10ecd3601bde5144b933b85e4990ccd3
+guid: 40caca41b23d24d71adcdd1706bab5e7
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -170,10 +170,10 @@ ModelImporter:
     400162: sword1
     400164: transform1
     2100000: eyes_texture
-    2100002: belt_texture2
+    2100002: belt_texture
     2100004: hair_texture
     2100006: body_texture
-    2100008: lambert8
+    2100008: lambert6
     2300000: sword1
     3300000: sword1
     4300000: belt_LP:eyesball_UVtest2:polySurface1

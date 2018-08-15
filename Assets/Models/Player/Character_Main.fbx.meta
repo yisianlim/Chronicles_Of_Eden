@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9c1cbc1c09badbf4aaeca7522df5172f
+guid: 6c597083153dd4f3d89fa50d3e00b84b
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -9,13 +9,13 @@ ModelImporter:
     100006: belt_LP:eyesball_UVtest2:transform2
     100008: belt_LP:group7
     100010: body_LP_UV_test1:polySurface1
-    100012: eyesball_UVtest2:polySurface1
-    100014: group
-    100016: group2
-    100018: group4
-    100020: group6
-    100022: Hair_UV_re:RetopoGroup1
-    100024: //RootNode
+    100012: //RootNode
+    100014: eyesball_UVtest2:polySurface1
+    100016: group
+    100018: group2
+    100020: group4
+    100022: group6
+    100024: Hair_UV_re:RetopoGroup1
     100026: locator1
     100028: locator2
     100030: mixamorig:Head
@@ -83,22 +83,46 @@ ModelImporter:
     100154: mixamorig:Spine
     100156: mixamorig:Spine1
     100158: mixamorig:Spine2
-    100160: polySurface1
-    100162: sword1
-    100164: transform1
+    100160: pCube1
+    100162: pCube2
+    100164: polySurface1
+    100166: polySurface10
+    100168: polySurface2
+    100170: polySurface3
+    100172: polySurface4
+    100174: polySurface5
+    100176: polySurface6
+    100178: polySurface7
+    100180: polySurface8
+    100182: polySurface9
+    100184: sword
+    100186: sword1
+    100188: transform1
+    100190: transform10
+    100192: transform11
+    100194: transform12
+    100196: transform13
+    100198: transform2
+    100200: transform3
+    100202: transform4
+    100204: transform5
+    100206: transform6
+    100208: transform7
+    100210: transform8
+    100212: transform9
     400000: belt_LP1:RetopoGroup1
     400002: belt_LP:eyesball_UVtest2:polySurface1
     400004: belt_LP:eyesball_UVtest2:transform1
     400006: belt_LP:eyesball_UVtest2:transform2
     400008: belt_LP:group7
     400010: body_LP_UV_test1:polySurface1
-    400012: eyesball_UVtest2:polySurface1
-    400014: group
-    400016: group2
-    400018: group4
-    400020: group6
-    400022: Hair_UV_re:RetopoGroup1
-    400024: //RootNode
+    400012: //RootNode
+    400014: eyesball_UVtest2:polySurface1
+    400016: group
+    400018: group2
+    400020: group4
+    400022: group6
+    400024: Hair_UV_re:RetopoGroup1
     400026: locator1
     400028: locator2
     400030: mixamorig:Head
@@ -166,9 +190,33 @@ ModelImporter:
     400154: mixamorig:Spine
     400156: mixamorig:Spine1
     400158: mixamorig:Spine2
-    400160: polySurface1
-    400162: sword1
-    400164: transform1
+    400160: pCube1
+    400162: pCube2
+    400164: polySurface1
+    400166: polySurface10
+    400168: polySurface2
+    400170: polySurface3
+    400172: polySurface4
+    400174: polySurface5
+    400176: polySurface6
+    400178: polySurface7
+    400180: polySurface8
+    400182: polySurface9
+    400184: sword
+    400186: sword1
+    400188: transform1
+    400190: transform10
+    400192: transform11
+    400194: transform12
+    400196: transform13
+    400198: transform2
+    400200: transform3
+    400202: transform4
+    400204: transform5
+    400206: transform6
+    400208: transform7
+    400210: transform8
+    400212: transform9
     2100000: eyes_texture
     2100002: belt_texture
     2100004: hair_texture
@@ -181,7 +229,6 @@ ModelImporter:
     4300004: Hair_UV_re:RetopoGroup1
     4300006: body_LP_UV_test1:polySurface1
     4300008: sword1
-    7400000: Take 001
     9500000: //RootNode
     13700000: belt_LP1:RetopoGroup1
     13700002: belt_LP:eyesball_UVtest2:polySurface1
