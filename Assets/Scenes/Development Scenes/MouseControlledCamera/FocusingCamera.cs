@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// A camera that can be set to focus on an object, and whos angle and distance can be set in relation to that object.
 /// </summary>
-public abstract class FocusingCamera : MonoBehaviour {
+public class FocusingCamera : MonoBehaviour {
 
     const float YRotationOffset = 90;
 
