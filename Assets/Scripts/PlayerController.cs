@@ -90,11 +90,11 @@ public class PlayerController : MonoBehaviour {
         // If the player is close enough to attack. 
         if (enemy != null) {
             float dist = Vector3.Distance(enemy.transform.position, transform.position);
-            if (dist < 0.5)
+            if (dist < 0.6)
             {
                 // Affect enemy stat.
                 EnemyStat enemyStat = enemy.GetComponent<EnemyStat>();
-                enemyStat.TakeDamage(10);
+                enemyStat.TakeDamage(10, transform.position);
             }
         }
 
