@@ -19,7 +19,6 @@ public class PlayerController : MonoBehaviour {
     public Rigidbody rb;
     private Vector3 moveDirection;
     private Vector3 lookAtDirection;
-    private Vector3 forward, right;
 
     [Header("Knockback")]
     public float knockBackForce;
@@ -29,13 +28,6 @@ public class PlayerController : MonoBehaviour {
     [Header("Combat")]
     private bool attacking;
 
-    private void Start()
-    {
-        forward = Camera.main.transform.forward;
-        forward.y = 0;
-        forward = Vector3.Normalize(forward);
-        right = Quaternion.Euler(new Vector3(0, 90, 0)) * forward;
-    }
     void Update () {
         //KnockBack();
         GetInput();
@@ -57,8 +49,8 @@ public class PlayerController : MonoBehaviour {
             input = Vector2.ClampMagnitude(input, 1);
 
             // Compute the position of the player based on camera. 
-            Vector3 moveRight = right * input.x;
-            Vector3 moveUp = forward * input.y;
+            Vector3 moveRight = Vector3.left * input.x;
+            Vector3 moveUp = Vector3.back * input.y;
             moveDirection = moveRight + moveUp;
             lookAtDirection = moveDirection;
         }
