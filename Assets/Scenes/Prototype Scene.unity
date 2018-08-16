@@ -1790,6 +1790,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 68643082}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &69337181 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1696182738787554, guid: 431fb1219e7882d47bee9a341933d742,
+    type: 2}
+  m_PrefabInternal: {fileID: 427405103}
 --- !u!1 &73487721
 GameObject:
   m_ObjectHideFlags: 0
@@ -59511,7 +59516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 429b71e4950345a4aa265bb5f872c4ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userTranform: {fileID: 0}
+  userTranform: {fileID: 288759813}
   items:
   - {fileID: 0}
   - {fileID: 0}
@@ -79380,7 +79385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cabe8b2f44ac5040919a0b3df5b1664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  user: {fileID: 0}
+  user: {fileID: 69337181}
   inGameRepresentation: {fileID: 1640492416}
   pickup: {fileID: 11400000, guid: 7e1a2db000b969a4dbb575271dde77b1, type: 2}
   inventory: {fileID: 1549057187}
