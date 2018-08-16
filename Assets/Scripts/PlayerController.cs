@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour {
 
         // Only move if it is not attacking or not being knockback (attacked).
         // Note: move relative to the position of the camera.
-        if (!attacking && knockBackCounter <= 0)
+        if (knockBackCounter <= 0)
         {
             // Get player inputs.
             input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
@@ -61,7 +61,12 @@ public class PlayerController : MonoBehaviour {
         else {
             knockBackCounter -= Time.deltaTime;
         }
-        rb.MovePosition(rb.position + moveDirection * Time.deltaTime * speed);
+
+        // Only move the player if it is not attacking.
+        if (!attacking)
+        {
+            rb.MovePosition(rb.position + moveDirection * Time.deltaTime * speed);
+        }
     }
 
     void SetAnimationAndDirection() {
@@ -86,13 +91,16 @@ public class PlayerController : MonoBehaviour {
     void Attack() {
         // Check if the player is close to any enemies.
         GameObject enemy = GameUtils.FindClosestEnemy(GameObject.FindGameObjectsWithTag("Enemy"), transform.position);
-        float dist = Vector3.Distance(enemy.transform.position, transform.position);
-
+        
         // If the player is close enough to attack. 
-        if (enemy != null && dist < 0.5) {
-            // Affect enemy stat.
-            EnemyStat enemyStat = enemy.GetComponent<EnemyStat>();
-            enemyStat.TakeDamage(10);
+        if (enemy != null) {
+            float dist = Vector3.Distance(enemy.transform.position, transform.position);
+            if (dist < 0.5)
+            {
+                // Affect enemy stat.
+                EnemyStat enemyStat = enemy.GetComponent<EnemyStat>();
+                enemyStat.TakeDamage(10);
+            }
         }
 
         // Manage the animation.
