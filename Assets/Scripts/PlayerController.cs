@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour {
     public float speed;
     public Rigidbody rb;
     private Vector3 moveDirection;
+    private Vector3 forward, right;
 
     [Header("Knockback")]
     public float knockBackForce;
@@ -27,7 +28,13 @@ public class PlayerController : MonoBehaviour {
     [Header("Combat")]
     private bool attacking;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        forward = Camera.main.transform.forward;
+        forward.y = 0;
+        forward = Vector3.Normalize(forward);
+        right = Quaternion.Euler(new Vector3(0, 90, 0)) * forward;
+    }
     void Update () {
         //KnockBack();
         GetInput();
@@ -41,7 +48,7 @@ public class PlayerController : MonoBehaviour {
         }
 
         // Only move if it is not attacking or not being knockback (attacked).
-        // Note: move relative to the position of the camera.
+        // Note: move relative to isometric geometry.
         if (knockBackCounter <= 0)
         {
             // Get player inputs.
@@ -49,14 +56,9 @@ public class PlayerController : MonoBehaviour {
             input = Vector2.ClampMagnitude(input, 1);
 
             // Compute the position of the player based on camera. 
-            cam = Camera.main.transform;
-            camF = cam.forward;
-            camR = cam.right;
-            camF.y = 0;
-            camR.y = 0;
-            camF = camF.normalized;
-            camR = camR.normalized;
-            moveDirection = (camF * input.y + camR * input.x); 
+            Vector3 moveRight = right * input.x;
+            Vector3 moveUp = forward * input.y;
+            moveDirection = moveRight + moveUp;
         }
         else {
             knockBackCounter -= Time.deltaTime;
@@ -85,7 +87,7 @@ public class PlayerController : MonoBehaviour {
         }
 
         // Make the player face to where it is heading. 
-        transform.LookAt(transform.position + (camF * input.y + camR * input.x));
+        transform.LookAt(transform.position + moveDirection);
     }
 
     void Attack() {
