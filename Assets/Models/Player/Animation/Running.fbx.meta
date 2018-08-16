@@ -173,7 +173,27 @@ ModelImporter:
     13700002: mesh_body
     13700004: mesh_eyes
     13700006: mesh_hair
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: belt_texture2
+    second: {fileID: 2100000, guid: 61fcaf016d7b043f18a883d789cfbe04, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: body_texture
+    second: {fileID: 2100000, guid: be5138fe35ecc49a1acc5dbdfd9edc5f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eyes_texture
+    second: {fileID: 2100000, guid: f40803d9ff9d448c3b94b17103cef27f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hair_texture
+    second: {fileID: 2100000, guid: ebd5ed1d29935417c9eb624bc07703ab, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
