@@ -10315,7 +10315,7 @@ MonoBehaviour:
   angleFromTarget: 46.1
   angleAroundTarget: 63
   baseY: 0
-  orthographicSize: 2
+  orthographicSize: 1.5
 --- !u!81 &286718310
 AudioListener:
   m_ObjectHideFlags: 0
