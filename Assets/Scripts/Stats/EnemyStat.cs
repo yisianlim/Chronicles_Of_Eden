@@ -23,17 +23,19 @@ public class EnemyStat : MonoBehaviour
     {
         currentHealth -= damage;
         Mathf.Clamp(currentHealth, 0, maxHealth);
-        if (currentHealth <= 0) {
-            Vector3 hitDirection = playerDirection - transform.position;
-            hitDirection = -hitDirection.normalized;
 
-            // Enable particle system.
-            ParticleSystem.EmissionModule module = ps.emission;
-            module.enabled = true;
+        Vector3 hitDirection = playerDirection - transform.position;
+        hitDirection = -hitDirection.normalized;
 
+        // Enable particle system.
+        ParticleSystem.EmissionModule module = ps.emission;
+        module.enabled = true;
+        Destroy(Instantiate(deathEffect, transform.position, Quaternion.FromToRotation(Vector3.forward, hitDirection)) as GameObject, 2);
+
+        if (currentHealth <= 0)
+        {
             // Destroy enemy.
             enemyAnimator.Dies();
-            Destroy(Instantiate(deathEffect, transform.position, Quaternion.FromToRotation(Vector3.forward, hitDirection)) as GameObject, 2);
             Destroy(enemy, 2);
         }
     }
