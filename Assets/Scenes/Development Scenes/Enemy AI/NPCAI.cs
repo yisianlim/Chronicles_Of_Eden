@@ -1,4 +1,5 @@
 ﻿using System;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +9,12 @@ public class NPCAI : MonoBehaviour {
 
     Reaction currentReaction;
     private Vector3 nearestScannablePosition = Vector3.positiveInfinity; //The position of the current closest scanable.
+    internal EnemyAnimator enemyAnimator;
 
+    private void Awake()
+    {
+        enemyAnimator = GetComponent<EnemyAnimator>();
+    }
 
     private void Update()
     {
@@ -61,11 +67,9 @@ public class NPCAI : MonoBehaviour {
 
             if (distanceToCurrent < distanceToNearest)
                 nearestScannable = scannables[i];
-
         }
 
         return nearestScannable;
-
     }
 
     [Serializable]

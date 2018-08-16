@@ -35,7 +35,7 @@ public class Attack : NPCBehaviour
             target.GetComponent<PlayerStat>().TakeDamage(strength, npc.transform.position);
             intervalTime = 0;
         }
-
+        npc.enemyAnimator.Attack();
         intervalTime += Time.deltaTime;
     }
 

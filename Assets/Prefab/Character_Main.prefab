@@ -596,11 +596,12 @@ GameObject:
   - component: {fileID: 136494877640128968}
   - component: {fileID: 54667818881863320}
   - component: {fileID: 114080186517617300}
+  - component: {fileID: 114450577824945526}
   - component: {fileID: 114730597861449020}
   - component: {fileID: 114649301519537304}
   m_Layer: 0
   m_Name: Character_Main
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2319,6 +2320,18 @@ MonoBehaviour:
   rb: {fileID: 54667818881863320}
   knockBackForce: 0.2
   knockBackTime: 0.1
+--- !u!114 &114450577824945526
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1445998519493276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0e231c7827149d47bb35bc005008ea9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!114 &114649301519537304
 MonoBehaviour:
   m_ObjectHideFlags: 1

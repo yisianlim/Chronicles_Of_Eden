@@ -8,8 +8,11 @@ public class EnemyStat : MonoBehaviour
     public int maxHealth = 10;
     public int currentHealth { get; private set; }
 
+    private EnemyAnimator enemyAnimator;
+
     private void Awake()
     {
+        enemyAnimator = GetComponent<EnemyAnimator>();
         ps = deathEffect.GetComponent<ParticleSystem>();
         ParticleSystem.EmissionModule module = ps.emission;
         module.enabled = false;
@@ -29,8 +32,9 @@ public class EnemyStat : MonoBehaviour
             module.enabled = true;
 
             // Destroy enemy.
+            enemyAnimator.Dies();
             Destroy(Instantiate(deathEffect, transform.position, Quaternion.FromToRotation(Vector3.forward, hitDirection)) as GameObject, 2);
-            Destroy(enemy);
+            Destroy(enemy, 2);
         }
     }
 }
