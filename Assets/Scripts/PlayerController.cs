@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour {
     public float speed;
     public Rigidbody rb;
     private Vector3 moveDirection;
+    private Vector3 lookAtDirection;
     private Vector3 forward, right;
 
     [Header("Knockback")]
@@ -59,15 +60,18 @@ public class PlayerController : MonoBehaviour {
             Vector3 moveRight = right * input.x;
             Vector3 moveUp = forward * input.y;
             moveDirection = moveRight + moveUp;
+            lookAtDirection = moveDirection;
         }
         else {
             knockBackCounter -= Time.deltaTime;
+            lookAtDirection = -moveDirection;
         }
 
         // Only move the player if it is not attacking.
         if (!attacking)
         {
             rb.MovePosition(rb.position + moveDirection * Time.deltaTime * speed);
+            transform.LookAt(transform.position + lookAtDirection);
         }
     }
 
@@ -85,9 +89,6 @@ public class PlayerController : MonoBehaviour {
                 anim.SetInteger("Condition", 0);
             }
         }
-
-        // Make the player face to where it is heading. 
-        transform.LookAt(transform.position + moveDirection);
     }
 
     void Attack() {
