@@ -16,11 +16,13 @@ public class FocusingCamera : MonoBehaviour {
     [SerializeField] [Range(0, 90)] protected float angleFromTarget; //The angle at which the camera is looking at the player.
     [SerializeField] [Range(0, 360)] protected float angleAroundTarget; //Where the player is around the circle. The mouse will control this.
     [SerializeField] protected float baseY; //The y value the camera will be locked on to.
+    [SerializeField] protected float orthographicSize; // The viewing volume you'd like the orthographic Camera to pick up.
 
     void Start()
     {
 
         Cursor.visible = false;
+        Camera.main.orthographicSize = orthographicSize;
 
         transform.parent = focusObject.parent; //Ensure camera is in the same level as its chosen object in the hireachy.
 
