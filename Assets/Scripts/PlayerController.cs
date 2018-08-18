@@ -20,16 +20,14 @@ public class PlayerController : MonoBehaviour {
     private Vector3 moveDirection;
     private Vector3 lookAtDirection;
 
-    [Header("Knockback")]
-    public float knockBackForce;
-
     [Header("Combat")]
-    private bool attacking;
     [SerializeField] int attackStrength;
     [SerializeField] float attackDistance; //The distance in front of the player in which targets have to be to be hit.
     [SerializeField] [Range(0, 90)] float attackArc; //The size (in degrees) of the arc in which enemies can hit targets.
     [SerializeField] float preImpactDelay; //The delay after the attack is initialised before the target takes damage.
-    [SerializeField] float postImpactDelay; //The dely after the target takes damage before the attack ends.
+    [SerializeField] float totalAttackDuration;
+
+    private bool attacking;
 
     void Update () {
         //KnockBack();
@@ -101,7 +99,7 @@ public class PlayerController : MonoBehaviour {
         new List<DamageReciever>(targets).ForEach(target => target.ApplyDamage(attackStrength, transform.position));
 
         //Wait for delay after damage has been dealt, then end the attack.
-        yield return new WaitForSeconds(postImpactDelay);
+        yield return new WaitForSeconds(totalAttackDuration - preImpactDelay);
         attacking = false;
         anim.SetInteger("Condition", 0);
     }
