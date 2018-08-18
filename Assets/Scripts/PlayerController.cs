@@ -27,6 +27,11 @@ public class PlayerController : MonoBehaviour {
 
     [Header("Combat")]
     private bool attacking;
+    [SerializeField] int attackStrength;
+    [SerializeField] float attackDistance; //The distance in front of the player in which targets have to be to be hit.
+    [SerializeField] [Range(0, 90)] float attackArc; //The size (in degrees) of the arc in which enemies can hit targets.
+    [SerializeField] float preImpactDelay; //The delay after the attack is initialised before the target takes damage.
+    [SerializeField] float postImpactDelay; //The dely after the target takes damage before the attack ends.
 
     void Update () {
         //KnockBack();
@@ -84,30 +89,28 @@ public class PlayerController : MonoBehaviour {
     }
 
     void Attack() {
-        // Check if the player is close to any enemies.
-        GameObject enemy = GameUtils.FindClosestEnemy(GameObject.FindGameObjectsWithTag("Enemy"), transform.position);
-        
-        // If the player is close enough to attack. 
-        if (enemy != null) {
-            float dist = Vector3.Distance(enemy.transform.position, transform.position);
-            if (dist < 0.6)
-            {
-                // Affect enemy stat.
-                EnemyStat enemyStat = enemy.GetComponent<EnemyStat>();
-                enemyStat.TakeDamage(10, transform.position);
-            }
-        }
 
-        // Manage the animation.
-        if (attacking) return;
-        anim.SetInteger("Condition", 2);
-        StartCoroutine(AttackRoutine());
+        if (attacking) return; //Don't do anything if already attacking.
+
+        //Find all units in range of attack, then run the attack routine.
+        DamageReciever[] targets = FOVScanner.FOVScanForObjectsOfType<DamageReciever>(transform.position, lookAtDirection, attackDistance, attackArc);
+        StartCoroutine(AttackRoutine(targets));
+
      }
 
-    // Set attacking to true and then false, after 1 second.
-    IEnumerator AttackRoutine() {
+
+    IEnumerator AttackRoutine(DamageReciever[] targets) {
+
+        //Begin attack.
+        anim.SetInteger("Condition", 2);
         attacking = true;
-        yield return new WaitForSeconds(1);
+
+        //Wait for specified delay and then apply damage to all targets in range.
+        yield return new WaitForSeconds(preImpactDelay);
+        new List<DamageReciever>(targets).ForEach(target => target.ApplyDamage(attackStrength));
+
+        //Wait for delay after damage has been dealt, then end the attack.
+        yield return new WaitForSeconds(postImpactDelay);
         attacking = false;
         anim.SetInteger("Condition", 0);
     }
