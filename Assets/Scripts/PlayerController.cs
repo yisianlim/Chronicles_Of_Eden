@@ -22,8 +22,6 @@ public class PlayerController : MonoBehaviour {
 
     [Header("Knockback")]
     public float knockBackForce;
-    public float knockBackTime;
-    private float knockBackCounter;
 
     [Header("Combat")]
     private bool attacking;
@@ -45,24 +43,17 @@ public class PlayerController : MonoBehaviour {
             Attack();
         }
 
-        // Only move if it is not attacking or not being knockback (attacked).
-        // Note: move relative to isometric geometry.
-        if (knockBackCounter <= 0)
-        {
-            // Get player inputs.
-            input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-            input = Vector2.ClampMagnitude(input, 1);
+       
+        // Get player inputs.
+        input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        input = Vector2.ClampMagnitude(input, 1);
 
-            // Compute the position of the player based on camera. 
-            Vector3 moveRight = Vector3.left * input.x;
-            Vector3 moveUp = Vector3.back * input.y;
-            moveDirection = moveRight + moveUp;
-            lookAtDirection = moveDirection;
-        }
-        else {
-            knockBackCounter -= Time.deltaTime;
-            lookAtDirection = -moveDirection;
-        }
+        // Compute the position of the player based on camera. 
+        Vector3 moveRight = Vector3.left * input.x;
+        Vector3 moveUp = Vector3.back * input.y;
+        moveDirection = moveRight + moveUp;
+        lookAtDirection = moveDirection;
+        
 
         // Only move the player if it is not attacking.
         if (!attacking)
@@ -107,7 +98,7 @@ public class PlayerController : MonoBehaviour {
 
         //Wait for specified delay and then apply damage to all targets in range.
         yield return new WaitForSeconds(preImpactDelay);
-        new List<DamageReciever>(targets).ForEach(target => target.ApplyDamage(attackStrength));
+        new List<DamageReciever>(targets).ForEach(target => target.ApplyDamage(attackStrength, transform.position));
 
         //Wait for delay after damage has been dealt, then end the attack.
         yield return new WaitForSeconds(postImpactDelay);
@@ -115,8 +106,4 @@ public class PlayerController : MonoBehaviour {
         anim.SetInteger("Condition", 0);
     }
 
-    public void KnockBack(Vector3 knockBackDirection) {
-        knockBackCounter = knockBackTime;
-        moveDirection = knockBackDirection * knockBackForce;
-    }
 }
