@@ -30,7 +30,12 @@ public class Attack : NPCBehaviour
         if((!warmedUp && intervalTime >= warmup) || (warmedUp && intervalTime >= attackRate))
         {
             warmedUp = true;
-            target.GetComponent<Stat>().TakeDamage(strength, npc.transform.position);
+
+            Debug.Log("Dealing damage.");
+
+            DamageReciever[] damageRecievers = target.GetComponents<DamageReciever>();
+            new List<DamageReciever>(damageRecievers).ForEach(r => r.ApplyDamage(strength, npc.transform.position));
+
             intervalTime = 0;
         }
         npc.enemyAnimator.Attack();

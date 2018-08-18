@@ -30,10 +30,6 @@ public class PlayerStat : Stat {
         UpdateHealthBarDisplay();
 
         Debug.Log("Taking damage.");
-
-        // Determine the hit direction, which is the difference between the enemy and player.
-        Vector3 hitDirection = enemyDirection - playerController.transform.position;
-        hitDirection = -hitDirection.normalized;
         
     }
 }
