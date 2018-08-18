@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerStat : MonoBehaviour {
+public class PlayerStat : Stat {
     public int maxHealth = 500;
     public int currentHealth { get; private set; }
 
@@ -23,7 +23,7 @@ public class PlayerStat : MonoBehaviour {
         HPImage.rectTransform.localScale = new Vector3(ratio, 1, 1);
     }
 
-    public void TakeDamage(int damage, Vector3 enemyDirection)
+    public override void TakeDamage(int damage, Vector3 enemyDirection)
     {
         currentHealth -= damage;
         Mathf.Clamp(currentHealth, 0, maxHealth);

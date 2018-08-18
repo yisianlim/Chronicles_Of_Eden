@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class EnemyStat : MonoBehaviour
+public class EnemyStat : Stat
 {
     public GameObject deathEffect;
     public ParticleSystem ps;
@@ -19,7 +19,7 @@ public class EnemyStat : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    public void TakeDamage(int damage, Vector3 playerDirection)
+    public override void TakeDamage(int damage, Vector3 playerDirection)
     {
         currentHealth -= damage;
         Mathf.Clamp(currentHealth, 0, maxHealth);
