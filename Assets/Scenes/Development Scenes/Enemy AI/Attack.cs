@@ -27,12 +27,10 @@ public class Attack : NPCBehaviour
     public override void Act(NPCAI npc, Scannable target)
     {
 
-        //Debug.Log("Attacking");
-
         if((!warmedUp && intervalTime >= warmup) || (warmedUp && intervalTime >= attackRate))
         {
             warmedUp = true;
-            target.GetComponent<PlayerStat>().TakeDamage(strength, npc.transform.position);
+            target.GetComponent<Stat>().TakeDamage(strength, npc.transform.position);
             intervalTime = 0;
         }
         npc.enemyAnimator.Attack();
