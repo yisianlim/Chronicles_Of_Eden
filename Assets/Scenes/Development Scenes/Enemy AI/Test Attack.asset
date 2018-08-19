@@ -13,4 +13,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strength: 10
   warmup: 1
-  attackRate: 0.5
+  attackRate: 1.2
+  preImpactDelay: 0.1
+  attackDuration: 1

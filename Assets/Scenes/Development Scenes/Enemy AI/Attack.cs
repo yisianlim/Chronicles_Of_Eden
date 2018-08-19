@@ -9,6 +9,8 @@ public class Attack : NPCBehaviour
     [SerializeField] int strength; //The damage done by the attack.
     [SerializeField] float warmup; //The before the first attack.
     [SerializeField] float attackRate; //The time interval (in seconds between attacks).
+    [SerializeField] float preImpactDelay; //The time after the attack starts
+    [SerializeField] float attackDuration; //The total time of the attack.
 
     bool warmedUp = false; //Whether the npc has performed its first attack since it was initialsed.
     double intervalTime; //The time since the last attack, or the behavior was initialsed.
@@ -31,15 +33,27 @@ public class Attack : NPCBehaviour
         {
             warmedUp = true;
 
-            Debug.Log("Dealing damage.");
-
-            DamageReciever[] damageRecievers = target.GetComponents<DamageReciever>();
-            new List<DamageReciever>(damageRecievers).ForEach(r => r.ApplyDamage(strength, npc.transform.position));
+            npc.StartCoroutine(attackCooroutine(npc, target));            
 
             intervalTime = 0;
         }
-        npc.enemyAnimator.Attack();
+        
         intervalTime += Time.deltaTime;
+    }
+
+
+    private IEnumerator attackCooroutine(NPCAI npc, Scannable target)
+    {
+
+        npc.enemyAnimator.Attack();
+        yield return new WaitForSeconds(preImpactDelay);
+
+        DamageReciever[] damageRecievers = target.GetComponents<DamageReciever>();
+        new List<DamageReciever>(damageRecievers).ForEach(r => r.ApplyDamage(strength, npc.transform.position));
+
+        yield return new WaitForSeconds(attackDuration - preImpactDelay);
+        npc.enemyAnimator.Idle();
+
     }
 
     public override void Cease(NPCAI npc, Scannable target)
