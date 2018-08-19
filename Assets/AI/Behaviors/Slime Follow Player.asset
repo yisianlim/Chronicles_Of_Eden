@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5489b90658b094488f00c7ca37eba96, type: 3}
-  m_Name: TestMoveTowards
+  m_Name: Slime Follow Player
   m_EditorClassIdentifier: 
   movementSpeed: 1
   turnSpeed: 0.05

@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ebd2cd2bd9fa6b46b9a58a329e12c52, type: 3}
-  m_Name: Avoid Behaviour
+  m_Name: Slime Bomb Avoid
   m_EditorClassIdentifier: 
   movementSpeed: 3
   turnSpeed: 0.1
