@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ebd2cd2bd9fa6b46b9a58a329e12c52, type: 3}
   m_Name: Avoid Behaviour
   m_EditorClassIdentifier: 
-  movementSpeed: 0.5
+  movementSpeed: 3
   turnSpeed: 0.1
   targetDistance: 1
   adjustmentDirections: 360
