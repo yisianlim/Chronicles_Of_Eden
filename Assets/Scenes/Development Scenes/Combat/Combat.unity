@@ -126,7 +126,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4936452817224446, guid: 431fb1219e7882d47bee9a341933d742, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.046
+      value: 0.115
       objectReference: {fileID: 0}
     - target: {fileID: 4936452817224446, guid: 431fb1219e7882d47bee9a341933d742, type: 2}
       propertyPath: m_LocalPosition.z
@@ -187,7 +187,7 @@ Prefab:
     - target: {fileID: 114080186517617300, guid: 431fb1219e7882d47bee9a341933d742,
         type: 2}
       propertyPath: attackStrength
-      value: 100
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114080186517617300, guid: 431fb1219e7882d47bee9a341933d742,
         type: 2}
@@ -841,7 +841,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4970511768051322, guid: 3107db9cf85187f4a97e15c6501b8f4f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.108
+      value: 0.262
       objectReference: {fileID: 0}
     - target: {fileID: 4970511768051322, guid: 3107db9cf85187f4a97e15c6501b8f4f, type: 2}
       propertyPath: m_LocalPosition.z
