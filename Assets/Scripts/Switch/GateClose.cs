@@ -2,19 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GateOpen : ToggleBehaviour {
+public class GateClose : ToggleBehaviour {
 
     private Animator anim;
 
+    // Use this for initialization
     void Start()
     {
         anim = GetComponent<Animator>();
-        anim.SetBool("Open", false);
+        anim.SetBool("Open", true);
     }
 
     public override void Toggle()
     {
-        anim.SetBool("Open", true);
+        anim.SetBool("Open", false);
     }
+
+
 
 }
