@@ -19964,7 +19964,7 @@ Prefab:
     - target: {fileID: 114080186517617300, guid: 431fb1219e7882d47bee9a341933d742,
         type: 2}
       propertyPath: preImpactDelay
-      value: 0.42
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114080186517617300, guid: 431fb1219e7882d47bee9a341933d742,
         type: 2}
