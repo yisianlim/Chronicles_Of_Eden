@@ -8,7 +8,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b005dd5296044f4c9a9fda6f7e89b1c, type: 3}
-  m_Name: Test Player Enemy Scanner
+  m_Script: {fileID: 11500000, guid: 3ebd2cd2bd9fa6b46b9a58a329e12c52, type: 3}
+  m_Name: 4-Way Avoid
   m_EditorClassIdentifier: 
-  scanRadius: 4
+  movementSpeed: 3
+  turnSpeed: 0.1
+  targetDistance: 1
+  adjustmentDirections: 4
