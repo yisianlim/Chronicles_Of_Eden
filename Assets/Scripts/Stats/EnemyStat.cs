@@ -35,6 +35,7 @@ public class EnemyStat : Stat
         if (currentHealth <= 0)
         {
             // Destroy enemy.
+            GetComponent<NPCAI>().enabled = false;
             enemyAnimator.Dies();
             Destroy(enemy, 2);
         }
