@@ -6975,6 +6975,36 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1445998519493276, guid: 431fb1219e7882d47bee9a341933d742,
     type: 2}
   m_PrefabInternal: {fileID: 2051826706}
+--- !u!114 &690007944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 690007943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf58cd78488386247a1333cf4836e7a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 3
+--- !u!114 &690007945 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114730597861449020, guid: 431fb1219e7882d47bee9a341933d742,
+    type: 2}
+  m_PrefabInternal: {fileID: 2051826706}
+  m_Script: {fileID: 11500000, guid: 030dc0c22223adf47b203deb777c2da8, type: 3}
+--- !u!114 &690007946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 690007943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32f8bd5f78e16c14587e45af56a0b91c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stat: {fileID: 690007945}
 --- !u!1 &700913027
 GameObject:
   m_ObjectHideFlags: 0
@@ -19985,6 +20015,11 @@ Prefab:
         type: 2}
       propertyPath: attackDistance
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114730597861449020, guid: 431fb1219e7882d47bee9a341933d742,
+        type: 2}
+      propertyPath: maxHealth
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114450577824945526, guid: 431fb1219e7882d47bee9a341933d742, type: 2}
