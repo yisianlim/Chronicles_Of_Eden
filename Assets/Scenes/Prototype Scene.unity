@@ -1056,7 +1056,7 @@ GameObject:
   - component: {fileID: 137373243}
   - component: {fileID: 137373242}
   - component: {fileID: 137373241}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bomb Pickup Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1899,7 +1899,7 @@ GameObject:
   - component: {fileID: 227063994}
   - component: {fileID: 227063993}
   - component: {fileID: 227063992}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bridge 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3688,7 +3688,7 @@ GameObject:
   - component: {fileID: 405675999}
   - component: {fileID: 405675998}
   - component: {fileID: 405675997}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Starting Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4677,6 +4677,10 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1673918061032332, guid: 35ede5ca7551140479a71b8a68e73554, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35ede5ca7551140479a71b8a68e73554, type: 2}
@@ -8586,7 +8590,7 @@ GameObject:
   - component: {fileID: 849839662}
   - component: {fileID: 849839661}
   - component: {fileID: 849839660}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bridge 1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10110,7 +10114,7 @@ GameObject:
   - component: {fileID: 1058189756}
   - component: {fileID: 1058189755}
   - component: {fileID: 1058189754}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Starting Area (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12139,7 +12143,7 @@ GameObject:
   - component: {fileID: 1267010491}
   - component: {fileID: 1267010490}
   - component: {fileID: 1267010489}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Starting Area (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13611,7 +13615,7 @@ GameObject:
   - component: {fileID: 1419811462}
   - component: {fileID: 1419811461}
   - component: {fileID: 1419811460}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bridge 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14270,7 +14274,7 @@ GameObject:
   - component: {fileID: 1513672942}
   - component: {fileID: 1513672941}
   - component: {fileID: 1513672940}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Starting Area (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14994,7 +14998,7 @@ GameObject:
   - component: {fileID: 1554633005}
   - component: {fileID: 1554633004}
   - component: {fileID: 1554633003}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Starting Area (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15309,7 +15313,7 @@ GameObject:
   - component: {fileID: 1571577103}
   - component: {fileID: 1571577102}
   - component: {fileID: 1571577101}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Long Middle Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15710,7 +15714,7 @@ GameObject:
   - component: {fileID: 1626508537}
   - component: {fileID: 1626508536}
   - component: {fileID: 1626508535}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bridge 1 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17978,7 +17982,7 @@ GameObject:
   - component: {fileID: 1822937025}
   - component: {fileID: 1822937024}
   - component: {fileID: 1822937023}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bridge 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20009,7 +20013,7 @@ GameObject:
   - component: {fileID: 2013219068}
   - component: {fileID: 2013219067}
   - component: {fileID: 2013219066}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Starting Area (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21650,7 +21654,7 @@ GameObject:
   - component: {fileID: 2123721629}
   - component: {fileID: 2123721628}
   - component: {fileID: 2123721627}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Long Middle Area (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21735,7 +21739,7 @@ GameObject:
   - component: {fileID: 2127823190}
   - component: {fileID: 2127823189}
   - component: {fileID: 2127823188}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bridge 1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
