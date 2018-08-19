@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Switch : MonoBehaviour {
 
-    public Animator anim;
+    private Animator anim;
     public ToggleBehaviour behaviour;
 
     private void Awake()
     {
+        anim = GetComponent<Animator>();
         anim.SetBool("On", false);
     }
 
