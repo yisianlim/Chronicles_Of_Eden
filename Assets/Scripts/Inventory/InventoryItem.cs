@@ -19,3 +19,17 @@ public class InventoryEventArgs : EventArgs {
         Item = item;
     }
 }
+
+public class ItemEquippedEventArgs : EventArgs
+{
+
+    public int Index;
+
+    public ItemEquippedEventArgs(int index)
+    {
+        Index = index;
+    }
+}
+
+
+

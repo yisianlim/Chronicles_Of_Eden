@@ -11,6 +11,8 @@ public class Inventory : MonoBehaviour {
     private int equipedItem = 0; //The index of the currently equiped item. 
 
     public event EventHandler<InventoryEventArgs> ItemAdded;
+    public event EventHandler<ItemEquippedEventArgs> ItemEquipped;
+
 
     private void Update()
     {
@@ -23,7 +25,10 @@ public class Inventory : MonoBehaviour {
         //If the user presses a number key, equipt the item of that number, if it exists.
         for (int key = 0; key < items.Length; key++)
         {
-            if (Input.GetKeyDown(key + "") && items[key] != null) equipedItem = key;
+            if (Input.GetKeyDown(key + "") && items[key] != null) {
+                equipedItem = key;
+                ItemEquipped(this, new ItemEquippedEventArgs(key));
+            }
         }
 
     }
