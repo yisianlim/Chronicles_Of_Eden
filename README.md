@@ -4,8 +4,8 @@ The player progesses through our prototype by solving various problems in sequen
 The problems invlove using equipable items to both manipulate the environment, as well as leverage behaviors of enemies.
 
 ## Imported Assets
-Explosion Effect: https://assetstore.unity.com/packages/essentials/asset-packs/unity-particle-pack-73777
-Post Processing: https://assetstore.unity.com/packages/essentials/post-processing-stack-83912
+* Explosion Effect: https://assetstore.unity.com/packages/essentials/asset-packs/unity-particle-pack-73777
+* Post Processing: https://assetstore.unity.com/packages/essentials/post-processing-stack-83912
 
 ## How to Play
 ### Running
