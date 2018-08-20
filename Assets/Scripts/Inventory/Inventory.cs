@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +9,8 @@ public class Inventory : MonoBehaviour {
 
     [SerializeField] private EquipableItem[] items = new EquipableItem[10];
     private int equipedItem = 0; //The index of the currently equiped item. 
+
+    public event EventHandler<InventoryEventArgs> ItemAdded;
 
     private void Update()
     {
@@ -35,6 +38,11 @@ public class Inventory : MonoBehaviour {
             if(items[i] == null)
             {
                 items[i] = item;
+
+                // Item added event is raised and subscribers are notified.
+                if (ItemAdded != null) {
+                    ItemAdded(this, new InventoryEventArgs(item));
+                }
                 return;
             }
         }

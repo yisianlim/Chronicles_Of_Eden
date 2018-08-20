@@ -7,11 +7,17 @@ using UnityEngine;
 public abstract class EquipableItem : ScriptableObject {
 
     [SerializeField] string InGameName;
-
+    [SerializeField] Sprite _Image;
     /// <summary>
     /// Activate the item.
     /// </summary>
     /// <param name="userTranform"> The transform of the character using the item. </param>
     public abstract void Use(Transform userTranform);
+
+    public Sprite Image {
+        get {
+            return _Image;
+        }
+    }
 
 }
