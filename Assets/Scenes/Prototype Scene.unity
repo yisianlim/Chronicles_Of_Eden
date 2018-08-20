@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1811107117}
-  m_IndirectSpecularColor: {r: 0.60783106, g: 0.75517213, b: 0.94172007, a: 1}
+  m_IndirectSpecularColor: {r: 0.6078509, g: 0.75517976, b: 0.9418666, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -33863,6 +33863,23 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 392e8bb82556540b284d780e57ce2cf3, type: 3}
+--- !u!1 &1237458589 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1673918061032332, guid: 35ede5ca7551140479a71b8a68e73554,
+    type: 2}
+  m_PrefabInternal: {fileID: 467073281}
+--- !u!114 &1237458590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1237458589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13d7882dd3230d54b8a7a69560a8ab82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 0}
 --- !u!4 &1242237247 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400020, guid: 77f40972afbf746b9b3aafcd1d074a79,
@@ -42368,7 +42385,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -859, y: 457}
+  m_AnchoredPosition: {x: -859, y: 938}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1554488008
@@ -52872,7 +52889,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1936376479
 Transform:
   m_ObjectHideFlags: 0

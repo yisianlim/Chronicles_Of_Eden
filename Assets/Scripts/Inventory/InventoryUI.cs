@@ -15,15 +15,11 @@ public class InventoryUI : MonoBehaviour {
     private void InventoryUIItemAdded(object sender, InventoryEventArgs e) {
         Transform inventoryPanel = transform.Find("Inventory");
 
-        Debug.Log("Add item to UI");
-
         foreach (Transform slot in inventoryPanel) {
             Image image = slot.GetComponent<Image>();
-            Debug.Log(image.enabled);
-            Debug.Log(e.Item.Image);
 
             // We found the empty slot.
-            if (image.enabled) {
+            if (!image.enabled) {
                 image.enabled = true;
                 image.sprite = e.Item.Image;
                 break;
