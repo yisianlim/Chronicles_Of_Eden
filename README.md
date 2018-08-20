@@ -5,6 +5,7 @@ The problems invlove using equipable items to both manipulate the environment, a
 
 ## Imported Assets
 Explosion Effect: https://assetstore.unity.com/packages/essentials/asset-packs/unity-particle-pack-73777
+Post Processing: https://assetstore.unity.com/packages/essentials/post-processing-stack-83912
 
 ## How to Play
 ### Running
