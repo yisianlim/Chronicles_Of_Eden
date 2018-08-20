@@ -1,5 +1,4 @@
-# LimYiSian_AngeloJonesRhys_ChroniclesOfEden_P2
-
+# Chronicles of Eden
 ## Outline
 The player progesses through our prototype by solving various problems in sequence that will each make the next part of the map accessible.
 The problems invlove using equipable items to both manipulate the environment, as well as leverage behaviors of enemies.
@@ -12,11 +11,11 @@ Explosion Effect: https://assetstore.unity.com/packages/essentials/asset-packs/u
 The game should just be able to be run my opening the .exe file on Windows and .app file on Mac.
 
 ### Controls
-WASD to move.
-Right click to attack with sword.
-Left Click to use currenly equiped item.
-E to pickup Item.
-1 - 9 to equip corresponding item in items slot.
+* WASD to move.
+* Right click to attack with sword.
+* Left Click to use currenly equiped item.
+* E to pickup Item.
+* 1 - 9 to equip corresponding item in items slot.
 
 ### Progression
 1) Find the box of bombs - interact with it to pick it up. (You may need to fight some enemies to get to it.)
@@ -31,3 +30,6 @@ END OF PROTOTYPE
 ## Most Challenging Parts
 ### Rhys
 The behavior of the the enemies provided the most interesting challenge. It was not just enough to have them move directly away from the target, as that direction may have an obstacle in the way. I had to utilised raycasting to determine if the most direct direction was the best direction, and then find the next best direction if that was not the case. What it came down to was determing which direction would get NPC the furthest away from the target.
+
+### Sian 
+The most challenging parts for me was learning how to fire an event when the player picks up an equippable item. At first, I thought about writing code to change the UI to display the item picked up by the player in the game model, but then I noticed that it breaks the rules of Model-View-Controller. After some research, I used C#'s EventArgs object for the Inventory UI (Observer) to subscribe to the event of the player picking up items, which makes the code a lot cleaner and neater!
