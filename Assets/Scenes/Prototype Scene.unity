@@ -1417,7 +1417,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &45233553
 Transform:
   m_ObjectHideFlags: 0
@@ -29954,6 +29954,10 @@ Prefab:
       propertyPath: m_Name
       value: tree_1 (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 100020, guid: 77f40972afbf746b9b3aafcd1d074a79, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77f40972afbf746b9b3aafcd1d074a79, type: 3}
   m_IsPrefabAsset: 0
@@ -33358,6 +33362,10 @@ Prefab:
     - target: {fileID: 100020, guid: 77f40972afbf746b9b3aafcd1d074a79, type: 3}
       propertyPath: m_Name
       value: tree_1 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100020, guid: 77f40972afbf746b9b3aafcd1d074a79, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77f40972afbf746b9b3aafcd1d074a79, type: 3}
@@ -49629,6 +49637,10 @@ Prefab:
       propertyPath: m_Name
       value: tree_1 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 100020, guid: 77f40972afbf746b9b3aafcd1d074a79, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77f40972afbf746b9b3aafcd1d074a79, type: 3}
   m_IsPrefabAsset: 0
@@ -50245,6 +50257,10 @@ Prefab:
     - target: {fileID: 100020, guid: 77f40972afbf746b9b3aafcd1d074a79, type: 3}
       propertyPath: m_Name
       value: tree_1 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100020, guid: 77f40972afbf746b9b3aafcd1d074a79, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77f40972afbf746b9b3aafcd1d074a79, type: 3}
