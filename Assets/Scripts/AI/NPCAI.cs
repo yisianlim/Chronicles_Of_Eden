@@ -31,8 +31,14 @@ public class NPCAI : MonoBehaviour {
             //If the type of the target has changed, initialise a new behavior.
             if (!ReferenceEquals(currentReaction, reaction))
             {
+
+                //Cease performing current behaviour, if one was being performed.
+                if(currentReaction != null) currentReaction.reaction.Cease(this, targetScannable);
+
+                //Start new one.
                 reaction.reaction.Plan(this, targetScannable);
                 currentReaction = reaction;
+
             }
 
             //Otherwise, if information about the target has changed, adjust plan for new information.
@@ -47,6 +53,7 @@ public class NPCAI : MonoBehaviour {
             return; //Only react to highest priority scannable.
 
         }
+
 
         currentReaction = null; //There are no applicable reactions.
 
