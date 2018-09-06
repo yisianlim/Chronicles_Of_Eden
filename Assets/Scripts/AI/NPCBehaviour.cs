@@ -4,6 +4,12 @@ using UnityEngine;
 
 public abstract class NPCBehaviour : ScriptableObject {
 
+    /*
+     * If false, the behavior will not be ceased when no targets are detected.
+     */
+    [SerializeField] bool ceaseWhenNoTargets;
+    public bool CeaseWhenNoTargets { get { return ceaseWhenNoTargets; } }
+
     /// <summary>
     /// Called when the target has first changed.
     /// </summary>

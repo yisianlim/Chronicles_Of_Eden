@@ -8,6 +8,7 @@ public class NPCAI : MonoBehaviour {
     [SerializeField] Reaction[] reactions; //The reactions of the NPC to differen object types, in order of priority.
 
     Reaction currentReaction;
+    private Scannable currentTarget;
     private Vector3 nearestScannablePosition = Vector3.positiveInfinity; //The position of the current closest scanable.
     internal EnemyAnimator enemyAnimator;
 
@@ -45,6 +46,7 @@ public class NPCAI : MonoBehaviour {
             else if (!nearestScannablePosition.Equals(targetScannable.transform.position))
             {
                 reaction.reaction.Adjust(this, targetScannable);
+                currentTarget = targetScannable;
                 nearestScannablePosition = targetScannable.transform.position;
             }
 
@@ -54,6 +56,9 @@ public class NPCAI : MonoBehaviour {
 
         }
 
+        //Cease performing current behaviour, if one was being performed, and the behavior is to be ceased when there are no targets.
+        if (currentReaction != null && currentReaction.reaction.CeaseWhenNoTargets)
+            currentReaction.reaction.Cease(this, currentTarget);
 
         currentReaction = null; //There are no applicable reactions.
 
