@@ -8,7 +8,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5a1be2e28010c74fa66d83a81ebbfa3, type: 3}
-  m_Name: Test Navigate Towrds
+  m_Script: {fileID: 11500000, guid: 0995673921e87764e8c508701eb2d91c, type: 3}
+  m_Name: Test Navigate Away
   m_EditorClassIdentifier: 
-  ceaseWhenNoTargets: 1
+  ceaseWhenNoTargets: 0
+  maxDistance: 6
+  maxVerticalDistance: 3
+  verticalDistanceCheckInc: 0.5
+  adjustmentDirections: 180
