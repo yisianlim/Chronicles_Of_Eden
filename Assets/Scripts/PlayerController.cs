@@ -96,7 +96,13 @@ public class PlayerController : MonoBehaviour {
 
         //Wait for specified delay and then apply damage to all targets in range.
         yield return new WaitForSeconds(preImpactDelay);
-        new List<DamageReciever>(targets).ForEach(target => target.ApplyDamage(attackStrength, transform.position));
+        //new List<DamageReciever>(targets).ForEach(target => target.ApplyDamage(attackStrength, transform.position));
+
+        foreach (DamageReciever target in targets) 
+        {
+            if(target)
+                target.ApplyDamage(attackStrength, transform.position);
+        }
 
         //Wait for delay after damage has been dealt, then end the attack.
         yield return new WaitForSeconds(totalAttackDuration - preImpactDelay);
