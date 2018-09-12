@@ -9,6 +9,7 @@ public class Inventory : MonoBehaviour {
 
     [SerializeField] private EquipableItem[] items = new EquipableItem[10];
     private int equipedItem = 0; //The index of the currently equiped item. 
+    public EquipableItem EquippedItem { get { return items[equipedItem]; } }
 
     public event EventHandler<InventoryEventArgs> ItemAdded;
     public event EventHandler<ItemEquippedEventArgs> ItemEquipped;
@@ -36,7 +37,7 @@ public class Inventory : MonoBehaviour {
     /// <summary>
     /// Add the given item at the first avaliable position in the inventory.
     /// </summary>
-    public void AddItem(EquipableItem item)
+    public virtual void AddItem(EquipableItem item)
     {
         for (int i = 1; i < items.Length; i++)
         {
