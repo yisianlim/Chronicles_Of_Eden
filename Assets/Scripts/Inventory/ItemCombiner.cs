@@ -18,17 +18,41 @@ public class ItemCombiner : EquipableItem, ItemQuerySender {
                                                    "it must be activated from a special slot in a combinable inventory.");
     }
 
-    public void StartCombination(EquipableItem item1, CombinableInventory inventory)
+    /// <summary>
+    /// Specify the first item and query an inventory for the second.
+    /// </summary>
+    /// <param name="item1"></param>
+    /// <param name="inventory"></param>
+    public void StartCombination(EquipableItem item1, QueriableInventory inventory)
     {
 
+        if (!scheme.HasCombination(item1)) throw new InvalidCombinationInitialisationException("The given item has no combinations.");
+
+        //Find all the slots in the inventory with eligible items.
+        List<int> eligibleSlots = new List<int>();
+        EquipableItem[] eligibleItems = scheme.eligibleItemsToCombineWith(item1);
+        foreach(EquipableItem eligibleItem in eligibleItems)
+        {
+            int slot = inventory.getPositionOfItem(eligibleItem);
+            if (slot > -1) eligibleSlots.Add(slot);
+        }
+
         this.item1 = item1;
-        inventory.QueryForItem(this); //Query inventory for second item to used in combination.
+        inventory.QueryForItem(this, eligibleSlots); //Query inventory for second item to used in combination.
 
     }
 
     public EquipableItem ResolveQuery(EquipableItem item2)
     {
         return scheme.combineItems(item1, item2);
+    }
+
+    public class InvalidCombinationInitialisationException : System.Exception
+    {
+        public InvalidCombinationInitialisationException(string msg) : base(msg)
+        {
+
+        }
     }
 
 }

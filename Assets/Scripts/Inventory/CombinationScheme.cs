@@ -36,6 +36,23 @@ public class CombinationScheme : ScriptableObject {
     }
 
     /// <summary>
+    /// Returns whether or not the given item can be combined with anything in the given scheme.
+    /// </summary>
+    /// <param name="item"></param>
+    /// <returns></returns>
+    public bool HasCombination(EquipableItem item)
+    {
+
+        foreach(CombinationDescription combination in combinations)
+        {
+            if (combination.Items[0] == item || combination.Items[1] == item) return true;
+        }
+
+        return false;
+
+    }
+
+    /// <summary>
     /// Return the item that results in the combination of the two items based on the scheme, or throw an error if there is none.
     /// </summary>
     /// <param name="item1"></param>
