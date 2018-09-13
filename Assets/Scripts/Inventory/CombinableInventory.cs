@@ -5,9 +5,21 @@ using UnityEngine;
 /// <summary>
 /// An extension of the inventory that has a special slot for the item combiner, and resulting combined item.
 /// </summary>
-public class CombinableInventory : Inventory {
+public class CombinableInventory : QueriableInventory {
 
-    private ItemCombiner combiner;
+    private ItemCombiner combiner; //The combiner that will be used to combine the items.
+
+    private void Update()
+    {
+
+        if (Input.GetAxis("Inventory Special") == 0 || combiner == null) return;
+
+        //Submit the first item to be used in the combination.
+        combiner.StartCombination(EquippedItem, this);
+
+    }
+
+    
 
     public override void AddItem(EquipableItem item)
     {
@@ -19,6 +31,5 @@ public class CombinableInventory : Inventory {
         else base.AddItem(item); //Otherwise, treat it as a regular item.
 
     }
-
 
 }
