@@ -5,6 +5,7 @@ using UnityEngine;
 /// <summary>
 /// An item which can be used to combine two other inventory items into a new item.
 /// </summary>
+[CreateAssetMenu(fileName = "Item Combiner", menuName = "Equipable Item/Item Combiner", order = 2)]
 public class ItemCombiner : EquipableItem, ItemQuerySender {
 
     [SerializeField] CombinationScheme scheme;

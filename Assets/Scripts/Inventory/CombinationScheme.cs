@@ -5,6 +5,7 @@ using UnityEngine;
 /// <summary>
 /// A decription of all the items that can be combined with each other and the items they create.
 /// </summary>
+[CreateAssetMenu(fileName = "Combination Scheme", menuName = "Combination Scheme", order = 1)]
 public class CombinationScheme : ScriptableObject {
 
     [SerializeField] CombinationDescription[] combinations; //The lists of avaliable combinations in this scheme.
