@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// An interface for a an object that can ask an Inventory for an equippable item.
+/// An interface for a an object that can ask an Inventory for an equippable item, and return an item when the query is resolved.
 /// </summary>
 public interface ItemQuerySender {
 
-    void ResolveQuery(EquipableItem item);
+    EquipableItem ResolveQuery(EquipableItem item);
 
 }

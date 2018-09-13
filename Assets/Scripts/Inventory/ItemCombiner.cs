@@ -7,6 +7,8 @@ using UnityEngine;
 /// </summary>
 public class ItemCombiner : EquipableItem, ItemQuerySender {
 
+    [SerializeField] CombinationScheme scheme;
+
     private EquipableItem item1; //The first of the two items to be combined.
     
 
@@ -24,9 +26,9 @@ public class ItemCombiner : EquipableItem, ItemQuerySender {
 
     }
 
-    public void ResolveQuery(EquipableItem item)
+    public EquipableItem ResolveQuery(EquipableItem item2)
     {
-        
-
+        return scheme.combineItems(item1, item2);
     }
+
 }
