@@ -8,6 +8,7 @@ using UnityEngine;
 public class CombinableInventory : QueriableInventory {
 
     private ItemCombiner combiner; //The combiner that will be used to combine the items.
+    private EquipableItem equipedCombination; //The currently equiped combination.
 
     private void Update()
     {
@@ -30,6 +31,11 @@ public class CombinableInventory : QueriableInventory {
         }
         else base.AddItem(item); //Otherwise, treat it as a regular item.
 
+    }
+
+    protected override void QueryResolved(EquipableItem result)
+    {
+        throw new System.NotImplementedException();
     }
 
 }

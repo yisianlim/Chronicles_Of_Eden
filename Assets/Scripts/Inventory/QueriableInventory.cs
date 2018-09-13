@@ -48,10 +48,13 @@ public abstract class QueriableInventory : Inventory {
             return;
         }
 
-        querySender.ResolveQuery(GetItemAt(num));
+        //Resolve the query, use the result, and then clear the query.
+        QueryResolved(querySender.ResolveQuery(GetItemAt(num)));
         querySender = null;
 
     }
+
+    protected abstract void QueryResolved(EquipableItem result);
 
     /// <summary>
     /// An exception to be thrown when the inventory is already busy with another query.
