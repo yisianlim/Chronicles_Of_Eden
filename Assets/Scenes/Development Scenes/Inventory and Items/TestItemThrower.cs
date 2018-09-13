@@ -17,7 +17,7 @@ public class TestItemThrower : MonoBehaviour {
 
         if (Input.GetMouseButton(0) && count <= 0)
         {
-            thower.Use(player);
+            thower.Use(player, null);
             count = 0.5f;
         }
 
