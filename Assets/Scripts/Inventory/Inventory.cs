@@ -53,6 +53,21 @@ public class Inventory : MonoBehaviour {
     }
 
     /// <summary>
+    /// Returns the position of the given item in the inventory, or -1 if it's not there.
+    /// </summary>
+    /// <param name="item"></param>
+    /// <returns></returns>
+    public int getPositionOfItem(EquipableItem item)
+    {
+        for(int i = 0; i < items.Length; i++)
+        {
+            if (item == items[i]) return i;
+        }
+
+        return -1;
+    }
+
+    /// <summary>
     /// Add the given item at the first avaliable position in the inventory.
     /// </summary>
     public virtual void AddItem(EquipableItem item)
@@ -70,8 +85,7 @@ public class Inventory : MonoBehaviour {
                 return;
             }
         }
-            
-        
+           
     }
 
 }
