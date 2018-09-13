@@ -12,7 +12,8 @@ public abstract class EquipableItem : ScriptableObject {
     /// Activate the item.
     /// </summary>
     /// <param name="userTranform"> The transform of the character using the item. </param>
-    public abstract void Use(Transform userTranform);
+    /// <param name="inventory"> The inventory from which the item was used. </param>
+    public abstract void Use(Transform userTranform, Inventory inventory);
 
     public Sprite Image {
         get {

@@ -10,7 +10,7 @@ public class ItemThrower : EquipableItem
     [SerializeField] Vector2 throwForce;
     [SerializeField] float instantiationDistanceFromPlayer;
 
-    public override void Use(Transform userTranform)
+    public override void Use(Transform userTranform, Inventory inventory)
     {
 
         float instantiationX = userTranform.position.x + instantiationDistanceFromPlayer * Mathf.Sin(Mathf.Deg2Rad * userTranform.eulerAngles.y);
