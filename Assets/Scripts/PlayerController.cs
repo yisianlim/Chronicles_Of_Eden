@@ -54,8 +54,8 @@ public class PlayerController : MonoBehaviour {
         if (input.y < 0) moveDirection += -CameraTransform.forward;
         if (input.x < 0) moveDirection += -CameraTransform.right;
         if (input.x > 0) moveDirection += CameraTransform.right;
-        Debug.Log(input.y);
-        Debug.Log(input.x);
+        //Debug.Log(input.y);
+        //Debug.Log(input.x);
         //Vector3 moveRight = Vector3.left * input.x;
         //Vector3 moveUp = Vector3.back * input.y;
         //moveDirection = moveRight + moveUp;
