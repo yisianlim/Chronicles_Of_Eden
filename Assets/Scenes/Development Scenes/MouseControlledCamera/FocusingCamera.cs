@@ -20,8 +20,6 @@ public class FocusingCamera : MonoBehaviour {
 
     void Start()
     {
-
-        Cursor.visible = false;
         Camera.main.orthographicSize = orthographicSize;
 
         transform.parent = focusObject.parent; //Ensure camera is in the same level as its chosen object in the hireachy.
