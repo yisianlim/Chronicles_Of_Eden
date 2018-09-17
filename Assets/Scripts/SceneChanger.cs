@@ -6,14 +6,18 @@ using UnityEngine.SceneManagement;
 public class SceneChanger : MonoBehaviour {
 
     public string nextScene;
+    public Animator sceneTransitionAnimator;
 
-    public void ChangeScene() {
-        SceneManager.LoadScene(nextScene);
+    private void FadeToLevel() {
+        sceneTransitionAnimator.SetTrigger("FadeOut");
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        ChangeScene();
-        Debug.Log("New scene!");
+        FadeToLevel();
+    }
+
+    private void OnFadeComplete() {
+        SceneManager.LoadScene(nextScene);
     }
 }
