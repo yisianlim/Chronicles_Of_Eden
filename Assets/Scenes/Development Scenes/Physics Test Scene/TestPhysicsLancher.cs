@@ -13,7 +13,7 @@ public class TestPhysicsLancher : MonoBehaviour {
 
         if (!Input.anyKeyDown) return;
 
-        Rigidbody obj = Instantiate(launchObject, transform);
+        Rigidbody obj = Instantiate(launchObject, transform.position, transform.rotation);
         
         Vector3 vel = Calculations.determineRequiredLaunchVelocityToReachPoint(transform.position, target.position, arcHeightDifference);
         Debug.Log(vel);
