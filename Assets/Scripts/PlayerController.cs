@@ -12,10 +12,12 @@ public class PlayerController : MonoBehaviour {
     // Condition = 0 for Idle.
     // Condition = 1 for Charge.
     // Condition = 2 for Attack. 
+    // Condition = 3 for Jump/Dodge. 
     public Animator anim;
 
     [Header("Movement")]
-    public float speed;
+    public float moveSpeed;
+    public float dodgeSpeed;
     public Transform CameraTransform;
     public Rigidbody rb;
     [SerializeField]private Vector3 moveDirection;
@@ -27,8 +29,10 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] [Range(0, 90)] float attackArc; //The size (in degrees) of the arc in which enemies can hit targets.
     [SerializeField] float preImpactDelay; //The delay after the attack is initialised before the target takes damage.
     [SerializeField] float totalAttackDuration;
+    [SerializeField] float DodgeDuration;
 
     private bool attacking;
+    private bool dodging = false;
 
     void Update () {
         //KnockBack();
@@ -40,6 +44,8 @@ public class PlayerController : MonoBehaviour {
         // Attack.
         if (Input.GetMouseButtonDown(1)) {
             Attack();
+        } else if (Input.GetButtonDown("Dodge")) {
+            Dodge();
         }
 
        
@@ -68,8 +74,12 @@ public class PlayerController : MonoBehaviour {
         // Only move the player if it is not attacking.
         if (!attacking)
         {
-            transform.position += moveDirection.normalized * speed * Time.deltaTime;
-            //rb.MovePosition((rb.position + moveDirection) * Time.deltaTime * speed);
+            if (dodging) {
+                transform.position += moveDirection.normalized * (moveSpeed*dodgeSpeed) * Time.deltaTime;
+            } else {
+                transform.position += moveDirection.normalized * moveSpeed * Time.deltaTime;
+            }
+            //rb.MovePosition((rb.position + moveDirection) * Time.deltaTime * moveSpeed);
             transform.LookAt(transform.position + lookAtDirection);
         }
     }
@@ -81,7 +91,12 @@ public class PlayerController : MonoBehaviour {
         {
             if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
             {
-                anim.SetInteger("Condition", 1);
+                if (dodging) {
+                    anim.SetInteger("Condition", 3);
+                } else {
+                    anim.SetInteger("Condition", 1);
+                }
+                
             }
             else
             {
@@ -121,6 +136,20 @@ public class PlayerController : MonoBehaviour {
         yield return new WaitForSeconds(totalAttackDuration - preImpactDelay);
         attacking = false;
         anim.SetInteger("Condition", 0);
+    }
+
+    void Dodge() {
+
+        if (dodging) return; //Don't do anything if already dodging.
+
+        StartCoroutine(DodgingRoutine());
+
+    }
+
+    IEnumerator DodgingRoutine() {
+        dodging = true;
+        yield return new WaitForSeconds(DodgeDuration);
+        dodging = false;
     }
 
 }

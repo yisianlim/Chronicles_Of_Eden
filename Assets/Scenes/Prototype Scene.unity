@@ -55728,7 +55728,7 @@ Prefab:
     - target: {fileID: 114080186517617300, guid: 431fb1219e7882d47bee9a341933d742,
         type: 2}
       propertyPath: totalAttackDuration
-      value: 1
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 114080186517617300, guid: 431fb1219e7882d47bee9a341933d742,
         type: 2}
@@ -55755,6 +55755,21 @@ Prefab:
       propertyPath: CameraTransform
       value: 
       objectReference: {fileID: 286718312}
+    - target: {fileID: 114080186517617300, guid: 431fb1219e7882d47bee9a341933d742,
+        type: 2}
+      propertyPath: moveSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114080186517617300, guid: 431fb1219e7882d47bee9a341933d742,
+        type: 2}
+      propertyPath: dodgeSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114080186517617300, guid: 431fb1219e7882d47bee9a341933d742,
+        type: 2}
+      propertyPath: DodgeDuration
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114450577824945526, guid: 431fb1219e7882d47bee9a341933d742, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 431fb1219e7882d47bee9a341933d742, type: 2}
