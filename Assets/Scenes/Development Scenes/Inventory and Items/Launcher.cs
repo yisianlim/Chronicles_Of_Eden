@@ -5,6 +5,7 @@ using UnityEngine;
 /// <summary>
 /// An item that fires an object to a position in a calculated arc.
 /// </summary>
+[CreateAssetMenu(fileName = "Launcher", menuName = "Equipable Item/Launcher", order = 3)]
 public class Launcher : AimableItem
 {
 
