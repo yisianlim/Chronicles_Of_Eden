@@ -25,7 +25,7 @@ public abstract class AimableItem : EquipableItem
     /// </summary>
     /// <param name="origin">The point from where the item is being aimed from.</param>
     /// <param name="endPoint">The point where the item is being aimed to.</param>
-    public abstract void VisualiseAim(Vector3 origin, Vector3 endPoint);
+    public abstract void VisualiseAim(Transform origin, Vector3 endPoint);
 
     /// <summary>
     /// Fire the item from the origin to the end point.

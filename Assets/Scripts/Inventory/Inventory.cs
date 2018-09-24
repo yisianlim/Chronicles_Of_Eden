@@ -39,7 +39,7 @@ public class Inventory : MonoBehaviour {
     protected virtual void SlotSelected(int num)
     {
         equipedItem = num;
-        ItemEquipped(this, new ItemEquippedEventArgs(num));
+        //ItemEquipped(this, new ItemEquippedEventArgs(num));
     }
 
     /// <summary>

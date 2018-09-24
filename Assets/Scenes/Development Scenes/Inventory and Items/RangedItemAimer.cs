@@ -8,14 +8,14 @@ using UnityEngine;
 public class RangedItemAimer : MonoBehaviour {
 
     private AimableItem itemBeingAimed;
-    private Transform origin; //From where the item is being aimed.
+    private Transform userTransform; //From where the item is being aimed.
 
     [SerializeField] MouseRotatedFocusingCamera cam;
 
     private void Start()
     {
-        origin = GetComponent<Transform>();
-        if (origin == null)
+        userTransform = GetComponent<Transform>();
+        if (userTransform == null)
             throw new System.Exception(gameObject.name + " should have a transform attatched to it to use a RangedItemAimer.");
     }
 
@@ -27,12 +27,15 @@ public class RangedItemAimer : MonoBehaviour {
         Vector3 aimPoint = GetAimPoint();
         if (aimPoint.Equals(Vector3.positiveInfinity)) return;
 
-        itemBeingAimed.VisualiseAim(origin.position, aimPoint);
+        itemBeingAimed.VisualiseAim(userTransform, aimPoint);
 
-        //When the user releases the mouse button again, fire the item and unlock the camera.
+        //When the user releases the mouse button again, fire the item, stop aiming, and unlock the camera.
         if (Input.GetMouseButtonUp(0)) { 
-            itemBeingAimed.Fire(origin, aimPoint);
+            itemBeingAimed.Fire(userTransform, aimPoint);
+
+            itemBeingAimed = null;
             cam.lockRotation = false;
+
         }
 
 	}
