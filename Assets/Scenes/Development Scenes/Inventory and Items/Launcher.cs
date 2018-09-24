@@ -36,7 +36,7 @@ public class Launcher : AimableItem
         instance.velocity = Calculations.DetermineRequiredLaunchToReachPoint(instantationPoint, endpoint, 1).launchVelocity;
 
         aimCursor.SetActive(false);
-        arcVisuliser.HidePath();
+        //arcVisuliser.HidePath();
 
     }
 
@@ -56,10 +56,10 @@ public class Launcher : AimableItem
         Calculations.LaunchData launch = Calculations.DetermineRequiredLaunchToReachPoint(instantationPoint, endPoint, 1);
 
         //Determine points along path and drawn them.
-        Vector3[] arc = new Vector3[arcVisualisationResolution];
-        for (int i = 0; i < arcVisualisationResolution; i++)
-            arc[i] = instantationPoint + Calculations.DetermineDisplacementAlongLaunchArc(launch.launchVelocity, launch.travelTime / (arcVisualisationResolution * 1f));
-        arcVisuliser.VisualisePath(arc);
+        //Vector3[] arc = new Vector3[arcVisualisationResolution];
+        //for (int i = 0; i < arcVisualisationResolution; i++)
+         //   arc[i] = instantationPoint + Calculations.DetermineDisplacementAlongLaunchArc(launch.launchVelocity, launch.travelTime / (arcVisualisationResolution * 1f));
+        //arcVisuliser.VisualisePath(arc);
 
     }
 }
