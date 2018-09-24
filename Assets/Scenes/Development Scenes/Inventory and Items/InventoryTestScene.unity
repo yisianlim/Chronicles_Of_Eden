@@ -267,6 +267,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400050, guid: ba24e610e0a338545b447ff44a3cf1cc,
     type: 3}
   m_PrefabInternal: {fileID: 162253889}
+--- !u!114 &162253897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 162253890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9853a85e5df524d4285101238b59050e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 1300628709}
 --- !u!1 &270440262
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,7 +387,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   user: {fileID: 162253890}
   inGameRepresentation: {fileID: 506120950}
-  pickup: {fileID: 11400000, guid: 7e1a2db000b969a4dbb575271dde77b1, type: 2}
+  pickup: {fileID: 11400000, guid: b651db53b3c6ea4429218b6435946a4d, type: 2}
   inventory: {fileID: 270440263}
 --- !u!1 &506120950
 GameObject:
