@@ -7,6 +7,8 @@ using UnityEngine;
 /// </summary>
 public class MouseRotatedFocusingCamera : FocusingCamera {
 
+    public bool lockRotation; //If true, the camera will not rotate.
+
     [SerializeField] MouseInputManager mouseInput;
     [SerializeField] float sensitivity; //How much the camera moves in response to the mouse.
 
@@ -22,7 +24,7 @@ public class MouseRotatedFocusingCamera : FocusingCamera {
 
     private void OnMouseMove(float deltaX, float deltaY, float deltaZ)
     {
-        if (deltaY == 0) return;
+        if (lockRotation || deltaY == 0) return;
 
         angleAroundTarget -= sensitivity * deltaX;
 
