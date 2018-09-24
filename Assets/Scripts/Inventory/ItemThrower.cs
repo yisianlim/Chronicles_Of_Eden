@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "BombThrower", menuName = "Equipable Item/Untitled Item Thower", order = 1)]
+[CreateAssetMenu(fileName = "Item Thrower", menuName = "Equipable Item/Item Thrower", order = 1)]
 public class ItemThrower : EquipableItem
 {
 
