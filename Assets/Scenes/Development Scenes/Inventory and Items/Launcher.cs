@@ -9,8 +9,17 @@ using UnityEngine;
 public class Launcher : AimableItem
 {
 
+    private GameObject aimCursor; //Used to visualise where in the world the item fired will end up.
+
     [SerializeField] Rigidbody item; //The item being launched.
     [SerializeField] float instantiationDistanceFromPlayer;
+    [SerializeField] GameObject cursor;
+
+    private void OnEnable()
+    {
+        aimCursor = Instantiate(cursor);
+        aimCursor.SetActive(false);
+    }
 
     public override void Fire(Transform userTransform, Vector3 endpoint)
     {
@@ -22,6 +31,8 @@ public class Launcher : AimableItem
         //Apply the required velocity to the instance so that it lands on the end point.
         instance.velocity = Calculations.determineRequiredLaunchVelocityToReachPoint(instantationPoint, endpoint, 1);
 
+        aimCursor.SetActive(false);
+
     }
 
     public override void VisualiseAim(Transform userTransform, Vector3 endPoint)
@@ -31,6 +42,9 @@ public class Launcher : AimableItem
         Vector3 dir = endPoint - userTransform.position;
         Vector3 rotation = Vector3.RotateTowards(userTransform.transform.forward, dir, 360, 0f);
         userTransform.transform.rotation = Quaternion.LookRotation(rotation);
+
+        aimCursor.SetActive(true);
+        aimCursor.transform.position = endPoint;
 
     }
 }
