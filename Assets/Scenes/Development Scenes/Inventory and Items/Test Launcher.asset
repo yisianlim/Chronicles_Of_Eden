@@ -15,3 +15,4 @@ MonoBehaviour:
   _Image: {fileID: 0}
   item: {fileID: 54403913715592602, guid: 3982863341e206246838f6824d5e6c21, type: 2}
   instantiationDistanceFromPlayer: 0.5
+  cursor: {fileID: 1683523223061198, guid: 9f1ee3998343bac4facac0016df51940, type: 2}
