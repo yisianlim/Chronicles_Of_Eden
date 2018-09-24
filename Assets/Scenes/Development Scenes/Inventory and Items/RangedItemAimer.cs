@@ -31,7 +31,7 @@ public class RangedItemAimer : MonoBehaviour {
 
         //When the user releases the mouse button again, fire the item and unlock the camera.
         if (Input.GetMouseButtonUp(0)) { 
-            itemBeingAimed.Fire(origin.position, aimPoint);
+            itemBeingAimed.Fire(origin, aimPoint);
             cam.lockRotation = false;
         }
 

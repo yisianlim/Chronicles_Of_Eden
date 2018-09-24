@@ -32,6 +32,6 @@ public abstract class AimableItem : EquipableItem
     /// </summary>
     /// <param name="origin"></param>
     /// <param name="endpoint"></param>
-    public abstract void Fire(Vector3 origin, Vector3 endpoint);
+    public abstract void Fire(Transform origin, Vector3 endpoint);
 
 }
