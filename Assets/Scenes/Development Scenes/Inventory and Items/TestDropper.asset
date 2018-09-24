@@ -15,4 +15,4 @@ MonoBehaviour:
   _Image: {fileID: 0}
   droppedItem: {fileID: 54218825054231782, guid: a356cdd95dac516438b3450714736d9c,
     type: 2}
-  instantiationDistanceFromPlayer: 0.2
+  instantiationDistanceFromPlayer: 0.4
