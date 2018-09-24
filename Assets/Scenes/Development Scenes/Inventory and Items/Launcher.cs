@@ -13,7 +13,11 @@ public class Launcher : AimableItem
 
     [SerializeField] Rigidbody item; //The item being launched.
     [SerializeField] float instantiationDistanceFromPlayer;
+
+    [Header("Visualisation")]
     [SerializeField] GameObject cursor;
+    [SerializeField] int arcVisualisationResolution;
+    [SerializeField] PathVisualiser arcVisuliser;
 
     private void OnEnable()
     {
@@ -29,9 +33,10 @@ public class Launcher : AimableItem
         Rigidbody instance = Instantiate(item, instantationPoint, userTransform.rotation);
 
         //Apply the required velocity to the instance so that it lands on the end point.
-        instance.velocity = Calculations.determineRequiredLaunchVelocityToReachPoint(instantationPoint, endpoint, 1);
+        instance.velocity = Calculations.DetermineRequiredLaunchToReachPoint(instantationPoint, endpoint, 1).launchVelocity;
 
         aimCursor.SetActive(false);
+        arcVisuliser.HidePath();
 
     }
 
@@ -45,6 +50,16 @@ public class Launcher : AimableItem
 
         aimCursor.SetActive(true);
         aimCursor.transform.position = endPoint;
+
+        //Determine how long the launch would take.
+        Vector3 instantationPoint = ItemThrower.CalculateInstantiationPoint(userTransform, instantiationDistanceFromPlayer);
+        Calculations.LaunchData launch = Calculations.DetermineRequiredLaunchToReachPoint(instantationPoint, endPoint, 1);
+
+        //Determine points along path and drawn them.
+        Vector3[] arc = new Vector3[arcVisualisationResolution];
+        for (int i = 0; i < arcVisualisationResolution; i++)
+            arc[i] = instantationPoint + Calculations.DetermineDisplacementAlongLaunchArc(launch.launchVelocity, launch.travelTime / (arcVisualisationResolution * 1f));
+        arcVisuliser.VisualisePath(arc);
 
     }
 }
