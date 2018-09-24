@@ -15,7 +15,7 @@ public class TestPhysicsLancher : MonoBehaviour {
 
         Rigidbody obj = Instantiate(launchObject, transform.position, transform.rotation);
         
-        Vector3 vel = Calculations.determineRequiredLaunchVelocityToReachPoint(transform.position, target.position, arcHeightDifference);
+        Vector3 vel = Calculations.DetermineRequiredLaunchToReachPoint(transform.position, target.position, arcHeightDifference).launchVelocity;
         Debug.Log(vel);
         obj.velocity = vel;
 	}
