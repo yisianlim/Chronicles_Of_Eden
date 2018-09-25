@@ -55668,7 +55668,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4936452817224446, guid: 431fb1219e7882d47bee9a341933d742, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4936452817224446, guid: 431fb1219e7882d47bee9a341933d742, type: 2}
       propertyPath: m_LocalPosition.y
@@ -55676,7 +55676,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4936452817224446, guid: 431fb1219e7882d47bee9a341933d742, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 1.089
+      value: 0.29
       objectReference: {fileID: 0}
     - target: {fileID: 4936452817224446, guid: 431fb1219e7882d47bee9a341933d742, type: 2}
       propertyPath: m_LocalRotation.x
@@ -55769,6 +55769,11 @@ Prefab:
         type: 2}
       propertyPath: DodgeDuration
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114080186517617300, guid: 431fb1219e7882d47bee9a341933d742,
+        type: 2}
+      propertyPath: clickMask.m_Bits
+      value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114450577824945526, guid: 431fb1219e7882d47bee9a341933d742, type: 2}

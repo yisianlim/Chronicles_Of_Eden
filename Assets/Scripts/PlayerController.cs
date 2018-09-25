@@ -20,16 +20,17 @@ public class PlayerController : MonoBehaviour {
     public float dodgeSpeed;
     public Transform CameraTransform;
     public Rigidbody rb;
-    [SerializeField]private Vector3 moveDirection;
-    private Vector3 lookAtDirection;
+    [SerializeField] private Vector3 moveDirection;
+    [SerializeField] private Vector3 lookAtDirection;
 
     [Header("Combat")]
     [SerializeField] int attackStrength;
     [SerializeField] float attackDistance; //The distance in front of the player in which targets have to be to be hit.
-    [SerializeField] [Range(0, 90)] float attackArc; //The size (in degrees) of the arc in which enemies can hit targets.
+    [SerializeField] [Range(0, 130)] float attackArc; //The size (in degrees) of the arc in which enemies can hit targets.
     [SerializeField] float preImpactDelay; //The delay after the attack is initialised before the target takes damage.
     [SerializeField] float totalAttackDuration;
     [SerializeField] float DodgeDuration;
+    public LayerMask clickMask;
 
     private bool attacking;
     private bool dodging = false;
@@ -43,6 +44,17 @@ public class PlayerController : MonoBehaviour {
     void GetInput() {
         // Attack.
         if (Input.GetMouseButtonDown(1)) {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, 100f, clickMask)) {
+                Vector3 v3 = hit.point;
+                v3.y = .5f;
+                //Debug.Log(v3);
+                lookAtDirection = v3;
+            }
+            transform.LookAt(lookAtDirection);
+            lookAtDirection = Vector3.zero;
             Attack();
         } else if (Input.GetButtonDown("Dodge")) {
             Dodge();
@@ -68,12 +80,10 @@ public class PlayerController : MonoBehaviour {
 
         moveDirection.y = 0f;
 
-        lookAtDirection = moveDirection;
-        
-
         // Only move the player if it is not attacking.
         if (!attacking)
         {
+            lookAtDirection = moveDirection;
             if (dodging) {
                 transform.position += moveDirection.normalized * (moveSpeed*dodgeSpeed) * Time.deltaTime;
             } else {
@@ -110,6 +120,7 @@ public class PlayerController : MonoBehaviour {
         if (attacking) return; //Don't do anything if already attacking.
 
         //Find all units in range of attack, then run the attack routine.
+        
         DamageReciever[] targets = FOVScanner.FOVScanForObjectsOfType<DamageReciever>(transform.position, lookAtDirection, attackDistance, attackArc);
         StartCoroutine(AttackRoutine(targets));
 
@@ -118,7 +129,8 @@ public class PlayerController : MonoBehaviour {
 
     IEnumerator AttackRoutine(DamageReciever[] targets) {
 
-        //Begin attack.
+        //Debug.Log("Routine Started");
+        //Begin attack.d
         anim.SetInteger("Condition", 2);
         attacking = true;
 
@@ -128,8 +140,10 @@ public class PlayerController : MonoBehaviour {
 
         foreach (DamageReciever target in targets) 
         {
-            if(target)
+            if (target) {
+                Debug.Log("damage applied");
                 target.ApplyDamage(attackStrength, transform.position);
+            } 
         }
 
         //Wait for delay after damage has been dealt, then end the attack.
