@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] float preImpactDelay; //The delay after the attack is initialised before the target takes damage.
     [SerializeField] float totalAttackDuration;
     [SerializeField] float DodgeDuration;
-    public LayerMask clickMask;
+    public LayerMask clickMask; //floor
 
     private bool attacking;
     private bool dodging = false;
@@ -43,17 +43,21 @@ public class PlayerController : MonoBehaviour {
 
     void GetInput() {
         // Attack.
+
         if (Input.GetMouseButtonDown(1)) {
+
+            //get position to look in for attack, based on ray from screen "hitting" floor layer
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
             if (Physics.Raycast(ray, out hit, 100f, clickMask)) {
                 Vector3 v3 = hit.point;
-                v3.y = .5f;
-                //Debug.Log(v3);
+                v3.y = .5f;//badcode to fix: used to keep character looking above ground yet still causes some unwanted x rotation
                 lookAtDirection = v3;
             }
             transform.LookAt(lookAtDirection);
+
+            //zero look direction before intiating attack(don't know why but doesn't work without)
             lookAtDirection = Vector3.zero;
             Attack();
         } else if (Input.GetButtonDown("Dodge")) {
@@ -129,7 +133,6 @@ public class PlayerController : MonoBehaviour {
 
     IEnumerator AttackRoutine(DamageReciever[] targets) {
 
-        //Debug.Log("Routine Started");
         //Begin attack.d
         anim.SetInteger("Condition", 2);
         attacking = true;
@@ -140,8 +143,8 @@ public class PlayerController : MonoBehaviour {
 
         foreach (DamageReciever target in targets) 
         {
+            //check targets validity
             if (target) {
-                Debug.Log("damage applied");
                 target.ApplyDamage(attackStrength, transform.position);
             } 
         }

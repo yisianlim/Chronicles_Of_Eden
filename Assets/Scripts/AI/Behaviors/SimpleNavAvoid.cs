@@ -7,6 +7,7 @@ public class SimpleNavAvoid : MonoBehaviour {
 
     private NavMeshAgent _agent;
 
+    //thing to run from
     public GameObject scaryThing;
 
     public float avoidDistance = 5f;
@@ -22,6 +23,7 @@ public class SimpleNavAvoid : MonoBehaviour {
 	void Update () {
         float distance = Vector3.Distance(transform.position, scaryThing.transform.position);
 
+        //if scary thing is within avoid set new path directly away from scary thing
         if (distance < avoidDistance) {
             Vector3 dirToScare = transform.position - scaryThing.transform.position;
             Vector3 newPos = transform.position + dirToScare;
