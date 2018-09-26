@@ -756,13 +756,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1251061203}
-  speed: 2
+  moveSpeed: 3
+  dodgeSpeed: 2
+  CameraTransform: {fileID: 158476789}
   rb: {fileID: 1251061205}
+  moveDirection: {x: 0, y: 0, z: 0}
+  lookAtDirection: {x: 0, y: 0, z: 0}
   attackStrength: 0
   attackDistance: 0
   attackArc: 0
   preImpactDelay: 0
   totalAttackDuration: 0
+  DodgeDuration: 0
+  clickMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!95 &1251061203
 Animator:
   serializedVersion: 3
@@ -822,7 +830,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 50
   HPImage: {fileID: 1520065704}
-  playerController: {fileID: 0}
+  playerController: {fileID: 1251061202}
 --- !u!114 &1251061207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1170,15 +1178,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reactions:
-  - objectType: Bomb
+  - objectType: Player
     scanner: {fileID: 11400000, guid: 59f27ac598a0e574ebfe4847200b9bd4, type: 2}
     reaction: {fileID: 11400000, guid: 82fffe9c1f8568248b447b3814aae3d4, type: 2}
-  - objectType: Player
-    scanner: {fileID: 11400000, guid: b2f1c8b3078894e4f991a2df2e9cbe84, type: 2}
-    reaction: {fileID: 11400000, guid: 9bb1629919e5f7748a471988ffa5265b, type: 2}
-  - objectType: Player
-    scanner: {fileID: 11400000, guid: 6df5ce11921ebeb469ffbd1acc630964, type: 2}
-    reaction: {fileID: 11400000, guid: cc6c9459ed627a7419f7c34459497014, type: 2}
 --- !u!54 &2130549148
 Rigidbody:
   m_ObjectHideFlags: 0
