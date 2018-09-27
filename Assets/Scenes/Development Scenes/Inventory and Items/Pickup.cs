@@ -20,11 +20,11 @@ public class Pickup : MonoBehaviour {
         //Do not do anyting if the intended key is being pressed.
         if (Input.GetAxis(INTERACTION_AXIS) == 0) return;
 
-        //Disable the collider so it only fires once.
-        GetComponent<Collider>().enabled = false;
-
         //Do not do anything if the object in the trigger is no meant to use the pickup.
         if (!other.gameObject.Equals(user)) return;
+
+        //Disable the collider so it only fires once.
+        GetComponent<Collider>().enabled = false;
 
         inventory.AddItem(pickup);
 
