@@ -16,4 +16,4 @@ MonoBehaviour:
   droppedItem: {fileID: 54146783787582408, guid: 46735bc6a6e9a444b820b9393569da86,
     type: 2}
   instantiationDistanceFromPlayer: 0.3
-  dropFromHeight: 0.2
+  dropFromHeight: 0.4
