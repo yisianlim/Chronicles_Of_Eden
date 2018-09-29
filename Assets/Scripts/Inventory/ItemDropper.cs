@@ -7,11 +7,12 @@ public class ItemDropper : EquipableItem
 {
     [SerializeField] Rigidbody droppedItem;
     [SerializeField] float instantiationDistanceFromPlayer;
+    [SerializeField] float dropFromHeight;
 
     public override void Use(Transform userTranform, Inventory inventory)
     {
         Vector3 instantationPoint = ItemThrower.CalculateInstantiationPoint(userTranform, instantiationDistanceFromPlayer);
-        Instantiate(droppedItem, instantationPoint, userTranform.rotation);
+        Instantiate(droppedItem, new Vector3(instantationPoint.x, userTranform.position.y + dropFromHeight, instantationPoint.z), userTranform.rotation);
     }
 
 }
