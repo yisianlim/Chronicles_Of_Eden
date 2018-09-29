@@ -17,10 +17,12 @@ public class PetrifyPotionScript : MonoBehaviour {
 	}
 
     private void OnCollisionEnter(Collision collision) {
-        if (collision.collider != null && collision.collider.CompareTag("Enemy")) {
+        if (collision.collider != null && collision.collider.CompareTag("LargeEnemy")) {
             collision.gameObject.GetComponent<NPCAI>().Petrify();
             collision.gameObject.GetComponent<Animator>().speed = 0;
             //collision.gameObject.GetComponent<Animator>().avatar
+            Destroy(this.gameObject);
+            
         }
         
     }
