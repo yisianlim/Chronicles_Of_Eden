@@ -150,6 +150,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45822d1866ff2a34db0736eb9be4c46a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countDownTime: 0
-  timerConst: 0
-  foodDecayConst: 0
+  countDownTime: 500
+  timerConst: 1
+  foodDecayConst: 1
