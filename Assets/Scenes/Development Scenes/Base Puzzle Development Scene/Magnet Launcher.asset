@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ceb6e79364a80b46afa0315c857779d, type: 3}
+  m_Name: Magnet Launcher
+  m_EditorClassIdentifier: 
+  InGameName: Magnet Launcher
+  _Image: {fileID: 0}
+  item: {fileID: 54130560282525688, guid: 8a19e832854a6f640bbb7a98b2924286, type: 2}
+  instantiationDistanceFromPlayer: 0.5
+  cursor: {fileID: 1683523223061198, guid: 9f1ee3998343bac4facac0016df51940, type: 2}
+  arcVisualisationResolution: 0
+  arcVisuliser: {fileID: 0}
