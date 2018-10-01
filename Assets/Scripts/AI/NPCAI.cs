@@ -12,6 +12,8 @@ public class NPCAI : MonoBehaviour {
     private Vector3 nearestScannablePosition = Vector3.positiveInfinity; //The position of the current closest scanable.
     internal EnemyAnimator enemyAnimator;
 
+    private Boolean stone = false;
+
     private void Awake()
     {
         enemyAnimator = GetComponent<EnemyAnimator>();
@@ -19,6 +21,8 @@ public class NPCAI : MonoBehaviour {
 
     private void Update()
     {
+
+        if (stone) { return; }
 
         foreach(Reaction reaction in reactions)
         {
@@ -82,6 +86,10 @@ public class NPCAI : MonoBehaviour {
         }
 
         return nearestScannable;
+    }
+
+    public void Petrify() {
+        this.stone = true;
     }
 
     [Serializable]

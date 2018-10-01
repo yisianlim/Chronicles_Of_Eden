@@ -14,7 +14,7 @@ public class FOVScanner : Scanner
 
         //Find all collidable objects within a given radius of the origin.
         Collider[] collidersInRadius = Physics.OverlapSphere(origin, scanRadius);
-        Debug.Log("In Radius: " + collidersInRadius.Length);
+        //Debug.Log("In Radius: " + collidersInRadius.Length);
 
 
         //Find all objects within the scan angle, relative to the position the origin and the direction being faced.
@@ -23,7 +23,7 @@ public class FOVScanner : Scanner
 
             //Check whether the object has the desired component, skip if otherwise.
             E[] es = target.GetComponents<E>();
-            Debug.Log("Components on " + target.gameObject.name + " :" + es.Length);
+            //Debug.Log("Components on " + target.gameObject.name + " :" + es.Length);
             if (es == null) continue;
 
             //Observe each one of the found components and add them to targets if they are reachable.
@@ -51,7 +51,7 @@ public class FOVScanner : Scanner
             }
 
         }
-
+        //Debug.Log(targetsInArc.ToArray().ToString());
         return targetsInArc.ToArray();
 
     }

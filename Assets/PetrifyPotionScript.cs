@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PetrifyPotionScript : MonoBehaviour {
 
+    public Texture stoneTexture;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -15,7 +17,14 @@ public class PetrifyPotionScript : MonoBehaviour {
 	}
 
     private void OnCollisionEnter(Collision collision) {
-        collision.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+        if (collision.collider != null && collision.collider.CompareTag("LargeEnemy")) {
+            collision.gameObject.GetComponent<NPCAI>().Petrify();
+            collision.gameObject.GetComponent<Animator>().speed = 0;
+            //collision.gameObject.GetComponent<Animator>().avatar
+            Destroy(this.gameObject);
+            
+        }
         
     }
+
 }

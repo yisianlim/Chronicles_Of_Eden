@@ -11,8 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0995673921e87764e8c508701eb2d91c, type: 3}
   m_Name: Test Navigate Away
   m_EditorClassIdentifier: 
-  ceaseWhenNoTargets: 0
-  maxDistance: 6
-  maxVerticalDistance: 3
-  verticalDistanceCheckInc: 0.5
-  adjustmentDirections: 180
+  ceaseWhenNoTargets: 1
+  avoidDistance: 3
