@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : Agent {
 
     private Transform cam;
     private Vector2 input;
@@ -83,6 +83,8 @@ public class PlayerController : MonoBehaviour {
         //moveDirection = moveRight + moveUp;
 
         moveDirection.y = 0f;
+        SetIsMoving(moveDirection != Vector3.zero);
+
 
         // Only move the player if it is not attacking.
         if (!attacking)

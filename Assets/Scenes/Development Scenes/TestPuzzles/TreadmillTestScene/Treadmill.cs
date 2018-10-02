@@ -32,23 +32,33 @@ public class Treadmill : MonoBehaviour {
     private void Update()
     {
 
+        Vector3 movement = Vector3.zero;
+
         //Check each user and see if they have moved, powering the treadmill and moving them.
         bool movingUser = false;
         Dictionary<Transform, Vector3> newPositions = new Dictionary<Transform, Vector3>();
         foreach(Transform t in positionsOfUsers.Keys)
         {
 
+            Agent treadmillUser = t.GetComponent<Agent>();
+            if (treadmillUser == null) continue;
+
             Vector3 positionChange = positionsOfUsers[t] - t.position;
-            if (!positionChange.Equals(Vector3.zero))
+            if (treadmillUser.IsMoving)
             {
                 movingUser = true;
 
                 float directionAdjustMultiplier = Vector3.Angle(directionFacing, positionChange.normalized) > 90 ? 1 : -1;
-                t.position = t.position - directionFacing * resistance * directionAdjustMultiplier;
+                movement = directionFacing * resistance * directionAdjustMultiplier;
 
-            }     
+            }
 
-            
+        }
+
+        foreach (Transform t in positionsOfUsers.Keys)
+        {
+
+            t.position = t.position - movement;
             newPositions[t] = t.position;
 
         }
