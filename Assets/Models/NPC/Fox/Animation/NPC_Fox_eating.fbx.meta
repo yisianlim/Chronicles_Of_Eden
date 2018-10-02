@@ -1,0 +1,201 @@
+fileFormatVersion: 2
+guid: 0be9055f5a0c54519bc5b487432e9235
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: CTRL_body
+    100002: CTRL_ear_L
+    100004: CTRL_ear_R
+    100006: CTRL_front
+    100008: CTRL_head
+    100010: CTRL_leg_L_back
+    100012: CTRL_leg_L_front
+    100014: CTRL_leg_R_back
+    100016: CTRL_leg_R_front
+    100018: CTRL_MASTER
+    100020: CTRL_tails
+    100022: ik_body
+    100024: ik_leg_L_back
+    100026: ik_leg_L_front
+    100028: ik_leg_R_back
+    100030: ik_leg_R_front
+    100032: joint32
+    100034: joint_fox
+    100036: JT_body_front
+    100038: JT_body_mid
+    100040: JT_head_ear_L_bot
+    100042: JT_head_ear_L_mid
+    100044: JT_head_ear_L_top
+    100046: JT_head_ear_R_bot
+    100048: JT_head_ear_R_mid
+    100050: JT_head_ear_R_top
+    100052: JT_head_face
+    100054: JT_head_neck
+    100056: JT_leg_L_Back_bot
+    100058: JT_leg_L_Back_mid
+    100060: JT_leg_L_Back_top
+    100062: JT_leg_L_Front_bot
+    100064: JT_leg_L_Front_mid
+    100066: JT_leg_L_Front_top
+    100068: JT_leg_R_Back_bot
+    100070: JT_leg_R_Back_mid
+    100072: JT_leg_R_Back_top
+    100074: JT_leg_R_Front_bot
+    100076: JT_leg_R_Front_mid
+    100078: JT_leg_R_Front_top
+    100080: JT_tails_bot
+    100082: JT_tails_mid
+    100084: JT_tails_top
+    100086: loc_fox
+    100088: loc_horns
+    100090: //RootNode
+    100092: NPC_Fox_re_body1:RetopoGroup1
+    100094: NPC_Fox_re_horns:RetopoGroup1
+    400000: CTRL_body
+    400002: CTRL_ear_L
+    400004: CTRL_ear_R
+    400006: CTRL_front
+    400008: CTRL_head
+    400010: CTRL_leg_L_back
+    400012: CTRL_leg_L_front
+    400014: CTRL_leg_R_back
+    400016: CTRL_leg_R_front
+    400018: CTRL_MASTER
+    400020: CTRL_tails
+    400022: ik_body
+    400024: ik_leg_L_back
+    400026: ik_leg_L_front
+    400028: ik_leg_R_back
+    400030: ik_leg_R_front
+    400032: joint32
+    400034: joint_fox
+    400036: JT_body_front
+    400038: JT_body_mid
+    400040: JT_head_ear_L_bot
+    400042: JT_head_ear_L_mid
+    400044: JT_head_ear_L_top
+    400046: JT_head_ear_R_bot
+    400048: JT_head_ear_R_mid
+    400050: JT_head_ear_R_top
+    400052: JT_head_face
+    400054: JT_head_neck
+    400056: JT_leg_L_Back_bot
+    400058: JT_leg_L_Back_mid
+    400060: JT_leg_L_Back_top
+    400062: JT_leg_L_Front_bot
+    400064: JT_leg_L_Front_mid
+    400066: JT_leg_L_Front_top
+    400068: JT_leg_R_Back_bot
+    400070: JT_leg_R_Back_mid
+    400072: JT_leg_R_Back_top
+    400074: JT_leg_R_Front_bot
+    400076: JT_leg_R_Front_mid
+    400078: JT_leg_R_Front_top
+    400080: JT_tails_bot
+    400082: JT_tails_mid
+    400084: JT_tails_top
+    400086: loc_fox
+    400088: loc_horns
+    400090: //RootNode
+    400092: NPC_Fox_re_body1:RetopoGroup1
+    400094: NPC_Fox_re_horns:RetopoGroup1
+    2100000: NPC_Fox_re_body1_lambert1
+    2100002: NPC_Fox_re_body1_lambert2
+    2300000: NPC_Fox_re_horns:RetopoGroup1
+    3300000: NPC_Fox_re_horns:RetopoGroup1
+    4300000: NPC_Fox_re_body1:RetopoGroup1
+    4300002: NPC_Fox_re_horns:RetopoGroup1
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: NPC_Fox_re_body1:RetopoGroup1
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NPC_Fox_re_body1_lambert1
+    second: {fileID: 2100000, guid: b6b62083056cb495b902db1b8f6a4a11, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NPC_Fox_re_body1_lambert2
+    second: {fileID: 2100000, guid: 1223fe965cbfd44aa882d08d6525b97a, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
