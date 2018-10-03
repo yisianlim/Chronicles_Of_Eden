@@ -8,7 +8,7 @@ public class MoveTowards : NPCBehaviour
 
     [SerializeField] float movementSpeed;
     [SerializeField] float turnSpeed;
-    private EnemyAnimator enemyAnimator;
+    private NPCAnimator enemyAnimator;
 
     public override void Plan(NPCAI npc, Scannable target)
     {

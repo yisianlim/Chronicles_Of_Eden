@@ -8,11 +8,11 @@ public class EnemyStat : Stat
     public int maxHealth = 10;
     public int currentHealth { get; private set; }
 
-    private EnemyAnimator enemyAnimator;
+    private NPCAnimator enemyAnimator;
 
     private void Awake()
     {
-        enemyAnimator = GetComponent<EnemyAnimator>();
+        enemyAnimator = GetComponent<NPCAnimator>();
         ps = deathEffect.GetComponent<ParticleSystem>();
         ParticleSystem.EmissionModule module = ps.emission;
         module.enabled = false;

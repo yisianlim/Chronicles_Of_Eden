@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAnimator : MonoBehaviour {
+public class NPCAnimator : MonoBehaviour {
 
     public Animator anim;
     private bool dying;

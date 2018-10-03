@@ -10,13 +10,13 @@ public class NPCAI : Agent {
     Reaction currentReaction;
     private Scannable currentTarget;
     private Vector3 nearestScannablePosition = Vector3.positiveInfinity; //The position of the current closest scanable.
-    internal EnemyAnimator enemyAnimator;
+    internal NPCAnimator enemyAnimator;
 
     private Boolean stone = false;
 
     private void Awake()
     {
-        enemyAnimator = GetComponent<EnemyAnimator>();
+        enemyAnimator = GetComponent<NPCAnimator>();
     }
 
     private void Update()
