@@ -38,7 +38,6 @@ public class MoveTowards : NPCBehaviour
         Vector3 rotation = Vector3.RotateTowards(npc.transform.forward, dir, turnSpeed, 0f);
         npc.transform.rotation = Quaternion.LookRotation(rotation);
 
-        npc.enemyAnimator.Running();
     }
 
     public override void Cease(NPCAI npc, Scannable target)
