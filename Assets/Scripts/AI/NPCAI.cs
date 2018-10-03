@@ -64,15 +64,14 @@ public class NPCAI : Agent {
 
         }
 
-        //Cease performing current behaviour, if one was being performed, and the behavior is to be ceased when there are no targets.
-        if (currentReaction != null && currentReaction.reaction.CeaseWhenNoTargets)
+        //If the stopping condition for the behavior has been met, stop the behavior.
+        if(currentReaction != null && currentReaction.reaction.ExtraStoppingCondition)
         {
             currentReaction.reaction.Cease(this, currentTarget);
             SetIsMoving(false);
             npcAnimator.Animation = "Idle";
+            currentReaction = null;
         }
-
-        currentReaction = null; //There are no applicable reactions.
 
     }
 
