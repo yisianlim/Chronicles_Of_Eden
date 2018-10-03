@@ -7,7 +7,18 @@ using UnityEngine.AI;
 public class NavigateAway : NPCBehaviour
 {
 
+    [SerializeField] float moveSpeed;
     [SerializeField] float avoidDistance;
+
+    private NavMeshAgent agent;
+
+    public override bool ExtraStoppingCondition
+    {
+        get
+        {
+            return IsMoving;
+        }
+    }
 
     public override void Plan(NPCAI npc, Scannable target)
     {
@@ -19,7 +30,10 @@ public class NavigateAway : NPCBehaviour
         {
             Vector3 dirToScare = npc.transform.position - target.transform.position;
 
-            npc.GetComponent<NavMeshAgent>().SetDestination(npc.transform.position + dirToScare);
+            agent = npc.GetComponent<NavMeshAgent>();
+
+            agent.speed = moveSpeed;
+            agent.SetDestination(npc.transform.position + dirToScare);
 
         }
 
@@ -27,7 +41,6 @@ public class NavigateAway : NPCBehaviour
 
     public override void Act(NPCAI npc, Scannable target)
     {
-        NavMeshAgent agent = npc.GetComponent<NavMeshAgent>();
         IsMoving = !agent.isStopped;
     }
 
