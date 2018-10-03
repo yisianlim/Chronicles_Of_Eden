@@ -6,11 +6,7 @@ public abstract class NPCBehaviour : ScriptableObject {
 
     public bool IsMoving { get; protected set; }
 
-    /*
-     * If false, the behavior will not be ceased when no targets are detected.
-     */
-    [SerializeField] bool ceaseWhenNoTargets;
-    public bool CeaseWhenNoTargets { get { return ceaseWhenNoTargets; } }
+    public abstract bool ExtraStoppingCondition { get; } //The behavior will be continued upon the absense of triggers, until the stopping condition has been met.
 
     private void OnEnable()
     {
