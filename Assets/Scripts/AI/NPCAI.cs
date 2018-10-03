@@ -69,6 +69,7 @@ public class NPCAI : Agent {
         {
             currentReaction.reaction.Cease(this, currentTarget);
             SetIsMoving(false);
+            npcAnimator.Animation = "Idle";
         }
 
         currentReaction = null; //There are no applicable reactions.
