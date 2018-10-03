@@ -12,7 +12,7 @@ public class NPCAnimator : MonoBehaviour {
     [SerializeField] Animator anim;
     [SerializeField] string[] animationNames;
 
-    private bool dying;
+    private bool dying = false;
 
     /// <summary>
     /// Change the current animation of the NPC.
@@ -34,6 +34,8 @@ public class NPCAnimator : MonoBehaviour {
             else if (dying) return;
 
             anim.SetInteger("Condition", FindAnimationConditionValue(value));
+
+            Debug.Log("Animation set to " + FindAnimationConditionValue(value) + ", " + value);
 
         }
     }
