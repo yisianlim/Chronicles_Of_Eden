@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPCAI : MonoBehaviour {
+public class NPCAI : Agent {
 
     [SerializeField] Reaction[] reactions; //The reactions of the NPC to differen object types, in order of priority.
 
@@ -55,6 +55,7 @@ public class NPCAI : MonoBehaviour {
             }
 
             reaction.reaction.Act(this, targetScannable);
+            SetIsMoving(reaction.reaction.IsMoving);
 
             return; //Only react to highest priority scannable.
 
@@ -62,7 +63,10 @@ public class NPCAI : MonoBehaviour {
 
         //Cease performing current behaviour, if one was being performed, and the behavior is to be ceased when there are no targets.
         if (currentReaction != null && currentReaction.reaction.CeaseWhenNoTargets)
+        {
             currentReaction.reaction.Cease(this, currentTarget);
+            SetIsMoving(false);
+        }
 
         currentReaction = null; //There are no applicable reactions.
 

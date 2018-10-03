@@ -4,11 +4,18 @@ using UnityEngine;
 
 public abstract class NPCBehaviour : ScriptableObject {
 
+    public bool IsMoving { get; protected set; }
+
     /*
      * If false, the behavior will not be ceased when no targets are detected.
      */
     [SerializeField] bool ceaseWhenNoTargets;
     public bool CeaseWhenNoTargets { get { return ceaseWhenNoTargets; } }
+
+    private void OnEnable()
+    {
+        IsMoving = false;
+    }
 
     /// <summary>
     /// Called when the target has first changed.
