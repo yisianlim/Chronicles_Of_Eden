@@ -10,6 +10,14 @@ public class MoveTowards : NPCBehaviour
     [SerializeField] float turnSpeed;
     private NPCAnimator enemyAnimator;
 
+    public override bool ExtraStoppingCondition
+    {
+        get
+        {
+            return true;
+        }
+    }
+
     public override void Plan(NPCAI npc, Scannable target)
     {
         //No need to plan.

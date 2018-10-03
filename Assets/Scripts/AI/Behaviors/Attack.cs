@@ -20,6 +20,14 @@ public class Attack : NPCBehaviour
     bool warmedUp = false; //Whether the npc has performed its first attack since it was initialsed.
     double intervalTime; //The time since the last attack, or the behavior was initialsed.
 
+    public override bool ExtraStoppingCondition
+    {
+        get
+        {
+            return true;
+        }
+    }
+
     public override void Plan(NPCAI npc, Scannable target)
     {
         warmedUp = false;

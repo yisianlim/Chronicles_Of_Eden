@@ -15,6 +15,14 @@ public class Avoid : NPCBehaviour
 
     Vector3 targetPosition; //The position in which the NPC will head in order to best avoid the target. 
 
+    public override bool ExtraStoppingCondition
+    {
+        get
+        {
+            return true;
+        }
+    }
+
     public override void Plan(NPCAI npc, Scannable target)
     {
 

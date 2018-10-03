@@ -8,6 +8,14 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Idle Behaviour", menuName = "NPC AI/Behaviors/Idle", order = 3)]
 public class IdleBehavior : NPCBehaviour
 {
+    public override bool ExtraStoppingCondition
+    {
+        get
+        {
+            return true;
+        }
+    }
+
     public override void Act(NPCAI npc, Scannable target) {}
 
     public override void Adjust(NPCAI npc, Scannable target){}

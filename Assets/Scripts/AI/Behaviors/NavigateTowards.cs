@@ -10,6 +10,13 @@ using UnityEngine.AI;
 public class NavigateTowards : NPCBehaviour
 {
 
+    [SerializeField] float moveSpeed;
+
+    public override bool ExtraStoppingCondition
+    {
+        get { return true; } //There is no extra stopping condition.
+    }
+
     public override void Act(NPCAI npc, Scannable target)
     {
         NavMeshAgent agent = npc.GetComponent<NavMeshAgent>();
@@ -48,6 +55,7 @@ public class NavigateTowards : NPCBehaviour
         if (agent == null)
             throw new System.Exception(npc.name + " is trying to use the NavigateTowards behavour without having a NavMeshAgent");
 
+        agent.speed = moveSpeed;
         agent.SetDestination(target.transform.position);
     }
 }
