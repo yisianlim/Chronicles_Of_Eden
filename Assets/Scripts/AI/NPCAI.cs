@@ -10,13 +10,13 @@ public class NPCAI : Agent {
     Reaction currentReaction;
     private Scannable currentTarget;
     private Vector3 nearestScannablePosition = Vector3.positiveInfinity; //The position of the current closest scanable.
-    internal NPCAnimator enemyAnimator;
+    internal NPCAnimator npcAnimator;
 
     private Boolean stone = false;
 
     private void Awake()
     {
-        enemyAnimator = GetComponent<NPCAnimator>();
+        npcAnimator = GetComponent<NPCAnimator>();
     }
 
     private void Update()
@@ -43,6 +43,9 @@ public class NPCAI : Agent {
                 //Start new one.
                 reaction.reaction.Plan(this, targetScannable);
                 currentReaction = reaction;
+
+                //Change the animation.
+                npcAnimator.Animation = reaction.animation;
 
             }
 
@@ -102,6 +105,8 @@ public class NPCAI : Agent {
         public string objectType;
         public Scanner scanner; //The scanner used to search for the objects to react to.
         public NPCBehaviour reaction;
+        public string animation;
+
     }
 
 }
