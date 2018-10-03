@@ -139,16 +139,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 158476785}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29bf64a45a19e1741a38ce992f31f2f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 47133c462ce6e4e41a05aaa555e6bd34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   focusObject: {fileID: 1251061201}
   lockOntoObject: 1
-  distanceFromTarget: 6.9
-  angleFromTarget: 54.9
-  angleAroundTarget: 91
+  distanceFromTarget: 6.03
+  angleFromTarget: 42.7
+  angleAroundTarget: 0
   baseY: 0
   orthographicSize: 0
+  lockRotation: 0
+  mouseInput: {fileID: 1227361561}
+  sensitivity: 1
 --- !u!81 &158476787
 AudioListener:
   m_ObjectHideFlags: 0
@@ -296,7 +299,7 @@ RectTransform:
   m_Children:
   - {fileID: 1520065703}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -363,7 +366,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &754729462
 Prefab:
@@ -549,7 +552,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1131531160
 GameObject:
@@ -607,48 +610,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1197139900
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1197139902}
-  - component: {fileID: 1197139901}
-  m_Layer: 0
-  m_Name: ItemThrowerDriver
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1197139901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1197139900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd44ab4891249b5409bda1d717b77501, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1251061201}
-  thower: {fileID: 11400000, guid: 7e1a2db000b969a4dbb575271dde77b1, type: 2}
---- !u!4 &1197139902
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1197139900}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.0955987, y: 2.0835803, z: 6.5661345}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1227361560
 GameObject:
@@ -799,6 +760,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: Player
+--- !u!114 &1251061208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1251061200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9853a85e5df524d4285101238b59050e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 158476786}
 --- !u!1001 &1267429927
 Prefab:
   m_ObjectHideFlags: 0
@@ -888,6 +861,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reactions:
+  - objectType: Food
+    scanner: {fileID: 11400000, guid: b2f1c8b3078894e4f991a2df2e9cbe84, type: 2}
+    reaction: {fileID: 11400000, guid: 455b3650d109b7544be30cb6cda2a046, type: 2}
+    animation: Eating
+  - objectType: Food
+    scanner: {fileID: 11400000, guid: 606920c20f6b7bd44b46174db3022f50, type: 2}
+    reaction: {fileID: 11400000, guid: cc6c9459ed627a7419f7c34459497014, type: 2}
+    animation: Running
   - objectType: Player
     scanner: {fileID: 11400000, guid: b2f1c8b3078894e4f991a2df2e9cbe84, type: 2}
     reaction: {fileID: 11400000, guid: 455b3650d109b7544be30cb6cda2a046, type: 2}
@@ -1013,6 +994,58 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1520065702}
   m_CullTransparentMesh: 0
+--- !u!1 &1813076253
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1813076255}
+  - component: {fileID: 1813076254}
+  m_Layer: 0
+  m_Name: Inventory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1813076254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1813076253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 429b71e4950345a4aa265bb5f872c4ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  userTranform: {fileID: 1251061201}
+  items:
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 14d8af66edbc83443855e1f45c09addd, type: 2}
+  - {fileID: 11400000, guid: 4fd5fc79440015748a8dbad5aa8b223b, type: 2}
+  - {fileID: 11400000, guid: 30c4298ad81ae3c44b1ae63d463874aa, type: 2}
+  - {fileID: 11400000, guid: a6642e4bd6e9d4b4d9485680760e7786, type: 2}
+  - {fileID: 11400000, guid: 5ed295daf67bc8140953b9060fe12760, type: 2}
+  - {fileID: 11400000, guid: f7df4f8e8f3d4114780bb8dbd31d7a03, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!4 &1813076255
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1813076253}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.0214844, y: 10.200195, z: -4.1484375}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1944064234
 GameObject:
   m_ObjectHideFlags: 0
@@ -1098,5 +1131,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
