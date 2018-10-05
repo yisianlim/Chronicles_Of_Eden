@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[RequireComponent(typeof(Collider))]
+
 [RequireComponent(typeof(Animator))]
-public class PressurePlate : MonoBehaviour {
+public class PressurePlate : ExternallyTriggerable {
 
     private Animator animator;
     private int numberOnPlate;
@@ -17,7 +17,7 @@ public class PressurePlate : MonoBehaviour {
         animator = GetComponent<Animator>();
     }
 
-    private void OnTriggerEnter(Collider other)
+    public override void TriggerEntered(Collider other)
     {
 
         Debug.Log(other.name + " entered!");
@@ -33,7 +33,7 @@ public class PressurePlate : MonoBehaviour {
     }
 
 
-    private void OnTriggerExit(Collider other)
+    public override void TriggerExited(Collider other)
     {
 
         if (numberOnPlate > 1) return; //Ensure the is nothing on the pressure plate.
