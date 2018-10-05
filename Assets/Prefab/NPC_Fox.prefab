@@ -1511,7 +1511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reactions:
   - objectType: Food
-    scanner: {fileID: 11400000, guid: b2f1c8b3078894e4f991a2df2e9cbe84, type: 2}
+    scanner: {fileID: 11400000, guid: 4013221a043db604a9a13aa3304b3e55, type: 2}
     reaction: {fileID: 11400000, guid: 455b3650d109b7544be30cb6cda2a046, type: 2}
     animation: Eating
   - objectType: Food
