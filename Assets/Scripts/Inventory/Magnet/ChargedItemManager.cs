@@ -21,14 +21,7 @@ public class ChargedItemManager : MonoBehaviour {
     }
 
     public IEnumerator Cycle(MovingChargedItem mci) {
-        bool isFirst = true;
         while (true) {
-            //// At the first go, we are going to wait for a little while
-            //// to avoid spiky movements. 
-            //if (isFirst) {
-            //    isFirst = false;
-            //    yield return new WaitForSeconds(Random.Range(0, cycleInterval));
-            //}
             ApplyMagneticForce(mci);
             yield return new WaitForSeconds(cycleInterval);
         }

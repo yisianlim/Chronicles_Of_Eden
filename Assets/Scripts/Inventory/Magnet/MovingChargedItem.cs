@@ -11,6 +11,5 @@ public class MovingChargedItem : ChargedItem {
         UpdateColor();
         rb = gameObject.AddComponent<Rigidbody>();
         rb.mass = mass;
-        rb.useGravity = false;
     }
 }

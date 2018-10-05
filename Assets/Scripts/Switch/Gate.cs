@@ -23,8 +23,8 @@ public class Gate : ToggleBehaviour {
         open = !open;
         if (open) anim.runtimeAnimatorController = openGateController;
         else anim.runtimeAnimatorController = closeGateContoller;
-
         anim.SetBool("Open", open);
+
 
     }
 
