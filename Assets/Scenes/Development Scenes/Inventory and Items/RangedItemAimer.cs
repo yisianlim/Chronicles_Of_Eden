@@ -10,13 +10,18 @@ public class RangedItemAimer : MonoBehaviour {
     private AimableItem itemBeingAimed;
     private Transform userTransform; //From where the item is being aimed.
 
-    [SerializeField] MouseRotatedFocusingCamera cam;
+    [SerializeField] Camera cam;
+    private MouseRotatedFocusingCamera mouseRotatedFocusingCamera;
 
     private void Start()
     {
+
         userTransform = GetComponent<Transform>();
         if (userTransform == null)
             throw new System.Exception(gameObject.name + " should have a transform attatched to it to use a RangedItemAimer.");
+
+        mouseRotatedFocusingCamera = cam.GetComponent<MouseRotatedFocusingCamera>();
+
     }
 
     void Update () {
@@ -35,7 +40,7 @@ public class RangedItemAimer : MonoBehaviour {
 
             itemBeingAimed = null;
             if(cam != null)
-                cam.lockRotation = false;
+                mouseRotatedFocusingCamera.lockRotation = false;
 
         }
 
@@ -49,7 +54,7 @@ public class RangedItemAimer : MonoBehaviour {
     {
         this.itemBeingAimed = itemBeingAimed;
         if(cam != null)
-            cam.lockRotation = true;
+            mouseRotatedFocusingCamera.lockRotation = true;
     }
 
     /// <summary>
@@ -60,7 +65,7 @@ public class RangedItemAimer : MonoBehaviour {
     {
 
         //Generate a ray from the camera to the mouse point.
-        Ray cameraToMouseRay = cam.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
+        Ray cameraToMouseRay = cam.ScreenPointToRay(Input.mousePosition);
 
         //Cast the ray and determine the point on the map that it hits, if it hits anything.
         RaycastHit hit;
