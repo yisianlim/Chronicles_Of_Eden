@@ -32,7 +32,7 @@ internal class GameUtils
 
         int mask = 0;
         foreach (int layer in layersToMask)
-            mask += (int) Mathf.Pow(2, layer);
+            mask += 1 << layer;
 
         return mask;
 
