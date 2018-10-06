@@ -34,7 +34,8 @@ public class RangedItemAimer : MonoBehaviour {
             itemBeingAimed.Fire(userTransform, aimPoint);
 
             itemBeingAimed = null;
-            cam.lockRotation = false;
+            if(cam != null)
+                cam.lockRotation = false;
 
         }
 
@@ -47,7 +48,8 @@ public class RangedItemAimer : MonoBehaviour {
     public void AimItem(AimableItem itemBeingAimed)
     {
         this.itemBeingAimed = itemBeingAimed;
-        cam.lockRotation = true;
+        if(cam != null)
+            cam.lockRotation = true;
     }
 
     /// <summary>
