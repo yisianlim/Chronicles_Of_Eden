@@ -8,8 +8,10 @@ using UnityEngine;
 public class PressurePlate : ExternallyTriggerable {
 
     private Animator animator;
-    private int numberOnPlate;
+    private float weightOnPlate;
+    bool beingPressed = false;
 
+    [SerializeField] float weightThreshold; //The weight required to trigger the plate.
     [SerializeField] ToggleBehaviour behaviour; //The behaviour the pressure plate affects.
 
     private void Start()
@@ -20,14 +22,11 @@ public class PressurePlate : ExternallyTriggerable {
     public override void TriggerEntered(Collider other)
     {
 
-        Debug.Log(other.name + " entered!");
-
-        if (numberOnPlate > 0) return; //Do not react if it is already being pressed by something else.
-
-        Debug.Log("Pressing");
+        weightOnPlate += GetWeightOf(other.gameObject);
+        if (beingPressed || weightOnPlate < weightThreshold) return;
 
         animator.SetBool("On", true);
-        numberOnPlate++;
+        beingPressed = true;
         behaviour.Toggle();
         
     }
@@ -35,12 +34,26 @@ public class PressurePlate : ExternallyTriggerable {
 
     public override void TriggerExited(Collider other)
     {
-
-        if (numberOnPlate > 1) return; //Ensure the is nothing on the pressure plate.
+        weightOnPlate -= GetWeightOf(other.gameObject);
+        if (!beingPressed || weightOnPlate >= weightThreshold) return; //Ensure the is nothing on the pressure plate.
 
         animator.SetBool("On", false);
-        numberOnPlate--;
+        beingPressed = false;
         behaviour.Toggle();
+
+    }
+
+    /// <summary>
+    /// Returns the weight of an object, if it has a weighted component attached.
+    /// </summary>
+    /// <param name="obj"></param>
+    /// <returns></returns>
+    private float GetWeightOf(GameObject obj)
+    {
+
+        WeightedObject objectWeight = obj.GetComponent<WeightedObject>();
+        if (objectWeight == null) return 0;
+        else return objectWeight.Weight;
 
     }
 

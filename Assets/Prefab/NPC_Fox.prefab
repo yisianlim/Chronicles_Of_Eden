@@ -280,6 +280,7 @@ GameObject:
   - component: {fileID: 114431415221253520}
   - component: {fileID: 114416954445151574}
   - component: {fileID: 195139664975720960}
+  - component: {fileID: 114249444323986498}
   m_Layer: 0
   m_Name: NPC_Fox
   m_TagString: Untagged
@@ -1498,6 +1499,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114249444323986498
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1465614672904082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99f33f57c521fa249801d614efe752a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 10
 --- !u!114 &114416954445151574
 MonoBehaviour:
   m_ObjectHideFlags: 1
