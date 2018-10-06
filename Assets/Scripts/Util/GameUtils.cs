@@ -21,4 +21,21 @@ internal class GameUtils
         }
         return closest;
     }
+
+    /// <summary>
+    /// Creates a layer mask that excludes the layers of the given numbers.
+    /// </summary>
+    /// <param name="layersToMask"></param>
+    /// <returns></returns>
+    public static int GenerateLayerMask(int[] layersToMask)
+    {
+
+        int mask = 0;
+        foreach (int layer in layersToMask)
+            mask += (int) Mathf.Pow(2, layer);
+
+        return mask;
+
+    }
+
 }
