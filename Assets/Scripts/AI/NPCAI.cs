@@ -45,7 +45,7 @@ public class NPCAI : Agent {
                 currentReaction = reaction;
 
                 //Change the animation.
-                npcAnimator.Animation = reaction.animation;
+                if(npcAnimator != null) npcAnimator.Animation = reaction.animation;
 
             }
 
@@ -69,7 +69,7 @@ public class NPCAI : Agent {
         {
             currentReaction.reaction.Cease(this, currentTarget);
             SetIsMoving(false);
-            npcAnimator.Animation = "Idle";
+            if (npcAnimator != null) npcAnimator.Animation = "Idle";
             currentReaction = null;
         }
 
