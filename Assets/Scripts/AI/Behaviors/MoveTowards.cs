@@ -42,9 +42,7 @@ public class MoveTowards : NPCBehaviour
         npc.transform.position = Vector3.MoveTowards(npc.transform.position, targetPosition, movementSpeed * Time.deltaTime);
 
         //Turn the npc towards the target.
-        Vector3 dir = targetPosition - npc.transform.position;
-        Vector3 rotation = Vector3.RotateTowards(npc.transform.forward, dir, turnSpeed, 0f);
-        npc.transform.rotation = Quaternion.LookRotation(rotation);
+        TurnTowards.Turn(targetPosition, npc.transform, turnSpeed);
 
     }
 
