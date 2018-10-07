@@ -1,0 +1,208 @@
+fileFormatVersion: 2
+guid: 3a56c0e92393f475599117d3a7ee3362
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: CTRL_Body
+    100002: CTRL_body_mid
+    100004: CTRL_Butt
+    100006: CTRL_Head
+    100008: CTRL_LeftLeg_back
+    100010: CTRL_LeftLeg_front
+    100012: CTRL_MASTER
+    100014: CTRL_RightLeg_back
+    100016: CTRL_RightLeg_front
+    100018: CTRL_Tails
+    100020: ik_LeftLeg_back
+    100022: ik_LeftLeg_front
+    100024: ik_RightLeg_back
+    100026: ik_RightLeg_front
+    100028: ik_tails
+    100030: joint32
+    100032: joint33
+    100034: joint34
+    100036: joint35
+    100038: joint36
+    100040: joint37
+    100042: joint38
+    100044: joint39
+    100046: joint40
+    100048: joint41
+    100050: joint42
+    100052: joint43
+    100054: joint44
+    100056: joint45
+    100058: joint46
+    100060: joint47
+    100062: joint48
+    100064: joint49
+    100066: joint50
+    100068: joint51
+    100070: joint52
+    100072: joint53
+    100074: joint54
+    100076: joint55
+    100078: joint56
+    100080: joint57
+    100082: joint58
+    100084: joint59
+    100086: joint60
+    100088: joint61
+    100090: joint62
+    100092: joint63
+    100094: joint64
+    100096: joint65
+    100098: NPC_Boar_body:RetopoGroup1
+    100100: NPC_Boar_horns:RetopoGroup1
+    100102: //RootNode
+    400000: CTRL_Body
+    400002: CTRL_body_mid
+    400004: CTRL_Butt
+    400006: CTRL_Head
+    400008: CTRL_LeftLeg_back
+    400010: CTRL_LeftLeg_front
+    400012: CTRL_MASTER
+    400014: CTRL_RightLeg_back
+    400016: CTRL_RightLeg_front
+    400018: CTRL_Tails
+    400020: ik_LeftLeg_back
+    400022: ik_LeftLeg_front
+    400024: ik_RightLeg_back
+    400026: ik_RightLeg_front
+    400028: ik_tails
+    400030: joint32
+    400032: joint33
+    400034: joint34
+    400036: joint35
+    400038: joint36
+    400040: joint37
+    400042: joint38
+    400044: joint39
+    400046: joint40
+    400048: joint41
+    400050: joint42
+    400052: joint43
+    400054: joint44
+    400056: joint45
+    400058: joint46
+    400060: joint47
+    400062: joint48
+    400064: joint49
+    400066: joint50
+    400068: joint51
+    400070: joint52
+    400072: joint53
+    400074: joint54
+    400076: joint55
+    400078: joint56
+    400080: joint57
+    400082: joint58
+    400084: joint59
+    400086: joint60
+    400088: joint61
+    400090: joint62
+    400092: joint63
+    400094: joint64
+    400096: joint65
+    400098: NPC_Boar_body:RetopoGroup1
+    400100: NPC_Boar_horns:RetopoGroup1
+    400102: //RootNode
+    2100000: NPC_Boar_body_lambert1
+    2100002: NPC_Boar_horns_lambert1
+    4300000: NPC_Boar_body:RetopoGroup1
+    4300002: NPC_Boar_horns:RetopoGroup1
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: NPC_Boar_body:RetopoGroup1
+    13700002: NPC_Boar_horns:RetopoGroup1
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NPC_Boar_body_lambert1
+    second: {fileID: 2100000, guid: ea624913d515946a19ed77863027792d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NPC_Boar_horns_lambert1
+    second: {fileID: 2100000, guid: d3da74b329ba84ac2b17d3ea2a8f46da, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

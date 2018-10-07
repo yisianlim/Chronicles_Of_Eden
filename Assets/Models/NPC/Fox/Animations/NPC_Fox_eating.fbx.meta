@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 7ae44b9f2b32843a48e6cc9262c053a4
 ModelImporter:
-  serializedVersion: 23
+  serializedVersion: 22
   fileIDToRecycleName:
     100000: CTRL_body
     100002: CTRL_ear_L
@@ -108,7 +108,17 @@ ModelImporter:
     7400000: Take 001
     9500000: //RootNode
     13700000: NPC_Fox_re_body1:RetopoGroup1
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NPC_Fox_re_body1_lambert1
+    second: {fileID: 2100000, guid: b6b62083056cb495b902db1b8f6a4a11, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NPC_Fox_re_body1_lambert2
+    second: {fileID: 2100000, guid: 1223fe965cbfd44aa882d08d6525b97a, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -187,8 +197,6 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
