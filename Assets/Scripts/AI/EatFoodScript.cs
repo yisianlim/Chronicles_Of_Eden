@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EatFoodScript : MonoBehaviour {
 
+    [SerializeField] string[] Tags; //The tags of objects that can eat food.
+
     public double countDownTime;
     public double timerConst;
     public double foodDecayConst;
@@ -28,9 +30,13 @@ public class EatFoodScript : MonoBehaviour {
     }
 
     private void OnTriggerEnter(Collider other) {
-       if (other.CompareTag("Enemy") || other.CompareTag("LargeEnemy") || other.CompareTag("ArmouredEnemy")) {
-            enemyNumber += 1;
-        } 
+
+        foreach (string tag in Tags) {
+            if (other.CompareTag(tag)) {
+                enemyNumber += 1;
+                return;
+            }
+        }
     }
 
 }
