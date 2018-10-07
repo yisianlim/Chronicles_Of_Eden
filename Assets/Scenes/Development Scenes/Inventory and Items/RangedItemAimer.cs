@@ -7,6 +7,8 @@ using UnityEngine;
 /// </summary>
 public class RangedItemAimer : MonoBehaviour {
 
+    public static readonly int[] layersToIgnoreWhenAiming = new int[] { 13 };
+    
     private AimableItem itemBeingAimed;
     private Transform userTransform; //From where the item is being aimed.
 
@@ -69,7 +71,7 @@ public class RangedItemAimer : MonoBehaviour {
 
         //Cast the ray and determine the point on the map that it hits, if it hits anything.
         RaycastHit hit;
-        if(!Physics.Raycast(cameraToMouseRay, out hit)) return Vector3.positiveInfinity;
+        if(!Physics.Raycast(cameraToMouseRay, out hit, Mathf.Infinity, ~GameUtils.GenerateLayerMask(layersToIgnoreWhenAiming))) return Vector3.positiveInfinity;
         return hit.point;
 
     }
