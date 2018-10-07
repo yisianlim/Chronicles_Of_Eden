@@ -7,7 +7,7 @@ using UnityEngine;
 /// </summary>
 public class RangedItemAimer : MonoBehaviour {
 
-    public static readonly int[] layersToIgnoreWhenAiming = new int[] { 13 };
+    public static readonly int[] layersToIgnoreWhenAiming = new int[] { 13, 14 };
     
     private AimableItem itemBeingAimed;
     private Transform userTransform; //From where the item is being aimed.
