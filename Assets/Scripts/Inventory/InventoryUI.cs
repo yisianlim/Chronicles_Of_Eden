@@ -6,7 +6,10 @@ using UnityEngine.UI;
 public class InventoryUI : MonoBehaviour {
 
     public Inventory inventory;
+
+    // Sprite used upon selected or deselection.
     public Sprite border;
+    public Sprite UIMask;
 
 	// Use this for initialization
 	void Start () {
@@ -22,11 +25,13 @@ public class InventoryUI : MonoBehaviour {
         {
             Image image = slot.GetComponent<Image>();
 
-            // We found the equipped slot.
-            if (key == e.Index)
-            {
+            
+            if (key == e.Index) {
+                // We found the equipped slot.
                 image.sprite = border;
-                break;
+            } else {
+                // All other slot should not be bordered!
+                image.sprite = UIMask;
             }
             key++;
         }
@@ -47,9 +52,4 @@ public class InventoryUI : MonoBehaviour {
             }
         }
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

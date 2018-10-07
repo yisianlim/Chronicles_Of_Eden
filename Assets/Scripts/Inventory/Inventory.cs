@@ -23,7 +23,7 @@ public class Inventory : MonoBehaviour {
             if (items[equipedItem] != null) items[equipedItem].Use(userTranform, this);
         }
 
-        //If the user presses a number key, equipt the item of that number, if it exists.
+        //If the user presses a number key, equip the item of that number, if it exists.
         for (int key = 0; key < items.Length; key++)
         {
             if (Input.GetKeyDown(key + "") && items[key] != null)
@@ -39,7 +39,7 @@ public class Inventory : MonoBehaviour {
     protected virtual void SlotSelected(int num)
     {
         equipedItem = num;
-        //ItemEquipped(this, new ItemEquippedEventArgs(num));
+        ItemEquipped(this, new ItemEquippedEventArgs(num));
     }
 
     /// <summary>

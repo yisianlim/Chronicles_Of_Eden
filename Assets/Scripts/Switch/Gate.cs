@@ -19,13 +19,10 @@ public class Gate : ToggleBehaviour {
 
     public override void Toggle()
     {
-
         open = !open;
         if (open) anim.runtimeAnimatorController = openGateController;
         else anim.runtimeAnimatorController = closeGateContoller;
         anim.SetBool("Open", open);
-
-
     }
 
 }
