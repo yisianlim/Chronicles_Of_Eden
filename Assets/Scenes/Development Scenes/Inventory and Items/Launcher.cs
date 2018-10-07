@@ -44,7 +44,7 @@ public class Launcher : AimableItem
     {
 
         //Turn user to face target.
-        Vector3 dir = endPoint - userTransform.position;
+        Vector3 dir = new Vector3(endPoint.x, userTransform.position.y, endPoint.z) - userTransform.position;
         Vector3 rotation = Vector3.RotateTowards(userTransform.transform.forward, dir, 360, 0f);
         userTransform.transform.rotation = Quaternion.LookRotation(rotation);
 
