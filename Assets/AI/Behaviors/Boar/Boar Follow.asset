@@ -8,8 +8,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5489b90658b094488f00c7ca37eba96, type: 3}
+  m_Script: {fileID: 11500000, guid: c5a1be2e28010c74fa66d83a81ebbfa3, type: 3}
   m_Name: Boar Follow
   m_EditorClassIdentifier: 
-  movementSpeed: 3
-  turnSpeed: 180
+  moveSpeed: 3
