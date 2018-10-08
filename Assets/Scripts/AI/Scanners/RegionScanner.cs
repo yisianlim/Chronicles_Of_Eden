@@ -9,10 +9,25 @@ using UnityEngine;
 public class RegionScanner : Scanner
 {
 
-    [SerializeField] RegionScannerTrigger region;
+    [SerializeField] Vector3 regionCentre;
+    [SerializeField] Vector3 regionSize;
+
+    private List<Scannable> scannables = new List<Scannable>();
 
     protected override ICollection<Scannable> Scan(Transform originTranform)
     {
-        return region.Query();
+
+        List<Scannable> scannables = new List<Scannable>();
+
+        Collider[] colliders = Physics.OverlapBox(regionCentre, regionSize / 2);
+        foreach(Collider c in colliders)
+        {
+            Scannable s = c.GetComponent<Scannable>();
+            if (s != null) scannables.Add(s);
+        }
+
+        return scannables;
+
     }
+
 }
