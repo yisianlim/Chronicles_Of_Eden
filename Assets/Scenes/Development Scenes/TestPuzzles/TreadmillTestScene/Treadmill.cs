@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))] 
-public class Treadmill : MonoBehaviour {
+public class Treadmill : ExternallyTriggerable {
 
     private Dictionary<Transform, Vector3> positionsOfUsers = new Dictionary<Transform, Vector3>();
 
@@ -25,7 +25,7 @@ public class Treadmill : MonoBehaviour {
         animator = GetComponent<Animator>();
     }
 
-    private void OnTriggerEnter(Collider other)
+    public override void TriggerEntered(Collider other)
     {
 
         Debug.Log(other.gameObject.name + " entered treadmill!");
@@ -34,7 +34,7 @@ public class Treadmill : MonoBehaviour {
             positionsOfUsers[other.transform] = other.transform.position;
     }
 
-    private void OnTriggerExit(Collider other)
+    public override void TriggerExited(Collider other)
     {
         positionsOfUsers.Remove(other.transform);
     }
@@ -93,4 +93,5 @@ public class Treadmill : MonoBehaviour {
         powered = p;
     }
 
+   
 }
