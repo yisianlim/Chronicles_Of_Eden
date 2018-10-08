@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Bomb Dropper
   m_EditorClassIdentifier: 
   InGameName: Bomb Launcher
-  _Image: {fileID: 0}
+  _Image: {fileID: 21300000, guid: 77b2927d53387ab419a7b3ecdd732e26, type: 3}
   droppedItem: {fileID: 54735292196036224, guid: 3617cd4500829ae479dd34ef2ba2107f,
     type: 2}
   instantiationDistanceFromPlayer: 0.5

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Bomb Lancher
   m_EditorClassIdentifier: 
   InGameName: Bomb Launcher
-  _Image: {fileID: 0}
+  _Image: {fileID: 21300000, guid: 77b2927d53387ab419a7b3ecdd732e26, type: 3}
   item: {fileID: 54735292196036224, guid: 3617cd4500829ae479dd34ef2ba2107f, type: 2}
   instantiationDistanceFromPlayer: 0.5
   cursor: {fileID: 1683523223061198, guid: 9f1ee3998343bac4facac0016df51940, type: 2}

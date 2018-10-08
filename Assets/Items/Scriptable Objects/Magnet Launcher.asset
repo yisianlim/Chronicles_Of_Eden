@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Magnet Launcher
   m_EditorClassIdentifier: 
   InGameName: Magnet Launcher
-  _Image: {fileID: 0}
+  _Image: {fileID: 21300000, guid: 47375b10dae98ee449c17356869a3e24, type: 3}
   item: {fileID: 54130560282525688, guid: 8a19e832854a6f640bbb7a98b2924286, type: 2}
   instantiationDistanceFromPlayer: 0.5
   cursor: {fileID: 1683523223061198, guid: 9f1ee3998343bac4facac0016df51940, type: 2}

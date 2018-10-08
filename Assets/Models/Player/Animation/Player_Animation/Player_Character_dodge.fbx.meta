@@ -1,7 +1,7 @@
 fileFormatVersion: 2
-guid: 008d9db46b6234f419ee9ee0e97f30c0
+guid: 7a03ec55ffccd834f9f9ba4bcd9380cb
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 23
   fileIDToRecycleName:
     100000: hand
     100002: JT_Head
@@ -170,37 +170,7 @@ ModelImporter:
     13700004: Main_Character_body:RetopoGroup1
     13700006: Main_Character_hair1:Main_Character_hair1
     13700008: Main_Character_shieldshoulder1:RetopoGroup1
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lambert2
-    second: {fileID: 2100000, guid: 2b917770109374f6890e096ba37981a5, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lambert3
-    second: {fileID: 2100000, guid: 5789c210b3c5243788c4ad997bc54746, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lambert4
-    second: {fileID: 2100000, guid: a251a4ba5ddfe49cdb6b9918e138334f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lambert5
-    second: {fileID: 2100000, guid: d455d38e30080435f889e2068c87dd6d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lambert6
-    second: {fileID: 2100000, guid: a409dc6be36b44de8bbed69339be1174, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lambert7
-    second: {fileID: 2100000, guid: 9cca491da0b784440b1910e64549d1b4, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -251,6 +221,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
