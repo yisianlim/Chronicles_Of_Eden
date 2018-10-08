@@ -1,26 +1,26 @@
 fileFormatVersion: 2
-guid: 4d341799000f07144ab9248dcfe6fa54
+guid: 07c30395f825b7b4681cd880b81894b2
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Cork
-    100004: Liquid
-    400000: //RootNode
-    400002: Cork
-    400004: Liquid
+    100000: Cork
+    100002: Liquid
+    100004: //RootNode
+    400000: Cork
+    400002: Liquid
+    400004: //RootNode
     2100000: Bottle
-    2100002: Liquid Blue Red
-    2100004: Cork
-    2300000: //RootNode
-    2300002: Cork
-    2300004: Liquid
-    3300000: //RootNode
-    3300002: Cork
-    3300004: Liquid
-    4300000: Concoction
-    4300002: Liquid
-    4300004: Cork
+    2100002: Cork
+    2100004: Liquid Red White Swirl
+    2300000: Cork
+    2300002: Liquid
+    2300004: //RootNode
+    3300000: Cork
+    3300002: Liquid
+    3300004: //RootNode
+    4300000: Elixir
+    4300002: Cork
+    4300004: Liquid
   externalObjects: {}
   materials:
     importMaterials: 1
