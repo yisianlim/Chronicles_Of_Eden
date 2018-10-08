@@ -1,0 +1,283 @@
+fileFormatVersion: 2
+guid: f3088a80bc262442ca1317019968a2e6
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: back
+    100002: JT_Head
+    100004: JT_HeadTop_End
+    100006: JT_Hips
+    100008: JT_LeftArm
+    100010: JT_LeftFoot
+    100012: JT_LeftForeArm
+    100014: JT_LeftHand
+    100016: JT_LeftHandIndex1
+    100018: JT_LeftHandIndex2
+    100020: JT_LeftHandIndex3
+    100022: JT_LeftHandIndex4
+    100024: JT_LeftHandMiddle1
+    100026: JT_LeftHandMiddle2
+    100028: JT_LeftHandMiddle3
+    100030: JT_LeftHandMiddle4
+    100032: JT_LeftHandPinky1
+    100034: JT_LeftHandPinky2
+    100036: JT_LeftHandPinky3
+    100038: JT_LeftHandPinky4
+    100040: JT_LeftHandRing1
+    100042: JT_LeftHandRing2
+    100044: JT_LeftHandRing3
+    100046: JT_LeftHandRing4
+    100048: JT_LeftHandThumb1
+    100050: JT_LeftHandThumb2
+    100052: JT_LeftHandThumb3
+    100054: JT_LeftHandThumb4
+    100056: JT_LeftLeg
+    100058: JT_LeftShoulder
+    100060: JT_LeftToe_End
+    100062: JT_LeftToeBase
+    100064: JT_LeftUpLeg
+    100066: JT_Neck
+    100068: JT_RightArm
+    100070: JT_RightFoot
+    100072: JT_RightForeArm
+    100074: JT_RightHand
+    100076: JT_RightHandIndex1
+    100078: JT_RightHandIndex2
+    100080: JT_RightHandIndex3
+    100082: JT_RightHandIndex4
+    100084: JT_RightHandMiddle1
+    100086: JT_RightHandMiddle2
+    100088: JT_RightHandMiddle3
+    100090: JT_RightHandMiddle4
+    100092: JT_RightHandPinky1
+    100094: JT_RightHandPinky2
+    100096: JT_RightHandPinky3
+    100098: JT_RightHandPinky4
+    100100: JT_RightHandRing1
+    100102: JT_RightHandRing2
+    100104: JT_RightHandRing3
+    100106: JT_RightHandRing4
+    100108: JT_RightHandThumb1
+    100110: JT_RightHandThumb2
+    100112: JT_RightHandThumb3
+    100114: JT_RightHandThumb4
+    100116: JT_RightLeg
+    100118: JT_RightShoulder
+    100120: JT_RightToe_End
+    100122: JT_RightToeBase
+    100124: JT_RightUpLeg
+    100126: JT_Spine
+    100128: JT_Spine1
+    100130: JT_Spine2
+    100132: Main_Character_bag:RetopoGroup1
+    100134: Main_Character_belt2:RetopoGroup1
+    100136: Main_Character_body:RetopoGroup1
+    100138: Main_Character_hair1:Main_Character_hair1
+    100140: Main_Character_shieldshoulder1:RetopoGroup1
+    100142: Main_Character_swords:RetopoGroup1
+    100144: //RootNode
+    400000: back
+    400002: JT_Head
+    400004: JT_HeadTop_End
+    400006: JT_Hips
+    400008: JT_LeftArm
+    400010: JT_LeftFoot
+    400012: JT_LeftForeArm
+    400014: JT_LeftHand
+    400016: JT_LeftHandIndex1
+    400018: JT_LeftHandIndex2
+    400020: JT_LeftHandIndex3
+    400022: JT_LeftHandIndex4
+    400024: JT_LeftHandMiddle1
+    400026: JT_LeftHandMiddle2
+    400028: JT_LeftHandMiddle3
+    400030: JT_LeftHandMiddle4
+    400032: JT_LeftHandPinky1
+    400034: JT_LeftHandPinky2
+    400036: JT_LeftHandPinky3
+    400038: JT_LeftHandPinky4
+    400040: JT_LeftHandRing1
+    400042: JT_LeftHandRing2
+    400044: JT_LeftHandRing3
+    400046: JT_LeftHandRing4
+    400048: JT_LeftHandThumb1
+    400050: JT_LeftHandThumb2
+    400052: JT_LeftHandThumb3
+    400054: JT_LeftHandThumb4
+    400056: JT_LeftLeg
+    400058: JT_LeftShoulder
+    400060: JT_LeftToe_End
+    400062: JT_LeftToeBase
+    400064: JT_LeftUpLeg
+    400066: JT_Neck
+    400068: JT_RightArm
+    400070: JT_RightFoot
+    400072: JT_RightForeArm
+    400074: JT_RightHand
+    400076: JT_RightHandIndex1
+    400078: JT_RightHandIndex2
+    400080: JT_RightHandIndex3
+    400082: JT_RightHandIndex4
+    400084: JT_RightHandMiddle1
+    400086: JT_RightHandMiddle2
+    400088: JT_RightHandMiddle3
+    400090: JT_RightHandMiddle4
+    400092: JT_RightHandPinky1
+    400094: JT_RightHandPinky2
+    400096: JT_RightHandPinky3
+    400098: JT_RightHandPinky4
+    400100: JT_RightHandRing1
+    400102: JT_RightHandRing2
+    400104: JT_RightHandRing3
+    400106: JT_RightHandRing4
+    400108: JT_RightHandThumb1
+    400110: JT_RightHandThumb2
+    400112: JT_RightHandThumb3
+    400114: JT_RightHandThumb4
+    400116: JT_RightLeg
+    400118: JT_RightShoulder
+    400120: JT_RightToe_End
+    400122: JT_RightToeBase
+    400124: JT_RightUpLeg
+    400126: JT_Spine
+    400128: JT_Spine1
+    400130: JT_Spine2
+    400132: Main_Character_bag:RetopoGroup1
+    400134: Main_Character_belt2:RetopoGroup1
+    400136: Main_Character_body:RetopoGroup1
+    400138: Main_Character_hair1:Main_Character_hair1
+    400140: Main_Character_shieldshoulder1:RetopoGroup1
+    400142: Main_Character_swords:RetopoGroup1
+    400144: //RootNode
+    2100000: lambert2
+    2100002: lambert6
+    2100004: lambert4
+    2100006: lambert3
+    2100008: lambert5
+    2100010: lambert7
+    2300000: Main_Character_swords:RetopoGroup1
+    3300000: Main_Character_swords:RetopoGroup1
+    4300000: Main_Character_body:RetopoGroup1
+    4300002: Main_Character_bag:RetopoGroup1
+    4300004: Main_Character_shieldshoulder1:RetopoGroup1
+    4300006: Main_Character_hair1:Main_Character_hair1
+    4300008: Main_Character_belt2:RetopoGroup1
+    4300010: Main_Character_swords:RetopoGroup1
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Main_Character_bag:RetopoGroup1
+    13700002: Main_Character_belt2:RetopoGroup1
+    13700004: Main_Character_body:RetopoGroup1
+    13700006: Main_Character_hair1:Main_Character_hair1
+    13700008: Main_Character_shieldshoulder1:RetopoGroup1
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert2
+    second: {fileID: 2100000, guid: 2b917770109374f6890e096ba37981a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert3
+    second: {fileID: 2100000, guid: 5789c210b3c5243788c4ad997bc54746, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert4
+    second: {fileID: 2100000, guid: a251a4ba5ddfe49cdb6b9918e138334f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert5
+    second: {fileID: 2100000, guid: d455d38e30080435f889e2068c87dd6d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert6
+    second: {fileID: 2100000, guid: a409dc6be36b44de8bbed69339be1174, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert7
+    second: {fileID: 2100000, guid: 9cca491da0b784440b1910e64549d1b4, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
