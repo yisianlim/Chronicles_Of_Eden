@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Animator))] 
 public class Treadmill : MonoBehaviour {
 
     private Dictionary<Transform, Vector3> positionsOfUsers = new Dictionary<Transform, Vector3>();
@@ -9,17 +10,26 @@ public class Treadmill : MonoBehaviour {
     private Vector3 directionFacing;
     private bool powered = false; //Whether or not the treadmill is being powered.
 
+    private Animator animator;
+
     [SerializeField] ToggleBehaviour action;
     [SerializeField] float resistance;
+    [SerializeField] float directionOffset;
 
     private void Start()
     {
         //Find the direction in which the treadmill is facing, so we can send the user(s) in the opposite direction.
-        directionFacing = (transform.rotation * Vector3.forward).normalized;
+        Quaternion offsettedRotation = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y + directionOffset, transform.eulerAngles.z);
+        directionFacing = (offsettedRotation * Vector3.forward).normalized;
+
+        animator = GetComponent<Animator>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
+
+        Debug.Log(other.gameObject.name + " entered treadmill!");
+
         if (!positionsOfUsers.ContainsKey(other.transform))
             positionsOfUsers[other.transform] = other.transform.position;
     }
@@ -40,8 +50,11 @@ public class Treadmill : MonoBehaviour {
         foreach(Transform t in positionsOfUsers.Keys)
         {
 
+            if (t == null) return;
             Agent treadmillUser = t.GetComponent<Agent>();
             if (treadmillUser == null) continue;
+
+            Debug.Log("Is moving: " + treadmillUser.IsMoving);
 
             Vector3 positionChange = positionsOfUsers[t] - t.position;
             if (treadmillUser.IsMoving)
@@ -51,9 +64,13 @@ public class Treadmill : MonoBehaviour {
                 float directionAdjustMultiplier = Vector3.Angle(directionFacing, positionChange.normalized) > 90 ? 1 : -1;
                 movement = directionFacing * resistance * directionAdjustMultiplier;
 
+                animator.SetBool("Forward", directionAdjustMultiplier == -1);
+
             }
 
         }
+
+        animator.SetBool("On", movingUser);
 
         foreach (Transform t in positionsOfUsers.Keys)
         {
