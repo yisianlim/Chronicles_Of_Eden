@@ -6,6 +6,7 @@ using UnityEngine;
 public class NPCAI : Agent {
 
     [SerializeField] Reaction[] reactions; //The reactions of the NPC to differen object types, in order of priority.
+    protected virtual Reaction[] CurrentReactions { get { return reactions; } }
 
     Reaction currentReaction;
     private Scannable currentTarget;
@@ -24,7 +25,7 @@ public class NPCAI : Agent {
 
         if (stone) { return; }
 
-        foreach(Reaction reaction in reactions)
+        foreach(Reaction reaction in CurrentReactions)
         {
 
             //Use the reaction's scanner to search for objects of the relevant type, and skip reaction if none are found.
@@ -100,7 +101,7 @@ public class NPCAI : Agent {
     }
 
     [Serializable]
-    private class Reaction
+    protected class Reaction
     {
         public string objectType;
         public Scanner scanner; //The scanner used to search for the objects to react to.
