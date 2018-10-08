@@ -11,4 +11,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5a1be2e28010c74fa66d83a81ebbfa3, type: 3}
   m_Name: Fox Follow Food
   m_EditorClassIdentifier: 
-  moveSpeed: 0.5
+  moveSpeed: 3
