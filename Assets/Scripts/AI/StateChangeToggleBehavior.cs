@@ -17,6 +17,6 @@ public class StateChangeToggleBehavior : ToggleBehaviour
     {
         baseBehavior.Toggle();
         foreach (MultiStateNPCAI ai in AIs)
-            ai.State = "newState";
+            ai.State = newState;
     }
 }
