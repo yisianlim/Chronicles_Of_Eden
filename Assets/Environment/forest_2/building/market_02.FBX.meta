@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: a4b5e1b50941a46c293d8c23ec10256b
+guid: d55099719978cea409225f62bdaa1bb5
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: 'Material #1'
+    2100000: 12 - Defaultdfv
     2300000: //RootNode
     3300000: //RootNode
-    4300000: LightPost_01
+    4300000: Market_02
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -60,6 +60,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0

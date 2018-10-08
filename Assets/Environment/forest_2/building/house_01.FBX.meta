@@ -1,26 +1,22 @@
 fileFormatVersion: 2
-guid: 0e77c41b4475e4007862b27668df9ee9
+guid: 9499980d2fc5f7b45b7dd981041f8a38
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Cork
-    100004: Liquid
+    100002: Object01
+    100004: Object02
     400000: //RootNode
-    400002: Cork
-    400004: Liquid
-    2100000: Bottle
-    2100002: Liquid Blue Red
-    2100004: Cork
-    2300000: //RootNode
-    2300002: Cork
-    2300004: Liquid
-    3300000: //RootNode
-    3300002: Cork
-    3300004: Liquid
-    4300000: Concoction
-    4300002: Liquid
-    4300004: Cork
+    400002: Object01
+    400004: Object02
+    2100000: 'Material #105'
+    2100002: 'Material #106'
+    2300000: Object01
+    2300002: Object02
+    3300000: Object01
+    3300002: Object02
+    4300000: Object01
+    4300002: Object02
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -72,6 +68,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0

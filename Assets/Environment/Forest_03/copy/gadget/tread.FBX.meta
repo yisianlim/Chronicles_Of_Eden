@@ -1,14 +1,46 @@
 fileFormatVersion: 2
-guid: e53a3008e0e274e5b892b04a8ca1eb03
+guid: 332280949d8fb0b40907e969f7ffd92f
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
+    100000: Board_01_a
+    100002: Board_01_b
+    100004: Board_01_c
+    100006: Board_01_d
+    100008: //RootNode
+    100010: wheelpart
+    100012: wheelpart 1
+    100014: Wheelpart1
+    400000: Board_01_a
+    400002: Board_01_b
+    400004: Board_01_c
+    400006: Board_01_d
+    400008: //RootNode
+    400010: wheelpart
+    400012: wheelpart 1
+    400014: Wheelpart1
     2100000: 'Material #1'
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: SignPost
+    2300000: Board_01_a
+    2300002: Board_01_b
+    2300004: Board_01_c
+    2300006: Board_01_d
+    2300008: wheelpart
+    2300010: wheelpart 1
+    2300012: Wheelpart1
+    3300000: Board_01_a
+    3300002: Board_01_b
+    3300004: Board_01_c
+    3300006: Board_01_d
+    3300008: wheelpart
+    3300010: wheelpart 1
+    3300012: Wheelpart1
+    4300000: wheelpart
+    4300002: Board_01_a
+    4300004: wheelpart
+    4300006: Board_01_b
+    4300008: Wheelpart1
+    4300010: Board_01_c
+    4300012: Board_01_d
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -60,6 +92,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0

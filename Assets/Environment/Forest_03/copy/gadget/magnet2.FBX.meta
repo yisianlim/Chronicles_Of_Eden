@@ -1,14 +1,31 @@
 fileFormatVersion: 2
-guid: 7608ddf0fc3e04c938de0495458605f4
+guid: c277d18be40fd364388d32b2debb83b9
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2100000: 'Material #1'
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: LogHeap_01_a
+    100000: Bolt_003
+    100002: Bolt_2
+    100004: Clamp_2
+    100006: //RootNode
+    100008: Subdivision_Surface
+    100010: Torus_1_3
+    400000: Bolt_003
+    400002: Bolt_2
+    400004: Clamp_2
+    400006: //RootNode
+    400008: Subdivision_Surface
+    400010: Torus_1_3
+    2100000: Aged Iron
+    2100002: "Metal - Stainless Steel Brushed C\xF4te de Gen\xE8ve"
+    2300000: Bolt_003
+    2300002: Bolt_2
+    2300004: Torus_1_3
+    3300000: Bolt_003
+    3300002: Bolt_2
+    3300004: Torus_1_3
+    4300000: Torus_1_3
+    4300002: Bolt_2
+    4300004: Bolt_003
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -60,6 +77,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0

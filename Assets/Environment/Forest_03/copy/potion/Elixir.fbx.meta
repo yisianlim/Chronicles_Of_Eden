@@ -1,16 +1,26 @@
 fileFormatVersion: 2
-guid: 7e3bd2784b4cd460fab6f02954dc2927
+guid: 76ac63e7d3eeddb4fb28a1bdb09ea0a3
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: FenceClosed
-    400000: //RootNode
-    400002: FenceClosed
-    2100000: No Name
-    2300000: FenceClosed
-    3300000: FenceClosed
-    4300000: FenceClosed
+    100000: Cork
+    100002: //RootNode
+    100004: Liquid
+    400000: Cork
+    400002: //RootNode
+    400004: Liquid
+    2100000: Bottle
+    2100002: Cork
+    2100004: Liquid Red White Swirl
+    2300000: Cork
+    2300002: //RootNode
+    2300004: Liquid
+    3300000: Cork
+    3300002: //RootNode
+    3300004: Liquid
+    4300000: Elixir
+    4300002: Cork
+    4300004: Liquid
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -62,6 +72,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
