@@ -5,6 +5,7 @@ using UnityEngine;
 /// <summary>
 /// Selects the closest valid target to the NPC.
 /// </summary>
+[CreateAssetMenu(fileName = "Nearest Target Selector", menuName = "NPC AI/Target/Selectors/Nearest Target", order = 1)]
 public class NearestScannableSelector : TargetSelector
 {
     public override Scannable SelectTarget(ICollection<Scannable> targets, NPCAI npc)

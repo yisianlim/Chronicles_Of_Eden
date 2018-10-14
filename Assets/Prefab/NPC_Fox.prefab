@@ -1480,7 +1480,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.26303864, y: 0.47, z: 0.5828775}
-  m_Center: {x: 0, y: 0.21, z: -0.02}
+  m_Center: {x: 0, y: 0.24, z: -0.02}
 --- !u!95 &95993665697867254
 Animator:
   serializedVersion: 3
@@ -1526,14 +1526,20 @@ MonoBehaviour:
   - objectType: Food
     scanner: {fileID: 11400000, guid: 4013221a043db604a9a13aa3304b3e55, type: 2}
     reaction: {fileID: 11400000, guid: 455b3650d109b7544be30cb6cda2a046, type: 2}
+    targetSelectionCritera: {fileID: 11400000, guid: c40b31d1438ab18469c2ddc994f8fdb5,
+      type: 2}
     animation: Eating
   - objectType: Food
     scanner: {fileID: 11400000, guid: f31200e035c1b0b4798aec50070938c6, type: 2}
     reaction: {fileID: 11400000, guid: 709a7d488442c9b44b5ab39ad42da69a, type: 2}
+    targetSelectionCritera: {fileID: 11400000, guid: c40b31d1438ab18469c2ddc994f8fdb5,
+      type: 2}
     animation: Running
   - objectType: Player
     scanner: {fileID: 11400000, guid: 191e583b444ca8a4e80bc4683314768d, type: 2}
     reaction: {fileID: 11400000, guid: 4f3d272dbfa09ab43a50b883b25c79ac, type: 2}
+    targetSelectionCritera: {fileID: 11400000, guid: c40b31d1438ab18469c2ddc994f8fdb5,
+      type: 2}
     animation: Sprinting
 --- !u!114 &114431415221253520
 MonoBehaviour:
