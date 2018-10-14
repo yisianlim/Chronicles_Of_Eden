@@ -26,7 +26,7 @@ public abstract class TargetSelector : ScriptableObject {
             bool targetValid = true;
             foreach(TargetFilter filter in filters)
             {
-                if (!filter.IsValidTarget(target))
+                if (!filter.IsValidTarget(target, npc))
                 {
                     //As soon as a target fails a filter, there is no point in continuing.
                     targetValid = false;
@@ -40,7 +40,7 @@ public abstract class TargetSelector : ScriptableObject {
 
 
         if (validTargets.Count == 0) return null;
-        else return SelectTarget(validTargets);
+        else return SelectTarget(validTargets, npc);
 
     }
 
