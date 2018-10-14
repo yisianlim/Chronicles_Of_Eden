@@ -10,7 +10,7 @@ using UnityEngine.AI;
 public class ReachableByNavmeshAgentTargetFilter : TargetFilter
 {
 
-    const float POINT_TOLERANCE = 0.5f;
+    const float POINT_TOLERANCE = 1f;
 
     public override bool IsValidTarget(Scannable target, NPCAI npc)
     {
@@ -21,8 +21,11 @@ public class ReachableByNavmeshAgentTargetFilter : TargetFilter
         NavMesh.SamplePosition(npc.transform.position, out npcPosition, POINT_TOLERANCE, NavMesh.AllAreas);
         NavMesh.SamplePosition(target.transform.position, out targetPosition, POINT_TOLERANCE, NavMesh.AllAreas);
 
-        //Try to find a path between the two points and return whether is is successful.
-        return NavMesh.CalculatePath(npcPosition.position, targetPosition.position, NavMesh.AllAreas, null);
+        if (targetPosition.position.Equals(new Vector3(Mathf.Infinity, Mathf.Infinity, Mathf.Infinity))) return false;
 
+        //Try to find a path between the two points and return whether is is successful.
+        NavMeshPath path = new NavMeshPath();
+        NavMesh.CalculatePath(npcPosition.position, targetPosition.position, NavMesh.AllAreas, path);
+        return path.status == NavMeshPathStatus.PathComplete;
     }
 }

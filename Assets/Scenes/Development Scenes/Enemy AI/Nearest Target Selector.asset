@@ -11,3 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9de1602ac82313a4abe11f53f90a86cb, type: 3}
   m_Name: Nearest Target Selector
   m_EditorClassIdentifier: 
+  filters:
+  - {fileID: 11400000, guid: b73a3fccfc1895e47a7f84bb0e1525c5, type: 2}
