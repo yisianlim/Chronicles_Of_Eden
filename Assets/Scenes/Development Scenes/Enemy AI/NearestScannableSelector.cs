@@ -14,10 +14,17 @@ public class NearestScannableSelector : TargetSelector
         foreach (Scannable target in targets)
         {
 
+            //To begin with, set the nearest scannable to the first item in scannables.
+            if(nearestScannable == null)
+            {
+                nearestScannable = target;
+                continue;
+            }
+
             float distanceToCurrent = Vector3.Distance(npc.transform.position, target.transform.position);
             float distanceToNearest = Vector3.Distance(npc.transform.position, nearestScannable.transform.position);
 
-            if (nearestScannable == null || distanceToCurrent < distanceToNearest)
+            if (distanceToCurrent < distanceToNearest)
                 nearestScannable = target;
         }
 
