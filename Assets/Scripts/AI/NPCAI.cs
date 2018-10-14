@@ -32,7 +32,7 @@ public class NPCAI : Agent {
             List<Scannable> detectedObjects = reaction.scanner.ScanFor(reaction.objectType, transform);
             if (detectedObjects.Count <= 0) continue;
 
-            Scannable targetScannable = getNearestScannable(detectedObjects);
+            Scannable targetScannable = reaction.targetSelectionCritera.FilterAndSelect(detectedObjects, this);
 
             //If the type of the target has changed, initialise a new behavior.
             if (!ReferenceEquals(currentReaction, reaction))
@@ -76,26 +76,6 @@ public class NPCAI : Agent {
 
     }
 
-    /// <summary>
-    /// Find the closest scanable to the current scanable from the given list of scannables.
-    /// </summary>
-    /// <param name="scannables"></param>
-    /// <returns></returns>
-    private Scannable getNearestScannable(List<Scannable> scannables)
-    {
-        Scannable nearestScannable = scannables[0];
-        for(int i = 0; i < scannables.Count; i++) {
-
-            float distanceToCurrent = Vector3.Distance(transform.position, scannables[i].transform.position);
-            float distanceToNearest = Vector3.Distance(transform.position, nearestScannable.transform.position);
-
-            if (distanceToCurrent < distanceToNearest)
-                nearestScannable = scannables[i];
-        }
-
-        return nearestScannable;
-    }
-
     public void Petrify() {
         this.stone = true;
     }
@@ -106,6 +86,7 @@ public class NPCAI : Agent {
         public string objectType;
         public Scanner scanner; //The scanner used to search for the objects to react to.
         public NPCBehaviour reaction;
+        public TargetSelector targetSelectionCritera;
         public string animation;
 
     }
