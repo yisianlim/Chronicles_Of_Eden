@@ -7,6 +7,6 @@ using UnityEngine;
 /// </summary>
 public abstract class TargetFilter  {
 
-    public abstract bool IsValidTarget(Scannable target);
+    public abstract bool IsValidTarget(Scannable target, NPCAI npc);
 
 }

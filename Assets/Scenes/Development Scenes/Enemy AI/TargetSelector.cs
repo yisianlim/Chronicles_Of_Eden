@@ -14,7 +14,7 @@ public abstract class TargetSelector : ScriptableObject {
     /// </summary>
     /// <param name="targets"></param>
     /// <returns></returns>
-	public Scannable FilterAndSelect(ICollection<Scannable> targets)
+	public Scannable FilterAndSelect(ICollection<Scannable> targets, NPCAI npc)
     {
 
         //Filter targets based on given filter.
@@ -49,6 +49,6 @@ public abstract class TargetSelector : ScriptableObject {
     /// </summary>
     /// <param name="targets"></param>
     /// <returns></returns>
-    public abstract Scannable SelectTarget(ICollection<Scannable> targets);
+    public abstract Scannable SelectTarget(ICollection<Scannable> targets, NPCAI npc);
 
 }
