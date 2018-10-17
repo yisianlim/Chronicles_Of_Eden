@@ -8,6 +8,7 @@ TagManager:
   - Food
   - LargeEnemy
   - NPC_Animal
+  - Item
   layers:
   - Default
   - TransparentFX

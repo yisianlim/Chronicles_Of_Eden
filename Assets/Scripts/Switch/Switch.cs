@@ -13,11 +13,12 @@ public class Switch : MonoBehaviour {
         anim.SetBool("On", false);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        anim.SetBool("On", true);
-        behaviour.Toggle();
-        Debug.Log("Solved!");
+    private void OnTriggerEnter(Collider other) {
+        if (!other.CompareTag("Item")) {
+            anim.SetBool("On", true);
+            behaviour.Toggle();
+            Debug.Log("Solved!");
+        }
+        Debug.Log("Stepped On");
     }
-
 }

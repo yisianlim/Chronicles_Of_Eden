@@ -30,16 +30,18 @@ public class PlayerController : Agent {
     [SerializeField] float preImpactDelay; //The delay after the attack is initialised before the target takes damage.
     [SerializeField] float totalAttackDuration;
     [SerializeField] float DodgeDuration;
+    [SerializeField] float DodgeCoolDownDuration = 1;
     public LayerMask clickMask; //floor
 
     private bool attacking;
     private bool dodging = false;
+    private bool dodgeCD = false;
 
-    void Update () {
+    void Update() {
         //KnockBack();
         GetInput();
         SetAnimationAndDirection();
-	}
+    }
 
     void GetInput() {
         // Attack.
@@ -52,19 +54,20 @@ public class PlayerController : Agent {
 
             if (Physics.Raycast(ray, out hit, 100f, clickMask)) {
                 Vector3 v3 = hit.point;
-                v3.y = .5f;//badcode to fix: used to keep character looking above ground yet still causes some unwanted x rotation
+                v3.y = this.transform.position.y;
                 lookAtDirection = v3;
             }
             transform.LookAt(lookAtDirection);
+            //transform.eulerangles.z = 0;
 
             //zero look direction before intiating attack(don't know why but doesn't work without)
             lookAtDirection = Vector3.zero;
             Attack();
-        } else if (Input.GetButtonDown("Dodge")) {
+        } else if (Input.GetButtonDown("Dodge") && !dodgeCD) {
             Dodge();
         }
 
-       
+
         // Get player inputs.
         input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         input = Vector2.ClampMagnitude(input, 1);
@@ -87,11 +90,10 @@ public class PlayerController : Agent {
 
 
         // Only move the player if it is not attacking.
-        if (!attacking)
-        {
+        if (!attacking) {
             lookAtDirection = moveDirection;
             if (dodging) {
-                transform.position += moveDirection.normalized * (moveSpeed*dodgeSpeed) * Time.deltaTime;
+                transform.position += moveDirection.normalized * (moveSpeed * dodgeSpeed) * Time.deltaTime;
             } else {
                 transform.position += moveDirection.normalized * moveSpeed * Time.deltaTime;
             }
@@ -103,19 +105,15 @@ public class PlayerController : Agent {
     void SetAnimationAndDirection() {
         // If the player is moving, then we want to set it to charge animation.
         // Otherwise, we set it to idle.
-        if (!attacking)
-        {
-            if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
-            {
+        if (!attacking) {
+            if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0) {
                 if (dodging) {
                     anim.SetInteger("Condition", 3);
                 } else {
                     anim.SetInteger("Condition", 1);
                 }
-                
-            }
-            else
-            {
+
+            } else {
                 anim.SetInteger("Condition", 0);
             }
         }
@@ -126,11 +124,11 @@ public class PlayerController : Agent {
         if (attacking) return; //Don't do anything if already attacking.
 
         //Find all units in range of attack, then run the attack routine.
-        
+
         DamageReciever[] targets = FOVScanner.FOVScanForObjectsOfType<DamageReciever>(transform.position, lookAtDirection, attackDistance, attackArc);
         StartCoroutine(AttackRoutine(targets));
 
-     }
+    }
 
 
     IEnumerator AttackRoutine(DamageReciever[] targets) {
@@ -143,12 +141,11 @@ public class PlayerController : Agent {
         yield return new WaitForSeconds(preImpactDelay);
         //new List<DamageReciever>(targets).ForEach(target => target.ApplyDamage(attackStrength, transform.position));
 
-        foreach (DamageReciever target in targets) 
-        {
+        foreach (DamageReciever target in targets) {
             //check targets validity
             if (target) {
                 target.ApplyDamage(attackStrength, transform.position);
-            } 
+            }
         }
 
         //Wait for delay after damage has been dealt, then end the attack.
@@ -167,8 +164,11 @@ public class PlayerController : Agent {
 
     IEnumerator DodgingRoutine() {
         dodging = true;
+        dodgeCD = true;
         yield return new WaitForSeconds(DodgeDuration);
         dodging = false;
+        yield return new WaitForSeconds(DodgeCoolDownDuration);
+        dodgeCD = false;
     }
 
 }
