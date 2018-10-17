@@ -74,20 +74,24 @@ public class PlayerController : Agent {
         input = Vector2.ClampMagnitude(input, 1);
 
         // Compute the position of the player based on camera.
-        moveDirection = Vector3.zero;
 
-        if (input.y > 0) moveDirection += CameraTransform.forward;
-        if (input.y < 0) moveDirection += -CameraTransform.forward;
-        if (input.x < 0) moveDirection += -CameraTransform.right;
-        if (input.x > 0) moveDirection += CameraTransform.right;
-        //Debug.Log(input.y);
-        //Debug.Log(input.x);
-        //Vector3 moveRight = Vector3.left * input.x;
-        //Vector3 moveUp = Vector3.back * input.y;
-        //moveDirection = moveRight + moveUp;
+        if (!dodging) {
+            moveDirection = Vector3.zero;
 
-        moveDirection.y = 0f;
-        SetIsMoving(moveDirection != Vector3.zero);
+            if (input.y > 0) moveDirection += CameraTransform.forward;
+            if (input.y < 0) moveDirection += -CameraTransform.forward;
+            if (input.x < 0) moveDirection += -CameraTransform.right;
+            if (input.x > 0) moveDirection += CameraTransform.right;
+            //Debug.Log(input.y);
+            //Debug.Log(input.x);
+            //Vector3 moveRight = Vector3.left * input.x;
+            //Vector3 moveUp = Vector3.back * input.y;
+            //moveDirection = moveRight + moveUp;
+
+            moveDirection.y = 0f;
+            SetIsMoving(moveDirection != Vector3.zero);
+        }
+        
 
 
         // Only move the player if it is not attacking.
