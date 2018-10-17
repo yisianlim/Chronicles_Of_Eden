@@ -1179,8 +1179,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1465614672904082}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.534, y: 0.58, z: 2.2143888}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.235025, y: 6.8997946, z: 10.546095}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4077269857125270}
@@ -1536,6 +1536,12 @@ MonoBehaviour:
       type: 2}
     animation: Running
   - objectType: Player
+    scanner: {fileID: 11400000, guid: 191e583b444ca8a4e80bc4683314768d, type: 2}
+    reaction: {fileID: 11400000, guid: 4f3d272dbfa09ab43a50b883b25c79ac, type: 2}
+    targetSelectionCritera: {fileID: 11400000, guid: c40b31d1438ab18469c2ddc994f8fdb5,
+      type: 2}
+    animation: Sprinting
+  - objectType: Bomb
     scanner: {fileID: 11400000, guid: 191e583b444ca8a4e80bc4683314768d, type: 2}
     reaction: {fileID: 11400000, guid: 4f3d272dbfa09ab43a50b883b25c79ac, type: 2}
     targetSelectionCritera: {fileID: 11400000, guid: c40b31d1438ab18469c2ddc994f8fdb5,
