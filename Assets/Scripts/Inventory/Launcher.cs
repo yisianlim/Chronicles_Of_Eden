@@ -9,6 +9,7 @@ using UnityEngine;
 public class Launcher : AimableItem
 {
 
+    
     private GameObject aimCursor; //Used to visualise where in the world the item fired will end up.
 
     [SerializeField] Rigidbody item; //The item being launched.

@@ -31,9 +31,10 @@ public class PlayerController : Agent {
     [SerializeField] float totalAttackDuration;
     [SerializeField] float DodgeDuration;
     [SerializeField] float DodgeCoolDownDuration = 1;
+    [SerializeField] float FiringDuration = 1;
     public LayerMask clickMask; //floor
 
-    private bool attacking;
+    private bool attacking, Firing;
     private bool dodging = false;
     private bool dodgeCD = false;
 
@@ -114,7 +115,13 @@ public class PlayerController : Agent {
                 }
 
             } else {
-                anim.SetInteger("Condition", 0);
+
+                if (Firing) {
+                    anim.SetInteger("Condition", 4);
+                } else {
+                    anim.SetInteger("Condition", 0);
+                }
+                
             }
         }
     }
@@ -169,6 +176,20 @@ public class PlayerController : Agent {
         dodging = false;
         yield return new WaitForSeconds(DodgeCoolDownDuration);
         dodgeCD = false;
+    }
+
+    public void Fire() {
+
+        if (Firing) return; //Don't do anything if already dodging.
+        Debug.Log("StartCoroutine fire");
+        StartCoroutine(FireRoutine());
+
+    }
+
+    IEnumerator FireRoutine() {
+        Firing = true;
+        yield return new WaitForSeconds(FiringDuration);
+        Firing = false;
     }
 
 }

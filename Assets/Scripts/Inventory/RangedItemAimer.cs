@@ -13,6 +13,8 @@ public class RangedItemAimer : MonoBehaviour {
     private Transform userTransform; //From where the item is being aimed.
 
     [SerializeField] Camera cam;
+    [SerializeField] PlayerController player;
+    [SerializeField] float waitTime;
     private MouseRotatedFocusingCamera mouseRotatedFocusingCamera;
 
     private void Start()
@@ -37,16 +39,22 @@ public class RangedItemAimer : MonoBehaviour {
         itemBeingAimed.VisualiseAim(userTransform, aimPoint);
 
         //When the user releases the mouse button again, fire the item, stop aiming, and unlock the camera.
-        if (Input.GetMouseButtonUp(0)) { 
-            itemBeingAimed.Fire(userTransform, aimPoint);
-
-            itemBeingAimed = null;
-            if(cam != null)
-                mouseRotatedFocusingCamera.lockRotation = false;
-
+        if (Input.GetMouseButtonUp(0)) {
+            player.Fire();
+            StartCoroutine(WaitThenFire(aimPoint));
+            
         }
 
 	}
+
+    IEnumerator WaitThenFire(Vector3 aimPoint) {
+        yield return new WaitForSeconds(waitTime);
+        itemBeingAimed.Fire(userTransform, aimPoint);
+        Debug.Log("fire");
+        itemBeingAimed = null;
+        if (cam != null)
+            mouseRotatedFocusingCamera.lockRotation = false;
+    }
 
     /// <summary>
     /// Initilaise the aiming of the given item.

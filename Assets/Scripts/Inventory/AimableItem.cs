@@ -4,6 +4,8 @@ using UnityEngine;
 
 public abstract class AimableItem : EquipableItem
 {
+    
+
     /// <summary>
     /// Ensure user has a RangedItemComponent attatched to them, and then use it to aim the given item.
     /// </summary>
