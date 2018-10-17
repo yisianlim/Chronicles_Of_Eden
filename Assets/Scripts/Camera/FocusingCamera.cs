@@ -28,7 +28,11 @@ public class FocusingCamera : MonoBehaviour {
 
     void Update()
     {
+        UpdateCameraPosition();
+    }
 
+    protected void UpdateCameraPosition()
+    {
         if (!lockOntoObject) return;
 
         /* Conversions to radians for Mathf trig functions. */
@@ -45,6 +49,5 @@ public class FocusingCamera : MonoBehaviour {
 
         transform.localPosition = new Vector3(cameraX, cameraHeight, cameraZ);
         transform.localEulerAngles = new Vector3(angleFromTarget, -angleAroundTarget - YRotationOffset, transform.localEulerAngles.z);
-
     }
 }
