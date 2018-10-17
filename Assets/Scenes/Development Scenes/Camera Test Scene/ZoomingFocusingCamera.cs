@@ -9,8 +9,8 @@ public class ZoomingFocusingCamera : FocusingCamera {
     [SerializeField] [Range(0, MAX_SCROLL_SENSITIVITY)] float scrollSensitivity;
     [SerializeField] float minDistance;
     [SerializeField] float maxDistance;
-    [SerializeField] float minAngleFromPlayer;
-    [SerializeField] float maxAngleFromPlayer;
+    [SerializeField] float minAngleFromTarget;
+    [SerializeField] float maxAngleFromTarget;
 
     private float currentScrollPoint = 0.5f;
 
@@ -18,9 +18,15 @@ public class ZoomingFocusingCamera : FocusingCamera {
     {
 
         float zoomSpeed = Input.GetAxis("Mouse ScrollWheel");
+        Debug.Log("Zoom Speed: " + zoomSpeed);
 
-        currentScrollPoint = Mathf.Clamp((scrollSensitivity / MAX_SCROLL_SENSITIVITY) * zoomSpeed, 0, 1);
+        currentScrollPoint = Mathf.Clamp(currentScrollPoint - (scrollSensitivity / MAX_SCROLL_SENSITIVITY) * zoomSpeed, 0, 1);
+        Debug.Log("Current Scroll Point: " + currentScrollPoint);
+
         distanceFromTarget = Mathf.Lerp(minDistance, maxDistance, currentScrollPoint);
+        angleFromTarget = Mathf.Lerp(minAngleFromTarget, maxAngleFromTarget, currentScrollPoint);
+
+        UpdateCameraPosition();
 
     }
 
