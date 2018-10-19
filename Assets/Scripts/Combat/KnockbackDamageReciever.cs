@@ -17,7 +17,7 @@ public class KnockbackDamageReciever : DamageReciever
     }
 
     
-    public static void KnockBack(Rigidbody rigidbody, Vector3 recieverPosition, Vector3 fromPosition, float force)
+    public virtual void KnockBack(Rigidbody rigidbody, Vector3 recieverPosition, Vector3 fromPosition, float force)
     {
 
         //Determine which direction the reciever will be sent in, based on source position.
