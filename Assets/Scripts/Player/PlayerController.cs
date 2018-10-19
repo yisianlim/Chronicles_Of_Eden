@@ -25,10 +25,7 @@ public class PlayerController : Agent {
 
     [Header("Combat")]
     [SerializeField] int attackStrength;
-    [SerializeField] float attackDistance; //The distance in front of the player in which targets have to be to be hit.
-    [SerializeField] [Range(0, 130)] float attackArc; //The size (in degrees) of the arc in which enemies can hit targets.
-    [SerializeField] float preImpactDelay; //The delay after the attack is initialised before the target takes damage.
-    [SerializeField] float totalAttackDuration;
+    [SerializeField] DamagingWeapon weapon;
     [SerializeField] float DodgeDuration;
     [SerializeField] float DodgeCoolDownDuration = 1;
     [SerializeField] float FiringDuration = 1;
@@ -37,6 +34,11 @@ public class PlayerController : Agent {
     private bool attacking, Firing;
     private bool dodging = false;
     private bool dodgeCD = false;
+
+    private void Start()
+    {
+        weapon.enabled = false; //The weapon should not do damage by default - only when the player is attacking.
+    }
 
     void Update() {
         //KnockBack();
@@ -134,36 +136,39 @@ public class PlayerController : Agent {
 
         if (attacking) return; //Don't do anything if already attacking.
 
-        //Find all units in range of attack, then run the attack routine.
-
-        DamageReciever[] targets = FOVScanner.FOVScanForObjectsOfType<DamageReciever>(transform.position, lookAtDirection, attackDistance, attackArc);
-        StartCoroutine(AttackRoutine(targets));
-
-    }
-
-
-    IEnumerator AttackRoutine(DamageReciever[] targets) {
-
-        //Begin attack.d
         anim.SetInteger("Condition", 2);
         attacking = true;
 
-        //Wait for specified delay and then apply damage to all targets in range.
-        yield return new WaitForSeconds(preImpactDelay);
-        //new List<DamageReciever>(targets).ForEach(target => target.ApplyDamage(attackStrength, transform.position));
-
-        foreach (DamageReciever target in targets) {
-            //check targets validity
-            if (target) {
-                target.ApplyDamage(attackStrength, transform.position);
-            }
-        }
-
-        //Wait for delay after damage has been dealt, then end the attack.
-        yield return new WaitForSeconds(totalAttackDuration - preImpactDelay);
-        attacking = false;
-        anim.SetInteger("Condition", 0);
     }
+
+    /// <summary>
+    /// An animation event called when the player should start dealing damage.
+    /// </summary>
+    public void ConnectStart() {
+        weapon.enabled = true;
+        Debug.Log("Connect Start");
+    }
+
+    /// <summary>
+    /// An animation event called when the player should stop dealing damage.
+    /// </summary>
+    public void ConnectEnd(){
+        weapon.enabled = false;
+        Debug.Log("Connect End");
+    }
+
+    /// <summary>
+    /// An animation even called when the player should finish thier attack.
+    /// </summary>
+    public void AttackEnd()
+    {
+
+        Debug.Log("Attack end");
+
+        anim.SetInteger("Condition", 0);
+        attacking = false;
+    }
+
 
     void Dodge() {
 
