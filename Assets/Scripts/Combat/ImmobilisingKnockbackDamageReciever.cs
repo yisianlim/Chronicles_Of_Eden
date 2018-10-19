@@ -4,9 +4,10 @@ using UnityEngine;
 using UnityEngine.AI;
 
 /// <summary>
-/// A KnockbackDamageReciever that disables a NavMeshAgent for a certain duration to avoid conflict between the NavMesh and Rigidbody.
+/// A KnockbackDamageReciever that disables a NavMeshAgent and NPCAI for a certain duration to avoid conflict between the NavMesh and Rigidbody.
 /// </summary>
 [RequireComponent(typeof(NavMeshAgent))]
+[RequireComponent(typeof(NPCAI))]
 [RequireComponent(typeof(Rigidbody))]
 public class ImmobilisingKnockbackDamageReciever : KnockbackDamageReciever {
 
@@ -26,11 +27,13 @@ public class ImmobilisingKnockbackDamageReciever : KnockbackDamageReciever {
     {
 
         GetComponent<NavMeshAgent>().enabled = false;
+        GetComponent<NPCAI>().enabled = false;
         GetComponent<Rigidbody>().isKinematic = false;
 
         yield return new WaitForSeconds(immobilisationDuration);
 
         GetComponent<NavMeshAgent>().enabled = true;
+        GetComponent<NPCAI>().enabled = true;
         GetComponent<Rigidbody>().isKinematic = true;
 
     }
