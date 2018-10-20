@@ -18,10 +18,8 @@ public class ZoomingFocusingCamera : FocusingCamera {
     {
 
         float zoomSpeed = Input.GetAxis("Mouse ScrollWheel");
-        Debug.Log("Zoom Speed: " + zoomSpeed);
 
         currentScrollPoint = Mathf.Clamp(currentScrollPoint - (scrollSensitivity / MAX_SCROLL_SENSITIVITY) * zoomSpeed, 0, 1);
-        Debug.Log("Current Scroll Point: " + currentScrollPoint);
 
         distanceFromTarget = Mathf.Lerp(minDistance, maxDistance, currentScrollPoint);
         angleFromTarget = Mathf.Lerp(minAngleFromTarget, maxAngleFromTarget, currentScrollPoint);

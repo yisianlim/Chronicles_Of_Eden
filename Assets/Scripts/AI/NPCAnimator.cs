@@ -35,8 +35,6 @@ public class NPCAnimator : MonoBehaviour {
 
             anim.SetInteger("Condition", FindAnimationConditionValue(value));
 
-            Debug.Log("Animation set to " + FindAnimationConditionValue(value) + ", " + value);
-
         }
     }
 
