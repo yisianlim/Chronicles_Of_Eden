@@ -145,16 +145,14 @@ public class PlayerController : Agent {
     /// An animation event called when the player should start dealing damage.
     /// </summary>
     public void ConnectStart() {
-        weapon.enabled = true;
-        Debug.Log("Connect Start");
+        weapon.Active = true;
     }
 
     /// <summary>
     /// An animation event called when the player should stop dealing damage.
     /// </summary>
     public void ConnectEnd(){
-        weapon.enabled = false;
-        Debug.Log("Connect End");
+        weapon.Active = false;
     }
 
     /// <summary>
@@ -162,9 +160,6 @@ public class PlayerController : Agent {
     /// </summary>
     public void AttackEnd()
     {
-
-        Debug.Log("Attack end");
-
         anim.SetInteger("Condition", 0);
         attacking = false;
     }
