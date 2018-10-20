@@ -15,13 +15,26 @@ public class Gate : ToggleBehaviour {
     {
         anim = GetComponent<Animator>();
         anim.SetBool("Open", open);
+        anim.runtimeAnimatorController = openGateController;
     }
 
     public override void Toggle()
     {
         open = !open;
-        if (open) anim.runtimeAnimatorController = openGateController;
-        else anim.runtimeAnimatorController = closeGateContoller;
+        anim.speed = 1;
+        if (open) {
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("Close") ) {
+                anim.runtimeAnimatorController = openGateController;
+            }
+            else { anim.speed = -1; }
+            //anim.runtimeAnimatorController = openGateController;
+        }
+        else {
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("Open")) {
+                anim.runtimeAnimatorController = closeGateContoller;
+            }
+            else { anim.speed = -1; }
+        }
         anim.SetBool("Open", open);
     }
 
