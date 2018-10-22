@@ -1,0 +1,299 @@
+fileFormatVersion: 2
+guid: 3bb436879baf2413397cc7f7525ec42f
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: House_02_BuildWood_House_02_BuildWood
+    100004: House_02_Door_House_02_Door
+    100006: House_02_Fireplace_House_02_Fireplace
+    100008: House_02_Main_B_House_02_Main_B
+    100010: House_02_Main_F_House_02_Main_F
+    100012: House_02_Main_M_House_02_Main_M
+    100014: House_02_Rooftop_B_L_House_02_Rooftop_B_L
+    100016: House_02_Rooftop_B_R_House_02_Rooftop_B_R
+    100018: House_02_Rooftop_F_L_House_02_Rooftop_F_L
+    100020: House_02_Rooftop_F_R_House_02_Rooftop_F_R
+    100022: House_02_Rooftop_M_L_House_02_Rooftop_M_L
+    100024: House_02_Rooftop_M_R_House_02_Rooftop_M_R
+    100026: House_02_Rooftop_Wood_B_House_02_Rooftop_Wood_B
+    100028: House_02_Rooftop_Wood_F_House_02_Rooftop_Wood_F
+    100030: House_02_Rooftop_Wood_M_House_02_Rooftop_Wood_M
+    100032: House_02_Stair_House_02_Stair
+    100034: House_02_Window_01_House_02_Window_01
+    100036: House_02_Window_02_House_02_Window_02
+    100038: House_02_Window_03_House_02_Window_03
+    400000: //RootNode
+    400002: House_02_BuildWood_House_02_BuildWood
+    400004: House_02_Door_House_02_Door
+    400006: House_02_Fireplace_House_02_Fireplace
+    400008: House_02_Main_B_House_02_Main_B
+    400010: House_02_Main_F_House_02_Main_F
+    400012: House_02_Main_M_House_02_Main_M
+    400014: House_02_Rooftop_B_L_House_02_Rooftop_B_L
+    400016: House_02_Rooftop_B_R_House_02_Rooftop_B_R
+    400018: House_02_Rooftop_F_L_House_02_Rooftop_F_L
+    400020: House_02_Rooftop_F_R_House_02_Rooftop_F_R
+    400022: House_02_Rooftop_M_L_House_02_Rooftop_M_L
+    400024: House_02_Rooftop_M_R_House_02_Rooftop_M_R
+    400026: House_02_Rooftop_Wood_B_House_02_Rooftop_Wood_B
+    400028: House_02_Rooftop_Wood_F_House_02_Rooftop_Wood_F
+    400030: House_02_Rooftop_Wood_M_House_02_Rooftop_Wood_M
+    400032: House_02_Stair_House_02_Stair
+    400034: House_02_Window_01_House_02_Window_01
+    400036: House_02_Window_02_House_02_Window_02
+    400038: House_02_Window_03_House_02_Window_03
+    2100000: House_02_BuildWood_House_02_BuildWoodMat
+    2100002: House_02_Door_House_02_DoorMat
+    2100004: House_02_Fireplace_House_02_FireplaceMat
+    2100006: House_02_Main_B_House_02_Main_BMat
+    2100008: House_02_Main_F_House_02_Main_FMat
+    2100010: House_02_Main_M_House_02_Main_MMat
+    2100012: House_02_Rooftop_B_L_House_02_Rooftop_B_LMat
+    2100014: House_02_Rooftop_B_R_House_02_Rooftop_B_RMat
+    2100016: House_02_Rooftop_F_L_House_02_Rooftop_F_LMat
+    2100018: House_02_Rooftop_F_R_House_02_Rooftop_F_RMat
+    2100020: House_02_Rooftop_M_L_House_02_Rooftop_M_LMat
+    2100022: House_02_Rooftop_M_R_House_02_Rooftop_M_RMat
+    2100024: House_02_Rooftop_Wood_B_House_02_Rooftop_Wood_BMat
+    2100026: House_02_Rooftop_Wood_F_House_02_Rooftop_Wood_FMat
+    2100028: House_02_Rooftop_Wood_M_House_02_Rooftop_Wood_MMat
+    2100030: House_02_Stair_House_02_StairMat
+    2100032: House_02_Window_01_House_02_Window_01Mat
+    2100034: House_02_Window_02_House_02_Window_02Mat
+    2100036: House_02_Window_03_House_02_Window_03Mat
+    2300000: House_02_BuildWood_House_02_BuildWood
+    2300002: House_02_Door_House_02_Door
+    2300004: House_02_Fireplace_House_02_Fireplace
+    2300006: House_02_Main_B_House_02_Main_B
+    2300008: House_02_Main_F_House_02_Main_F
+    2300010: House_02_Main_M_House_02_Main_M
+    2300012: House_02_Rooftop_B_L_House_02_Rooftop_B_L
+    2300014: House_02_Rooftop_B_R_House_02_Rooftop_B_R
+    2300016: House_02_Rooftop_F_L_House_02_Rooftop_F_L
+    2300018: House_02_Rooftop_F_R_House_02_Rooftop_F_R
+    2300020: House_02_Rooftop_M_L_House_02_Rooftop_M_L
+    2300022: House_02_Rooftop_M_R_House_02_Rooftop_M_R
+    2300024: House_02_Rooftop_Wood_B_House_02_Rooftop_Wood_B
+    2300026: House_02_Rooftop_Wood_F_House_02_Rooftop_Wood_F
+    2300028: House_02_Rooftop_Wood_M_House_02_Rooftop_Wood_M
+    2300030: House_02_Stair_House_02_Stair
+    2300032: House_02_Window_01_House_02_Window_01
+    2300034: House_02_Window_02_House_02_Window_02
+    2300036: House_02_Window_03_House_02_Window_03
+    3300000: House_02_BuildWood_House_02_BuildWood
+    3300002: House_02_Door_House_02_Door
+    3300004: House_02_Fireplace_House_02_Fireplace
+    3300006: House_02_Main_B_House_02_Main_B
+    3300008: House_02_Main_F_House_02_Main_F
+    3300010: House_02_Main_M_House_02_Main_M
+    3300012: House_02_Rooftop_B_L_House_02_Rooftop_B_L
+    3300014: House_02_Rooftop_B_R_House_02_Rooftop_B_R
+    3300016: House_02_Rooftop_F_L_House_02_Rooftop_F_L
+    3300018: House_02_Rooftop_F_R_House_02_Rooftop_F_R
+    3300020: House_02_Rooftop_M_L_House_02_Rooftop_M_L
+    3300022: House_02_Rooftop_M_R_House_02_Rooftop_M_R
+    3300024: House_02_Rooftop_Wood_B_House_02_Rooftop_Wood_B
+    3300026: House_02_Rooftop_Wood_F_House_02_Rooftop_Wood_F
+    3300028: House_02_Rooftop_Wood_M_House_02_Rooftop_Wood_M
+    3300030: House_02_Stair_House_02_Stair
+    3300032: House_02_Window_01_House_02_Window_01
+    3300034: House_02_Window_02_House_02_Window_02
+    3300036: House_02_Window_03_House_02_Window_03
+    4300000: House_02_BuildWood_House_02_BuildWood
+    4300002: House_02_Door_House_02_Door
+    4300004: House_02_Fireplace_House_02_Fireplace
+    4300006: House_02_Main_B_House_02_Main_B
+    4300008: House_02_Main_F_House_02_Main_F
+    4300010: House_02_Main_M_House_02_Main_M
+    4300012: House_02_Rooftop_B_L_House_02_Rooftop_B_L
+    4300014: House_02_Rooftop_B_R_House_02_Rooftop_B_R
+    4300016: House_02_Rooftop_F_L_House_02_Rooftop_F_L
+    4300018: House_02_Rooftop_F_R_House_02_Rooftop_F_R
+    4300020: House_02_Rooftop_M_L_House_02_Rooftop_M_L
+    4300022: House_02_Rooftop_M_R_House_02_Rooftop_M_R
+    4300024: House_02_Rooftop_Wood_B_House_02_Rooftop_Wood_B
+    4300026: House_02_Rooftop_Wood_F_House_02_Rooftop_Wood_F
+    4300028: House_02_Rooftop_Wood_M_House_02_Rooftop_Wood_M
+    4300030: House_02_Stair_House_02_Stair
+    4300032: House_02_Window_01_House_02_Window_01
+    4300034: House_02_Window_02_House_02_Window_02
+    4300036: House_02_Window_03_House_02_Window_03
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: House_02_BuildWood_House_02_BuildWoodMat
+    second: {fileID: 2100000, guid: 605b3c612bfe74db28aec481b19be589, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: House_02_Door_House_02_DoorMat
+    second: {fileID: 2100000, guid: 1686a3eac76a844668ccd479f36e4e98, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: House_02_Fireplace_House_02_FireplaceMat
+    second: {fileID: 2100000, guid: 1272c9e6498014b02a8f49fab82d460f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: House_02_Main_B_House_02_Main_BMat
+    second: {fileID: 2100000, guid: c2309b4aa56b84ae4bf44b8eb2ec5d3b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: House_02_Main_F_House_02_Main_FMat
+    second: {fileID: 2100000, guid: 17ece2afdab184af7a7e18655827d231, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: House_02_Main_M_House_02_Main_MMat
+    second: {fileID: 2100000, guid: 5baeea6936bfb40d38695c0fa0e7e931, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: House_02_Rooftop_B_L_House_02_Rooftop_B_LMat
+    second: {fileID: 2100000, guid: 513f5a97271ce4f729a17e229527e0c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: House_02_Rooftop_B_R_House_02_Rooftop_B_RMat
+    second: {fileID: 2100000, guid: 106dd99ebd47d410db8ade9a96d4bbcf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: House_02_Rooftop_F_L_House_02_Rooftop_F_LMat
+    second: {fileID: 2100000, guid: e057eae4332d348e287fbac9d5bd3886, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: House_02_Rooftop_F_R_House_02_Rooftop_F_RMat
+    second: {fileID: 2100000, guid: 2a6d642a675e941b5b6c00e0b94be276, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: House_02_Rooftop_M_L_House_02_Rooftop_M_LMat
+    second: {fileID: 2100000, guid: c39061dee0ff94aa9a3ee29867f0423e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: House_02_Rooftop_M_R_House_02_Rooftop_M_RMat
+    second: {fileID: 2100000, guid: 1a6421c29954246f48a3793035d3bbe7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: House_02_Rooftop_Wood_B_House_02_Rooftop_Wood_BMat
+    second: {fileID: 2100000, guid: 0ae2cb99641884822b4be5960c5c5f73, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: House_02_Rooftop_Wood_F_House_02_Rooftop_Wood_FMat
+    second: {fileID: 2100000, guid: 3e9367dd84f994e41ae3b21db26d8b20, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: House_02_Rooftop_Wood_M_House_02_Rooftop_Wood_MMat
+    second: {fileID: 2100000, guid: 32239a7e240104db4b6545e63fc97ffc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: House_02_Stair_House_02_StairMat
+    second: {fileID: 2100000, guid: bf90058f147054ff48837025a84d36b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: House_02_Window_01_House_02_Window_01Mat
+    second: {fileID: 2100000, guid: add4bf77fa8d74312ae6c6f5937f0652, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: House_02_Window_02_House_02_Window_02Mat
+    second: {fileID: 2100000, guid: b594514701f3340ca8c15c6a1485ddaa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: House_02_Window_03_House_02_Window_03Mat
+    second: {fileID: 2100000, guid: a35513eb178f44838874d6a44b0864b9, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

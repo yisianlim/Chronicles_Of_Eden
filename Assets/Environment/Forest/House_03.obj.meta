@@ -1,0 +1,343 @@
+fileFormatVersion: 2
+guid: 23500cc6e6a474f1a8da608fc990c3ed
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Build_B_Build_B
+    100002: Build_F_Build_F
+    100004: Build_M_Build_M
+    100006: Build_S_Build_S
+    100008: Buildwood_Buildwood
+    100010: Door_Door
+    100012: Fireplace_Fireplace
+    100014: //RootNode
+    100016: Rooftop_B_L_Rooftop_B_L
+    100018: Rooftop_B_R_Rooftop_B_R
+    100020: Rooftop_F_L_Rooftop_F_L
+    100022: Rooftop_F_R_Rooftop_F_R
+    100024: Rooftop_M_L_Rooftop_M_L
+    100026: Rooftop_M_R_Rooftop_M_R
+    100028: Rooftop_S_L_Rooftop_S_L
+    100030: Rooftop_S_R_Rooftop_S_R
+    100032: Roofwood_B_Roofwood_B
+    100034: Roofwood_F_Roofwood_F
+    100036: Roofwood_M_Roofwood_M
+    100038: Roofwood_S_Roofwood_S
+    100040: Stair_Stair
+    100042: Window_01_Window_01
+    100044: Window_02_Window_02
+    100046: Window_03_Window_03
+    400000: Build_B_Build_B
+    400002: Build_F_Build_F
+    400004: Build_M_Build_M
+    400006: Build_S_Build_S
+    400008: Buildwood_Buildwood
+    400010: Door_Door
+    400012: Fireplace_Fireplace
+    400014: //RootNode
+    400016: Rooftop_B_L_Rooftop_B_L
+    400018: Rooftop_B_R_Rooftop_B_R
+    400020: Rooftop_F_L_Rooftop_F_L
+    400022: Rooftop_F_R_Rooftop_F_R
+    400024: Rooftop_M_L_Rooftop_M_L
+    400026: Rooftop_M_R_Rooftop_M_R
+    400028: Rooftop_S_L_Rooftop_S_L
+    400030: Rooftop_S_R_Rooftop_S_R
+    400032: Roofwood_B_Roofwood_B
+    400034: Roofwood_F_Roofwood_F
+    400036: Roofwood_M_Roofwood_M
+    400038: Roofwood_S_Roofwood_S
+    400040: Stair_Stair
+    400042: Window_01_Window_01
+    400044: Window_02_Window_02
+    400046: Window_03_Window_03
+    2100000: Build_B_Build_BMat
+    2100002: Build_F_Build_FMat
+    2100004: Build_M_Build_MMat
+    2100006: Build_S_Build_SMat
+    2100008: Buildwood_BuildwoodMat
+    2100010: Door_DoorMat
+    2100012: Fireplace_FireplaceMat
+    2100014: Rooftop_B_L_Rooftop_B_LMat
+    2100016: Rooftop_B_R_Rooftop_B_RMat
+    2100018: Rooftop_F_L_Rooftop_F_LMat
+    2100020: Rooftop_F_R_Rooftop_F_RMat
+    2100022: Rooftop_M_L_Rooftop_M_LMat
+    2100024: Rooftop_M_R_Rooftop_M_RMat
+    2100026: Rooftop_S_L_Rooftop_S_LMat
+    2100028: Rooftop_S_R_Rooftop_S_RMat
+    2100030: Roofwood_B_Roofwood_BMat
+    2100032: Roofwood_F_Roofwood_FMat
+    2100034: Roofwood_M_Roofwood_MMat
+    2100036: Roofwood_S_Roofwood_SMat
+    2100038: Stair_StairMat
+    2100040: Window_01_Window_01Mat
+    2100042: Window_02_Window_02Mat
+    2100044: Window_03_Window_03Mat
+    2300000: Build_B_Build_B
+    2300002: Build_F_Build_F
+    2300004: Build_M_Build_M
+    2300006: Build_S_Build_S
+    2300008: Buildwood_Buildwood
+    2300010: Door_Door
+    2300012: Fireplace_Fireplace
+    2300014: Rooftop_B_L_Rooftop_B_L
+    2300016: Rooftop_B_R_Rooftop_B_R
+    2300018: Rooftop_F_L_Rooftop_F_L
+    2300020: Rooftop_F_R_Rooftop_F_R
+    2300022: Rooftop_M_L_Rooftop_M_L
+    2300024: Rooftop_M_R_Rooftop_M_R
+    2300026: Rooftop_S_L_Rooftop_S_L
+    2300028: Rooftop_S_R_Rooftop_S_R
+    2300030: Roofwood_B_Roofwood_B
+    2300032: Roofwood_F_Roofwood_F
+    2300034: Roofwood_M_Roofwood_M
+    2300036: Roofwood_S_Roofwood_S
+    2300038: Stair_Stair
+    2300040: Window_01_Window_01
+    2300042: Window_02_Window_02
+    2300044: Window_03_Window_03
+    3300000: Build_B_Build_B
+    3300002: Build_F_Build_F
+    3300004: Build_M_Build_M
+    3300006: Build_S_Build_S
+    3300008: Buildwood_Buildwood
+    3300010: Door_Door
+    3300012: Fireplace_Fireplace
+    3300014: Rooftop_B_L_Rooftop_B_L
+    3300016: Rooftop_B_R_Rooftop_B_R
+    3300018: Rooftop_F_L_Rooftop_F_L
+    3300020: Rooftop_F_R_Rooftop_F_R
+    3300022: Rooftop_M_L_Rooftop_M_L
+    3300024: Rooftop_M_R_Rooftop_M_R
+    3300026: Rooftop_S_L_Rooftop_S_L
+    3300028: Rooftop_S_R_Rooftop_S_R
+    3300030: Roofwood_B_Roofwood_B
+    3300032: Roofwood_F_Roofwood_F
+    3300034: Roofwood_M_Roofwood_M
+    3300036: Roofwood_S_Roofwood_S
+    3300038: Stair_Stair
+    3300040: Window_01_Window_01
+    3300042: Window_02_Window_02
+    3300044: Window_03_Window_03
+    4300000: Build_B_Build_B
+    4300002: Build_F_Build_F
+    4300004: Build_M_Build_M
+    4300006: Build_S_Build_S
+    4300008: Buildwood_Buildwood
+    4300010: Door_Door
+    4300012: Fireplace_Fireplace
+    4300014: Rooftop_B_L_Rooftop_B_L
+    4300016: Rooftop_B_R_Rooftop_B_R
+    4300018: Rooftop_F_L_Rooftop_F_L
+    4300020: Rooftop_F_R_Rooftop_F_R
+    4300022: Rooftop_M_L_Rooftop_M_L
+    4300024: Rooftop_M_R_Rooftop_M_R
+    4300026: Rooftop_S_L_Rooftop_S_L
+    4300028: Rooftop_S_R_Rooftop_S_R
+    4300030: Roofwood_B_Roofwood_B
+    4300032: Roofwood_F_Roofwood_F
+    4300034: Roofwood_M_Roofwood_M
+    4300036: Roofwood_S_Roofwood_S
+    4300038: Stair_Stair
+    4300040: Window_01_Window_01
+    4300042: Window_02_Window_02
+    4300044: Window_03_Window_03
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Build_B_Build_BMat
+    second: {fileID: 2100000, guid: 296ad840a43d14c1b9e3aa16d06613f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Build_F_Build_FMat
+    second: {fileID: 2100000, guid: e57fd403a148d48768453f4cd988bb57, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Build_M_Build_MMat
+    second: {fileID: 2100000, guid: 70f52fc72d68e4542b8bcffce2f95743, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Build_S_Build_SMat
+    second: {fileID: 2100000, guid: 39b0ea8747cbe49e8bca1385289220f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Buildwood_BuildwoodMat
+    second: {fileID: 2100000, guid: 567d5359c605041fe80728f15a165eb0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door_DoorMat
+    second: {fileID: 2100000, guid: a30570114aaec4c1c9b777faefc235a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fireplace_FireplaceMat
+    second: {fileID: 2100000, guid: 64414acec320840eda5b49996869d908, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rooftop_B_L_Rooftop_B_LMat
+    second: {fileID: 2100000, guid: acb8c9de0772948cea4b09e83044ddfe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rooftop_B_R_Rooftop_B_RMat
+    second: {fileID: 2100000, guid: cc0e4252f11b14010ab2616f71b92719, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rooftop_F_L_Rooftop_F_LMat
+    second: {fileID: 2100000, guid: c425c9a0031f3418ba5ca4b040746ba1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rooftop_F_R_Rooftop_F_RMat
+    second: {fileID: 2100000, guid: e77ea09fc730b4d8a82bf014d63139c7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rooftop_M_L_Rooftop_M_LMat
+    second: {fileID: 2100000, guid: 144f8c10e54cc41249e6ab19ec68847c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rooftop_M_R_Rooftop_M_RMat
+    second: {fileID: 2100000, guid: 9c56a2ad519144022b7b8c87909155e9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rooftop_S_L_Rooftop_S_LMat
+    second: {fileID: 2100000, guid: 51c01d5f9c0b24dab9cd215ce359186f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rooftop_S_R_Rooftop_S_RMat
+    second: {fileID: 2100000, guid: d4483a8a6fb1a4782b3c5a6ddbe3b464, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Roofwood_B_Roofwood_BMat
+    second: {fileID: 2100000, guid: d20875a002c39471086144b99ae43717, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Roofwood_F_Roofwood_FMat
+    second: {fileID: 2100000, guid: 91222ac653e75487ca663d4cd0585f42, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Roofwood_M_Roofwood_MMat
+    second: {fileID: 2100000, guid: 6e18a17c80a5440388ded1642f750b2c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Roofwood_S_Roofwood_SMat
+    second: {fileID: 2100000, guid: f1385a898dca64f5abd4f81e159df711, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stair_StairMat
+    second: {fileID: 2100000, guid: 3f23a20a60f5745968fa88703561715b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Window_01_Window_01Mat
+    second: {fileID: 2100000, guid: 4a0a287b080bd4d59bc823368d609720, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Window_02_Window_02Mat
+    second: {fileID: 2100000, guid: 5d1cb0bfde07c43e983e48a4ea6a4539, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Window_03_Window_03Mat
+    second: {fileID: 2100000, guid: 7d9cdbcd2de7446a186a35ea3fc46cf8, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
