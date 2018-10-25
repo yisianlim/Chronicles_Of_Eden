@@ -52,9 +52,10 @@ ModelImporter:
     100092: joint63
     100094: joint64
     100096: joint65
-    100098: //RootNode
-    100100: NPC_Boar_body:RetopoGroup1
-    100102: NPC_Boar_horns:RetopoGroup1
+    100098: locator1
+    100100: //RootNode
+    100102: NPC_Boar_body:RetopoGroup1
+    100104: NPC_Boar_horns:RetopoGroup1
     400000: CTRL_Body
     400002: CTRL_body_mid
     400004: CTRL_Butt
@@ -104,9 +105,10 @@ ModelImporter:
     400092: joint63
     400094: joint64
     400096: joint65
-    400098: //RootNode
-    400100: NPC_Boar_body:RetopoGroup1
-    400102: NPC_Boar_horns:RetopoGroup1
+    400098: locator1
+    400100: //RootNode
+    400102: NPC_Boar_body:RetopoGroup1
+    400104: NPC_Boar_horns:RetopoGroup1
     2100000: NPC_Boar_body_lambert1
     2100002: NPC_Boar_horns_lambert1
     4300000: NPC_Boar_body:RetopoGroup1
@@ -152,42 +154,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Take 001
-      takeName: Take 001
-      firstFrame: 1
-      lastFrame: 30
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events:
-      - time: 0.07570709
-        functionName: AttackImpact
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
