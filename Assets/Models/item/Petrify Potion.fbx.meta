@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 094c960223225430f823a3a4c26b9a42
+guid: 68a3835c84888cb43bf99eb67cea6c3e
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -9,12 +9,7 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Petrify_Potion
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lambert1
-    second: {fileID: 2100000, guid: 651af63ddf887402b83293added22b86, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a8bb9d688967e43b985256844258d8b6
+guid: c7e93960b31eb7e43b4f582a729b4c05
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -9,12 +9,7 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: item_bomb
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: bomb
-    second: {fileID: 2100000, guid: 5b39049f2322c43d9ba9e39a2f96e830, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0

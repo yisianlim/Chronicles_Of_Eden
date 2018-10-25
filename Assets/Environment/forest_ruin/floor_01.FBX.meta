@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 233bd1e3cd557014f8132f208cade74d
+guid: 8e688ee192f1d2942884b9ce3ed72d39
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -9,12 +9,7 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: ruins_floor_001
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 'Material #159'
-    second: {fileID: 2100000, guid: b92d8737881772441b3d412059eed50c, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0

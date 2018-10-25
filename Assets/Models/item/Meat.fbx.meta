@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d19a4b0b5dd57464b907d958ab6568b2
+guid: 03430984005330e48b7db339c331ea84
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -9,12 +9,7 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Meat:RetopoGroup1
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Meat_lambert1
-    second: {fileID: 2100000, guid: 3cb5cbd05118041eea6866d5f337e133, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0

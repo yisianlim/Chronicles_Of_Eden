@@ -117,17 +117,7 @@ ModelImporter:
     9500000: //RootNode
     13700000: NPC_Boar_body:RetopoGroup1
     13700002: NPC_Boar_horns:RetopoGroup1
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: NPC_Boar_body_lambert1
-    second: {fileID: 2100000, guid: ea624913d515946a19ed77863027792d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: NPC_Boar_horns_lambert1
-    second: {fileID: 2100000, guid: d3da74b329ba84ac2b17d3ea2a8f46da, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
