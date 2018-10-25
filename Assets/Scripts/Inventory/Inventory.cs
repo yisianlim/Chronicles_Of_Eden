@@ -7,20 +7,27 @@ public class Inventory : MonoBehaviour {
 
     [SerializeField] Transform userTranform; //The transform of the user using this inventory.
 
-    [SerializeField] private EquipableItem[] items = new EquipableItem[10];
+    [SerializeField] private EquipableItem[] items;
+    private float[] timesUntilNextUse; //How long before an item can be used again.
+
     private int equipedItem = 0; //The index of the currently equiped item. 
     public EquipableItem EquippedItem { get { return items[equipedItem]; } }
 
     public event EventHandler<InventoryEventArgs> ItemAdded;
     public event EventHandler<ItemEquippedEventArgs> ItemEquipped;
 
+    private void Start()
+    {
+        timesUntilNextUse = new float[items.Length];
+    }
 
     private void Update()
     {
 
-        //If the user hasn't pressed the left mouse button, don't do anything.
+        //If the user presses the mouse button, use the equipped item if it exists and is not still cooling down.
         if (Input.GetMouseButtonDown(0)) {
-            if (items[equipedItem] != null) items[equipedItem].Use(userTranform, this);
+            if (items[equipedItem] != null && timesUntilNextUse[equipedItem] <= 0) items[equipedItem].Use(userTranform, this);
+            timesUntilNextUse[equipedItem] = items[equipedItem].Cooldown; //Start the cooldown for the used item.
         }
 
         //If the user presses a number key, equip the item of that number, if it exists.
@@ -28,6 +35,11 @@ public class Inventory : MonoBehaviour {
         {
             if (Input.GetKeyDown(key + "") && items[key] != null)
                 SlotSelected(key);
+        }
+
+        //Decrease the cooldown counter for all the items.
+        for(int i = 0; i < timesUntilNextUse.Length; i++) {
+            if(timesUntilNextUse[i] > 0) timesUntilNextUse[i] -= Time.deltaTime;
         }
 
     }
