@@ -1,15 +1,20 @@
 fileFormatVersion: 2
-guid: 650a9e2137f1146a1bfcd28bccfaee60
+guid: 0ba0d02c1f62b4ffa911c87e6a31bc70
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: lambert1
+    2100000: Magnet_tx
     2300000: //RootNode
     3300000: //RootNode
-    4300000: pSphere13
-  externalObjects: {}
+    4300000: Magnet
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Magnet_tx
+    second: {fileID: 2100000, guid: 462affccc8b394a3399359244b3413bd, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
