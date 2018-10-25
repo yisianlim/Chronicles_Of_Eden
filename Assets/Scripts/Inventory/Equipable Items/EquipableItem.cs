@@ -8,6 +8,10 @@ public abstract class EquipableItem : ScriptableObject {
 
     [SerializeField] string InGameName;
     [SerializeField] Sprite _Image;
+    [SerializeField] float cooldown; //How long after the item has been used the item is able to be used again.
+
+    public float Cooldown { get { return cooldown; } }
+
     /// <summary>
     /// Activate the item.
     /// </summary>
