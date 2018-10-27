@@ -52,7 +52,7 @@ public class RangedItemAimer : MonoBehaviour {
         itemBeingAimed.Fire(userTransform, aimPoint);
         Debug.Log("fire");
         itemBeingAimed = null;
-        if (cam != null)
+        if (mouseRotatedFocusingCamera != null)
             mouseRotatedFocusingCamera.lockRotation = false;
     }
 
@@ -63,7 +63,7 @@ public class RangedItemAimer : MonoBehaviour {
     public void AimItem(AimableItem itemBeingAimed)
     {
         this.itemBeingAimed = itemBeingAimed;
-        if(cam != null)
+        if(mouseRotatedFocusingCamera != null)
             mouseRotatedFocusingCamera.lockRotation = true;
     }
 

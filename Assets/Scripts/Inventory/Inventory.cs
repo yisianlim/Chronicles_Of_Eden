@@ -26,8 +26,11 @@ public class Inventory : MonoBehaviour {
 
         //If the user presses the mouse button, use the equipped item if it exists and is not still cooling down.
         if (Input.GetMouseButtonDown(0)) {
-            if (items[equipedItem] != null && timesUntilNextUse[equipedItem] <= 0) items[equipedItem].Use(userTranform, this);
-            timesUntilNextUse[equipedItem] = items[equipedItem].Cooldown; //Start the cooldown for the used item.
+            if (items[equipedItem] != null && timesUntilNextUse[equipedItem] <= 0)
+            {
+                items[equipedItem].Use(userTranform, this);
+                timesUntilNextUse[equipedItem] = items[equipedItem].Cooldown; //Start the cooldown for the used item.
+            }
         }
 
         //If the user presses a number key, equip the item of that number, if it exists.

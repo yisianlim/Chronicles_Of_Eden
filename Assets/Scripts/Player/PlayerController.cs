@@ -37,7 +37,7 @@ public class PlayerController : Agent {
 
     private void Start()
     {
-        weapon.enabled = false; //The weapon should not do damage by default - only when the player is attacking.
+        if(weapon != null) weapon.enabled = false; //The weapon should not do damage by default - only when the player is attacking.
     }
 
     void Update() {
