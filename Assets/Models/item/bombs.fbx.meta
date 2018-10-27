@@ -9,7 +9,12 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: item_bomb
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bomb
+    second: {fileID: 2100000, guid: 5b39049f2322c43d9ba9e39a2f96e830, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

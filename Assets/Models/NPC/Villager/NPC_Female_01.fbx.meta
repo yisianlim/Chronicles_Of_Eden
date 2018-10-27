@@ -214,7 +214,32 @@ ModelImporter:
     9500000: //RootNode
     13700000: Female_char_body:RetopoGroup1
     13700002: Female_char_hair:RetopoGroup1
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Female_char_body_texture
+    second: {fileID: 2100000, guid: fd4f46606ad374ff7ba38bd18781043c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Female_char_collar_texture
+    second: {fileID: 2100000, guid: ebd6eb6a7bc9542429ec9f9ceebe6fbf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Female_char_hair_texture
+    second: {fileID: 2100000, guid: 5be72b5ea9c4e4a5cb52fdcb0de50fa4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Female_char_ribbon_texture
+    second: {fileID: 2100000, guid: 11e6ec38d599d40d48ae5c516babb4f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert8
+    second: {fileID: 2100000, guid: 51221108b5bf5429996676f292b63d61, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

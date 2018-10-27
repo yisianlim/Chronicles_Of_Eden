@@ -56,6 +56,10 @@ ModelImporter:
     100100: //RootNode
     100102: NPC_Boar_body:RetopoGroup1
     100104: NPC_Boar_horns:RetopoGroup1
+    100106: locator2
+    100108: locator3
+    100110: NPC_boar_armor:RetopoGroup1
+    100112: NPC_boar_helmet:RetopoGroup1
     400000: CTRL_Body
     400002: CTRL_body_mid
     400004: CTRL_Butt
@@ -109,15 +113,47 @@ ModelImporter:
     400100: //RootNode
     400102: NPC_Boar_body:RetopoGroup1
     400104: NPC_Boar_horns:RetopoGroup1
+    400106: locator2
+    400108: locator3
+    400110: NPC_boar_armor:RetopoGroup1
+    400112: NPC_boar_helmet:RetopoGroup1
     2100000: NPC_Boar_body_lambert1
     2100002: NPC_Boar_horns_lambert1
+    2100004: armor
+    2100006: helmet
+    2300000: NPC_boar_armor:RetopoGroup1
+    2300002: NPC_boar_helmet:RetopoGroup1
+    3300000: NPC_boar_armor:RetopoGroup1
+    3300002: NPC_boar_helmet:RetopoGroup1
     4300000: NPC_Boar_body:RetopoGroup1
     4300002: NPC_Boar_horns:RetopoGroup1
+    4300004: NPC_boar_armor:RetopoGroup1
+    4300006: NPC_boar_helmet:RetopoGroup1
     7400000: Take 001
     9500000: //RootNode
     13700000: NPC_Boar_body:RetopoGroup1
     13700002: NPC_Boar_horns:RetopoGroup1
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NPC_Boar_body_lambert1
+    second: {fileID: 2100000, guid: ea624913d515946a19ed77863027792d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NPC_Boar_horns_lambert1
+    second: {fileID: 2100000, guid: d3da74b329ba84ac2b17d3ea2a8f46da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: armor
+    second: {fileID: 2100000, guid: cee6c8fffb6604c79b7926eb57face90, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: helmet
+    second: {fileID: 2100000, guid: b31fda9846c7740a88733b131d842d3e, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
