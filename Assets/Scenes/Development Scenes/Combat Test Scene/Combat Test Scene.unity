@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -272,6 +272,36 @@ Prefab:
       propertyPath: DodgeDuration
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 137099981031273644, guid: 6edf6417a2cae484ba6b969f226ad1da,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a409dc6be36b44de8bbed69339be1174, type: 2}
+    - target: {fileID: 137722048669499638, guid: 6edf6417a2cae484ba6b969f226ad1da,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d455d38e30080435f889e2068c87dd6d, type: 2}
+    - target: {fileID: 137961858057846986, guid: 6edf6417a2cae484ba6b969f226ad1da,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2b917770109374f6890e096ba37981a5, type: 2}
+    - target: {fileID: 137372591190118386, guid: 6edf6417a2cae484ba6b969f226ad1da,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5789c210b3c5243788c4ad997bc54746, type: 2}
+    - target: {fileID: 137651028574491422, guid: 6edf6417a2cae484ba6b969f226ad1da,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a251a4ba5ddfe49cdb6b9918e138334f, type: 2}
+    - target: {fileID: 23150146959688548, guid: 6edf6417a2cae484ba6b969f226ad1da,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9cca491da0b784440b1910e64549d1b4, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6edf6417a2cae484ba6b969f226ad1da, type: 2}
   m_IsPrefabAsset: 0
@@ -786,6 +816,10 @@ Prefab:
     - target: {fileID: 100098, guid: 36400095026194eba83f643f783e2808, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 36400095026194eba83f643f783e2808, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36400095026194eba83f643f783e2808, type: 3}
