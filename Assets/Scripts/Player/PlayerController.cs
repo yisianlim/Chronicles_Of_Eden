@@ -66,6 +66,8 @@ public class PlayerController : Agent {
             //zero look direction before intiating attack(don't know why but doesn't work without)
             lookAtDirection = Vector3.zero;
             Attack();
+            gameObject.GetComponentInChildren<TrailRenderer>().enabled = true;
+
         } else if (Input.GetButtonDown("Dodge") && !dodgeCD) {
             Dodge();
         }
@@ -162,6 +164,7 @@ public class PlayerController : Agent {
     {
         anim.SetInteger("Condition", 0);
         attacking = false;
+        gameObject.GetComponentInChildren<TrailRenderer>().enabled = false;
     }
 
 
