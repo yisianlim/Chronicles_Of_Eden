@@ -1,105 +1,84 @@
 fileFormatVersion: 2
-guid: 8a59449e6f9bd47ef878bf593a739e9c
+guid: 691af7844c84642fbbfc28af0f301116
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     100002: CTRL_ArmLeft
     100004: CTRL_ArmRight
-    100006: CTRL_LegLeft
-    100008: CTRL_LegRight
-    100010: CTRL_MASTER
-    100012: CTRL_MthBot
-    100014: CTRL_MthTop
-    100016: CTRL_Tip
-    100018: JT_ArmLeft1
-    100020: JT_ArmLeft2
-    100022: JT_ArmLeft3
-    100024: JT_ArmRight1
-    100026: JT_ArmRight2
-    100028: JT_ArmRight3
-    100030: JT_Head
-    100032: JT_HeadMid
-    100034: JT_HeadTip
-    100036: JT_hip
-    100038: JT_LegLeft1
-    100040: JT_LegLeft2
-    100042: JT_LegRight1
-    100044: JT_LegRight2
-    100046: JT_Mouth
-    100048: JT_MouthBot
-    100050: JT_MouthTop
-    100052: JT_spine
-    100054: locator1
-    100056: SChick_armor:RetopoGroup1
+    100006: CTRL_body
+    100008: CTRL_LegLeft
+    100010: CTRL_LegRight
+    100012: CTRL_MASTER
+    100014: CTRL_MthBot
+    100016: CTRL_MthTop
+    100018: CTRL_Tip
+    100020: JT_ArmLeft1
+    100022: JT_ArmLeft2
+    100024: JT_ArmLeft3
+    100026: JT_ArmRight1
+    100028: JT_ArmRight2
+    100030: JT_ArmRight3
+    100032: JT_Head
+    100034: JT_HeadMid
+    100036: JT_HeadTip
+    100038: JT_hip
+    100040: JT_LegLeft1
+    100042: JT_LegLeft2
+    100044: JT_LegRight1
+    100046: JT_LegRight2
+    100048: JT_Mouth
+    100050: JT_MouthBot
+    100052: JT_MouthTop
+    100054: JT_spine
+    100056: locator1
     100058: SChick_body1:RetopoGroup1
-    100060: SChick_helmet:RetopoGroup1
-    100062: SChick_mouth_bot:RetopoGroup1
-    100064: SChick_mouth_top:RetopoGroup1
-    100066: CTRL_body
+    100060: SChick_mouth_bot:RetopoGroup1
+    100062: SChick_mouth_top:RetopoGroup1
     400000: //RootNode
     400002: CTRL_ArmLeft
     400004: CTRL_ArmRight
-    400006: CTRL_LegLeft
-    400008: CTRL_LegRight
-    400010: CTRL_MASTER
-    400012: CTRL_MthBot
-    400014: CTRL_MthTop
-    400016: CTRL_Tip
-    400018: JT_ArmLeft1
-    400020: JT_ArmLeft2
-    400022: JT_ArmLeft3
-    400024: JT_ArmRight1
-    400026: JT_ArmRight2
-    400028: JT_ArmRight3
-    400030: JT_Head
-    400032: JT_HeadMid
-    400034: JT_HeadTip
-    400036: JT_hip
-    400038: JT_LegLeft1
-    400040: JT_LegLeft2
-    400042: JT_LegRight1
-    400044: JT_LegRight2
-    400046: JT_Mouth
-    400048: JT_MouthBot
-    400050: JT_MouthTop
-    400052: JT_spine
-    400054: locator1
-    400056: SChick_armor:RetopoGroup1
+    400006: CTRL_body
+    400008: CTRL_LegLeft
+    400010: CTRL_LegRight
+    400012: CTRL_MASTER
+    400014: CTRL_MthBot
+    400016: CTRL_MthTop
+    400018: CTRL_Tip
+    400020: JT_ArmLeft1
+    400022: JT_ArmLeft2
+    400024: JT_ArmLeft3
+    400026: JT_ArmRight1
+    400028: JT_ArmRight2
+    400030: JT_ArmRight3
+    400032: JT_Head
+    400034: JT_HeadMid
+    400036: JT_HeadTip
+    400038: JT_hip
+    400040: JT_LegLeft1
+    400042: JT_LegLeft2
+    400044: JT_LegRight1
+    400046: JT_LegRight2
+    400048: JT_Mouth
+    400050: JT_MouthBot
+    400052: JT_MouthTop
+    400054: JT_spine
+    400056: locator1
     400058: SChick_body1:RetopoGroup1
-    400060: SChick_helmet:RetopoGroup1
-    400062: SChick_mouth_bot:RetopoGroup1
-    400064: SChick_mouth_top:RetopoGroup1
-    400066: CTRL_body
+    400060: SChick_mouth_bot:RetopoGroup1
+    400062: SChick_mouth_top:RetopoGroup1
     2100000: body_tx
     2100002: SChick_helmet_top
     2100004: SChick_helmet_tx_bot
-    2100006: SChick_helmet_armor
-    2100008: SChick_helmet_helmet
-    2300000: SChick_armor:RetopoGroup1
-    2300002: SChick_helmet:RetopoGroup1
-    3300000: SChick_armor:RetopoGroup1
-    3300002: SChick_helmet:RetopoGroup1
     4300000: SChick_body1:RetopoGroup1
     4300002: SChick_mouth_top:RetopoGroup1
     4300004: SChick_mouth_bot:RetopoGroup1
-    4300006: SChick_armor:RetopoGroup1
-    4300008: SChick_helmet:RetopoGroup1
+    7400000: Take 001
     9500000: //RootNode
     13700000: SChick_body1:RetopoGroup1
     13700002: SChick_mouth_bot:RetopoGroup1
     13700004: SChick_mouth_top:RetopoGroup1
   externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: SChick_helmet_armor
-    second: {fileID: 2100000, guid: c758f8c8f172741e7a9528f802f3ef91, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: SChick_helmet_helmet
-    second: {fileID: 2100000, guid: 00df8fb2c2ad343b29c846c0196f29bb, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
