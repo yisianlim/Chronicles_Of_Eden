@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 95146282820072426}
   - component: {fileID: 114434836118311454}
   m_Layer: 0
-  m_Name: Wood Gate
+  m_Name: Gate_Wood_01_open
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
