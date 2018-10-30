@@ -105,6 +105,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4999220519066312}
   - component: {fileID: 64142800443616694}
+  - component: {fileID: 65141132307160338}
+  - component: {fileID: 65251731611890940}
   m_Layer: 0
   m_Name: House_Medium
   m_TagString: Untagged
@@ -1435,9 +1437,33 @@ MeshCollider:
   m_GameObject: {fileID: 1168853453710378}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 0}
+--- !u!65 &65141132307160338
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1168853453710378}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.634415, y: 11.315115, z: 5.560628}
+  m_Center: {x: -4.5335765, y: 3.5245416, z: -2.0981076}
+--- !u!65 &65251731611890940
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1168853453710378}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.322692, y: 10.857618, z: 16.550385}
+  m_Center: {x: 2.5838423, y: 4.928809, z: 0.11238454}
