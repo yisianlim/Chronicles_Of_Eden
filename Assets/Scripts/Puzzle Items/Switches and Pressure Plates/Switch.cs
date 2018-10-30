@@ -6,6 +6,7 @@ public class Switch : MonoBehaviour {
 
     private Animator anim;
     public ToggleBehaviour behaviour;
+    public bool once, many;
 
     private void Awake()
     {
@@ -14,11 +15,15 @@ public class Switch : MonoBehaviour {
     }
 
     private void OnTriggerEnter(Collider other) {
-        if (!other.CompareTag("Item")) {
-            anim.SetBool("On", true);
-            behaviour.Toggle();
-            Debug.Log("Solved!");
+        if (once || many) {
+            if (!other.CompareTag("Item")) {
+                anim.SetBool("On", true);
+                behaviour.Toggle();
+                Debug.Log("Solved!");
+            }
+            Debug.Log("Stepped On");
+            once = false;
         }
-        Debug.Log("Stepped On");
+        
     }
 }
