@@ -171,6 +171,7 @@ public class PlayerController : Agent {
     /// An animation event called when the player should stop dealing damage.
     /// </summary>
     public void ConnectEnd(){
+        gameObject.GetComponentInChildren<TrailRenderer>().enabled = false;
         weapon.Active = false;
         Debug.Log("AttackMid");
 
@@ -184,7 +185,7 @@ public class PlayerController : Agent {
         anim.SetInteger("Condition", 0);
         attacking = false;
         Debug.Log("AttackEnd");
-        gameObject.GetComponentInChildren<TrailRenderer>().enabled = false;
+        
     }
 
 

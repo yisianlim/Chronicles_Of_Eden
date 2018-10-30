@@ -252,7 +252,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.66734695
+      - time: 0.7306123
         functionName: ConnectStart
         data: 
         objectReferenceParameter: {instanceID: 0}
