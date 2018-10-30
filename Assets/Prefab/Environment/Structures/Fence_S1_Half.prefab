@@ -23,7 +23,7 @@ GameObject:
   m_Name: fence_08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1210307815524198
@@ -39,7 +39,7 @@ GameObject:
   m_Name: Fence_S1_Half
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1220043966811078
@@ -54,7 +54,7 @@ GameObject:
   m_Name: polySurface26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1234850260711774
@@ -69,7 +69,7 @@ GameObject:
   m_Name: polySurface25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1271205873596838
@@ -82,12 +82,13 @@ GameObject:
   - component: {fileID: 4146850879070008}
   - component: {fileID: 33523626180306818}
   - component: {fileID: 23952948542964234}
+  - component: {fileID: 64513137378975454}
   m_Layer: 0
   m_Name: Fence_s1_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &1334000498147774
 GameObject:
@@ -101,7 +102,7 @@ GameObject:
   m_Name: transform247
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1384600189920150
@@ -116,7 +117,7 @@ GameObject:
   m_Name: transform248
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1434219502484066
@@ -131,7 +132,7 @@ GameObject:
   m_Name: transform250
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1645046393508880
@@ -146,7 +147,7 @@ GameObject:
   m_Name: transform251
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1742750260018274
@@ -161,7 +162,7 @@ GameObject:
   m_Name: polySurface27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1746111120593332
@@ -176,7 +177,7 @@ GameObject:
   m_Name: transform249
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1788399690271744
@@ -191,7 +192,7 @@ GameObject:
   m_Name: polySurface24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4102628556240784
@@ -313,15 +314,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1210307815524198}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0.70710707, z: -0, w: 0.70710653}
+  m_LocalPosition: {x: 2.56, y: 0, z: 9.03}
   m_LocalScale: {x: 22, y: 22, z: 22}
   m_Children:
   - {fileID: 4102628556240784}
   - {fileID: 4146850879070008}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
 --- !u!4 &4906379613296044
 Transform:
   m_ObjectHideFlags: 1
@@ -403,6 +404,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1271205873596838}
   m_Mesh: {fileID: 4300000, guid: 26004de6dea8f411fa09c5f87747e3a1, type: 3}
+--- !u!64 &64513137378975454
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1271205873596838}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 26004de6dea8f411fa09c5f87747e3a1, type: 3}
 --- !u!64 &64951966954518336
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -413,7 +428,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 0}

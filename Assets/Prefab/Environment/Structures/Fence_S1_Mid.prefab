@@ -23,7 +23,7 @@ GameObject:
   m_Name: transform160
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1118050525261430
@@ -38,7 +38,7 @@ GameObject:
   m_Name: pCube89
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1216807441821020
@@ -53,7 +53,7 @@ GameObject:
   m_Name: pCube86
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1240527820231138
@@ -69,7 +69,7 @@ GameObject:
   m_Name: Fence_S1_Mid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1249883591423970
@@ -84,7 +84,7 @@ GameObject:
   m_Name: transform158
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1305965802459110
@@ -99,7 +99,7 @@ GameObject:
   m_Name: transform157
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1349826085893798
@@ -114,7 +114,7 @@ GameObject:
   m_Name: pCube88
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1357018467939096
@@ -129,7 +129,7 @@ GameObject:
   m_Name: transform159
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1467233041514124
@@ -144,7 +144,7 @@ GameObject:
   m_Name: fence_002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1475334640009504
@@ -159,7 +159,7 @@ GameObject:
   m_Name: pCube90
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1484814797122608
@@ -174,7 +174,7 @@ GameObject:
   m_Name: transform156
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1572510072905458
@@ -189,7 +189,7 @@ GameObject:
   m_Name: pCube87
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1781556036123966
@@ -202,12 +202,13 @@ GameObject:
   - component: {fileID: 4086638355119032}
   - component: {fileID: 33700561455997878}
   - component: {fileID: 23670395261995820}
+  - component: {fileID: 64034061855252214}
   m_Layer: 0
   m_Name: Fence_s1_mid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4049474303624194
 Transform:
@@ -269,7 +270,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1240527820231138}
   m_LocalRotation: {x: -0, y: 0.70710707, z: -0, w: 0.70710653}
-  m_LocalPosition: {x: -7, y: 0, z: 5}
+  m_LocalPosition: {x: -4.9, y: 0, z: 5}
   m_LocalScale: {x: 22, y: 22, z: 22}
   m_Children:
   - {fileID: 4645456249915060}
@@ -432,6 +433,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1781556036123966}
   m_Mesh: {fileID: 4300000, guid: 9bd4a77b63a1d4310b13bfec246535e0, type: 3}
+--- !u!64 &64034061855252214
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1781556036123966}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 9bd4a77b63a1d4310b13bfec246535e0, type: 3}
 --- !u!64 &64947851917065734
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -442,7 +457,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 0}
