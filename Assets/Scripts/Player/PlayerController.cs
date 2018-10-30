@@ -18,10 +18,14 @@ public class PlayerController : Agent {
     [Header("Movement")]
     public float moveSpeed;
     public float dodgeSpeed;
-    public Transform CameraTransform;
-    public Rigidbody rb;
     [SerializeField] private Vector3 moveDirection;
     [SerializeField] private Vector3 lookAtDirection;
+    public Rigidbody rb;
+
+    [Header("Camera")]
+    public Transform CameraTransform;
+    public FocusingCamera CameraObject;
+
 
     [Header("Combat")]
     [SerializeField] int attackStrength;
@@ -30,10 +34,12 @@ public class PlayerController : Agent {
     [SerializeField] float DodgeCoolDownDuration = 1;
     [SerializeField] float FiringDuration = 1;
     public LayerMask clickMask; //floor
-
     private bool attacking, Firing;
     private bool dodging = false;
     private bool dodgeCD = false;
+    private bool attackSwitch = false;
+
+
 
     private void Start()
     {
@@ -44,6 +50,7 @@ public class PlayerController : Agent {
         //KnockBack();
         GetInput();
         SetAnimationAndDirection();
+        //RotateCamera();
     }
 
     void GetInput() {
@@ -70,6 +77,10 @@ public class PlayerController : Agent {
 
         } else if (Input.GetButtonDown("Dodge") && !dodgeCD) {
             Dodge();
+        } else if (Input.GetButtonDown("Rotate Left")) {
+            CameraObject.RotateCamera(-90);
+        } else if (Input.GetButtonDown("Rotate Right")) {
+            CameraObject.RotateCamera(90);
         }
 
 
@@ -137,8 +148,13 @@ public class PlayerController : Agent {
     void Attack() {
 
         if (attacking) return; //Don't do anything if already attacking.
-
-        anim.SetInteger("Condition", 2);
+        if (!attackSwitch) {
+            anim.SetInteger("Condition", 2);
+            attackSwitch = !attackSwitch;
+        } else {
+            anim.SetInteger("Condition", 5);
+            attackSwitch = !attackSwitch;
+        }
         attacking = true;
 
     }
@@ -148,6 +164,7 @@ public class PlayerController : Agent {
     /// </summary>
     public void ConnectStart() {
         weapon.Active = true;
+        Debug.Log("AttackStart");
     }
 
     /// <summary>
@@ -155,6 +172,8 @@ public class PlayerController : Agent {
     /// </summary>
     public void ConnectEnd(){
         weapon.Active = false;
+        Debug.Log("AttackMid");
+
     }
 
     /// <summary>
@@ -164,6 +183,7 @@ public class PlayerController : Agent {
     {
         anim.SetInteger("Condition", 0);
         attacking = false;
+        Debug.Log("AttackEnd");
         gameObject.GetComponentInChildren<TrailRenderer>().enabled = false;
     }
 
@@ -199,4 +219,20 @@ public class PlayerController : Agent {
         Firing = false;
     }
 
+    //protected void RotateCamera() {
+
+    //    float step = rSpeed * Time.deltaTime;
+    //    float orbitCircumfrance = 2F * rDistance * Mathf.PI;
+    //    float distanceDegrees = (rSpeed / orbitCircumfrance) * 360;
+    //    float distanceRadians = (rSpeed / orbitCircumfrance) * 2 * Mathf.PI;
+
+    //    if (targetAngle > 0) {
+    //        CameraTransform.RotateAround(transform.position, Vector3.up, -rotationAmount);
+    //        targetAngle -= rotationAmount;
+    //    } else if (targetAngle < 0) {
+    //        CameraTransform.RotateAround(transform.position, Vector3.up, rotationAmount);
+    //        targetAngle += rotationAmount;
+    //    }
+
+    //}
 }
