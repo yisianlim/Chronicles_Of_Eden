@@ -50684,6 +50684,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114569546177663632, guid: 60eacb50316e44542b81b688199710a9,
+        type: 2}
+      propertyPath: sounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4017084924948606, guid: 60eacb50316e44542b81b688199710a9, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -50736,6 +50741,46 @@ Prefab:
       propertyPath: sounds.Array.data[2].pitch
       value: 0.9
       objectReference: {fileID: 0}
+    - target: {fileID: 114569546177663632, guid: 60eacb50316e44542b81b688199710a9,
+        type: 2}
+      propertyPath: sounds.Array.data[0].name
+      value: Attack Voice 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114569546177663632, guid: 60eacb50316e44542b81b688199710a9,
+        type: 2}
+      propertyPath: sounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7e142699a66d14df0a8a1694d76869c8, type: 3}
+    - target: {fileID: 114569546177663632, guid: 60eacb50316e44542b81b688199710a9,
+        type: 2}
+      propertyPath: sounds.Array.data[0].volume
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114569546177663632, guid: 60eacb50316e44542b81b688199710a9,
+        type: 2}
+      propertyPath: sounds.Array.data[0].pitch
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114569546177663632, guid: 60eacb50316e44542b81b688199710a9,
+        type: 2}
+      propertyPath: sounds.Array.data[1].name
+      value: Attack Voice 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114569546177663632, guid: 60eacb50316e44542b81b688199710a9,
+        type: 2}
+      propertyPath: sounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: d467f3a9bcae449c1879fec63a5a8824, type: 3}
+    - target: {fileID: 114569546177663632, guid: 60eacb50316e44542b81b688199710a9,
+        type: 2}
+      propertyPath: sounds.Array.data[2].name
+      value: Explosion
+      objectReference: {fileID: 0}
+    - target: {fileID: 114569546177663632, guid: 60eacb50316e44542b81b688199710a9,
+        type: 2}
+      propertyPath: sounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8c77850bf78c07a49b57e00fe175d6a6, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60eacb50316e44542b81b688199710a9, type: 2}
   m_IsPrefabAsset: 0

@@ -29,14 +29,18 @@ public abstract class Detonatable : MonoBehaviour {
 
         ParticleSystem explosionInstance = Instantiate(explosionEffect, transform.position, transform.rotation);
         explosionInstance.gameObject.SetActive(true);
+        FindObjectOfType<AudioManager>().Play("Explosion");
 
         yield return new WaitForSeconds(delayBeforeDamage);
 
         //Find all item that respond to an exposion and effect them.
         new List<Collider>(Physics.OverlapSphere(transform.position, exposionRadius)).ForEach((item) =>
         {
-            DetonationReciever reciever = item.GetComponent<DetonationReciever>();
-            if (reciever != null) reciever.ApplyDetonation();
+            DetonationReciever receiver = item.GetComponent<DetonationReciever>();
+            if (receiver != null)
+            {
+                receiver.ApplyDetonation();
+            }
         });
 
         gameObject.GetComponent<Renderer>().enabled = false;
