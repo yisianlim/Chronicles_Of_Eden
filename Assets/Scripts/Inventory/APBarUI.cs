@@ -15,6 +15,9 @@ public class APBarUI : MonoBehaviour {
     // AP UI.
     public Image APBar;
 
+    // Flag to check when we need to continually fill up the bar. 
+    private bool fillBar = false;
+
     void Awake () {
         inventory.ItemEquipped += UpdateEquippedItem;
     }
@@ -22,6 +25,8 @@ public class APBarUI : MonoBehaviour {
     private void UpdateEquippedItem(object sender, ItemEquippedEventArgs e) {
         currentEquippedItem = inventory.EquippedItem;
         maxAP = currentEquippedItem.Cooldown;
+        currentAP = maxAP;
+        fillBar = true;
     }
 
     void Update () {
@@ -29,9 +34,20 @@ public class APBarUI : MonoBehaviour {
         if (currentEquippedItem == null) {
             APBar.rectTransform.localScale = new Vector3(0, 1, 1);
             return;
-
         }
-        currentAP = inventory.getTimeUntilNextUse(currentEquippedItem);
+
+        if (fillBar == true)
+        {
+            // Increase AP over a period of time (instead of an instant increase)
+            // when the item is first equipped.
+            currentAP -= 1.0f / 0.4f * Time.deltaTime;
+            fillBar = currentAP > 0;
+        }
+        else
+        {
+            // Since item already equipped, just update the cool down time. 
+            currentAP = inventory.getTimeUntilNextUse(currentEquippedItem);
+        }
         UpdateBarDisplay();	
 	}
 
