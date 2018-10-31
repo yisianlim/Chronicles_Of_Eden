@@ -1,7 +1,7 @@
 # Rhys Angelo-Jones
-Username: angelorhys__
-Role: Bear__
-Primary Responsibility:__
+Username: angelorhys  
+Role: Bear  
+Primary Responsibility:  
 
 
 ## Code Discussion
