@@ -28,7 +28,6 @@ public class PlayerStat : Stat {
         currentHealth -= damage;
         Mathf.Clamp(currentHealth, 0, maxHealth);
         UpdateHealthBarDisplay();
-
         Debug.Log("Taking damage.");
         
     }
