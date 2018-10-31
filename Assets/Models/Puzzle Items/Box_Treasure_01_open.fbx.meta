@@ -1,35 +1,35 @@
 fileFormatVersion: 2
-guid: 79d359cdb830b4345a238c3f8368775b
+guid: ad3eb06b374d14596b98f0348473ab2d
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: base
-    100002: //RootNode
-    100004: switch_top
-    400000: base
-    400002: //RootNode
-    400004: switch_top
-    2100000: Switch_top_tx
-    2100002: base_tx
-    2300000: base
-    2300002: switch_top
-    3300000: base
-    3300002: switch_top
-    4300000: switch_top
-    4300002: base
+    100000: //RootNode
+    100002: treasure_box
+    100004: treasure_open
+    400000: //RootNode
+    400002: treasure_box
+    400004: treasure_open
+    2100000: Treasure_body
+    2100002: Treasure_lit
+    2300000: treasure_box
+    2300002: treasure_open
+    3300000: treasure_box
+    3300002: treasure_open
+    4300000: treasure_box
+    4300002: treasure_open
     7400000: Take 001
     9500000: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Switch_top_tx
-    second: {fileID: 2100000, guid: 1fe76b1849d1f4c229dbd83423d98895, type: 2}
+      name: Treasure_body
+    second: {fileID: 2100000, guid: dd1204d2209fa426581018b64dd7884c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: base_tx
-    second: {fileID: 2100000, guid: 1ce83bdf3dfcb44e8b9749da1c4a1d3b, type: 2}
+      name: Treasure_lit
+    second: {fileID: 2100000, guid: c6b9795a031224f519cf7f6577cd65fd, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 79d359cdb830b4345a238c3f8368775b
+guid: 8438ac07d6eeb4bdf8bca938164abcc4
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -24,7 +24,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Switch_top_tx
-    second: {fileID: 2100000, guid: 1fe76b1849d1f4c229dbd83423d98895, type: 2}
+    second: {fileID: 2100000, guid: bdbbec097c0f945d6aff40acedb9b48b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
