@@ -75,9 +75,7 @@ public class InventoryUI : MonoBehaviour {
             else {
                 image.sprite = defaultBackground;
             }
-
             key++;
-
         }
     }
 
