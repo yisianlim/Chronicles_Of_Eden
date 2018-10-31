@@ -76,6 +76,7 @@ ModelImporter:
     100140: Main_Character_shieldshoulder1:RetopoGroup1
     100142: Main_Character_swords:RetopoGroup1
     100144: //RootNode
+    100146: hand
     400000: JT_Head
     400002: JT_HeadTop_End
     400004: JT_Hips
@@ -149,12 +150,19 @@ ModelImporter:
     400140: Main_Character_shieldshoulder1:RetopoGroup1
     400142: Main_Character_swords:RetopoGroup1
     400144: //RootNode
+    400146: hand
     2100000: body
     2100002: bag
     2100004: SShield
     2100006: hair
     2100008: belt
     2100010: Main_Character_swords_lambert1
+    2100012: lambert2
+    2100014: lambert6
+    2100016: lambert4
+    2100018: lambert3
+    2100020: lambert5
+    2100022: lambert8
     2300000: Main_Character_swords:RetopoGroup1
     3300000: Main_Character_swords:RetopoGroup1
     4300000: Main_Character_body:RetopoGroup1
@@ -201,6 +209,36 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: hair
     second: {fileID: 2100000, guid: 5789c210b3c5243788c4ad997bc54746, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert2
+    second: {fileID: 2100000, guid: 2b917770109374f6890e096ba37981a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert3
+    second: {fileID: 2100000, guid: 5789c210b3c5243788c4ad997bc54746, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert4
+    second: {fileID: 2100000, guid: a251a4ba5ddfe49cdb6b9918e138334f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert5
+    second: {fileID: 2100000, guid: d455d38e30080435f889e2068c87dd6d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert6
+    second: {fileID: 2100000, guid: a409dc6be36b44de8bbed69339be1174, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert8
+    second: {fileID: 2100000, guid: 9cca491da0b784440b1910e64549d1b4, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -231,8 +269,8 @@ ModelImporter:
     - serializedVersion: 16
       name: Take 001
       takeName: Take 001
-      firstFrame: 0
-      lastFrame: 20.4
+      firstFrame: 22
+      lastFrame: 33
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
