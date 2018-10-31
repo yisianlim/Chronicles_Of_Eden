@@ -11,31 +11,30 @@ public class Gate : ToggleBehaviour {
     [SerializeField] RuntimeAnimatorController openGateController;
     [SerializeField] RuntimeAnimatorController closeGateContoller;
 
-    void Start()
-    {
+    void Start() {
         anim = GetComponent<Animator>();
         anim.SetBool("Open", open);
-        anim.runtimeAnimatorController = openGateController;
+        //anim.runtimeAnimatorController = openGateController;
     }
 
-    public override void Toggle()
-    {
+    public override void Toggle() {
+        Debug.Log("Toggle");
         open = !open;
         anim.speed = 1;
         if (open) {
-            if (anim.GetCurrentAnimatorStateInfo(0).IsName("Close") ) {
-                anim.runtimeAnimatorController = openGateController;
-            }
-            else { anim.speed = -1; }
+            //if (anim.GetCurrentAnimatorStateInfo(0).IsName("Close") ) {
+            anim.runtimeAnimatorController = openGateController;
+            //}
+            //else { anim.speed = -1; }
             //anim.runtimeAnimatorController = openGateController;
+        } else {
+            //if (anim.GetCurrentAnimatorStateInfo(0).IsName("Open")) {
+            anim.runtimeAnimatorController = closeGateContoller;
+            //    }
+            //    else { anim.speed = -1; }
+            //}
+            //anim.SetBool("Open", open);
         }
-        else {
-            if (anim.GetCurrentAnimatorStateInfo(0).IsName("Open")) {
-                anim.runtimeAnimatorController = closeGateContoller;
-            }
-            else { anim.speed = -1; }
-        }
-        anim.SetBool("Open", open);
-    }
 
+    }
 }

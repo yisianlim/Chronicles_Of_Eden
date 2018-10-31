@@ -36,6 +36,7 @@ ModelImporter:
     100060: SChick_helmet:RetopoGroup1
     100062: SChick_mouth_bot:RetopoGroup1
     100064: SChick_mouth_top:RetopoGroup1
+    100066: CTRL_body
     400000: //RootNode
     400002: CTRL_ArmLeft
     400004: CTRL_ArmRight
@@ -69,6 +70,7 @@ ModelImporter:
     400060: SChick_helmet:RetopoGroup1
     400062: SChick_mouth_bot:RetopoGroup1
     400064: SChick_mouth_top:RetopoGroup1
+    400066: CTRL_body
     2100000: body_tx
     2100002: SChick_helmet_top
     2100004: SChick_helmet_tx_bot

@@ -9,6 +9,7 @@ using UnityEngine;
 public class DamagingWeapon : MonoBehaviour {
 
     public bool Active { get; set; } //Whether the weapon is able to deal damage at a particular point in time.
+    public GameObject myParent;
 
     [SerializeField] int strength; //How much damage the attack deals.
 
@@ -20,10 +21,25 @@ public class DamagingWeapon : MonoBehaviour {
         //Deal damage to what ever was detected within the collider.
         DamageReciever[] damageRecievers = other.GetComponents<DamageReciever>();
         new List<DamageReciever>(damageRecievers).ForEach(reciever => {
+            ParentCheck(reciever.transform);
             reciever.ApplyDamage(strength, transform.position);
             Debug.Log(reciever);
         });
 
     }
+
+    public void ParentCheck(Transform trn) {
+        Transform parent = trn.parent;
+        int i = 1;
+        while (parent != null) {
+            Debug.Log("Reached parent " + i + ": " + parent.name);
+            parent.SendMessage("example");
+
+            parent = parent.parent;
+            ++i;
+        }
+        Debug.Log("No more parents");
+    }
+
 
 }

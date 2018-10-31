@@ -17,6 +17,9 @@ public class FocusingCamera : MonoBehaviour {
     [SerializeField] [Range(0, 360)] protected float angleAroundTarget; //Where the player is around the circle. The mouse will control this.
     [SerializeField] protected float baseY; //The y value the camera will be locked on to.
     [SerializeField] protected float orthographicSize; // The viewing volume you'd like the orthographic Camera to pick up.
+    [SerializeField] [Range(0, 360)] protected float desiredRotation;
+    [SerializeField] public float rSpeed = 1.0f;
+    [SerializeField] const float rotationAmount = 1.5f;
 
     void Start()
     {
@@ -35,6 +38,12 @@ public class FocusingCamera : MonoBehaviour {
     {
         if (!lockOntoObject) return;
 
+        if (desiredRotation > angleAroundTarget) {
+            angleAroundTarget += rotationAmount;
+        } else if (desiredRotation < angleAroundTarget) {
+            angleAroundTarget -= rotationAmount;
+        }
+
         /* Conversions to radians for Mathf trig functions. */
         float angleFromTargetInRadians = Mathf.Deg2Rad * angleFromTarget;
         float angleAroundTargetInRadians = Mathf.Deg2Rad * angleAroundTarget;
@@ -49,5 +58,10 @@ public class FocusingCamera : MonoBehaviour {
 
         transform.localPosition = new Vector3(cameraX, cameraHeight, cameraZ);
         transform.localEulerAngles = new Vector3(angleFromTarget, -angleAroundTarget - YRotationOffset, transform.localEulerAngles.z);
+
+    }
+
+    public void RotateCamera(int rotation) {
+        desiredRotation += rotation;
     }
 }
