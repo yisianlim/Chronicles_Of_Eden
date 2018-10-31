@@ -47,9 +47,6 @@ public class Inventory : MonoBehaviour {
                 timesUntilNextUse[i] = timesUntilNextUse[i] < 0 ? 0 : timesUntilNextUse[i];
             }
         }
-
-        //Debug.Log(timesUntilNextUse[1]);
-
     }
 
     /// <summary>
