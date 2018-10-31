@@ -16,6 +16,7 @@ public class Pickup : MonoBehaviour {
 
     private void OnTriggerStay(Collider other)
     {
+        Debug.Log("Pickup?");
 
         //Do not do anyting if the intended key is being pressed.
         if (Input.GetAxis(INTERACTION_AXIS) == 0) return;
