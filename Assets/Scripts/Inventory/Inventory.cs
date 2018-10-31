@@ -42,8 +42,13 @@ public class Inventory : MonoBehaviour {
 
         //Decrease the cooldown counter for all the items.
         for(int i = 0; i < timesUntilNextUse.Length; i++) {
-            if(timesUntilNextUse[i] > 0) timesUntilNextUse[i] -= Time.deltaTime;
+            if (timesUntilNextUse[i] > 0) {
+                timesUntilNextUse[i] -= Time.deltaTime;
+                timesUntilNextUse[i] = timesUntilNextUse[i] < 0 ? 0 : timesUntilNextUse[i];
+            }
         }
+
+        //Debug.Log(timesUntilNextUse[1]);
 
     }
 
@@ -80,6 +85,18 @@ public class Inventory : MonoBehaviour {
         }
 
         return -1;
+    }
+
+    /// <summary>
+    /// Returns the time until next use of the given item in the inventory, or -1 if it's not there.
+    /// </summary>
+    /// <param name="item"></param>
+    /// <returns></returns>
+    public float getTimeUntilNextUse(EquipableItem item) {
+        int index = getPositionOfItem(item);
+        if (index < 0) return -1f;
+        float time = timesUntilNextUse[index];
+        return time;
     }
 
     /// <summary>

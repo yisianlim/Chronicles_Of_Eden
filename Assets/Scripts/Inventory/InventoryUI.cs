@@ -7,7 +7,7 @@ public class InventoryUI : MonoBehaviour {
 
     public Inventory inventory;
 
-    // Sprite used upon selected or deselection.
+    // Sprite used upon selected or deselected.
     public Sprite border;
     public Sprite UIMask;
 
