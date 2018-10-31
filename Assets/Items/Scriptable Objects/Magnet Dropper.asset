@@ -13,7 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InGameName: 
   _Image: {fileID: 21300000, guid: 47375b10dae98ee449c17356869a3e24, type: 3}
-  droppedItem: {fileID: 54130560282525688, guid: 8a19e832854a6f640bbb7a98b2924286,
+  cooldown: 0
+  droppedItem: {fileID: 54237642204012766, guid: c2b4106391f62d54795982af85304270,
     type: 2}
   instantiationDistanceFromPlayer: 0.5
   dropFromHeight: 0.3

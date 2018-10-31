@@ -8,7 +8,6 @@ public class MovingChargedItem : ChargedItem {
 
     void Start()
     {
-        UpdateColor();
         rb = gameObject.AddComponent<Rigidbody>();
         rb.mass = mass;
     }
