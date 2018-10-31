@@ -1,15 +1,84 @@
 fileFormatVersion: 2
-guid: a99a1be0a414668499adfb4598366ade
+guid: f33bf309953534ba093320c011db58c5
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2100000: 'Material #155'
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: ruins_floor_002
-  externalObjects: {}
+    100000: Brush_001
+    100002: //RootNode
+    100004: Brush_01
+    100006: pPlane10
+    100008: pPlane11
+    100010: pPlane12
+    100012: pPlane13
+    100014: pPlane14
+    100016: pPlane15
+    100018: pPlane16
+    100020: pPlane17
+    100022: pPlane18
+    100024: pPlane19
+    100026: pPlane2
+    100028: pPlane3
+    100030: pPlane4
+    100032: pPlane8
+    100034: pPlane9
+    100036: transform10
+    100038: transform11
+    100040: transform12
+    100042: transform13
+    100044: transform14
+    100046: transform149
+    100048: transform150
+    100050: transform151
+    100052: transform3
+    100054: transform4
+    100056: transform5
+    100058: transform6
+    100060: transform7
+    100062: transform8
+    100064: transform9
+    400000: Brush_001
+    400002: //RootNode
+    400004: Brush_01
+    400006: pPlane10
+    400008: pPlane11
+    400010: pPlane12
+    400012: pPlane13
+    400014: pPlane14
+    400016: pPlane15
+    400018: pPlane16
+    400020: pPlane17
+    400022: pPlane18
+    400024: pPlane19
+    400026: pPlane2
+    400028: pPlane3
+    400030: pPlane4
+    400032: pPlane8
+    400034: pPlane9
+    400036: transform10
+    400038: transform11
+    400040: transform12
+    400042: transform13
+    400044: transform14
+    400046: transform149
+    400048: transform150
+    400050: transform151
+    400052: transform3
+    400054: transform4
+    400056: transform5
+    400058: transform6
+    400060: transform7
+    400062: transform8
+    400064: transform9
+    2100000: lambert1
+    2300000: Brush_01
+    3300000: Brush_01
+    4300000: Brush_01
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 206d1d5fc0d1a4e8d9e50cf0ed5d4ac9, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

@@ -1,15 +1,20 @@
 fileFormatVersion: 2
-guid: 41a245e8d01dfa847bae012ba34e71d1
+guid: 86866698794c53e41b9e5dbcf8ee7120
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: 'Material #157'
+    2100000: 'Material #158'
     2300000: //RootNode
     3300000: //RootNode
-    4300000: ruins_column_002
-  externalObjects: {}
+    4300000: ruins_entrance_002
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #158'
+    second: {fileID: 2100000, guid: 37adf06a5934ad64a9a107c1ceb3df43, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
