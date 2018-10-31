@@ -8,30 +8,34 @@ public class InventoryUI : MonoBehaviour {
     public Inventory inventory;
 
     // Sprite used upon selected or deselected.
-    public Sprite border;
-    public Sprite UIMask;
+    public Sprite selectedBorder;
+    public Sprite defaultBorder;
 
-	// Use this for initialization
-	void Start () {
+    // Background sprite used during cooldown or default.
+    public Sprite cooldownBackground;
+    public Sprite defaultBackground;
+
+    // Use this for initialization
+    void Start () {
         inventory.ItemAdded += InventoryUIItemAdded;
         inventory.ItemEquipped += InventoryUIItemSelected;
 	}
 
     private void InventoryUIItemSelected(object sender, ItemEquippedEventArgs e) {
-        Transform inventoryPanel = transform.Find("Inventory");
-
         int key = 1;
-        foreach (Transform slot in inventoryPanel)
+        foreach (Transform slot in transform)
         {
-            Image image = slot.GetComponent<Image>();
+            Image image = slot.GetChild(0).GetComponent<Image>();
 
-            
-            if (key == e.Index) {
+            if (key == e.Index)
+            {
                 // We found the equipped slot.
-                image.sprite = border;
-            } else {
+                image.sprite = selectedBorder;
+            }
+            else
+            {
                 // All other slot should not be bordered!
-                image.sprite = UIMask;
+                image.sprite = defaultBorder;
             }
             key++;
         }
@@ -39,17 +43,46 @@ public class InventoryUI : MonoBehaviour {
     }
 
     private void InventoryUIItemAdded(object sender, InventoryEventArgs e) {
-        Transform inventoryPanel = transform.Find("Inventory");
 
-        foreach (Transform slot in inventoryPanel) {
-            Image image = slot.GetChild(0).GetComponent<Image>();
+        foreach (Transform slot in transform)
+        {
+            Image image = slot.GetChild(0).GetChild(0).GetComponent<Image>();
 
             // We found the empty slot.
-            if (!image.enabled) {
+            if (!image.enabled)
+            {
                 image.enabled = true;
                 image.sprite = e.Item.Image;
                 break;
             }
         }
+    }
+
+    private void UpdateBackground()
+    {
+        int key = 1;
+        foreach (Transform slot in transform)
+        {
+            // Get the respective item from inventory.
+            EquipableItem item = inventory.GetItemAt(key);
+            Image image = slot.GetComponent<Image>();
+
+            // If the item is still cooling down, show a gray background.
+            if (item != null && inventory.getTimeUntilNextUse(item) > 0)
+            {
+                image.sprite = cooldownBackground;
+            }
+            else {
+                image.sprite = defaultBackground;
+            }
+
+            key++;
+
+        }
+    }
+
+    private void Update()
+    {
+        UpdateBackground();
     }
 }

@@ -64,7 +64,7 @@ public class Inventory : MonoBehaviour {
     /// </summary>
     /// <param name="num"></param>
     /// <returns></returns>
-    protected EquipableItem GetItemAt(int num)
+    public EquipableItem GetItemAt(int num)
     {
         return items[num];
     }
