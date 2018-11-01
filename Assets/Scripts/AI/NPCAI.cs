@@ -12,16 +12,25 @@ public class NPCAI : Agent {
     private Scannable currentTarget;
     private Vector3 nearestScannablePosition = Vector3.positiveInfinity; //The position of the current closest scanable.
     internal NPCAnimator npcAnimator;
+    private Stat stat;
 
     private Boolean stone = false;
 
     private void Awake()
     {
         npcAnimator = GetComponent<NPCAnimator>();
+        stat = GetComponent<Stat>();
     }
 
     private void Update()
     {
+
+        //Check NPC's health (if it has any) and kill it if it reaches 0.
+        if(stat != null && stat.currentHealth <= 0)
+        {
+            npcAnimator.Animation = "Die";
+            return;
+        }
 
         if (stone) { return; }
 
@@ -75,6 +84,7 @@ public class NPCAI : Agent {
         }
 
     }
+
 
     public void Petrify() {
         this.stone = true;
