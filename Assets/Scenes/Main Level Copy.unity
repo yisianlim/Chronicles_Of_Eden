@@ -39731,23 +39731,13 @@ Animator:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1049581598}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: b90f631b6f4441c42bcffa922cd0b78d, type: 3}
+  m_Avatar: {fileID: 9000000, guid: 9938f6cca9e270a4d9f883e9a3c6f794, type: 3}
   m_Controller: {fileID: 9100000, guid: cf51f95dbdb735f4886b3b3a1c4863eb, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed by
-    Humanoid clips.\n\tTransform 'JT_Hips'\n\tTransform 'JT_RightHandThumb2'\n\tTransform
-    'JT_LeftArm'\n\tTransform 'JT_LeftHandThumb2'\n\tTransform 'JT_LeftHandRing2'\n\tTransform
-    'JT_LeftLeg'\n\tTransform 'JT_RightHandThumb3'\n\tTransform 'JT_LeftFoot'\n\tTransform
-    'JT_LeftHandThumb1'\n\tTransform 'JT_RightHandIndex1'\n\tand more ...\n\tFrom
-    animation clip 'Take Idle'\n\tFrom animation clip 'Take Roll'\n\tFrom animation
-    clip 'Take Run'\n\tFrom animation clip 'Take Throw'\n\tFrom animation clip 'Take
-    Idle Weapon Out'\n\tFrom animation clip 'Take Sheath'\n\tFrom animation clip 'Take
-    Attack'\n\tFrom animation clip 'Take Idle'\n\tFrom animation clip 'Take Sheath'\n\tFrom
-    animation clip 'Take Attack 2'\n\tand more ..."
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -39793,7 +39783,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 16
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &1049581603
 MonoBehaviour:

@@ -374,7 +374,7 @@ GameObject:
   - component: {fileID: 114183524684155232}
   - component: {fileID: 195202274477114536}
   m_Layer: 0
-  m_Name: Chick_large (1)
+  m_Name: Large_Chick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
