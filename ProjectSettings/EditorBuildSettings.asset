@@ -5,10 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Development Scenes/Level Transition/Scene2.unity
-    guid: b4fb864aae54536408c94b2bf23b2de4
+    path: Assets/Scenes/Development Scenes/Combat Test Scene/Combat Test Scene.unity
+    guid: 4f7aa4f826ffbdd43a75e47770c4b2a5
   - enabled: 1
-    path: Assets/Scenes/Development Scenes/Level Transition/Scene1.unity
-    guid: 3e4a24e97843b074483537fe190e22eb
+    path: Assets/Scenes/Menu.unity
+    guid: cd6538154a497e94aae832a0ea4fc358
   m_configObjects: {}

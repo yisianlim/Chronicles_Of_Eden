@@ -8,13 +8,8 @@ public class SceneChanger : MonoBehaviour {
     public string nextScene;
     public Animator sceneTransitionAnimator;
 
-    public void FadeToLevel() {
-        sceneTransitionAnimator.SetBool("FadeOut", true);
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        FadeToLevel();
+    public void FadeToScene() {
+        sceneTransitionAnimator.SetBool("GameOver", true);
     }
 
     public void OnFadeComplete() {

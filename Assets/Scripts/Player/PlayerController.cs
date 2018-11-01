@@ -286,7 +286,7 @@ public class PlayerController : Agent
 
     public void OnKill()
     {
-        deathSceneChanger.OnFadeComplete();
+        deathSceneChanger.FadeToScene();
     }
 
     //protected void RotateCamera() {
