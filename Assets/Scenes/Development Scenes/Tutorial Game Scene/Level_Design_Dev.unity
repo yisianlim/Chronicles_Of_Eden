@@ -28934,7 +28934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f79a2fab496bd04c8334bb07c459159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 2125467867}
+  playerController: {fileID: 1049581604}
   APBar: {fileID: 823450642}
 --- !u!1001 &964229954
 Prefab:
@@ -31644,6 +31644,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 978809562}
   m_Script: {fileID: 11500000, guid: 030dc0c22223adf47b203deb777c2da8, type: 3}
+--- !u!114 &1049581604 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114805880504076408, guid: 6edf6417a2cae484ba6b969f226ad1da,
+    type: 2}
+  m_PrefabInternal: {fileID: 978809562}
+  m_Script: {fileID: 11500000, guid: 07086f8c1a844664796826c2ad818b8a, type: 3}
 --- !u!1 &1050172116
 GameObject:
   m_ObjectHideFlags: 0
@@ -45358,7 +45364,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1554017271
 RectTransform:
   m_ObjectHideFlags: 0
