@@ -1015,17 +1015,17 @@ MonoBehaviour:
       type: 2}
     animation: Running
   - objectType: Player
-    scanner: {fileID: 11400000, guid: 1ee5756ff1c23433f8581d38be958a91, type: 2}
-    reaction: {fileID: 11400000, guid: f7aa51c796d3a4006a1f5359a6e98fdd, type: 2}
-    targetSelectionCritera: {fileID: 11400000, guid: c40b31d1438ab18469c2ddc994f8fdb5,
-      type: 2}
-    animation: Walking
-  - objectType: Player
     scanner: {fileID: 11400000, guid: 69d250721ed974a6f8e5c768f772c59c, type: 2}
     reaction: {fileID: 11400000, guid: 1c0f01994eba6440ab2afade2ba7d5b9, type: 2}
     targetSelectionCritera: {fileID: 11400000, guid: c40b31d1438ab18469c2ddc994f8fdb5,
       type: 2}
     animation: Attack
+  - objectType: Player
+    scanner: {fileID: 11400000, guid: 1ee5756ff1c23433f8581d38be958a91, type: 2}
+    reaction: {fileID: 11400000, guid: f7aa51c796d3a4006a1f5359a6e98fdd, type: 2}
+    targetSelectionCritera: {fileID: 11400000, guid: c40b31d1438ab18469c2ddc994f8fdb5,
+      type: 2}
+    animation: Walking
   - objectType: Food
     scanner: {fileID: 11400000, guid: 4ae0d7222f0104f179d8309581c48e4e, type: 2}
     reaction: {fileID: 11400000, guid: 5d29fb1522e6a4dd497d01b25eb92b15, type: 2}
