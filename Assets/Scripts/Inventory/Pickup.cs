@@ -32,12 +32,11 @@ public class Pickup : MonoBehaviour {
         //Disable the collider so it only fires once.
         GetComponent<Collider>().enabled = false;
 
-        // Begin open treasure chest and add the item to player's inventory.
-        StartCoroutine(OpenTreasureChestRoutine());
+        // Begin opening treasure box and then adding the item to player's inventory.
+        StartCoroutine(OpenTreasureBoxRoutine());
 
         // Disable trigger.
         enabled = false;
-
     }
 
     /// <summary>
@@ -45,9 +44,10 @@ public class Pickup : MonoBehaviour {
     /// inventory. Ensures that the animation is completed first, before 
     /// the item is displayed in the UI.
     /// </summary>
-    IEnumerator OpenTreasureChestRoutine(){
+    IEnumerator OpenTreasureBoxRoutine(){
         representationAnimator.SetBool("Open", true);
         yield return new WaitForSeconds(1.5f);
+        FindObjectOfType<AudioManager>().Play("Pickup");
         inventory.AddItem(pickup);
     }
 

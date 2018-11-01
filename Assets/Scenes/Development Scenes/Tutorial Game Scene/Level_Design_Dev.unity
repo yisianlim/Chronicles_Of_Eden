@@ -29547,6 +29547,11 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114805880504076408, guid: 6edf6417a2cae484ba6b969f226ad1da,
+        type: 2}
+      propertyPath: DodgeCoolDownDuration
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6edf6417a2cae484ba6b969f226ad1da, type: 2}
   m_IsPrefabAsset: 0
@@ -50338,7 +50343,7 @@ Prefab:
     - target: {fileID: 114569546177663632, guid: 60eacb50316e44542b81b688199710a9,
         type: 2}
       propertyPath: sounds.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4017084924948606, guid: 60eacb50316e44542b81b688199710a9, type: 2}
       propertyPath: m_LocalPosition.x
@@ -50432,6 +50437,26 @@ Prefab:
       propertyPath: sounds.Array.data[2].clip
       value: 
       objectReference: {fileID: 8300000, guid: 8c77850bf78c07a49b57e00fe175d6a6, type: 3}
+    - target: {fileID: 114569546177663632, guid: 60eacb50316e44542b81b688199710a9,
+        type: 2}
+      propertyPath: sounds.Array.data[3].name
+      value: Pickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 114569546177663632, guid: 60eacb50316e44542b81b688199710a9,
+        type: 2}
+      propertyPath: sounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9ae32f8e1a94c486c9929faca77ff03b, type: 3}
+    - target: {fileID: 114569546177663632, guid: 60eacb50316e44542b81b688199710a9,
+        type: 2}
+      propertyPath: sounds.Array.data[3].volume
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114569546177663632, guid: 60eacb50316e44542b81b688199710a9,
+        type: 2}
+      propertyPath: sounds.Array.data[3].pitch
+      value: 0.9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60eacb50316e44542b81b688199710a9, type: 2}
   m_IsPrefabAsset: 0
