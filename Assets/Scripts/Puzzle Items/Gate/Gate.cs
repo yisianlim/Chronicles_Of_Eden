@@ -18,7 +18,7 @@ public class Gate : ToggleBehaviour {
     }
 
     public override void Toggle() {
-        Debug.Log("Toggled :" + open);
+        Debug.Log("Toggle");
         open = !open;
         anim.speed = 1;
         if (open) {
