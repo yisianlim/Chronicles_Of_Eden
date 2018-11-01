@@ -52,13 +52,13 @@ public class PlayerController : Agent {
 
     void Update() {
 
-        //if (stat.currentHealth <= 0)
-        //{
-        //    anim.SetInteger("Condition", 6);
-        //    return;
-        //} 
+        if (stat.currentHealth <= 0)
+        {
+            anim.SetInteger("Condition", 6);
+            return;
+        } 
 
-        //Debug.Log(name + " stat: " + stat.currentHealth);
+        Debug.Log(name + " stat: " + stat.currentHealth);
 
        
         
