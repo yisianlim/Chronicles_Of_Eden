@@ -20,7 +20,7 @@ public class NavigateTowards : NPCBehaviour
     public override void Act(NPCAI npc, Scannable target)
     {
         NavMeshAgent agent = npc.GetComponent<NavMeshAgent>();
-        Debug.Log("isStopped" + agent.isStopped);
+        //Debug.Log("isStopped" + agent.isStopped);
         IsMoving = !agent.isStopped;
     }
 
