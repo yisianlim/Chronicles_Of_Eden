@@ -5,52 +5,46 @@ using UnityEngine.UI;
 
 public class TutorialManager : MonoBehaviour {
 
-    private bool start = false;
-
+    // UI elements for TutorialManager.
     public Text nameText;
     public Text dialogueText;
     public Button button;
-    public Dialogue dialogue;
-
     public Animator animator;
-    private Queue<string> sentences;
 
-    void Start()
+    // Dialogues for the tutorial.
+    public Dialogue dialogue;
+    private List<string> sentences;
+
+    // The current tutorial that we are at.
+    private int popUpIndex = -1;
+
+    private void Start()
     {
-        sentences = new Queue<string>();
+        sentences = new List<string>();
+        foreach (string s in dialogue.sentences)
+        {
+            sentences.Add(s);
+        }
     }
 
     void Update()
+    { 
+        StartCoroutine(BeginTutorial());
+
+        if (popUpIndex == 0) {
+            animator.SetBool("IsOpen", true);
+            nameText.text = dialogue.name;
+            Debug.Log(sentences[0]);
+            //StartCoroutine(TypeSentence(sentences[popUpIndex]));
+        }
+
+    }
+
+    IEnumerator BeginTutorial()
     {
-        if (start == false) {
-            StartCoroutine(Begin());
-        }
-    }
-
-    IEnumerator Begin() {
-        start = true;
         yield return new WaitForSeconds(2);
-        StartTutorial();
+        popUpIndex = 0;
     }
-
-    void StartTutorial() {
-        animator.SetBool("IsOpen", true);
-        nameText.text = dialogue.name;
-        sentences.Clear();
-
-        // Add all dialogue into the queue. 
-        foreach (string s in dialogue.sentences)
-        {
-            sentences.Enqueue(s);
-        }
-
-        // Display the first sentence.
-        string sentence = sentences.Dequeue();
-        StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
-
-    }
-
 
     IEnumerator TypeSentence(string sentence)
     {
@@ -61,6 +55,32 @@ public class TutorialManager : MonoBehaviour {
             yield return null;
         }
     }
+
+    void Display() {
+        
+
+    }
+
+    //void StartTutorial() {
+    //    animator.SetBool("IsOpen", true);
+    //    nameText.text = dialogue.name;
+    //    sentences.Clear();
+
+    //    // Add all dialogue into the queue. 
+    //    foreach (string s in dialogue.sentences)
+    //    {
+    //        sentences.Enqueue(s);
+    //    }
+
+    //    // Display the first sentence.
+    //    string sentence = sentences.Dequeue();
+    //    StopAllCoroutines();
+    //    StartCoroutine(TypeSentence(sentence));
+
+    //}
+
+
+
 
     //   // TutorialManager will be a singleton instance - only one instance
     //   // is needed throughout the lifetime of the game. 

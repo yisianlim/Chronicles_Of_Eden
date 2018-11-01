@@ -46585,7 +46585,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1576931369}
   - component: {fileID: 1576931370}
-  - component: {fileID: 1576931371}
   m_Layer: 0
   m_Name: TutorialManager
   m_TagString: Untagged
@@ -46617,26 +46616,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 564e155e62b738a4f89aceaac0522260, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1576931371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1576931368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9f6b4d0969e88c42a2039fc4c23d659, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  nameText: {fileID: 578064305}
+  dialogueText: {fileID: 1167492151}
+  button: {fileID: 164216344}
+  animator: {fileID: 1403430685}
   dialogue:
     name: Tutorial
     sentences:
-    - 'Hi there, welcome to Chronicles of Eden! I am going to teach you how to play
-      the game before you embark on your new adventure.
-
-
-      Firstly, Press any WASD key to move. Alternatively, you can use your arrow key.'
-    - Press WASD to move.
+    - Hi there, welcome to Chronicles of Eden! I am going to teach you how to play
+      the game before you embark on your new adventure. Firstly, Press any WASD key
+      to move. Alternatively, you can use your arrow key.
+    - 
 --- !u!4 &1576981723 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4583241636621712, guid: 52c19bf20475d458a902647834a27fd6,
