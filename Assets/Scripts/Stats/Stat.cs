@@ -1,9 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public abstract class Stat : MonoBehaviour {
+public class Stat : MonoBehaviour {
+    public int maxHealth = 500;
+    public int currentHealth { get; private set; }
 
-    public abstract void TakeDamage(int damage, Vector3 damageSourceDirection);
+    private void Awake()
+    {
+        currentHealth = maxHealth;
+    }
 
+    public void TakeDamage(int damage, Vector3 enemyDirection)
+    {
+        currentHealth -= damage;
+        Mathf.Clamp(currentHealth, 0, maxHealth);
+    }
 }

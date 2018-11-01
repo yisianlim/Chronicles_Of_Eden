@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HPBarUI : MonoBehaviour {
 
-    public PlayerStat stat;
+    public Stat stat;
     public Image HPImage;
 
     private int maxHP;
