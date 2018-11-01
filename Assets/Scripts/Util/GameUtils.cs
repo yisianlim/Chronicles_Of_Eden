@@ -23,7 +23,7 @@ internal class GameUtils
     }
 
     /// <summary>
-    /// Creates a layer mask that excludes the layers of the given numbers.
+    /// Creates a layer mask that includes the layers of the given numbers.
     /// </summary>
     /// <param name="layersToMask"></param>
     /// <returns></returns>

@@ -13,15 +13,19 @@ public class DamagingWeapon : MonoBehaviour {
 
     [SerializeField] int strength; //How much damage the attack deals.
 
-    public void OnTriggerExit(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
 
+        Debug.Log("Is active: " + Active);
+
         if (!Active) return; //Do not do anything more is the weapon is not supposed to be able to deal damage.
+
+        Debug.Log("Applying Damage.");
 
         //Deal damage to what ever was detected within the collider.
         DamageReciever[] damageRecievers = other.GetComponents<DamageReciever>();
         new List<DamageReciever>(damageRecievers).ForEach(reciever => {
-            ParentCheck(reciever.transform);
+            //ParentCheck(reciever.transform);
             reciever.ApplyDamage(strength, transform.position);
             Debug.Log(reciever);
         });
