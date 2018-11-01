@@ -63,6 +63,12 @@ ModelImporter:
     100114: LChick_wings:RetopoGroup1
     100116: locator1
     100118: locator2
+    100120: CTRL_Body
+    100122: CTRL_Head
+    100124: tails_1
+    100126: tails_2
+    100128: tails_3
+    100130: tails_4
     400000: //RootNode
     400002: CTRL_body
     400004: CTRL_FeetLeft
@@ -123,6 +129,12 @@ ModelImporter:
     400114: LChick_wings:RetopoGroup1
     400116: locator1
     400118: locator2
+    400120: CTRL_Body
+    400122: CTRL_Head
+    400124: tails_1
+    400126: tails_2
+    400128: tails_3
+    400130: tails_4
     2100000: LChick_body_tx
     2100002: LChick_tiphead_tx
     2100004: LChick_wings_tx
