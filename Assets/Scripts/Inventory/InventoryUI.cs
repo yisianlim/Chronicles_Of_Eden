@@ -11,9 +11,8 @@ public class InventoryUI : MonoBehaviour {
     public Sprite selectedBorder;
     public Sprite defaultBorder;
 
-    // Background sprite used during cooldown or default.
+    // Background sprite used during cooldown.
     public Sprite cooldownBackground;
-    public Sprite defaultBackground;
 
     // Use this for initialization
     void Start () {
@@ -25,7 +24,7 @@ public class InventoryUI : MonoBehaviour {
         int key = 1;
         foreach (Transform slot in transform)
         {
-            Image image = slot.GetChild(0).GetComponent<Image>();
+            Image image = slot.Find("border").GetComponent<Image>();
 
             if (key == e.Index)
             {
@@ -46,7 +45,7 @@ public class InventoryUI : MonoBehaviour {
 
         foreach (Transform slot in transform)
         {
-            Image image = slot.GetChild(0).GetChild(0).GetComponent<Image>();
+            Image image = slot.Find("border").Find("item").GetComponent<Image>();
 
             // We found the empty slot.
             if (!image.enabled)
@@ -65,15 +64,22 @@ public class InventoryUI : MonoBehaviour {
         {
             // Get the respective item from inventory.
             EquipableItem item = inventory.GetItemAt(key);
-            Image image = slot.GetComponent<Image>();
 
-            // If the item is still cooling down, show a gray background.
+            // Get the cooldown background. 
+            Image image = slot.Find("cooldown").GetComponent<Image>();
+
+            // If the item is still cooling down, show a gray background
+            // with its size based on the cooldown time. 
             if (item != null && inventory.getTimeUntilNextUse(item) > 0)
             {
+                image.enabled = true;
+                float ratio = inventory.getTimeUntilNextUse(item) / item.Cooldown;
+                image.rectTransform.localScale = new Vector3(1, ratio, 1);
                 image.sprite = cooldownBackground;
             }
-            else {
-                image.sprite = defaultBackground;
+            else
+            {
+                image.enabled = false;
             }
             key++;
         }

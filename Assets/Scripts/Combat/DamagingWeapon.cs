@@ -26,7 +26,7 @@ public class DamagingWeapon : MonoBehaviour {
         DamageReciever[] damageRecievers = other.GetComponents<DamageReciever>();
         new List<DamageReciever>(damageRecievers).ForEach(reciever => {
             //ParentCheck(reciever.transform);
-            reciever.ApplyDamage(strength, transform.position);
+            reciever.ApplyDamage(strength, myParent.transform.position);
             Debug.Log(reciever);
         });
 
