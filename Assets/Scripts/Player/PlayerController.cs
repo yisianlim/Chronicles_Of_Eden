@@ -8,6 +8,7 @@ public class PlayerController : Agent {
     private Vector2 input;
     private Vector3 camF;
     private Vector3 camR;
+    private Stat stat;
 
     // Condition = 0 for Idle.
     // Condition = 1 for Charge.
@@ -43,10 +44,22 @@ public class PlayerController : Agent {
 
     private void Start()
     {
+
         if(weapon != null) weapon.enabled = false; //The weapon should not do damage by default - only when the player is attacking.
+        stat = GetComponent<Stat>();
+
     }
 
     void Update() {
+
+        Debug.Log(name + " stat: " + stat.currentHealth);
+
+        if (stat.currentHealth <= 0)
+        {
+            anim.SetInteger("Condition", 6);
+            return;
+        }
+        
         //KnockBack();
         GetInput();
         SetAnimationAndDirection();
