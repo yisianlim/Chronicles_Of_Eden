@@ -971,7 +971,7 @@ Animator:
   m_GameObject: {fileID: 1987398376561152}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 8a59449e6f9bd47ef878bf593a739e9c, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d92dce9bf20e1450dbbf3cf49c2a9b43, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -991,7 +991,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e2ae7cc42258474c8c3d63d379a0441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reactions: []
+  reactions:
+  - objectType: Bomb
+    scanner: {fileID: 11400000, guid: ef9184c97e5f44659999e77651c0acff, type: 2}
+    reaction: {fileID: 11400000, guid: 6460ab150e36841e2bbc25b50c4e6ae3, type: 2}
+    targetSelectionCritera: {fileID: 11400000, guid: c40b31d1438ab18469c2ddc994f8fdb5,
+      type: 2}
+    animation: Running
+  - objectType: Player
+    scanner: {fileID: 11400000, guid: 1ee5756ff1c23433f8581d38be958a91, type: 2}
+    reaction: {fileID: 11400000, guid: f7aa51c796d3a4006a1f5359a6e98fdd, type: 2}
+    targetSelectionCritera: {fileID: 11400000, guid: c40b31d1438ab18469c2ddc994f8fdb5,
+      type: 2}
+    animation: Walking
+  - objectType: 
+    scanner: {fileID: 0}
+    reaction: {fileID: 0}
+    targetSelectionCritera: {fileID: 0}
+    animation: 
+  - objectType: 
+    scanner: {fileID: 0}
+    reaction: {fileID: 0}
+    targetSelectionCritera: {fileID: 0}
+    animation: 
 --- !u!114 &114970830277714786
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1003,8 +1025,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73f1c6db96a55444e9226d322e46ca37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
-  animationNames: []
+  anim: {fileID: 95713498474376482}
+  animationNames:
+  - Idle
+  - Walking
+  - Eating
+  - Death
+  - Running
+  - Attack
 --- !u!136 &136400196539586974
 CapsuleCollider:
   m_ObjectHideFlags: 1
