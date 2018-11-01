@@ -9,6 +9,8 @@ public class AttackAnimationEventHandler : MonoBehaviour {
 
     [HideInInspector] public GameObject target;
 
+    [SerializeField] public float attackRange = 2;
+
     /// <summary>
     /// Have an attack deal damage.
     /// </summary>
@@ -17,6 +19,7 @@ public class AttackAnimationEventHandler : MonoBehaviour {
     {
 
         if (target == null) return;
+        if (Vector3.Distance(target.transform.position, transform.position) > attackRange) return;
 
         DamageReciever[] damageRecievers = target.GetComponents<DamageReciever>();
         if (damageRecievers.Length == 0)

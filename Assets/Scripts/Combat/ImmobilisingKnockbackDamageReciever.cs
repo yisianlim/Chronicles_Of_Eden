@@ -11,6 +11,7 @@ using UnityEngine.AI;
 public class ImmobilisingKnockbackDamageReciever : KnockbackDamageReciever {
 
     [SerializeField] float immobilisationDuration; //How long after the enemy has been hit that they remain unable to move (i.e. how long the NavMeshAgent is disabled for).
+    [SerializeField] float KnockbackDistance;
 
     public override void KnockBack(Rigidbody rigidbody, Vector3 recieverPosition, Vector3 fromPosition, float force)
     {
@@ -34,9 +35,9 @@ public class ImmobilisingKnockbackDamageReciever : KnockbackDamageReciever {
         float defaultAngularSpeed = agent.angularSpeed;
 
         agent.speed = defaultSpeed * force;
-        agent.acceleration = defaultAcceleration + 1000;
+        agent.acceleration = defaultAcceleration * 1000;
         agent.angularSpeed = 0;
-        agent.SetDestination(transform.position + direction * force);
+        agent.SetDestination(transform.position + direction * KnockbackDistance);
 
         yield return new WaitForSeconds(immobilisationDuration);
 
