@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0995673921e87764e8c508701eb2d91c, type: 3}
   m_Name: SCAvoidBomb
   m_EditorClassIdentifier: 
-  moveSpeed: 0
-  avoidDistance: 0
+  moveSpeed: 2
+  avoidDistance: 7
