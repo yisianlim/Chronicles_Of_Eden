@@ -20,12 +20,6 @@ public class Launcher : AimableItem
     [SerializeField] int arcVisualisationResolution;
     [SerializeField] PathVisualiser arcVisuliser;
 
-    private void OnEnable()
-    {
-        aimCursor = Instantiate(cursor);
-        aimCursor.SetActive(false);
-    }
-
     public override void Fire(Transform userTransform, Vector3 endpoint)
     {
 
@@ -43,6 +37,11 @@ public class Launcher : AimableItem
 
     public override void VisualiseAim(Transform userTransform, Vector3 endPoint)
     {
+
+        if(aimCursor == null){
+            aimCursor = Instantiate(cursor);
+            aimCursor.SetActive(false);
+        }
 
         //Turn user to face target.
         Vector3 dir = new Vector3(endPoint.x, userTransform.position.y, endPoint.z) - userTransform.position;
