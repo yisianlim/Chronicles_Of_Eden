@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Minimap : MonoBehaviour {
 
-    public Transform Character_Main;
+    public Transform NewMainCharacter;
 
 	private void LateUpdate()
 	{
-        Vector3 newPosition = Character_Main.position;
+        Vector3 newPosition = NewMainCharacter.position;
         newPosition.y = transform.position.y;
         transform.position = newPosition;
 
-        transform.rotation = Quaternion.Euler(90f, Character_Main.eulerAngles.y, 0f);
+        transform.rotation = Quaternion.Euler(90f, NewMainCharacter.eulerAngles.y, 0f);
 	}
 }
