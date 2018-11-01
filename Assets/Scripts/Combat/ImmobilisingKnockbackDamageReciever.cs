@@ -8,7 +8,6 @@ using UnityEngine.AI;
 /// </summary>
 [RequireComponent(typeof(NavMeshAgent))]
 [RequireComponent(typeof(NPCAI))]
-[RequireComponent(typeof(Rigidbody))]
 public class ImmobilisingKnockbackDamageReciever : KnockbackDamageReciever {
 
     [SerializeField] float immobilisationDuration; //How long after the enemy has been hit that they remain unable to move (i.e. how long the NavMeshAgent is disabled for).
@@ -16,25 +15,36 @@ public class ImmobilisingKnockbackDamageReciever : KnockbackDamageReciever {
     public override void KnockBack(Rigidbody rigidbody, Vector3 recieverPosition, Vector3 fromPosition, float force)
     {
 
-        StartCoroutine(Immobilise());
-
-        base.KnockBack(rigidbody, recieverPosition, fromPosition, force);
+        StartCoroutine(ImmobiliseAndKnockBack(rigidbody, recieverPosition, fromPosition, force));
 
     }
 
     //Briefly disable the NavmeshAgent and make RigidBody not Kinematic so force is able to be applied.
-    public IEnumerator Immobilise()
+    public IEnumerator ImmobiliseAndKnockBack(Rigidbody rigidbody, Vector3 recieverPosition, Vector3 fromPosition, float force)
     {
 
-        GetComponent<NavMeshAgent>().enabled = false;
         GetComponent<NPCAI>().enabled = false;
-        GetComponent<Rigidbody>().isKinematic = false;
+
+        Vector3 direction = (recieverPosition - fromPosition).normalized;
+
+        NavMeshAgent agent = GetComponent<NavMeshAgent>();
+
+        float defaultSpeed = agent.speed;
+        float defaultAcceleration = agent.acceleration;
+        float defaultAngularSpeed = agent.angularSpeed;
+
+        agent.speed = defaultSpeed * force;
+        agent.acceleration = defaultAcceleration + 1000;
+        agent.angularSpeed = 0;
+        agent.SetDestination(transform.position + direction * force);
 
         yield return new WaitForSeconds(immobilisationDuration);
 
-        GetComponent<NavMeshAgent>().enabled = true;
+        agent.speed = defaultSpeed;
+        agent.acceleration = defaultAcceleration;
+        agent.angularSpeed = defaultAngularSpeed;
+
         GetComponent<NPCAI>().enabled = true;
-        GetComponent<Rigidbody>().isKinematic = true;
 
     }
 
