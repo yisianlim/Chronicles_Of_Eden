@@ -65,7 +65,19 @@ public class NPCAnimator : MonoBehaviour {
     /// </summary>
     public void Dies()
     {
+
+        if(dying) return;
+        Debug.Log("Dying");
+
         dying = true;
         anim.SetInteger("Condition", FindAnimationConditionValue(DIE_KEYWORD));
+    }
+
+    /// <summary>
+    /// An animation event called when the dying animation has completed.
+    /// </summary>
+    public void FinishDying()
+    {
+        Destroy(gameObject);
     }
 }
