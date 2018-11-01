@@ -14,6 +14,13 @@ public class Pickup : MonoBehaviour {
     [SerializeField] EquipableItem pickup; //The item that will be added to the inventory.
     [SerializeField] Inventory inventory; //The inventory the item will be added to.
 
+    private Animator representationAnimator;
+
+    private void Awake()
+    { 
+        representationAnimator = inGameRepresentation.GetComponent<Animator>();
+    }
+
     private void OnTriggerStay(Collider other)
     {
         //Do not do anyting if the intended key is being pressed.
@@ -25,11 +32,23 @@ public class Pickup : MonoBehaviour {
         //Disable the collider so it only fires once.
         GetComponent<Collider>().enabled = false;
 
-        inventory.AddItem(pickup);
+        // Begin open treasure chest and add the item to player's inventory.
+        StartCoroutine(OpenTreasureChestRoutine());
 
-        //Hide representation from world, and disable trigger.
-        inGameRepresentation.SetActive(false);
+        // Disable trigger.
         enabled = false;
 
     }
+
+    /// <summary>
+    /// Wait for 1.5 seconds between adding the item to the player's
+    /// inventory. Ensures that the animation is completed first, before 
+    /// the item is displayed in the UI.
+    /// </summary>
+    IEnumerator OpenTreasureChestRoutine(){
+        representationAnimator.SetBool("Open", true);
+        yield return new WaitForSeconds(1.5f);
+        inventory.AddItem(pickup);
+    }
+
 }
