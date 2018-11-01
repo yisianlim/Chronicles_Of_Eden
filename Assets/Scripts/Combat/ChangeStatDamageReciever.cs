@@ -12,7 +12,7 @@ public class ChangeStatDamageReciever : DamageReciever
 
     public override void ApplyDamage(int damage, Vector3 fromPosition)
     {
-        Debug.Log("Stat: " + stat);
+        //Debug.Log("Stat: " + stat);
         stat.TakeDamage(damage, fromPosition);
     }
 }

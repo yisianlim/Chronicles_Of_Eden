@@ -52,13 +52,15 @@ public class PlayerController : Agent {
 
     void Update() {
 
-        Debug.Log(name + " stat: " + stat.currentHealth);
+        //if (stat.currentHealth <= 0)
+        //{
+        //    anim.SetInteger("Condition", 6);
+        //    return;
+        //} 
 
-        if (stat.currentHealth <= 0)
-        {
-            anim.SetInteger("Condition", 6);
-            return;
-        }
+        //Debug.Log(name + " stat: " + stat.currentHealth);
+
+       
         
         //KnockBack();
         GetInput();
@@ -158,15 +160,15 @@ public class PlayerController : Agent {
         if (attacking) return; //Don't do anything if already attacking.
 
         // Switch between attack animations and audio. 
-        if (!attackSwitch) {
-            anim.SetInteger("Condition", 2);
-            attackSwitch = !attackSwitch;
-            FindObjectOfType<AudioManager>().Play("Attack Voice 1");
-        } else {
+        //if (!attackSwitch) {
             anim.SetInteger("Condition", 5);
-            attackSwitch = !attackSwitch;
-            FindObjectOfType<AudioManager>().Play("Attack Voice 2");
-        }
+            //attackSwitch = !attackSwitch;
+            FindObjectOfType<AudioManager>().Play("Attack Voice 1");
+        //} else {
+        //    anim.SetInteger("Condition", 5);
+        //    attackSwitch = !attackSwitch;
+        //    FindObjectOfType<AudioManager>().Play("Attack Voice 2");
+        //}
         attacking = true;
     }
 

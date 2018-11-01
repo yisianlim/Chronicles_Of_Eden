@@ -232,7 +232,7 @@ ModelImporter:
       name: Take Attack
       takeName: Take 001
       firstFrame: 0
-      lastFrame: 22
+      lastFrame: 20.3
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -252,21 +252,21 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.40358743
+      - time: 0.44155842
         functionName: ConnectStart
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.94327635
+      - time: 0.96753246
         functionName: ConnectEnd
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 1
+      - time: 0.987013
         functionName: AttackEnd
         data: 
         objectReferenceParameter: {instanceID: 0}
