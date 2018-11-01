@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: TriPlanar Texture Blend
+  m_Name: TriPlanar Texture Blend 1
   m_Shader: {fileID: 4800000, guid: 4e4ba5a40cd046d4f9edaf7f8e971713, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -56,7 +56,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _Texture1:
         m_Texture: {fileID: 2800000, guid: 3fa27fdb9f8d24eb9b081b77db27789c, type: 3}
-        m_Scale: {x: 0.05, y: 0.05}
+        m_Scale: {x: 0.1, y: 0.1}
         m_Offset: {x: 0, y: 0}
     - _Texture10:
         m_Texture: {fileID: 0}
