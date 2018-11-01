@@ -30,9 +30,9 @@ public class PlayerController : Agent {
     [Header("Combat")]
     [SerializeField] int attackStrength;
     [SerializeField] DamagingWeapon weapon;
-    [SerializeField] float DodgeDuration;
-    [SerializeField] float DodgeCoolDownDuration = 1;
     [SerializeField] float FiringDuration = 1;
+    public float DodgeDuration;
+    public float DodgeCoolDownDuration = 1;
     public LayerMask clickMask; //floor
     private bool attacking, Firing;
     private bool dodging = false;
@@ -216,6 +216,20 @@ public class PlayerController : Agent {
         Firing = true;
         yield return new WaitForSeconds(FiringDuration);
         Firing = false;
+    }
+
+    /// <summary>
+    /// Getter method is check if the player is currently dodging.
+    /// </summary>
+    public bool isDodging() {
+        return dodging;
+    }
+
+    /// <summary>
+    /// Getter method is check if the player is cooling down from dodging. 
+    /// </summary>
+    public bool isCoolingDown() {
+        return dodgeCD;
     }
 
     //protected void RotateCamera() {
