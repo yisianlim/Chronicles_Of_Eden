@@ -15,7 +15,6 @@ public class FocusingCamera : MonoBehaviour {
     [SerializeField] protected float distanceFromTarget;
     [SerializeField] [Range(0, 90)] protected float angleFromTarget; //The angle at which the camera is looking at the player.
     [SerializeField] [Range(0, 360)] protected float angleAroundTarget; //Where the player is around the circle. The mouse will control this.
-    [SerializeField] protected float baseY; //The y value the camera will be locked on to.
     [SerializeField] protected float orthographicSize; // The viewing volume you'd like the orthographic Camera to pick up.
     [SerializeField] [Range(0, 360)] protected float desiredRotation;
     [SerializeField] public float rSpeed = 1.0f;
@@ -49,7 +48,7 @@ public class FocusingCamera : MonoBehaviour {
         float angleAroundTargetInRadians = Mathf.Deg2Rad * angleAroundTarget;
 
         /* Basic trig, finding the length of the opposite side (vertical distance of camera from player) based on given angle and distance.*/
-        float cameraHeight = baseY + Mathf.Sin(angleFromTargetInRadians) * distanceFromTarget;
+        float cameraHeight = focusObject.transform.position.y + Mathf.Sin(angleFromTargetInRadians) * distanceFromTarget;
 
         /* Find the horizontal distance of camera from the target, then use that to determine its x and y based its angle around the player.*/
         float cameraRadius = Mathf.Cos(angleFromTargetInRadians) * distanceFromTarget;
