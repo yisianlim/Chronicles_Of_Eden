@@ -14,7 +14,8 @@ public class PotionDetector : MonoBehaviour {
             this.gameObject.GetComponent<NPCAI>().Petrify();
             this.gameObject.GetComponent<Animator>().speed = 0;
             this.gameObject.AddComponent(new  Rigidbody().GetType());
-            this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+            this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
+            this.gameObject.GetComponent<Agent>().enabled = false;
             Destroy(other.gameObject);
         }
     }
