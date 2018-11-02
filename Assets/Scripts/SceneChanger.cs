@@ -8,16 +8,11 @@ public class SceneChanger : MonoBehaviour {
     public string nextScene;
     public Animator sceneTransitionAnimator;
 
-    private void FadeToLevel() {
-        sceneTransitionAnimator.SetTrigger("FadeOut");
+    public void FadeToScene() {
+        sceneTransitionAnimator.SetBool("GameOver", true);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        FadeToLevel();
-    }
-
-    private void OnFadeComplete() {
+    public void OnFadeComplete() {
         SceneManager.LoadScene(nextScene);
     }
 }

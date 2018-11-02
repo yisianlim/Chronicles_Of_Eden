@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class NPCInteraction : MonoBehaviour {
 
-    // The dialogue that this NPC will have.
-    public string[] dialogue;
-
-    // The name of this NPC.
-    public string name;
-
     public GameObject player;
     private bool hasInteracted;
 	
@@ -36,6 +30,6 @@ public class NPCInteraction : MonoBehaviour {
     /// </summary>
     void BeginInteraction() {
         hasInteracted = true;
-        DialogueSystem.Instance.AddNewDialogue(this);
+        GetComponent<DialogueTrigger>().TriggerDialogue();
     }
 }
