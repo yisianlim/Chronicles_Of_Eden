@@ -6,7 +6,7 @@
 
 ## Code Discussion
 ### Parts worked On
-* Inventory Logic - All
+* Inventory Logic - Most
 * AI Framework - All
 * NPC Follow Behaviour - ALL
 * NPC Avoid Behavior - Most

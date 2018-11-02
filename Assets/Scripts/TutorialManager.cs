@@ -5,6 +5,16 @@ using UnityEngine.UI;
 
 public class TutorialManager : MonoBehaviour {
 
+    enum TutorialComponent : int {
+        Move = 0,
+        Dodge = 1,
+        Attack = 2,
+        Pickup = 3,
+        Equip = 4,
+        UseItem = 5,
+        End = 6
+    }
+
     // UI elements for TutorialManager.
     public Text nameText;
     public Text dialogueText;
@@ -19,6 +29,7 @@ public class TutorialManager : MonoBehaviour {
     private List<string> sentences;
 
     // The current tutorial that we are at.
+    // -1 indicates that the tutorial have not begun yet.
     private int popUpIndex = -1;
 
     // Flag to check if the tutorial has already started.
@@ -55,42 +66,46 @@ public class TutorialManager : MonoBehaviour {
     /// be displayed. 
     /// </summary>
     void CheckPlayerInputs() {
-        // Check if player moves using the WASD key or arrow keys.
-        if (popUpIndex == 0 && (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0))
+        if ((popUpIndex == (int)TutorialComponent.Move && 
+            (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)))
         {
+            // Player learned to move.
             MoveToNextTutorial();
         }
-        // Check if player learned how to dodged.
-        else if (popUpIndex == 1 &&
+        else if (popUpIndex == (int)TutorialComponent.Dodge &&
             (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0) && Input.GetKeyDown(KeyCode.Space))
         {
+            // Player learned to dodge.
             MoveToNextTutorial();
         }
-        // Check that player learned to attack.
-        else if (popUpIndex == 2 && Input.GetMouseButtonDown(1))
+        else if (popUpIndex == (int)TutorialComponent.Attack 
+            && Input.GetMouseButtonDown(1))
         {
+            // Player learned to attack.
             MoveToNextTutorial();
         }
-        // Check that the first item has already been successfully picked up.
-        else if (popUpIndex == 3 && firstPickup.pickedUp)
+        else if (popUpIndex == (int)TutorialComponent.Pickup 
+            && firstPickup.pickedUp)
         {
+            // Item has already been successfully picked up.
             MoveToNextTutorial();
         }
-        // Check that the picked up item is equipped.
-        else if (popUpIndex == 4 && Input.GetKeyDown(KeyCode.Alpha1))
+        else if (popUpIndex == (int)TutorialComponent.Equip 
+            && Input.GetKeyDown(KeyCode.Alpha1))
         {
+            // Item is equipped.
             MoveToNextTutorial();
         }
-        // Check that the bomb is used.
-        else if (popUpIndex == 5 && Input.GetMouseButtonDown(0))
+        else if (popUpIndex == (int)TutorialComponent.UseItem 
+            && Input.GetMouseButtonDown(0))
         {
+            // Item is used.
             MoveToNextTutorial();
         }
-        // End of tutorial.
-        else if (popUpIndex == 6) {
+        else if (popUpIndex == (int)TutorialComponent.End) {
+            // End of tutorial.
             StartCoroutine(EndTutorial());
         }
-
     }
 
     /// <summary>
@@ -101,6 +116,8 @@ public class TutorialManager : MonoBehaviour {
         if (popUpIndex >= 0 && popUpIndex < sentences.Count)
         {
             animator.SetBool("IsOpen", true);
+
+            // Display tutorial dialogue if it has not start typing yet. 
             if (typing == false)
             {
                 StopAllCoroutines();

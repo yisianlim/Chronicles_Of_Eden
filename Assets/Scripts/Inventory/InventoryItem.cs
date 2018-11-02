@@ -3,31 +3,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//public interface  {
-//    string Name { get; }
-
-//    Sprite Image { get; }
-
-//    void OnPickUp();
-//}
-
 public class InventoryEventArgs : EventArgs {
 
-    public EquipableItem Item;
+    public EquipableItem item;
 
     public InventoryEventArgs(EquipableItem item) {
-        Item = item;
+        this.item = item;
     }
 }
 
 public class ItemEquippedEventArgs : EventArgs
 {
 
-    public int Index;
+    public int index;
 
     public ItemEquippedEventArgs(int index)
     {
-        Index = index;
+        this.index = index;
     }
 }
 

@@ -228,7 +228,6 @@ public class PlayerController : Agent
         anim.SetInteger("Condition", 0);
         attacking = false;
         Debug.Log("AttackEnd");
-
     }
 
 
