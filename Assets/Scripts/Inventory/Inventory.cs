@@ -29,7 +29,6 @@ public class Inventory : MonoBehaviour {
             if (items[equipedItem] != null && timesUntilNextUse[equipedItem] <= 0)
             {
                 items[equipedItem].Use(userTranform, this);
-                timesUntilNextUse[equipedItem] = items[equipedItem].Cooldown; //Start the cooldown for the used item.
             }
         }
 
@@ -82,6 +81,15 @@ public class Inventory : MonoBehaviour {
         }
 
         return -1;
+    }
+
+    /// <summary>
+    /// Start cooldown timer for item in given slot.
+    /// </summary>
+    /// <param name="i"></param>
+    public void StartCooldown(int i)
+    {
+        timesUntilNextUse[i] = items[i].Cooldown;
     }
 
     /// <summary>

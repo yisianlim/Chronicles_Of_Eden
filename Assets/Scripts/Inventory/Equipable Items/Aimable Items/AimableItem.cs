@@ -18,7 +18,7 @@ public abstract class AimableItem : EquipableItem
         if (aimer == null)
             throw new System.Exception("The player needs to have a ranged item aimer attatched to it in order to use a" + name);
 
-        aimer.AimItem(this);
+        aimer.AimItem(this, inventory);
 
     }
 
