@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3235969113bea64e8b0cbb2f33bf2db, type: 3}
+  m_Name: Boar Right Switch Scanner
+  m_EditorClassIdentifier: 
+  regionCentre: {x: -2.86, y: 4.36, z: 46.87}
+  regionSize: {x: 3, y: 1, z: 3}
