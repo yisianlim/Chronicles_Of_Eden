@@ -10,5 +10,7 @@
 
 ## Links to each developers README files
 [Rhys Angelo](angelorhys.md)
+[Yi Sian Lim](limyisi.md)
+[Benjamin Allan](allanbenj1.md)
 
 ## How to play
