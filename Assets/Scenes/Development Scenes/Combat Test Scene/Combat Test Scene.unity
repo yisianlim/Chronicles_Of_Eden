@@ -300,7 +300,7 @@ Prefab:
         type: 2}
       propertyPath: stat
       value: 
-      objectReference: {fileID: 178695978}
+      objectReference: {fileID: 178695977}
     - target: {fileID: 114805880504076408, guid: 6edf6417a2cae484ba6b969f226ad1da,
         type: 2}
       propertyPath: deathSceneChanger
@@ -1239,7 +1239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weight: 20
---- !u!114 &178695978
+--- !u!114 &178695977
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1247,10 +1247,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 178695974}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5192d3aee24495a4681fb82cc102e457, type: 3}
+  m_Script: {fileID: 11500000, guid: 030dc0c22223adf47b203deb777c2da8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1
+  maxHealth: 100
 --- !u!1001 &222039702
 Prefab:
   m_ObjectHideFlags: 0
@@ -2179,6 +2179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030dc0c22223adf47b203deb777c2da8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 500
 --- !u!114 &1220632807
 MonoBehaviour:
   m_ObjectHideFlags: 0

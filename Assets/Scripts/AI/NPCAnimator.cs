@@ -11,6 +11,9 @@ public class NPCAnimator : MonoBehaviour {
 
     [SerializeField] Animator anim;
     [SerializeField] string[] animationNames;
+    [SerializeField] float deathDuration;
+
+    float dyingFor;
 
     private bool dying = false;
 
@@ -66,11 +69,15 @@ public class NPCAnimator : MonoBehaviour {
     public void Dies()
     {
 
-        if(dying) return;
+        //if(dying) return;
         Debug.Log("Dying");
 
         dying = true;
         anim.SetInteger("Condition", FindAnimationConditionValue(DIE_KEYWORD));
+
+        dyingFor += Time.deltaTime;
+        if (dyingFor > deathDuration) FinishDying();
+
     }
 
     /// <summary>
@@ -78,6 +85,6 @@ public class NPCAnimator : MonoBehaviour {
     /// </summary>
     public void FinishDying()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }

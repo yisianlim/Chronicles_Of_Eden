@@ -83,6 +83,7 @@ GameObject:
   - component: {fileID: 33523626180306818}
   - component: {fileID: 23952948542964234}
   - component: {fileID: 64513137378975454}
+  - component: {fileID: 65891458993277012}
   m_Layer: 0
   m_Name: Fence_s1_right
   m_TagString: Untagged
@@ -315,7 +316,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1210307815524198}
   m_LocalRotation: {x: -0, y: -0.70710707, z: -0, w: 0.70710653}
-  m_LocalPosition: {x: 2.56, y: 0, z: 9.03}
+  m_LocalPosition: {x: 13.920095, y: -0.000000007450581, z: 9.200953}
   m_LocalScale: {x: 22, y: 22, z: 22}
   m_Children:
   - {fileID: 4102628556240784}
@@ -412,7 +413,7 @@ MeshCollider:
   m_GameObject: {fileID: 1271205873596838}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 14
@@ -432,3 +433,15 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 0}
+--- !u!65 &65891458993277012
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1271205873596838}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.00927068, y: 0.05358681, z: 0.0361045}
+  m_Center: {x: -0.0018389124, y: 0.013737977, z: -0.010467773}
