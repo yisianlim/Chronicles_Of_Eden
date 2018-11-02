@@ -8,13 +8,16 @@
 ### Parts worked On
 * Inventory Logic - All
 * AI Framework - All
-* NPC Follow Behaviour - ALL
+* NPC Follow Behaviour - All
 * NPC Avoid Behavior - Most
-* Camera - All
-* Player Controller - Some (mainly related to combat)
+* Camera - Most
+* Player Controller - Some (mainly related to combat and death)
 * Player Attack Hit Detection - All
+* Item Launchers - All
+* Sound Effects - Some (Hit and death sounds) 
 
 ### Most Interesting Code
+
 
 ### Most Proud Of
 
