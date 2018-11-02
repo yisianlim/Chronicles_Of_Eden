@@ -1,4 +1,11 @@
 # Chronicles of Eden
+Welcome, we are excited to have you to come to play our game! 
+
+![ss1](Images/ss1.JPG)
+
+Chronicles of Eden is a puzzle-based game designed to be in a fantasy-based setting. The story begins with Eden, the main player, to explore the map which consists of a bunch of puzzles that needs to be solved using the items picked up. 
+
+Remember to be careful, enemies are lurking in the map to hurt you. Make sure you defend yourself with the sword given to you!
 
 ## Installation and Setup Instructions
 
@@ -14,8 +21,21 @@
 * [Boy Battle Voices](https://assetstore.unity.com/packages/audio/sound-fx/voices/boy-battle-voices-volume-01-mai-36051)
 
 ## Links to each developers README files
-[Rhys Angelo](angelorhys.md)
-[Yi Sian Lim](limyisi.md)
-[Benjamin Allan](allanbenj1.md)
+* [Rhys Angelo](angelorhys.md)
+* [Yi Sian Lim](limyisi.md)
+* [Benjamin Allan](allanbenj1.md)
 
 ## How to play
+There is an interactive tutorial at the beginning of the game that guides you how to play the game. 
+* Move: WASD keys or arrows keys to move.
+* Dodge: Any of the move keys + SPACE.
+* Attack: Right click 
+* Pickup: Press Z near a treasure box.
+* Equip item: Press 1, 2, 3 or 4.
+* Use equipped item: Left click
+* Rotate camera: Press Q or E to rotate anticlockwise and clockwise respectively.
+
+HP Bar displays the player's health point & AP Bar displays the player's 
+![ss2](Images/ss2.JPG)
+
+
