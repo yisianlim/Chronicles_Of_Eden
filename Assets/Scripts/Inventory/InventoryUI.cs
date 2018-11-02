@@ -26,7 +26,7 @@ public class InventoryUI : MonoBehaviour {
         {
             Image image = slot.Find("border").GetComponent<Image>();
 
-            if (key == e.Index)
+            if (key == e.index)
             {
                 // We found the equipped slot.
                 image.sprite = selectedBorder;
@@ -51,7 +51,7 @@ public class InventoryUI : MonoBehaviour {
             if (!image.enabled)
             {
                 image.enabled = true;
-                image.sprite = e.Item.Image;
+                image.sprite = e.item.Image;
                 break;
             }
         }
