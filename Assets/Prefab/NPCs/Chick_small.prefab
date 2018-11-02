@@ -480,7 +480,8 @@ GameObject:
   - component: {fileID: 195043573514977174}
   - component: {fileID: 114948549125079290}
   - component: {fileID: 114153250808580378}
-  - component: {fileID: 114717336006394708}
+  - component: {fileID: 114300046198915430}
+  - component: {fileID: 114239623602994178}
   m_Layer: 0
   m_Name: Chick_small
   m_TagString: Untagged
@@ -995,7 +996,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32f8bd5f78e16c14587e45af56a0b91c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stat: {fileID: 114717336006394708}
+  stat: {fileID: 114300046198915430}
+--- !u!114 &114239623602994178
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1987398376561152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43d21d37983a9f14d87c0d61f5b5b087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  attackRange: 2
+--- !u!114 &114300046198915430
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1987398376561152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 030dc0c22223adf47b203deb777c2da8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 30
 --- !u!114 &114448230981803312
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1032,18 +1058,6 @@ MonoBehaviour:
     targetSelectionCritera: {fileID: 11400000, guid: c40b31d1438ab18469c2ddc994f8fdb5,
       type: 2}
     animation: Walking
---- !u!114 &114717336006394708
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1987398376561152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5192d3aee24495a4681fb82cc102e457, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 40
 --- !u!114 &114948549125079290
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1055,8 +1069,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77ab8e38d77d1694c99a62c06d6c8ea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 4
+  force: 7
   immobilisationDuration: 1
+  KnockbackDistance: 3
 --- !u!114 &114970830277714786
 MonoBehaviour:
   m_ObjectHideFlags: 1
