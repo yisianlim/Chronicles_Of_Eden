@@ -55,7 +55,7 @@ public class PlayerController : Agent
     {
 
         //Debug.Log(name + " stat: " + stat.currentHealth);
-
+        Debug.Log(anim.GetInteger("Condition"));
         if (stat.currentHealth <= 0)
         {
             anim.SetInteger("Condition", 6);
@@ -182,7 +182,6 @@ public class PlayerController : Agent
 
     void Attack()
     {
-
         if (attacking) return; //Don't do anything if already attacking.
         attacking = true;
         // Switch between attack animations and audio. 
