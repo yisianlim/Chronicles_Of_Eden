@@ -19,6 +19,7 @@ Remember to be careful, enemies are lurking in the map to hurt you. Make sure yo
 * [Fantasy SFX](https://assetstore.unity.com/packages/audio/sound-fx/fantasy-sfx-32833)
 * [Mai Voices](https://assetstore.unity.com/packages/audio/sound-fx/voices/mai-free-voices-52907)
 * [Boy Battle Voices](https://assetstore.unity.com/packages/audio/sound-fx/voices/boy-battle-voices-volume-01-mai-36051)
+* [Cartoon Particles](https://assetstore.unity.com/packages/vfx/particles/simple-fx-cartoon-particles-67834)
 
 ## Links to each developers README files
 * [Rhys Angelo](angelorhys.md)
@@ -31,11 +32,15 @@ There is an interactive tutorial at the beginning of the game that guides you ho
 * Dodge: Any of the move keys + SPACE.
 * Attack: Right click 
 * Pickup: Press Z near a treasure box.
-* Equip item: Press 1, 2, 3 or 4.
+
+![ss3](Images/ss3.JPG)
+* Equip item: Press 1, 2, 3 or 4. The number corresponds to the order in the inventory UI. Upon selection, the border will be highlighted. 
 * Use equipped item: Left click
 * Rotate camera: Press Q or E to rotate anticlockwise and clockwise respectively.
 
-HP Bar displays the player's health point & AP Bar displays the player's 
 ![ss2](Images/ss2.JPG)
+
+* HP Bar displays the player's health point
+* AP Bar displays the player's dodge ability. 
 
 
