@@ -6,9 +6,14 @@ public class NPCInteraction : MonoBehaviour {
 
     public GameObject player;
     private bool hasInteracted;
-	
+    public Animator anim;
+
+    void Awake() {
+        anim.SetInteger("Condition", 0);
+    }
 	void Update () {
-        if (Interacted()) {
+        if (Interacted())
+        {
             BeginInteraction();
         }
 	}
@@ -31,5 +36,6 @@ public class NPCInteraction : MonoBehaviour {
     void BeginInteraction() {
         hasInteracted = true;
         GetComponent<DialogueTrigger>().TriggerDialogue();
+        anim.SetInteger("Condition", 1);
     }
 }

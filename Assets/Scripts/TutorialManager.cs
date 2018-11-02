@@ -18,7 +18,6 @@ public class TutorialManager : MonoBehaviour {
     // UI elements for TutorialManager.
     public Text nameText;
     public Text dialogueText;
-    public Button button;
     public Animator animator;
 
     // Check if the first item has been picked up.
@@ -40,7 +39,6 @@ public class TutorialManager : MonoBehaviour {
 
     private void Start()
     {
-        button.gameObject.SetActive(false);
         sentences = new List<string>();
         nameText.text = dialogue.name;
         foreach (string s in dialogue.sentences)
@@ -124,9 +122,12 @@ public class TutorialManager : MonoBehaviour {
                 StartCoroutine(TypeSentence(sentences[popUpIndex]));
             }
         }
-        else
+        
+
+        if(popUpIndex >= sentences.Count) 
         {
             animator.SetBool("IsOpen", false);
+            gameObject.SetActive(false);
         }
     }
 
