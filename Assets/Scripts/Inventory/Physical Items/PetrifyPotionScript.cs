@@ -16,14 +16,9 @@ public class PetrifyPotionScript : MonoBehaviour {
 		
 	}
 
-    private void OnCollisionEnter(Collision collision) {
+    public void Petrify(Collision collision) {
         Debug.Log("Collision: " + collision.collider.tag);
         if (collision.collider != null && collision.collider.CompareTag("LargeEnemy")) {
-            collision.gameObject.GetComponent<NPCAI>().Petrify();
-            collision.gameObject.GetComponent<Animator>().speed = 0;
-            collision.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-            //collision.gameObject.GetComponent<Animator>().avatar
-            Destroy(this.gameObject);
             
         }
         

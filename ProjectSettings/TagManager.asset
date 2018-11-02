@@ -9,6 +9,7 @@ TagManager:
   - LargeEnemy
   - NPC_Animal
   - Item
+  - Petrify Potion
   layers:
   - Default
   - TransparentFX
