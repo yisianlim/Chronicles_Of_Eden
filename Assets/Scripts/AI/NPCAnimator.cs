@@ -9,13 +9,18 @@ public class NPCAnimator : MonoBehaviour {
 
     const string DIE_KEYWORD = "Die";
 
+    [Header("Animations")]
     [SerializeField] Animator anim;
     [SerializeField] string[] animationNames;
+
+    [Header("Death")]
     [SerializeField] float deathDuration;
+    [SerializeField] AudioClip deathSound;
 
     float dyingFor;
 
     private bool dying = false;
+    private bool deathSoundPlayed = false;
 
     /// <summary>
     /// Change the current animation of the NPC.
@@ -69,6 +74,12 @@ public class NPCAnimator : MonoBehaviour {
     public void Dies()
     {
 
+        if (!deathSoundPlayed)
+        {
+            GetComponent<AudioSource>().PlayOneShot(deathSound);
+            deathSoundPlayed = true;
+        }
+
         //if(dying) return;
         Debug.Log("Dying");
 
@@ -85,6 +96,8 @@ public class NPCAnimator : MonoBehaviour {
     /// </summary>
     public void FinishDying()
     {
+        
         gameObject.SetActive(false);
     }
+
 }

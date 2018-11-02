@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4622370387554436}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: JT_ArmRight1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,7 +34,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4940303572934716}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: JT_ArmLeft3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,7 +49,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4083751422957328}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: CTRL_Tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4698267791673850}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: CTRL_MthBot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,7 +79,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4430976729520040}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: JT_ArmRight2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4564610146437116}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: locator1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4285292013297472}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: JT_ArmRight3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4245737120977518}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: JT_LegLeft2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4776946720599070}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: CTRL_ArmRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +154,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4979760799615656}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: JT_HeadMid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4739643570491108}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: JT_spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4374189153905548}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: JT_ArmLeft2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +199,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4587527736672460}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: CTRL_LegRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +214,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4221509255446222}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: JT_HeadTip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4444863591114926}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: CTRL_LegLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -244,7 +244,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4514677227458078}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: JT_LegLeft1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4403059504257230}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: CTRL_ArmLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -274,7 +274,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4396827487463902}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: JT_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -289,7 +289,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4078220548202492}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: JT_LegRight2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -305,7 +305,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4919113914948192}
   - component: {fileID: 137746985007162956}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: SChick_mouth_bot:RetopoGroup1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -320,7 +320,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4723361616070312}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: JT_ArmLeft1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -336,7 +336,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4611536167410156}
   - component: {fileID: 137085557469189378}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: SChick_body1:RetopoGroup1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -351,7 +351,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4247342676049600}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: JT_hip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -366,7 +366,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4281656087933714}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: JT_MouthTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -381,7 +381,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4532897217840176}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: JT_Mouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -396,7 +396,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4261859315163778}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: CTRL_body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -411,7 +411,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4810965128111994}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: CTRL_MASTER
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,7 +426,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4876154867033688}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: CTRL_MthTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -442,7 +442,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4539665144334990}
   - component: {fileID: 137437197386564048}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: SChick_mouth_top:RetopoGroup1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -457,7 +457,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4628045059507220}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: JT_MouthBot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -484,7 +484,7 @@ GameObject:
   - component: {fileID: 114239623602994178}
   - component: {fileID: 82062415776153506}
   - component: {fileID: 114516176038009950}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Chick_small
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -499,7 +499,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4928810337021900}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: JT_LegRight1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -790,7 +790,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1987398376561152}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.013105, y: 0.4, z: 12.166964}
+  m_LocalPosition: {x: 15.53, y: 0.471, z: 8.96}
   m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children:
   - {fileID: 4810965128111994}
@@ -1200,7 +1200,8 @@ MonoBehaviour:
   - Attack
   - Running
   - Die
-  deathDuration: 0
+  deathDuration: 2.1
+  deathSound: {fileID: 8300000, guid: 41d3bcfa1f2568044a91f3d508dec8cb, type: 3}
 --- !u!136 &136400196539586974
 CapsuleCollider:
   m_ObjectHideFlags: 1
