@@ -33,17 +33,20 @@ public class ImmobilisingKnockbackDamageReciever : KnockbackDamageReciever {
         float defaultSpeed = agent.speed;
         float defaultAcceleration = agent.acceleration;
         float defaultAngularSpeed = agent.angularSpeed;
+        ObstacleAvoidanceType defaultAvoidanceQuality = agent.obstacleAvoidanceType;
 
         agent.speed = defaultSpeed * force;
         agent.acceleration = defaultAcceleration * 1000;
         agent.angularSpeed = 0;
         agent.SetDestination(transform.position + direction * KnockbackDistance);
+        agent.obstacleAvoidanceType = ObstacleAvoidanceType.NoObstacleAvoidance;
 
         yield return new WaitForSeconds(immobilisationDuration);
 
         agent.speed = defaultSpeed;
         agent.acceleration = defaultAcceleration;
         agent.angularSpeed = defaultAngularSpeed;
+        agent.obstacleAvoidanceType = defaultAvoidanceQuality;
 
         GetComponent<NPCAI>().enabled = true;
 
