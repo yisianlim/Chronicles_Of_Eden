@@ -1181,6 +1181,7 @@ MonoBehaviour:
   force: 7
   immobilisationDuration: 1
   KnockbackDistance: 3
+  particle: {fileID: 0}
 --- !u!114 &114970830277714786
 MonoBehaviour:
   m_ObjectHideFlags: 1
