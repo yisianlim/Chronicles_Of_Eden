@@ -1179,9 +1179,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1465614672904082}
-  m_LocalRotation: {x: -0, y: 0.62168205, z: -0, w: 0.78326976}
-  m_LocalPosition: {x: -0.1949, y: -0.0127, z: 0.23858}
-  m_LocalScale: {x: 1.289265, y: 1.289265, z: 1.289265}
+  m_LocalRotation: {x: -0, y: -0.9108401, z: -0, w: 0.41275954}
+  m_LocalPosition: {x: 0.0024896557, y: -0.014, z: 0.18464543}
+  m_LocalScale: {x: 0.07894147, y: 0.07894143, z: 0.07894147}
   m_Children:
   - {fileID: 4077269857125270}
   - {fileID: 4281702137003060}
@@ -1565,6 +1565,7 @@ MonoBehaviour:
   - Eating
   - Die
   - Sprinting
+  deathDuration: 0
 --- !u!137 &137038358227271116
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
