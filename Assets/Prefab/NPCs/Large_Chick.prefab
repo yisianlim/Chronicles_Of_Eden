@@ -378,6 +378,10 @@ GameObject:
   - component: {fileID: 136769371685190088}
   - component: {fileID: 136343726425218572}
   - component: {fileID: 114684261055816024}
+  - component: {fileID: 114374631975379074}
+  - component: {fileID: 114687575573046876}
+  - component: {fileID: 114065440019803534}
+  - component: {fileID: 114042370231813696}
   m_Layer: 15
   m_Name: Large_Chick
   m_TagString: LargeEnemy
@@ -1908,6 +1912,31 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114042370231813696
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1398142195757654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43d21d37983a9f14d87c0d61f5b5b087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  attackRange: 2
+--- !u!114 &114065440019803534
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1398142195757654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32f8bd5f78e16c14587e45af56a0b91c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stat: {fileID: 114687575573046876}
 --- !u!114 &114183524684155232
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1932,6 +1961,20 @@ MonoBehaviour:
     targetSelectionCritera: {fileID: 11400000, guid: c40b31d1438ab18469c2ddc994f8fdb5,
       type: 2}
     animation: Walk
+--- !u!114 &114374631975379074
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1398142195757654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77ab8e38d77d1694c99a62c06d6c8ea4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  immobilisationDuration: 2
+  KnockbackDistance: 0.5
 --- !u!114 &114398969555422174
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1956,6 +1999,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55da1a9dd791c2f45b348f2e202663d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114687575573046876
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1398142195757654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 030dc0c22223adf47b203deb777c2da8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 50
 --- !u!114 &114717258315364470
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1975,7 +2030,8 @@ MonoBehaviour:
   - Attack
   - Run
   - Die
-  deathDuration: 0
+  deathDuration: 2
+  deathSound: {fileID: 8300000, guid: 41d3bcfa1f2568044a91f3d508dec8cb, type: 3}
 --- !u!114 &114789952058842814
 MonoBehaviour:
   m_ObjectHideFlags: 1
