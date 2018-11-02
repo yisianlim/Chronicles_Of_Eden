@@ -184,11 +184,11 @@ public class PlayerController : Agent
     {
 
         if (attacking) return; //Don't do anything if already attacking.
-
+        attacking = true;
         // Switch between attack animations and audio. 
         if (!attackSwitch)
         {
-            anim.SetInteger("Condition", 2);
+            anim.SetInteger("Condition", 5);
             attackSwitch = !attackSwitch;
             FindObjectOfType<AudioManager>().Play("Attack Voice 1");
         }
@@ -198,7 +198,7 @@ public class PlayerController : Agent
             attackSwitch = !attackSwitch;
             FindObjectOfType<AudioManager>().Play("Attack Voice 2");
         }
-        attacking = true;
+
     }
 
     /// <summary>
