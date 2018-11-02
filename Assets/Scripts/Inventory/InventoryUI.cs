@@ -69,7 +69,7 @@ public class InventoryUI : MonoBehaviour {
             Image image = slot.Find("cooldown").GetComponent<Image>();
 
             // If the item is still cooling down, show a gray background
-            // with its size based on the cooldown time. 
+            // with its size based on the cooldown time.
             if (item != null && inventory.getTimeUntilNextUse(item) > 0)
             {
                 image.enabled = true;
