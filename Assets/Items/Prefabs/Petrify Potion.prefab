@@ -24,9 +24,9 @@ GameObject:
   - component: {fileID: 136778196909357270}
   - component: {fileID: 54581977551446736}
   - component: {fileID: 114299672323569892}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Petrify Potion
-  m_TagString: Untagged
+  m_TagString: Petrify Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
