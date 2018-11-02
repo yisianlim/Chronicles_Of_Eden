@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 54932959447445814}
   - component: {fileID: 114352328072131256}
   - component: {fileID: 114224500557381106}
+  - component: {fileID: 135340019237685544}
   m_Layer: 9
   m_Name: Meat
   m_TagString: Untagged
@@ -39,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1203235984752808}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.540167, y: 0.0018842224, z: 3.8763735}
+  m_LocalPosition: {x: 17.796982, y: 0.015073831, z: 45.859715}
   m_LocalScale: {x: 8, y: 8, z: 8}
   m_Children: []
   m_Father: {fileID: 0}
@@ -125,9 +126,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45822d1866ff2a34db0736eb9be4c46a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Tags: []
+  Tags:
+  - NPC_Animal
   countDownTime: 2000
-  timerConst: 10
+  timerConst: 20
   foodDecayConst: 1
 --- !u!114 &114352328072131256
 MonoBehaviour:
@@ -141,3 +143,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: Food
+--- !u!135 &135340019237685544
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1203235984752808}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.06
+  m_Center: {x: -0.00015981123, y: 0.0018336, z: 0.0007527545}
