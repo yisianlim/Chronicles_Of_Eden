@@ -55,7 +55,7 @@ public class PlayerController : Agent
     {
 
         //Debug.Log(name + " stat: " + stat.currentHealth);
-        Debug.Log(anim.GetInteger("Condition"));
+        //Debug.Log(anim.GetInteger("Condition"));
         if (stat.currentHealth <= 0)
         {
             anim.SetInteger("Condition", 6);
@@ -72,7 +72,7 @@ public class PlayerController : Agent
     {
         // Attack.
 
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) && !attacking)
         {
 
             //get position to look in for attack, based on ray from screen "hitting" floor layer
@@ -183,21 +183,24 @@ public class PlayerController : Agent
     void Attack()
     {
         if (attacking) return; //Don't do anything if already attacking.
+
         attacking = true;
         // Switch between attack animations and audio. 
         if (!attackSwitch)
         {
-            anim.SetInteger("Condition", 5);
+            
             attackSwitch = !attackSwitch;
             FindObjectOfType<AudioManager>().Play("Attack Voice 1");
         }
         else
         {
-            anim.SetInteger("Condition", 5);
+            
             attackSwitch = !attackSwitch;
             FindObjectOfType<AudioManager>().Play("Attack Voice 2");
         }
 
+        anim.SetInteger("Condition", 5); 
+        Debug.Log("condition is 5");
     }
 
     /// <summary>
@@ -206,7 +209,7 @@ public class PlayerController : Agent
     public void ConnectStart()
     {
         weapon.Active = true;
-        Debug.Log("AttackStart");
+        //Debug.Log("AttackStart");
     }
 
     /// <summary>
@@ -216,7 +219,9 @@ public class PlayerController : Agent
     {
         gameObject.GetComponentInChildren<TrailRenderer>().enabled = false;
         weapon.Active = false;
-        Debug.Log("AttackMid");
+        anim.SetInteger("Condition", 0);
+        Debug.Log("set condition to 0");
+        //Debug.Log("AttackMid");
 
     }
 
@@ -227,7 +232,7 @@ public class PlayerController : Agent
     {
         anim.SetInteger("Condition", 0);
         attacking = false;
-        Debug.Log("AttackEnd");
+        Debug.Log("set condition to 0");
 
     }
 
