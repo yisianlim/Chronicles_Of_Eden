@@ -11,11 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ceb6e79364a80b46afa0315c857779d, type: 3}
   m_Name: PotionLauncher
   m_EditorClassIdentifier: 
-  InGameName: 
-  _Image: {fileID: 0}
-  cooldown: 0
-  item: {fileID: 0}
-  instantiationDistanceFromPlayer: 0
-  cursor: {fileID: 0}
+  InGameName: Potion Launcher
+  _Image: {fileID: 21300000, guid: a770824edc91c4ab2b92f0d513e21fba, type: 3}
+  cooldown: 10
+  item: {fileID: 54581977551446736, guid: 19746127ae1a6f04e97025092b941a01, type: 2}
+  instantiationDistanceFromPlayer: 0.5
+  cursor: {fileID: 1972715289585636, guid: 947cbca4355494f44a943f8d65bb8b90, type: 2}
   arcVisualisationResolution: 0
   arcVisuliser: {fileID: 0}
