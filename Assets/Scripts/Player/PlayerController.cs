@@ -54,7 +54,7 @@ public class PlayerController : Agent
     void Update()
     {
 
-        Debug.Log(name + " stat: " + stat.currentHealth);
+        //Debug.Log(name + " stat: " + stat.currentHealth);
 
         if (stat.currentHealth <= 0)
         {

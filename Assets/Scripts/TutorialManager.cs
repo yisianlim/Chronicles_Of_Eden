@@ -11,6 +11,9 @@ public class TutorialManager : MonoBehaviour {
     public Button button;
     public Animator animator;
 
+    // Check if the first item has been picked up.
+    public Pickup firstPickup;
+
     // Dialogues for the tutorial.
     public Dialogue dialogue;
     private List<string> sentences;
@@ -18,9 +21,17 @@ public class TutorialManager : MonoBehaviour {
     // The current tutorial that we are at.
     private int popUpIndex = -1;
 
+    // Flag to check if the tutorial has already started.
+    private bool startTutorial = false;
+
+    // Check if a dialogue is already typing. 
+    private bool typing = false;
+
     private void Start()
     {
+        button.gameObject.SetActive(false);
         sentences = new List<string>();
+        nameText.text = dialogue.name;
         foreach (string s in dialogue.sentences)
         {
             sentences.Add(s);
@@ -28,26 +39,105 @@ public class TutorialManager : MonoBehaviour {
     }
 
     void Update()
-    { 
-        StartCoroutine(BeginTutorial());
+    {
+        // Wait for a few seconds before beginning the tutorial.
+        if (startTutorial == false)
+        {
+            StartCoroutine(BeginTutorial());
+        }
 
-        if (popUpIndex == 0) {
-            animator.SetBool("IsOpen", true);
-            nameText.text = dialogue.name;
-            Debug.Log(sentences[0]);
-            //StartCoroutine(TypeSentence(sentences[popUpIndex]));
+        CheckPlayerInputs();
+        Display();
+    }
+
+    /// <summary>
+    /// Check the player inputs, in order to keep track of the tutorial to 
+    /// be displayed. 
+    /// </summary>
+    void CheckPlayerInputs() {
+        // Check if player moves using the WASD key or arrow keys.
+        if (popUpIndex == 0 && (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0))
+        {
+            MoveToNextTutorial();
+        }
+        // Check if player learned how to dodged.
+        else if (popUpIndex == 1 &&
+            (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0) && Input.GetKeyDown(KeyCode.Space))
+        {
+            MoveToNextTutorial();
+        }
+        // Check that player learned to attack.
+        else if (popUpIndex == 2 && Input.GetMouseButtonDown(1))
+        {
+            MoveToNextTutorial();
+        }
+        // Check that the first item has already been successfully picked up.
+        else if (popUpIndex == 3 && firstPickup.pickedUp)
+        {
+            MoveToNextTutorial();
+        }
+        // Check that the picked up item is equipped.
+        else if (popUpIndex == 4 && Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            MoveToNextTutorial();
+        }
+        // Check that the bomb is used.
+        else if (popUpIndex == 5 && Input.GetMouseButtonDown(0))
+        {
+            MoveToNextTutorial();
+        }
+        // End of tutorial.
+        else if (popUpIndex == 6) {
+            StartCoroutine(EndTutorial());
         }
 
     }
 
+    /// <summary>
+    /// Display the tutorial dialogue if there is still more tutorials
+    /// to show. 
+    /// </summary>
+    void Display() {
+        if (popUpIndex >= 0 && popUpIndex < sentences.Count)
+        {
+            animator.SetBool("IsOpen", true);
+            if (typing == false)
+            {
+                StopAllCoroutines();
+                StartCoroutine(TypeSentence(sentences[popUpIndex]));
+            }
+        }
+        else
+        {
+            animator.SetBool("IsOpen", false);
+        }
+    }
+
+    /// <summary>
+    /// Wait for 2 seconds before we begin the tutorial.
+    /// </summary>
     IEnumerator BeginTutorial()
     {
+        startTutorial = true;
         yield return new WaitForSeconds(2);
         popUpIndex = 0;
     }
 
+    /// <summary>
+    /// Wait for 3 seconds before we end the tutorial.
+    /// </summary>
+    IEnumerator EndTutorial() {
+        yield return new WaitForSeconds(3);
+        popUpIndex++;
+    }
+
+    /// <summary>
+    /// Type the sentence character by character.
+    /// </summary>
+    /// <param name="sentence">Sentence to type.</param>
     IEnumerator TypeSentence(string sentence)
     {
+        typing = true;
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray())
         {
@@ -56,88 +146,11 @@ public class TutorialManager : MonoBehaviour {
         }
     }
 
-    void Display() {
-        
-
+    /// <summary>
+    /// Display the next tutorial to the user. 
+    /// </summary>
+    void MoveToNextTutorial() {
+        popUpIndex++;
+        typing = false;
     }
-
-    //void StartTutorial() {
-    //    animator.SetBool("IsOpen", true);
-    //    nameText.text = dialogue.name;
-    //    sentences.Clear();
-
-    //    // Add all dialogue into the queue. 
-    //    foreach (string s in dialogue.sentences)
-    //    {
-    //        sentences.Enqueue(s);
-    //    }
-
-    //    // Display the first sentence.
-    //    string sentence = sentences.Dequeue();
-    //    StopAllCoroutines();
-    //    StartCoroutine(TypeSentence(sentence));
-
-    //}
-
-
-
-
-    //   // TutorialManager will be a singleton instance - only one instance
-    //   // is needed throughout the lifetime of the game. 
-    //   public static TutorialManager Instance { get; set; }
-
-    //   // UI elements for TutorialManager.
-    //   public GameObject tutorialPanel;
-    //   Text tutorialText;
-
-    //   // Keeps track of which tutorial we are currently at. 
-    //   private int popUpIndex = 0;
-
-    //   // List of instructions. 
-    //   public List<string> lines = new List<string>();
-
-    //   private void Awake()
-    //   {
-    //       // Initialize the UI elements. 
-    //       tutorialText = tutorialPanel.transform.Find("Text").GetComponent<Text>();
-
-    //       // Panel is shown at the start. 
-    //       tutorialPanel.SetActive(true);
-
-    //       // To ensure the the TutorialManager remains a singleton instance.
-    //       if (Instance != null && Instance != this)
-    //       {
-    //           Destroy(gameObject);
-    //       }
-    //       else
-    //       {
-    //           Instance = this;
-    //       }
-    //   }
-
-    //   // Update is called once per frame
-    //   void Update () {
-
-    //       if (popUpIndex == 0)
-    //       {
-    //           if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
-    //           {
-    //               popUpIndex++;
-    //           }
-    //       }
-    //       else if (popUpIndex == 1) {
-    //           if (Input.GetKeyDown(KeyCode.Space)) {
-    //               popUpIndex++;
-    //           }
-    //       }
-
-    //       if (popUpIndex < lines.Count)
-    //       {
-    //           tutorialText.text = lines[popUpIndex];
-    //           tutorialPanel.SetActive(true);
-    //       }
-    //       else {
-    //           tutorialPanel.SetActive(false);
-    //       }
-    //}
 }

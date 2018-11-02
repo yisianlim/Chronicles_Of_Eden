@@ -29831,6 +29831,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114589902411171290, guid: 6edf6417a2cae484ba6b969f226ad1da,
+        type: 2}
+      propertyPath: stat
+      value: 
+      objectReference: {fileID: 1049581607}
     m_RemovedComponents:
     - {fileID: 114860008970120350, guid: 6edf6417a2cae484ba6b969f226ad1da, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 6edf6417a2cae484ba6b969f226ad1da, type: 2}
@@ -31929,6 +31934,18 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 978809562}
   m_Script: {fileID: 11500000, guid: 07086f8c1a844664796826c2ad818b8a, type: 3}
+--- !u!114 &1049581607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1049581598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5192d3aee24495a4681fb82cc102e457, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 500
 --- !u!1 &1050172116
 GameObject:
   m_ObjectHideFlags: 0
@@ -42492,8 +42509,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 48.259}
-  m_SizeDelta: {x: 671.8, y: 135.1}
+  m_AnchoredPosition: {x: 0, y: 129}
+  m_SizeDelta: {x: 671.8, y: 135.09998}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1403430683
 MonoBehaviour:
@@ -46625,8 +46642,18 @@ MonoBehaviour:
     sentences:
     - Hi there, welcome to Chronicles of Eden! I am going to teach you how to play
       the game before you embark on your new adventure. Firstly, Press any WASD key
-      to move. Alternatively, you can use your arrow key.
-    - 
+      to move. Alternatively, you can use your arrow keys.
+    - Then, press any move keys + SPACE to dodge!
+    - Right click to attack
+    - 'Now, go find the nearest treasure chest and pick someting up by pressing Z. '
+    - 'Great job! The item is now in your inventory. Now press 1 to equip it. (You
+      can change your equipped item later on by pressing 2, 3 and 4.) '
+    - Left click to toss the bomb! You will have to wait for it to cool down before
+      you can use it again.
+    - 'You are now ready for your adventure. Have fun!
+
+      :)'
+  firstPickup: {fileID: 792963874}
 --- !u!4 &1576981723 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4583241636621712, guid: 52c19bf20475d458a902647834a27fd6,
@@ -62698,6 +62725,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4990895846708720, guid: e084067bc16da4f97853100c6c8892b1, type: 2}
       propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1565613998966040, guid: e084067bc16da4f97853100c6c8892b1, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

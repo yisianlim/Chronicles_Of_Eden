@@ -14,6 +14,7 @@ public class DialogueManager : MonoBehaviour {
     private Queue<string> sentences;
 
 	void Start () {
+        button.gameObject.SetActive(true);
         sentences = new Queue<string>();
 	}
 

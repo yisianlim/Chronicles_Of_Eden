@@ -16,6 +16,8 @@ public class Pickup : MonoBehaviour {
 
     private Animator representationAnimator;
 
+    internal bool pickedUp = false; // Check if this item has already been picked up.
+
     private void Awake()
     { 
         representationAnimator = inGameRepresentation.GetComponent<Animator>();
@@ -49,6 +51,7 @@ public class Pickup : MonoBehaviour {
         yield return new WaitForSeconds(1.5f);
         FindObjectOfType<AudioManager>().Play("Pickup");
         inventory.AddItem(pickup);
+        pickedUp = true;
     }
 
 }
