@@ -549,7 +549,7 @@ GameObject:
   - component: {fileID: 95606652946023188}
   - component: {fileID: 136094986337660658}
   - component: {fileID: 114156666185907592}
-  - component: {fileID: 114034271828439956}
+  - component: {fileID: 114123302953087562}
   - component: {fileID: 114341032040394158}
   - component: {fileID: 114007506176790658}
   - component: {fileID: 114920000045028210}
@@ -936,7 +936,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1549394498548646}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.529018, y: -0.000283055, z: 24.860687}
+  m_LocalPosition: {x: 15.346931, y: -0.000283055, z: 27.961123}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4811112693844360}
@@ -1656,7 +1656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stat: {fileID: 114920000045028210}
---- !u!114 &114034271828439956
+--- !u!114 &114123302953087562
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1664,34 +1664,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 1549394498548646}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e2ae7cc42258474c8c3d63d379a0441, type: 3}
+  m_Script: {fileID: 11500000, guid: b7362ea06c396964380b3cb65d232518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reactions:
-  - objectType: Bomb
-    scanner: {fileID: 11400000, guid: ea8bf0d53842eef45ac22356472fc4af, type: 2}
-    reaction: {fileID: 11400000, guid: f218ce794cba2ff4aa802cc1d27e8e82, type: 2}
-    targetSelectionCritera: {fileID: 11400000, guid: c40b31d1438ab18469c2ddc994f8fdb5,
-      type: 2}
-    animation: Running
-  - objectType: Player
-    scanner: {fileID: 11400000, guid: 8846d5d4211f8854a973c3d50419c745, type: 2}
-    reaction: {fileID: 11400000, guid: 8f4c28282aace1543ad0fb959526e0b5, type: 2}
-    targetSelectionCritera: {fileID: 11400000, guid: c40b31d1438ab18469c2ddc994f8fdb5,
-      type: 2}
-    animation: Attacking
-  - objectType: Player
-    scanner: {fileID: 11400000, guid: 66136be9ebcc38e428522f43ecfbdc87, type: 2}
-    reaction: {fileID: 11400000, guid: 78dd1cce0a4c4f04abbecdc351a48ae4, type: 2}
-    targetSelectionCritera: {fileID: 11400000, guid: c40b31d1438ab18469c2ddc994f8fdb5,
-      type: 2}
-    animation: Running
-  - objectType: Player
-    scanner: {fileID: 11400000, guid: d20509bbe2252414fa6ca9d23d772b22, type: 2}
-    reaction: {fileID: 11400000, guid: 0e9e2adfe38414846b37badffd9063b5, type: 2}
-    targetSelectionCritera: {fileID: 11400000, guid: c40b31d1438ab18469c2ddc994f8fdb5,
-      type: 2}
-    animation: Agitated
+  reactions: []
+  initialState: Default
+  states:
+  - name: Default
+    associatedReactions:
+    - objectType: Bomb
+      scanner: {fileID: 11400000, guid: ea8bf0d53842eef45ac22356472fc4af, type: 2}
+      reaction: {fileID: 11400000, guid: f218ce794cba2ff4aa802cc1d27e8e82, type: 2}
+      targetSelectionCritera: {fileID: 11400000, guid: c40b31d1438ab18469c2ddc994f8fdb5,
+        type: 2}
+      animation: Running
+    - objectType: Player
+      scanner: {fileID: 11400000, guid: 8846d5d4211f8854a973c3d50419c745, type: 2}
+      reaction: {fileID: 11400000, guid: 8f4c28282aace1543ad0fb959526e0b5, type: 2}
+      targetSelectionCritera: {fileID: 11400000, guid: c40b31d1438ab18469c2ddc994f8fdb5,
+        type: 2}
+      animation: Attacking
+    - objectType: Player
+      scanner: {fileID: 11400000, guid: 66136be9ebcc38e428522f43ecfbdc87, type: 2}
+      reaction: {fileID: 11400000, guid: 78dd1cce0a4c4f04abbecdc351a48ae4, type: 2}
+      targetSelectionCritera: {fileID: 11400000, guid: c40b31d1438ab18469c2ddc994f8fdb5,
+        type: 2}
+      animation: Running
+    - objectType: Player
+      scanner: {fileID: 11400000, guid: d20509bbe2252414fa6ca9d23d772b22, type: 2}
+      reaction: {fileID: 11400000, guid: 0e9e2adfe38414846b37badffd9063b5, type: 2}
+      targetSelectionCritera: {fileID: 11400000, guid: c40b31d1438ab18469c2ddc994f8fdb5,
+        type: 2}
+      animation: Agitated
 --- !u!114 &114156666185907592
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1711,7 +1715,7 @@ MonoBehaviour:
   - Attacking
   - Agitated
   - Die
-  deathDuration: 0
+  deathDuration: 2
 --- !u!114 &114341032040394158
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1736,7 +1740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09266e079ee5e1d4ea363ddc9b8b2bb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: b3b48ff96cdc9044ebe810f2a954dae2, type: 3}
+  clip: {fileID: 8300000, guid: dbee2f3ec348e9b4bb5870227d2cbd38, type: 3}
 --- !u!114 &114920000045028210
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1760,9 +1764,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77ab8e38d77d1694c99a62c06d6c8ea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 2
+  force: 1
   immobilisationDuration: 0.5
-  KnockbackDistance: 0
+  KnockbackDistance: 2
 --- !u!136 &136094986337660658
 CapsuleCollider:
   m_ObjectHideFlags: 1
