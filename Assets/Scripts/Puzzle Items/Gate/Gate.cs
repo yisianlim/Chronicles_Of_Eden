@@ -11,6 +11,8 @@ public class Gate : ToggleBehaviour {
     [SerializeField] RuntimeAnimatorController openGateController;
     [SerializeField] RuntimeAnimatorController closeGateContoller;
 
+    [SerializeField] AudioClip gateClip;
+
     void Start() {
         anim = GetComponent<Animator>();
         anim.SetBool("Open", open);
@@ -19,6 +21,9 @@ public class Gate : ToggleBehaviour {
 
     public override void Toggle() {
         Debug.Log("Toggle");
+
+        GetComponent<AudioSource>().PlayOneShot(gateClip);
+
         open = !open;
         anim.speed = 1;
         if (open) {
