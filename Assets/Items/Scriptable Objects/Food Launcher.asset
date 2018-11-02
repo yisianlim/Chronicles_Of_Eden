@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Food Launcher
   m_EditorClassIdentifier: 
   InGameName: Food Launcher
-  _Image: {fileID: 21300000, guid: 1b45c427c4d359541a9b5f408820ffb8, type: 3}
+  _Image: {fileID: 21300000, guid: d0641a98a7d7241c9b61281f93bd5369, type: 3}
   cooldown: 0
   item: {fileID: 54932959447445814, guid: 2bdaac6fda2c0354dadb23230b38f0d3, type: 2}
   instantiationDistanceFromPlayer: 0.5

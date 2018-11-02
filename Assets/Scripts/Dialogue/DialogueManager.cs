@@ -5,19 +5,23 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour {
 
+    // UI elements for dialogue.
     public Text nameText;
     public Text dialogueText;
-    public Button button;
 
+    // Animation for the dialogues popping up.
     public Animator animator;
 
     private Queue<string> sentences;
 
 	void Start () {
-        button.gameObject.SetActive(true);
         sentences = new Queue<string>();
 	}
 
+    /// <summary>
+    /// Start the dialogue.
+    /// </summary>
+    /// <param name="dialogue">Sentences that the dialogue has.</param>
     public void StartDialogue(Dialogue dialogue) {
         animator.SetBool("IsOpen", true);
         nameText.text = dialogue.name;
@@ -30,6 +34,16 @@ public class DialogueManager : MonoBehaviour {
         DisplayNextSentence();
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return)) {
+            DisplayNextSentence();
+        }
+    }
+
+    /// <summary>
+    /// Display the next sentence in the dialogue. 
+    /// </summary>
     public void DisplayNextSentence() {
         if (sentences.Count == 0) {
             EndDialogue();
@@ -41,6 +55,10 @@ public class DialogueManager : MonoBehaviour {
         StartCoroutine(TypeSentence(sentence));
     }
 
+    /// <summary>
+    /// Types the sentences character by character.
+    /// </summary>
+    /// <param name="sentence">Sentence to type.</param>
     IEnumerator TypeSentence(string sentence) {
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray()) {
@@ -49,6 +67,9 @@ public class DialogueManager : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Animation which closes the dialogue UI.
+    /// </summary>
     void EndDialogue() {
         animator.SetBool("IsOpen", false);
     }
