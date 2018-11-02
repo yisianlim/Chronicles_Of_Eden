@@ -21,6 +21,15 @@ Remember to be careful, enemies are lurking in the map to hurt you. Make sure yo
 * [Boy Battle Voices](https://assetstore.unity.com/packages/audio/sound-fx/voices/boy-battle-voices-volume-01-mai-36051)
 * [Cartoon Particles](https://assetstore.unity.com/packages/vfx/particles/simple-fx-cartoon-particles-67834)
 
+### Futher Sounds:
+* Bird Chirp: https://freesound.org/people/alegemaate/sounds/233255/
+* Chicken Scream Soft https://freesound.org/people/Henlord/sounds/413823/
+* Wild Boar https://freesound.org/people/yottasounds/sounds/176731/
+* Gate Open: https://freesound.org/people/mhtaylor67/sounds/126041/
+* Chick Dying: https://freesound.org/people/markb258/sounds/245807/
+* Boar Dying: https://freesound.org/people/uzerx/sounds/71836/
+
+
 ## Links to each developers README files
 * [Rhys Angelo](angelorhys.md)
 * [Yi Sian Lim](limyisi.md)
