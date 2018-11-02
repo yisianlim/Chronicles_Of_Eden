@@ -5,11 +5,13 @@ using UnityEngine.UI;
 
 public class HPBarUI : MonoBehaviour {
 
+    // Player stat.
     public Stat stat;
-    public Image HPImage;
-
     private int maxHP;
     private int currentHP;
+
+    // UI.
+    public Image HPImage;
 
     private void Awake()
     {
@@ -18,6 +20,7 @@ public class HPBarUI : MonoBehaviour {
 
     void Update () {
         currentHP = stat.currentHealth;
+        UpdateHealthBarDisplay();
 	}
 
     /// <summary>

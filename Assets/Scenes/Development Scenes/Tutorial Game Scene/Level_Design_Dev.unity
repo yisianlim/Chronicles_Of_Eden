@@ -31076,7 +31076,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4936508508134156, guid: 2cbb8d4745ff239458fd5bddb1b83ba5, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1670852767042560, guid: 2cbb8d4745ff239458fd5bddb1b83ba5, type: 2}
       propertyPath: m_Name
@@ -46637,6 +46637,7 @@ MonoBehaviour:
   dialogueText: {fileID: 1167492151}
   button: {fileID: 164216344}
   animator: {fileID: 1403430685}
+  firstPickup: {fileID: 792963874}
   dialogue:
     name: Tutorial
     sentences:
@@ -46650,10 +46651,7 @@ MonoBehaviour:
       can change your equipped item later on by pressing 2, 3 and 4.) '
     - Left click to toss the bomb! You will have to wait for it to cool down before
       you can use it again.
-    - 'You are now ready for your adventure. Have fun!
-
-      :)'
-  firstPickup: {fileID: 792963874}
+    - You are now ready for your adventure. Have fun! :)
 --- !u!4 &1576981723 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4583241636621712, guid: 52c19bf20475d458a902647834a27fd6,

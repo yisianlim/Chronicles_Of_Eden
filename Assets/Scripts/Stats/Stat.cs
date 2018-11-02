@@ -14,9 +14,7 @@ public class Stat : MonoBehaviour {
 
     public virtual void TakeDamage(int damage, Vector3 enemyDirection)
     {
-
         currentHealth -= damage;
         Mathf.Clamp(currentHealth, 0, maxHealth);
-
     }
 }
