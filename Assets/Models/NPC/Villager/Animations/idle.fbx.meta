@@ -211,7 +211,7 @@ ModelImporter:
     4300004: Female_char_collar:RetopoGroup1
     4300006: Female_char_ribbon:RetopoGroup1
     4300008: Female_char_laces
-    7400000: Take 001
+    7400000: Female_idle
     9500000: //RootNode
     13700000: Female_char_body:RetopoGroup1
     13700002: Female_char_hair:RetopoGroup1
@@ -269,7 +269,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Take 001
+      name: Female_idle
       takeName: Take 001
       firstFrame: 0
       lastFrame: 90
@@ -280,7 +280,7 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
-      loopBlend: 0
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
