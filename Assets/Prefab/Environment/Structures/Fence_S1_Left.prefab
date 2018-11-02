@@ -67,6 +67,7 @@ GameObject:
   - component: {fileID: 33189081580303366}
   - component: {fileID: 23720915379235578}
   - component: {fileID: 64557837213866314}
+  - component: {fileID: 65156678838638378}
   m_Layer: 0
   m_Name: Fence_s1_left
   m_TagString: Untagged
@@ -288,7 +289,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1873528330091344}
   m_LocalRotation: {x: -0, y: 0.000000014901159, z: -0, w: 1}
-  m_LocalPosition: {x: 6.96, y: 0.0016869307, z: 11.434}
+  m_LocalPosition: {x: 14.375029, y: -0.000000007450581, z: 45.368267}
   m_LocalScale: {x: 22, y: 22, z: 22}
   m_Children:
   - {fileID: 4394178795191870}
@@ -432,3 +433,15 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 5c7ee8b9e8ad34a06aa25afebab167e3, type: 3}
+--- !u!65 &65156678838638378
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1344971232897402}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0072622295, y: 0.046639312, z: 0.044445146}
+  m_Center: {x: 6.7732553e-10, y: 0.009927014, z: -0.000000004063953}
