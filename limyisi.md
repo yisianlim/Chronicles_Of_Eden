@@ -21,7 +21,7 @@
 
 ### Most Interesting Code
 #### Inventory UI using EventArgs to subscribe to player actions
-In the Inventory class, this is defined in the field:
+I used C#'s existing EventArgs to update the inventory UI, which uses the Observer pattern. In the Inventory class, this is defined in the field:
 ```
 public event EventHandler<InventoryEventArgs> ItemAdded;
 ```
@@ -48,7 +48,21 @@ private void InventoryUIItemAdded(object sender, InventoryEventArgs e) {
 }
 ```
 
+The approach makes the code robust to new item or image changes. It also makes to more efficient as we only invoke the UI change once when there is a change in inventory. It is also separates the inventory logic from the UI which is conforms to the rules of Model-View-Controller.
+
 #### Using IEnumerator
+IEnumerator was used multiple times to wait for a couple of seconds before displaying certain UI components. However, the one that I found to be most interesting, was using it to type the dialogue sentences such that a character appears one at a time (instead of displaying the entire sentence at once). Doing that improves the look-and-feel of the dialogue box and overall gameplay.
+```
+IEnumerator TypeSentence(string sentence)
+{
+    dialogueText.text = "";
+    foreach (char letter in sentence.ToCharArray())
+    {
+        dialogueText.text += letter;
+        yield return null;
+    }
+}
+```
 
 ### Most Proud Of
 #### Dialogue Systems

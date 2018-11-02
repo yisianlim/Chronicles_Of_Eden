@@ -12,6 +12,7 @@ public class ImmobilisingKnockbackDamageReciever : KnockbackDamageReciever {
 
     [SerializeField] float immobilisationDuration; //How long after the enemy has been hit that they remain unable to move (i.e. how long the NavMeshAgent is disabled for).
     [SerializeField] float KnockbackDistance;
+    [SerializeField] public ParticleSystem particle;
 
     public override void KnockBack(Rigidbody rigidbody, Vector3 recieverPosition, Vector3 fromPosition, float force)
     {
@@ -23,6 +24,8 @@ public class ImmobilisingKnockbackDamageReciever : KnockbackDamageReciever {
     //Briefly disable the NavmeshAgent and make RigidBody not Kinematic so force is able to be applied.
     public IEnumerator ImmobiliseAndKnockBack(Rigidbody rigidbody, Vector3 recieverPosition, Vector3 fromPosition, float force)
     {
+        if (particle != null)
+            particle.Play();
 
         GetComponent<NPCAI>().enabled = false;
 
