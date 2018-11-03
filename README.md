@@ -1,4 +1,5 @@
 # Chronicles of Eden
+Video link: [Gameplay video](./Comp 1.mp4)
 Welcome, we are excited to have you to come to play our game! 
 
 ![ss1](Images/ss1.JPG)
@@ -8,6 +9,7 @@ Chronicles of Eden is a puzzle-based game designed to be in a fantasy-based sett
 Remember to be careful, enemies are lurking in the map to hurt you. Make sure you defend yourself with the sword given to you!
 
 ## Installation and Setup Instructions
+To run the game, please git clone this repository and run the scene of Main Level.unity. 
 
 ## Imported Assets
 * [Explosion Effect](https://assetstore.unity.com/packages/essentials/asset-packs/unity-particle-pack-73777)

@@ -11,6 +11,7 @@ public class EndGame : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Enter?");
         StartCoroutine(SoundFade());
         changer.FadeToScene();
     }
