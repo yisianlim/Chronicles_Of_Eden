@@ -1,5 +1,6 @@
 # Chronicles of Eden
-Video link: [Gameplay video](./Comp 1.mp4)
+Video is in repo named Comp 1.mp4
+
 Welcome, we are excited to have you to come to play our game! 
 
 ![ss1](Images/ss1.JPG)
